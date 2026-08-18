@@ -1,6 +1,6 @@
 id: SESC-REG-05
 title: Interested Parties Register
-version: "0.1"
+version: "0.2"
 status: draft
 owner: Chief Operating Officer
 approver: Managing Director
@@ -67,6 +67,11 @@ parties:
   - ref: IP-02
     party: Customers — social housing, public sector, defence, commercial and domestic
     category: external
+    named: >
+      Sovereign Housing (registered social landlord), QinetiQ, and MOD sites including
+      Boscombe Down. The February 2026 data protection declaration with an express audit right
+      at IP-08 was given to a registered social landlord customer — reconnect the two before any
+      audit right is exercised.
     requirements:
       - requirement: Work conforming to specification, scheme rules, manufacturers' instructions and Building Regulations
         obligation: contractual
@@ -200,6 +205,15 @@ parties:
         obligation: legal
         evidence: SESC-POL-05, signed
         status: partial
+      - requirement: A first-aid needs assessment, site-scoped and signed
+        obligation: legal
+        basis: Health and Safety (First-Aid) Regulations 1981
+        evidence: PARTIAL
+        status: partial
+        gap: >
+          The assessment held is dated 4 January 2023, is UNSIGNED, covers the office and stores
+          only, and records no mobile workers. Replacement due 31 August 2026. Cheap, checkable,
+          and an auditor asks for it.
     enforcement_history: Nil return, checked against the HSE public register
     risks: [D1, D2, D3, D4]
 

@@ -1,0 +1,117 @@
+id: SESC-FRM-05
+title: Nonconformity and Corrective Action
+version: "0.1"
+status: draft
+owner: Quality Representative
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+classification: internal
+clauses:
+  iso9001:  ["10.2.1", "10.2.2"]
+  iso14001: ["10.2"]
+  iso45001: ["10.2"]
+personal_data: false
+records_generated: [nonconformity_record, corrective_action_record]
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    Records store. An NCR about a process may be held in git. One that names an
+    individual's conduct may not.
+  retention: 6 years
+  feeds_register: >
+    Nonconformity and Corrective Action Log — DOES NOT YET EXIST. Gap G3, due
+    31 August 2026. This form is the reason to open it.
+
+purpose: >
+  ISO 10.2.2 requires retained documented information on the nature of the
+  nonconformity, the actions taken, and the results of the corrective action.
+  Three separate pieces of evidence, and a certification body checks all three.
+  Most small firms retain the first and forget the third.
+
+design_note: >
+  ONE log for all three standards. A quality NCR, an environmental
+  nonconformity and a safety nonconformity are the same object with a different
+  domain tag. Separate logs are how a small business ends up reviewing none of
+  them — the same reasoning as the unified issues register SESC-REG-06.
+
+fields:
+  - key: date_raised
+    label: Date raised
+    type: date
+    required: true
+  - key: raised_by
+    label: Raised by
+    type: text
+    required: true
+  - key: source
+    label: How it came to light
+    type: select
+    required: true
+    options: [Internal audit, External audit, Customer complaint, Site inspection, Near miss or incident, Supplier issue, Self-identified, Management review]
+  - key: domains
+    label: Domain
+    type: multiselect
+    required: true
+    options: [Quality, Environmental, Health and safety, Information security, Commercial]
+  - key: description
+    label: Nature of the nonconformity
+    type: textarea
+    required: true
+    help: What actually happened, and which requirement it failed against.
+  - key: requirement_failed
+    label: Requirement or clause not met
+    type: text
+    required: true
+  - key: containment
+    label: Action taken to control and correct it
+    type: textarea
+    required: true
+    help: 10.2.1 a). What was done about the thing itself.
+  - key: consequences
+    label: Consequences dealt with
+    type: textarea
+    required: false
+  - key: root_cause
+    label: Root cause
+    type: textarea
+    required: true
+    help: >
+      10.2.1 b). Not "human error". Why was it possible for a person to do that,
+      and where else could it happen.
+  - key: similar_elsewhere
+    label: Could this exist elsewhere
+    type: select
+    required: true
+    options: [Checked — no, Checked — yes, and raised separately, Not yet checked]
+    help: 10.2.1 d). The step most often skipped.
+  - key: corrective_action
+    label: Corrective action
+    type: textarea
+    required: true
+  - key: action_owner
+    label: Owner
+    type: text
+    required: true
+  - key: action_due
+    label: Due
+    type: date
+    required: true
+  - key: effectiveness_check
+    label: Was the corrective action effective
+    type: select
+    required: false
+    options: [Verified effective, Not effective — reopened, Too early to say]
+    help: >
+      10.2.1 f). This is the field that closes the loop and the one auditors find
+      empty. An NCR is not closed until this is filled in.
+  - key: effectiveness_date
+    label: Date effectiveness verified
+    type: date
+    required: false
+  - key: management_system_changed
+    label: Did the management system change as a result
+    type: textarea
+    required: false
+    help: 10.2.1 g). If nothing changed, say so and say why.

@@ -1,0 +1,97 @@
+id: SESC-FRM-01
+title: Near Miss and Hazard Report
+version: "0.1"
+status: draft
+owner: Health and Safety Officer
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+classification: internal
+clauses:
+  iso45001: ["10.2"]
+personal_data: false
+records_generated: [near_miss_report]
+
+# The TEMPLATE carries no personal data and lives in git.
+# A COMPLETED near miss report may name individuals and does NOT. See CLAUDE.md 8.
+completed_record:
+  contains_personal_data: true
+  store: encrypted records store, outside git
+  retention: 3 years from the date of the report
+  feeds_register: SESC-REG-03 Accident, Incident and RIDDOR Register
+
+purpose: >
+  A near miss is the only free lesson a construction business gets. ISO 45001
+  clause 10.2 wants incidents reacted to and their causes removed; a near miss
+  is an incident that did not cost anything. This form exists so that reporting
+  one takes under two minutes.
+
+guidance:
+  - Report it even if nothing happened. Especially if nothing happened.
+  - No name is needed in the description. Describe what nearly happened, not who.
+  - A report is never used as the basis of disciplinary action.
+
+fields:
+  - key: date
+    label: Date it happened
+    type: date
+    required: true
+  - key: time
+    label: Approximate time
+    type: time
+    required: false
+  - key: site
+    label: Site or location
+    type: text
+    required: true
+    help: Site name and the part of it — "Boscombe Down, Bldg 42 roof" beats "site".
+  - key: reported_by
+    label: Reported by
+    type: text
+    required: false
+    help: Optional. A report with no name is still a valid report.
+  - key: category
+    label: What kind of hazard
+    type: select
+    required: true
+    options:
+      - Work at height
+      - Fragile roof or roof light
+      - Electrical
+      - Manual handling
+      - Plant, vehicles and traffic
+      - Slips, trips and falls
+      - Falling objects
+      - Hazardous substance (COSHH)
+      - Asbestos — suspected
+      - Confined space
+      - Hot works
+      - Weather and heat stress
+      - Other
+  - key: description
+    label: What happened, or nearly happened
+    type: textarea
+    required: true
+    help: Plain words. What you saw, what could have gone wrong, what stopped it.
+  - key: immediate_action
+    label: What was done straight away
+    type: textarea
+    required: true
+    help: Made safe, isolated, area closed, told the supervisor, nothing yet.
+  - key: potential_severity
+    label: If it had gone wrong, how bad
+    type: select
+    required: true
+    options: [Minor injury, Serious injury, Life-changing or fatal, Damage only, Environmental]
+  - key: rams_covered
+    label: Was this covered by the RAMS in force
+    type: select
+    required: true
+    options: [Yes, "No", Do not know]
+    help: >
+      A No here is worth more than the rest of the form. It means the risk
+      assessment missed something real.
+  - key: photo
+    label: Photograph
+    type: file
+    required: false

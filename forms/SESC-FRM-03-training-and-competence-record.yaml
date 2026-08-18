@@ -1,0 +1,80 @@
+id: SESC-FRM-03
+title: Training and Competence Record
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+classification: internal
+clauses:
+  iso9001:  ["7.2"]
+  iso14001: ["7.2"]
+  iso45001: ["7.2"]
+personal_data: false
+records_generated: [training_record]
+
+completed_record:
+  contains_personal_data: true
+  store: encrypted records store, outside git
+  retention: duration of employment plus 6 years
+  feeds_register: Training Matrix
+
+purpose: >
+  Clause 7.2 is the same sentence in all three standards: determine the
+  competence needed, ensure the person has it, retain documented information as
+  evidence. The third part is where SESC currently has nothing systematic —
+  22 qualifications are recorded as expired against 20 current.
+
+design_note: >
+  Competence REQUIREMENTS are held by role and live in git. Competence EVIDENCE
+  names a person and does not. This form is the bridge between them.
+
+fields:
+  - key: date
+    label: Date completed
+    type: date
+    required: true
+  - key: person_role
+    label: Role
+    type: select
+    required: true
+    options: [Managing Director, Chief Operating Officer, Contracts Manager, Accounts Manager, Supervisor, Operative, Apprentice, Subcontractor]
+  - key: person
+    label: Name
+    type: text
+    required: true
+  - key: activity
+    label: Training, qualification or briefing
+    type: text
+    required: true
+  - key: type
+    label: Type
+    type: select
+    required: true
+    options: [External qualification, Card scheme, Toolbox talk, Induction, Internal briefing, Refresher, On-the-job assessment]
+  - key: provider
+    label: Provider or awarding body
+    type: text
+    required: false
+  - key: certificate_number
+    label: Certificate or card number
+    type: text
+    required: false
+  - key: expires
+    label: Expiry date
+    type: date
+    required: false
+    help: Leave blank if it does not expire. An expiry with no date is how 22 lapsed.
+  - key: competence_demonstrated
+    label: How competence was demonstrated
+    type: select
+    required: true
+    options: [Certificate held and verified with the issuing body, Certificate held, not verified, Observed on site, Knowledge check passed, Attendance only]
+    help: >
+      "Attendance only" is not competence. It is recorded honestly so that the
+      Training Matrix does not read greener than it is.
+  - key: evidence
+    label: Evidence attached
+    type: file
+    required: false

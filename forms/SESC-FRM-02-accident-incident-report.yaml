@@ -1,0 +1,116 @@
+id: SESC-FRM-02
+title: Accident and Incident Report
+version: "0.1"
+status: draft
+owner: Health and Safety Officer
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+classification: internal
+clauses:
+  iso45001: ["10.2"]
+personal_data: false
+records_generated: [accident_report, riddor_notification]
+supersedes: null
+
+completed_record:
+  contains_personal_data: true
+  special_category: true
+  store: >
+    Encrypted records store, outside git. Injury detail is Article 9 special
+    category data. It never enters this repository. See CLAUDE.md 8.
+  retention: >
+    3 years from the date of the entry for adults; to age 21 where the injured
+    person is under 18. RIDDOR-reportable entries are kept for 3 years from the
+    date of the report.
+  feeds_register: SESC-REG-03 Accident, Incident and RIDDOR Register
+
+purpose: >
+  The electronic form of SESC-TPL-04. It exists so that a report can be raised
+  from a phone on site on the day, rather than from a filing cabinet a week
+  later. The paper form remains valid.
+
+riddor_note: >
+  RIDDOR reporting is a legal duty with deadlines: a death or specified injury
+  without delay and by report within 10 days; an over-seven-day injury within 15
+  days; a reportable dangerous occurrence without delay. This form flags a
+  probable RIDDOR case but it does not make the report. The Managing Director
+  makes it.
+
+fields:
+  - key: date
+    label: Date of the accident or incident
+    type: date
+    required: true
+  - key: time
+    label: Time
+    type: time
+    required: true
+  - key: site
+    label: Site or location
+    type: text
+    required: true
+  - key: person_status
+    label: Who was involved
+    type: select
+    required: true
+    options: [Employee, Subcontractor, Agency worker, Member of the public, Client staff, No one — damage or dangerous occurrence only]
+  - key: injury_type
+    label: Nature of the injury
+    type: select
+    required: true
+    options:
+      - No injury
+      - First aid only
+      - Over-three-day absence
+      - Over-seven-day absence
+      - Specified injury (RIDDOR Schedule 1)
+      - Fatality
+      - Occupational disease
+      - Dangerous occurrence, no injury
+  - key: body_part
+    label: Part of the body
+    type: text
+    required: false
+  - key: description
+    label: What happened
+    type: textarea
+    required: true
+    help: Sequence of events. Facts, not conclusions and not blame.
+  - key: immediate_action
+    label: Immediate action taken
+    type: textarea
+    required: true
+  - key: first_aider
+    label: First aider or medical attention
+    type: text
+    required: false
+  - key: witnesses
+    label: Were there witnesses
+    type: select
+    required: true
+    options: [Yes, "No"]
+    help: Names are taken separately and are not typed into this form.
+  - key: riddor_likely
+    label: Does this look RIDDOR-reportable
+    type: select
+    required: true
+    options: [Yes, "No", Unsure — escalate now]
+  - key: enforcing_authority_attended
+    label: Did an enforcing authority or site authority attend
+    type: select
+    required: true
+    options: ["No", HSE, Local authority, MOD site authority, Client]
+  - key: root_cause
+    label: Root cause, once established
+    type: textarea
+    required: false
+    help: Completed at investigation, not at the scene.
+  - key: corrective_action
+    label: Corrective action, owner and date
+    type: textarea
+    required: false
+  - key: photo
+    label: Photographs
+    type: file
+    required: false

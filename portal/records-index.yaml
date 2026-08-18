@@ -1,0 +1,46 @@
+# portal/records-index.yaml — an INDEX of records, not the records themselves.
+#
+# CLAUDE.md 12.6 sets the gap report definition: "Any clause with no artefact,
+# OR AN ARTEFACT WITH ZERO RECORDS IN THE LAST TWELVE MONTHS, goes red. That
+# twelve-month staleness rule is the whole point — a clause covered by a
+# document nobody has used in a year is not covered."
+#
+# The portal cannot apply that rule without knowing which records exist and when.
+# This file holds metadata only — reference, date, and the clauses the record
+# evidences. NO RECORD CONTENT AND NO PERSONAL DATA. The records themselves live
+# in the encrypted records store outside git. See CLAUDE.md 8.
+#
+# It lives in portal/ rather than records/ deliberately: validate.py fails the
+# build on any file in records/, and that guard is not to be softened.
+
+window_months: 12
+
+records:
+
+  - ref: SESC-REC-01
+    title: Annual Information Asset Identification and Risk Assessment 2026
+    date: 2026-08-17
+    clauses: {}
+    note: >
+      Clause map pending. This record was produced under POL-13, which has not
+      been migrated into the repository and declares no clauses. Until it is,
+      this record evidences nothing in the clause map — which is the honest
+      position, not a defect in this file.
+
+  - ref: SESC-REC-02
+    title: Annual Information Security Risk Assessment 2026
+    date: 2026-08-17
+    clauses: {}
+    note: Clause map pending — as SESC-REC-01.
+
+  - ref: SESC-REC-03
+    title: Business Continuity and IT Disaster Recovery Exercise 2026
+    date: 2026-08-17
+    clauses: {}
+    note: Clause map pending — as SESC-REC-01.
+
+  - ref: SESC-REC-04
+    title: Annual Security Briefing 2026
+    date: 2026-08-17
+    clauses: {}
+    note: Clause map pending — as SESC-REC-01.

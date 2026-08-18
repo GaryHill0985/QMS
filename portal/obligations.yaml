@@ -1,0 +1,343 @@
+# portal/obligations.yaml — SESC-REG-02 Assurance Calendar, held as data.
+#
+# Transcribed from SESC-REG-02 v1.0, signed 17 August 2026. The PDF remains the
+# controlled copy; this file is the machine-readable form the portal is built
+# from. If the two ever disagree, the PDF wins and this file is wrong.
+#
+# RECONCILIATION NOTE — raised as finding F10.
+#   SESC-REG-02 8(a) states there are "twenty-nine recurring obligations" and
+#   that eleven have never been done. The tables at 3 to 6 contain 23 scheduled
+#   obligations (12 annual, 2 six-monthly, 6 quarterly, 3 monthly) and 7 lists
+#   6 event-driven triggers. 23 + 6 = 29, so the total reconciles only if the
+#   event-driven triggers are counted as recurring obligations, which 7 says
+#   they are not.
+#   On never-done: every quarterly (6), every monthly (3) and both six-monthly
+#   (2) is 11 on its own, and 8(a) then adds "and four of the annual ones",
+#   which makes 15, not 11. The portal reports what the tables say: 15 of 23
+#   scheduled obligations have never been carried out.
+#   Correct SESC-REG-02 8(a) at the next reissue.
+
+source: SESC-REG-02 Assurance Calendar v1.0, issued 17 August 2026
+operated_by: >
+  The Chief Operating Officer reviews this register monthly and reports anything
+  overdue to the Managing Director. Each completed obligation produces a dated
+  record and the "last done" column is updated the same day. An obligation that
+  cannot be met on time is rescheduled in writing with a reason — a rescheduled
+  obligation is honest, a lapsed one is a finding.
+
+first_operated_quarter_ends: 2026-09-30
+
+obligations:
+
+  # ------------------------------- ANNUAL -------------------------------
+
+  - ref: OB-A01
+    frequency: annual
+    obligation: Identify, risk assess and record critical information assets
+    source: POL-13 Annex J1
+    owner: Managing Director
+    record: SESC-REC-01
+    last_done: 2026-08-17
+    next_due: 2027-08-17
+    joscar: ["2.11.2", "2.11.2.1"]
+
+  - ref: OB-A02
+    frequency: annual
+    obligation: Identify, assess and record information security risks
+    source: POL-13 Annex J1
+    owner: Managing Director
+    record: SESC-REC-02
+    last_done: 2026-08-17
+    next_due: 2027-08-17
+    joscar: ["2.11.19", "2.11.19.2"]
+
+  - ref: OB-A03
+    frequency: annual
+    obligation: Business continuity and IT DR exercise — tabletop plus live restore
+    source: POL-15 26.1, 24.8
+    owner: Managing Director
+    record: SESC-REC-03, and POL-15 Annex E
+    last_done: 2026-08-17
+    next_due: 2027-08-17
+    joscar: ["2.15.1.20.x", "2.15.6.x"]
+
+  - ref: OB-A04
+    frequency: annual
+    obligation: >
+      Mandatory security briefing — information, physical and personnel security,
+      and classified document handling
+    source: POL-13 16, Annex L8
+    owner: Chief Operating Officer
+    record: SESC-REC-04 attendance record and knowledge check
+    last_done: null
+    next_due: 2026-08-24
+    joscar: ["2.11.18", "2.11.22"]
+
+  - ref: OB-A05
+    frequency: annual
+    obligation: Simulated phishing exercise or equivalent practical test
+    source: POL-13 54
+    owner: Chief Operating Officer
+    record: Result recorded at REC-04 10, reported to the Board as a percentage
+    last_done: null
+    next_due: 2026-10-31
+    joscar: ["2.11.22.1.x"]
+
+  - ref: OB-A06
+    frequency: annual
+    obligation: Physical security review of the premises and its risks
+    source: POL-13 Annex F2, F12
+    owner: Managing Director
+    record: Walk-round record; Annex F rewritten from it
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.21"]
+
+  - ref: OB-A07
+    frequency: annual
+    obligation: Review of the Business Continuity Plan
+    source: POL-15 101(a)
+    owner: Managing Director
+    record: Reissued POL-15, or a note that no change is needed
+    last_done: 2026-08-16
+    next_due: 2027-08-16
+    joscar: ["2.15.1.3.1"]
+
+  - ref: OB-A08
+    frequency: annual
+    obligation: Review of the Health & Safety Policy and arrangements
+    source: POL-05
+    owner: Contracts Manager
+    record: Reissued POL-05 or a dated review note
+    last_done: 2026-08-16
+    next_due: 2027-08-16
+    joscar: ["2.6.1.2", "2.6.4.0"]
+
+  - ref: OB-A09
+    frequency: annual
+    obligation: Review of every other policy in the SESC-POL series
+    source: each policy's review clause
+    owner: Chief Operating Officer
+    record: Reissued document or a dated no-change note
+    last_done: 2026-08-17
+    next_due: 2027-08-17
+    joscar: ["1.8", "2.2", "2.7"]
+
+  - ref: OB-A10
+    frequency: annual
+    obligation: Business risk register review
+    source: SESC-REG-01
+    owner: Board
+    record: Reissued SESC-REG-01
+    last_done: 2026-08-12
+    next_due: 2027-08-12
+    joscar: ["2.8.7"]
+
+  - ref: OB-A11
+    frequency: annual
+    obligation: Cyber Essentials gap analysis, whether or not certification is sought
+    source: POL-13 18, 42(e)
+    owner: Chief Operating Officer
+    record: Gap analysis note
+    last_done: null
+    next_due: 2026-12-31
+    joscar: ["2.11"]
+
+  - ref: OB-A12
+    frequency: annual
+    obligation: Confirm the mitigations at POL-15 8 are actually in place
+    source: POL-15 101(e)
+    owner: Managing Director
+    record: Recorded in the exercise report
+    last_done: 2026-08-17
+    next_due: 2027-08-17
+    joscar: ["2.15.1.x"]
+
+  # ---------------------------- SIX-MONTHLY ----------------------------
+
+  - ref: OB-S01
+    frequency: six-monthly
+    obligation: Revalidation of user access privileges — logical and physical together
+    source: POL-13 Annex B9, Annex F4
+    owner: Managing Director
+    record: Signed revalidation sheet per user
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.18.2"]
+
+  - ref: OB-S02
+    frequency: six-monthly
+    obligation: Verify the emergency contact list at POL-15 Annex B
+    source: POL-15 101(d)
+    owner: Accounts Manager
+    record: Annex B reprinted and dated
+    last_done: null
+    next_due: 2026-08-31
+    joscar: ["2.15.5"]
+
+  # ------------------------------ QUARTERLY ----------------------------
+
+  - ref: OB-Q01
+    frequency: quarterly
+    obligation: Backup restore test — a data check, distinct from the annual exercise
+    source: POL-13 Annex H3, POL-15 96
+    owner: Accounts Manager
+    record: "Annex H3 line: date, media, what was restored, result"
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.32.x", "2.15.6.x"]
+
+  - ref: OB-Q02
+    frequency: quarterly
+    obligation: Technical security control checks
+    source: POL-13 Annex E9
+    owner: Managing Director
+    record: Annex E9 check sheet, sixteen checks
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.20", "2.11.29"]
+
+  - ref: OB-Q03
+    frequency: quarterly
+    obligation: Review of third-party application access to the cloud tenant
+    source: POL-13 40(f)
+    owner: Managing Director
+    record: List of connected applications, with removals
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.40"]
+
+  - ref: OB-Q04
+    frequency: quarterly
+    obligation: Security report to the Board, including the threat picture
+    source: POL-13 Annex J8(e), 55
+    owner: Chief Operating Officer
+    record: Quarterly report
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.6"]
+
+  - ref: OB-Q05
+    frequency: quarterly
+    obligation: Security training completion monitored against the Training Matrix
+    source: POL-13 55
+    owner: Contracts Manager
+    record: Training Matrix, with overdue people identified
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.22", "2.6.25"]
+
+  - ref: OB-Q06
+    frequency: quarterly
+    obligation: Objectives at POL-13 3 reviewed
+    source: POL-13 42(a)
+    owner: Chief Operating Officer
+    record: Twelve objectives, each with a measure and a date
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.6.1"]
+
+  # ------------------------------- MONTHLY ------------------------------
+
+  - ref: OB-M01
+    frequency: monthly
+    obligation: Review of sign-in alerts and administration logs
+    source: POL-13 33(f)
+    owner: Managing Director
+    record: Note of anything anomalous, or a nil line
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.29"]
+
+  - ref: OB-M02
+    frequency: monthly
+    obligation: Threat and vulnerability source review, with a decision recorded
+    source: POL-13 Annex J8(b)
+    owner: Chief Operating Officer
+    record: "One dated line per month: no action, action now, or add to the register"
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.11.19.3.4"]
+
+  - ref: OB-M03
+    frequency: monthly
+    obligation: Review of open actions from every register in this calendar
+    source: POL-15 26.4(c)
+    owner: Chief Operating Officer
+    record: This register, updated
+    last_done: null
+    next_due: 2026-09-30
+    joscar: ["2.15.1.20.3"]
+
+# ---------------------------- EVENT-DRIVEN -----------------------------
+# No date, but they must not be forgotten. SESC-REG-02 7.
+
+event_driven:
+
+  - ref: OB-E01
+    trigger: >
+      A significant change — new system, new premises, new category of customer
+      information, material change in what the business does
+    action: >
+      Re-run the information asset and information security risk assessments; do
+      not wait for the annual date
+    source: POL-13 Annex J1 187
+    owner: Managing Director
+
+  - ref: OB-E02
+    trigger: Any security or data protection incident
+    action: >
+      Incident record at POL-13 Annex D; customer told within 24 hours; a
+      Government site authority told immediately; ICO within 72 hours where
+      personal data is involved; the plan reviewed afterwards
+    source: POL-13 Annex D7, POL-14, POL-15 37
+    owner: Managing Director
+
+  - ref: OB-E03
+    trigger: A leaver, or a change of role
+    action: >
+      Leaver process executed on the last working day and signed off; access,
+      keys, passes and credentials withdrawn; download activity around the
+      departure reviewed
+    source: POL-13 Annex A2, Annex C4
+    owner: Accounts Manager
+
+  - ref: OB-E04
+    trigger: >
+      A new starter, or a subcontractor attending a Government site for the
+      first time
+    action: >
+      Induction, Acceptable Use Policy signed, and the classified information
+      element of the security briefing before the first visit
+    source: POL-13 52, Annex L8
+    owner: Contracts Manager
+
+  - ref: OB-E05
+    trigger: An invocation of the Business Continuity Plan
+    action: Annex D invocation record; the plan reviewed after the incident; actions raised
+    source: POL-15 27, 101(a)
+    owner: Managing Director
+
+  - ref: OB-E06
+    trigger: A change to any IT system or service
+    action: Change record at POL-13 9; consider whether a risk assessment or a DPIA is needed
+    source: POL-13 36
+    owner: Managing Director
+
+# Three things SESC-REG-02 9 says are added when certification is sought, and
+# none of which exists. The portal shows these as the gap they are.
+not_yet_in_the_calendar:
+  - obligation: Internal audit programme covering every clause on a defined cycle
+    standard_clause: "9001 9.2 / 14001 9.2 / 45001 9.2"
+    status: does not exist
+  - obligation: Management review at a defined interval, with defined inputs and outputs
+    standard_clause: "9001 9.3 / 14001 9.3 / 45001 9.3"
+    status: >
+      Does not exist. No management review has been minuted since 10 January 2023.
+  - obligation: >
+      Nonconformity and corrective action log, distinct from the action tables in
+      the individual registers
+    standard_clause: "9001 10.2 / 14001 10.2 / 45001 10.2"
+    status: >
+      Does not exist. No log of the Employer's own has been opened before
+      31 August 2026.
