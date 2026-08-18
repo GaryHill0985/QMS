@@ -28,7 +28,40 @@ live gap report, reverse impact analysis and PQQ answers — with no human effor
 
 ```
 python3 build/validate.py          # CI gate: front matter, clause refs, review dates, personal data
+python3 build/build_portal.py      # generate site/ — four audience builds
 ```
+
+## The portal
+
+`site/` is the management system as a thing you can open. Start at `site/index.html`.
+
+**It is generated, not maintained.** Every page is written by `build/build_portal.py` from the
+files above. Nobody can change a status by typing into it, and that is the point — a coverage
+figure somebody can type over is a self-assessment, and self-assessments drift green. Change the
+source and re-run. Never patch `site/`; the next run overwrites it.
+
+Nine pages: an overview computed from the repository, the full 134-clause map with what declares
+each clause, the document register across both estates, SESC-REG-05 and REG-06, the SESC-REG-02
+assurance calendar sorted by what is due, one action list drawn from blockers, decisions,
+findings and gaps, five record-capture forms, and an audit mode answering the twelve questions
+an assessor actually asks.
+
+It applies the gap report definition at `CLAUDE.md` §12.6 — **a clause covered by a document
+nobody has used in a year is not covered** — using `portal/records-index.yaml`, which holds
+record metadata only and never record content.
+
+**Four builds, one repository.** `controller`, `approver`, `contributor`, `auditor` — each
+generated separately with the content that audience must not see left out, so the auditor folder
+is a folder you can hand to an auditor. **These are distribution audiences, not logins.** A
+generated site cannot authenticate anybody and this one does not pretend to.
+
+```
+python3 build/build_portal.py --audience auditor     # just that build
+python3 build/build_portal.py --asof 2026-12-01      # what it will look like then
+git checkout <sha> && python3 build/build_portal.py  # what it looked like then
+```
+
+That last line is document control and the audit trail, and neither had to be written.
 
 ## Layout
 
@@ -38,7 +71,9 @@ documents/    SESC-POL-nn, SESC-PRO-nn, SESC-WI-nn
 registers/    SESC-REG-nn as YAML
 forms/        SESC-FRM-nn schemas
 standards/    the clause map as data, plus the front-matter schema
-build/        validate.py, and (to come) render_docx.py, render_site.py, audit_pack.py
+portal/       source data for the portal — config, the legacy estate, SESC-REG-02, actions, records index
+build/        validate.py, build_portal.py, portal_theme.py, and (to come) render_docx.py
+site/         THE PORTAL — generated, four audience builds. Never edited by hand.
 records/      SQLite + attachments — gitignored, see CLAUDE.md
 ```
 

@@ -1,0 +1,580 @@
+# portal/documents.yaml — the legacy document estate.
+#
+# These are the twenty-one signed documents and the registers, records and
+# templates issued alongside them. They live OUTSIDE this repository, as branded
+# PDFs, and have not been migrated into it. Until a document is migrated it has
+# no front matter, so it declares no clauses, so it contributes NOTHING to
+# clause coverage. That is deliberate.
+#
+#   Control data below is read off the Evidence Pack document register, which
+#   itself extracts it from the PDF control table with pdftotext. A null value
+#   means the value could not be extracted, NOT that the document lacks it.
+#
+#   clause_map: pending  means exactly that. No clause is claimed for any of
+#   these documents. Claiming clauses from a document title is how a padded
+#   clause map produces a green gap report over an empty system.
+#   See CLAUDE.md 7.
+#
+# NOT a controlled register. If it should become SESC-REG-07 Document Register,
+# say so and it will be moved to registers/ with front matter and validated.
+
+meta:
+  source: Evidence Pack document register, built 18 August 2026
+  extraction: pdftotext of the page-1 control table
+  caveat: >
+    Document owner could not be extracted for any document. The value exists in
+    each PDF control table; the Evidence Pack builder did not capture it. It is
+    reported by the portal as a data gap rather than guessed at.
+
+series_meaning:
+  POL: Policy
+  PRO: Procedure
+  WI: Work instruction
+  REG: Register
+  FRM: Form
+  REC: Record
+  TPL: Record template
+  CAP: Capability sheet
+  CRP: Carbon reduction plan
+  IMS: Annex SL spine
+
+documents:
+
+  # ---------------- signed policy set (21 signed documents) ----------------
+
+  - ref: SESC-POL-01
+    title: Employee Code of Business Conduct
+    version: "1.0"
+    state: signed
+    form: branded
+    issued: 2026-08-12
+    next_review: 2027-08
+    pages: 9
+    joscar: ["2.2"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-02
+    title: Conflicts of Interest Policy and Reporting Procedure
+    version: "1.0"
+    state: signed
+    form: branded
+    issued: 2026-08-12
+    next_review: 2027-08
+    pages: 12
+    joscar: ["2.2"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    defect: >
+      Annex C, the conflicts register, is ISSUED EMPTY — 8 of 8 rows blank.
+      A register issued empty is a policy that has never operated.
+
+  - ref: SESC-POL-03
+    title: Whistleblowing (Speak Up) Policy
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 9
+    joscar: ["2.2"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    defect: >
+      The Speak Up register is issued empty, 5 of 5 rows, and the address
+      speakup@sescsolutions.co.uk DOES NOT EXIST while JOSCAR 2.2.8 is saved Yes.
+
+  - ref: SESC-POL-04
+    title: Competition and Anti-Trust Compliance Policy
+    version: "1.0"
+    state: signed
+    form: branded
+    issued: 2026-08-12
+    next_review: 2027-08
+    pages: 9
+    joscar: ["2.2", "2.5"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-05
+    title: Health and Safety Policy and Arrangements Manual
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-16
+    next_review: 2027-08
+    pages: 32
+    joscar: ["2.6"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    note: >
+      The nearest thing SESC has to an OH&S manual. It is NOT a substitute for
+      ISO 45001 clause 5.4 — a paragraph on consultation will not pass.
+
+  - ref: SESC-POL-06
+    title: Drug and Alcohol Policy
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-16
+    next_review: 2027-08
+    pages: 6
+    joscar: ["2.6"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-07
+    title: Mental Health and Wellbeing Policy
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-16
+    next_review: 2027-08
+    pages: 6
+    joscar: ["2.6"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-08
+    title: Environmental Policy and Management Arrangements Manual
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 23
+    joscar: ["2.7"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    defect: >
+      THE HIGHEST-PRIORITY DOCUMENT TO REMEDIATE. The only manual carrying no
+      records-not-yet-held section, and it asserts the existence of eight
+      registers that do not exist: aspects, legal, compliance evaluation, risks
+      and opportunities, waste, approved contractor, environmental action plan
+      and an annual data set. It is the weakest link for ISO 14001.
+
+  - ref: SESC-POL-09
+    title: Sustainability, ESG and Social Value Policy
+    version: "1.0"
+    state: signed
+    form: branded
+    issued: 2026-08-12
+    next_review: 2027-08
+    pages: 6
+    joscar: ["1.5"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-10
+    title: Modern Slavery, Labour Standards and Human Rights Policy
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 10
+    joscar: ["1.5"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-11
+    title: Equity, Diversity and Inclusion Policy
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 12
+    joscar: ["1.5"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-12
+    title: Supplier Code of Conduct
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 7
+    joscar: ["2.7", "2.10"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-13
+    title: Information Security Policy and Management Arrangements
+    version: "1.5"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 89
+    joscar: ["2.11"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    note: >
+      Eighty-nine pages, and the source of 20 of the 29 obligations in the
+      assurance calendar. Most of the recurring work in the system comes out of
+      this one document.
+
+  - ref: SESC-POL-14
+    title: Data Protection and Privacy Policy (Annexes A-E)
+    version: "1.3"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 13
+    joscar: ["2.12"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-15
+    title: Business Continuity Plan
+    version: "1.2"
+    state: signed
+    form: branded
+    issued: 2026-08-16
+    next_review: 2027-08
+    pages: 36
+    joscar: ["2.15"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-POL-16
+    title: Quality Policy and Management Arrangements
+    version: "1.2"
+    state: signed
+    form: branded
+    issued: 2026-08-16
+    next_review: 2027-08
+    pages: 21
+    joscar: ["2.8"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    note: >
+      The reference implementation for migration into this repository —
+      workstream 7. When it is migrated it will be the first legacy document to
+      carry a clause map, and ISO 9001 coverage moves for the first time.
+
+  - ref: SESC-POL-17
+    title: Counterfeit Materiel Policy and Control Process
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-17
+    next_review: 2027-08
+    pages: 22
+    joscar: ["2.14"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    note: >
+      13 distinguishes a true nil return from an absent record. That distinction
+      is the honesty convention at its best and should be copied everywhere.
+
+  - ref: SESC-POL-18
+    title: Financial Sanctions and Trade Compliance Policy
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-14
+    next_review: 2027-08
+    pages: 16
+    joscar: ["1.0", "1.10", "1.11", "2.21"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    defect: >
+      Annex A, the counterparty screening record, is ISSUED EMPTY — 6 of 7 cells
+      blank — and the whole of JOSCAR 2.21 at 100% rests on it.
+
+  - ref: SESC-POL-19
+    title: Product Integrity, Product Safety and Conformity Policy
+    version: "1.1"
+    state: signed
+    form: branded
+    issued: 2026-08-16
+    next_review: 2027-08
+    pages: 39
+    joscar: ["2.9"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-CRP-01
+    title: Carbon Reduction Plan (PPN 006 format)
+    version: "1.0"
+    state: signed
+    form: branded
+    issued: 2026-08-12
+    next_review: 2027-08
+    pages: 6
+    joscar: ["1.5"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-REG-01
+    title: Business Risk Register
+    version: "1.0"
+    state: signed
+    form: branded
+    issued: 2026-08-12
+    next_review: 2027-08
+    pages: 18
+    joscar: ["2.8"]
+    clause_map: pending
+    audiences: [controller, approver, auditor]
+    defect: >
+      Three gaps raised 18 August: no risk covers heat stress (CLI-02), none
+      covers flooding of Unit 19 or a site (CLI-03), and none covers "no internal
+      audit and no management review has ever happened" — which is the single
+      longest pole in the certification timetable.
+
+  # ---------------- registers issued alongside ----------------
+
+  - ref: SESC-REG-02
+    title: Assurance Calendar
+    version: "1.0"
+    state: signed
+    form: plain
+    issued: 2026-08-17
+    next_review: 2027-08
+    pages: 4
+    owner: Managing Director
+    joscar: ["2.8"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    note: >
+      29 recurring obligations plus 6 event-driven triggers. Held as data at
+      portal/obligations.yaml and driving the calendar page of this portal.
+
+  - ref: SESC-REG-03
+    title: Accident, Incident and RIDDOR Register
+    version: "1.0"
+    state: signed
+    form: plain
+    issued: 2026-08-17
+    next_review: 2027-08
+    pages: 6
+    joscar: ["2.6"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-REG-04
+    title: Licence and Accreditation Register
+    version: "1.0"
+    state: issued
+    form: html
+    issued: 2026-08-18
+    next_review: 2027-08
+    joscar: ["2.13"]
+    clause_map: pending
+    audiences: [controller, approver, auditor]
+
+  # ---------------- the first four real records ----------------
+
+  - ref: SESC-REC-01
+    title: Annual Information Asset Identification and Risk Assessment 2026
+    state: record
+    form: plain
+    issued: 2026-08-17
+    next_review: 2027-08-17
+    pages: 6
+    joscar: ["2.11"]
+    clause_map: pending
+    audiences: [controller, approver, auditor]
+
+  - ref: SESC-REC-02
+    title: Annual Information Security Risk Assessment 2026
+    state: record
+    form: plain
+    issued: 2026-08-17
+    next_review: 2027-08-17
+    pages: 6
+    joscar: ["2.11"]
+    clause_map: pending
+    audiences: [controller, approver, auditor]
+
+  - ref: SESC-REC-03
+    title: Business Continuity and IT Disaster Recovery Exercise 2026
+    state: record
+    form: plain
+    issued: 2026-08-17
+    next_review: 2027-08-17
+    pages: 5
+    joscar: ["2.15"]
+    clause_map: pending
+    audiences: [controller, approver, auditor]
+
+  - ref: SESC-REC-04
+    title: Annual Security Briefing 2026
+    state: record
+    form: plain
+    issued: 2026-08-17
+    next_review: 2027-08-17
+    pages: 5
+    joscar: ["2.11", "2.22"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  # ---------------- record templates ----------------
+
+  - ref: SESC-TPL-01
+    title: Business Continuity and IT DR Exercise Report template
+    state: issued
+    form: plain
+    pages: 5
+    joscar: ["2.15"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-TPL-02
+    title: Information Risk Assessment Review template
+    state: issued
+    form: plain
+    pages: 5
+    joscar: ["2.11"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-TPL-03
+    title: Annual Security Briefing attendance record and knowledge check
+    state: issued
+    form: plain
+    pages: 4
+    joscar: ["2.11", "2.22"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  - ref: SESC-TPL-04
+    title: Accident / Incident Report Form
+    state: issued
+    form: plain
+    pages: 5
+    joscar: ["2.6"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+
+  # ---------------- capability sheets ----------------
+
+  - ref: SESC-CAP-002
+    title: Commercial Roofing Capability
+    version: "1.0"
+    state: missing
+    form: plain
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, auditor]
+    defect: >
+      The model the other twelve capability sheets follow, and it is NOT on disk
+      anywhere in the JOSCAR folder. Its NVQ Level 2 claim is also open.
+
+  - ref: SESC-CAP-003
+    title: Building Construction
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-004
+    title: Office Refurbishment
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-005
+    title: Industrial Facilities Refurbishment
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-006
+    title: Minor Construction Works
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-007
+    title: Roofing Works
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-008
+    title: Heating, Ventilation & Cooling Systems
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    note: >
+      One of the four supports for the determination that ISO 9001 clause 8.3
+      design and development is IN SCOPE.
+  - ref: SESC-CAP-009
+    title: Refrigeration Systems
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-010
+    title: White Goods
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-011
+    title: Property Maintenance
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-012
+    title: Electrical Services
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-013
+    title: Plumbing Services
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+  - ref: SESC-CAP-014
+    title: Heating, Ventilation & Cooling Services
+    version: "1.0"
+    state: issued
+    form: plain
+    pages: 1
+    joscar: ["1.4", "2.17"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]

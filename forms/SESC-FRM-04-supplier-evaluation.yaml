@@ -1,0 +1,105 @@
+id: SESC-FRM-04
+title: Supplier and Subcontractor Evaluation
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+classification: internal
+clauses:
+  iso9001:  ["8.4.1", "8.4.2"]
+  iso14001: ["8.1"]
+  iso45001: ["8.1.4.2"]
+personal_data: false
+records_generated: [supplier_evaluation]
+registers_cited: [SESC-POL-12]
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    Records store. A supplier is an organisation, not a person, so an evaluation
+    of one may be held in git — unless it names a sole trader, in which case it
+    may not.
+  retention: duration of the relationship plus 6 years
+  feeds_register: Approved Supplier Register — DOES NOT YET EXIST
+
+purpose: >
+  ISO 9001 8.4.1 requires criteria for the evaluation, selection, monitoring and
+  re-evaluation of external providers, and 8.4.2 requires control proportionate
+  to the effect on conforming product. ISO 45001 8.1.4.2 adds that health and
+  safety criteria must be part of the procurement decision, not checked
+  afterwards. SESC-POL-12 Supplier Code of Conduct sets the standards; this form
+  is the evidence that they were applied to a named supplier on a date.
+
+fields:
+  - key: date
+    label: Date of evaluation
+    type: date
+    required: true
+  - key: supplier
+    label: Supplier or subcontractor
+    type: text
+    required: true
+  - key: company_number
+    label: Company number
+    type: text
+    required: false
+  - key: category
+    label: What they supply
+    type: select
+    required: true
+    options: [Labour-only subcontractor, Bona fide subcontractor, Materials, Plant hire, Waste carrier, Professional services, Software and IT]
+  - key: criticality
+    label: Effect on conforming work
+    type: select
+    required: true
+    options: [Critical, Significant, Routine]
+    help: Drives how much control is proportionate. 8.4.2.
+  - key: insurance_verified
+    label: Insurance verified
+    type: select
+    required: true
+    options: [EL and PL seen and in date, Seen but expired, Not seen]
+  - key: hs_competence
+    label: Health and safety competence
+    type: select
+    required: true
+    options: [SSIP member, Own assessment passed, Assessment outstanding, Not assessed]
+  - key: environmental
+    label: Environmental checks
+    type: select
+    required: true
+    options: [Waste carrier licence verified — tier confirmed, Waste carrier licence seen — tier not confirmed, Not applicable, Not checked]
+    help: >
+      Construction and demolition waste is excluded from the own-waste exemption.
+      Upper tier is required. See finding F8.
+  - key: code_of_conduct
+    label: SESC-POL-12 Supplier Code of Conduct issued and accepted
+    type: select
+    required: true
+    options: [Issued and accepted in writing, Issued, no response, Not issued]
+  - key: modern_slavery
+    label: Modern slavery and labour standards
+    type: select
+    required: true
+    options: [Statement seen, Below threshold — declaration taken, Not checked]
+  - key: counterfeit
+    label: Counterfeit materiel controls
+    type: select
+    required: true
+    options: [Franchised or authorised distributor, Independent distributor — POL-17 controls applied, Not applicable, Not checked]
+  - key: outcome
+    label: Outcome
+    type: select
+    required: true
+    options: [Approved, Approved with conditions, Rejected, Provisional — re-evaluate in 3 months]
+  - key: conditions
+    label: Conditions, owner and date
+    type: textarea
+    required: false
+  - key: reevaluation_due
+    label: Re-evaluation due
+    type: date
+    required: true
+    help: 8.4.1 requires re-evaluation, not just selection. A date or it does not happen.

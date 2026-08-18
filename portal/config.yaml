@@ -1,0 +1,84 @@
+# portal/config.yaml — the only place organisation-level facts are typed.
+# Read by build/build_portal.py. Nothing in site/ is written by hand.
+#
+# NOTE ON WHAT IS DELIBERATELY ABSENT:
+#   headcount is not stated. It has been declared five different ways
+#   (5, 7, 12, 18, "about thirty"). See CLAUDE.md 10. It goes in here the day
+#   payroll produces one figure with the date it changed, and not before.
+
+organisation:
+  legal_name: SESC Solutions Ltd
+  company_number: "07606236"
+  registered_office: >
+    Unit 19, Melbury Business Park, West Melbury, Shaftesbury, Dorset SP7 0AF
+  trades: Roofing, building fabric, mechanical, electrical and renewable energy works
+  joscar_supplier: "10101706"
+
+# Roles are DISTRIBUTION AUDIENCES, not logins. A generated site cannot
+# authenticate anybody. Each audience gets its own build of the site, and the
+# generator omits content that audience must not see. That is separation by
+# distribution — it is real, and it is honest about what it is.
+audiences:
+  - key: controller
+    name: Controller
+    holder: Chief Operating Officer (Gary Adam Hill)
+    summary: >
+      Everything. Authors, reviews, runs the build, owns the gap picture.
+    sees_internal: true
+
+  - key: approver
+    name: Approver
+    holder: Managing Director (Steven A Coffen)
+    summary: >
+      What is waiting on him and nothing else — decisions, approvals, the
+      obligations he personally owns, and every open finding.
+    sees_internal: true
+
+  - key: contributor
+    name: Contributor
+    holder: Site and operations — Contracts Manager, Accounts Manager, operatives
+    summary: >
+      Raise records. See the obligations owned by their own role and the
+      documents they have to work to. No decision log, no commercial risk.
+    sees_internal: false
+
+  - key: auditor
+    name: Auditor
+    holder: Certification body assessor, customer or framework auditor
+    summary: >
+      Clause by clause, what the system says and what evidences it. The document
+      register, the registers, and the assurance calendar with its dated records.
+      No open commercial decisions, no project action list, no personal data.
+    sees_internal: false
+
+standards:
+  - key: iso9001
+    label: ISO 9001
+    certify_to: "2015"
+    file: standards/iso9001-2015.yaml
+  - key: iso14001
+    label: ISO 14001
+    certify_to: "2026"
+    file: standards/iso14001-2026.yaml
+  - key: iso45001
+    label: ISO 45001
+    certify_to: "2018"
+    file: standards/iso45001-2018.yaml
+
+milestones:
+  - date: 2026-09-30
+    label: First quarter in which SESC-REG-02 is fully operated ends
+    note: >
+      The date to quote when asked when the management system started working.
+      SESC-REG-02 8(d).
+  - date: 2026-09-16
+    label: ISO 9001:2026 publishes
+    note: Certification to it is unlikely before mid/late 2027. Certify to :2015.
+  - date: 2026-12-31
+    label: Cyber Essentials gap analysis due
+    note: SESC-REG-02 3, POL-13 18.
+
+brand:
+  ink: "#231F20"
+  accent: "#0b4f8a"
+  brand_red: "#ED1D24"
