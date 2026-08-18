@@ -101,8 +101,10 @@ written this way and consistency is auditable.
   `SESC-REG-nn` registers · `SESC-FRM-nn` forms · `SESC-REC-nn` records · `SESC-TPL-nn` record
   templates · `SESC-CAP-nn` capability sheets · `SESC-CRP-nn` carbon reduction plan ·
   **`SESC-IMS-nn` the Annex SL spine, where `nn` is the clause number it covers (04 to 10).**
-- **Next free references, as at 18 August 2026:**
-  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-01` · `SESC-REG-07` · `SESC-FRM-01` · `SESC-REC-05` ·
+- **Next free references, as at 18 August 2026** — `SESC-FRM-01` to `SESC-FRM-05` were taken by
+  the record capture forms drafted in the portal session; they are DRAFTS and decision D13
+  confirms or renumbers them **before** any is issued:
+  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-01` · `SESC-REG-07` · `SESC-FRM-06` · `SESC-REC-05` ·
   `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-05`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**
@@ -216,3 +218,79 @@ As at 18 August 2026:
 - **Employers' liability and public liability certificates are recorded at POL-05 Annex C as
   NOT VERIFIED**, and the schedule and the broker letter give different policy numbers.
 - **ICO data protection fee: recorded as absent**, but the public register has not been queried.
+
+---
+
+## 11. Where things live
+
+**None of these files is in this repository, and several of the rules above tell you to use them.
+Without this section a chat cannot find the document it is being told to obey.**
+
+| Thing | Location |
+|---|---|
+| **Architecture and build plan — AUTHORITATIVE for the repo design at §4–§9, and NOT to be re-derived** | `Desktop\SESC\ISO\SESC-IMS-Architecture-and-Build-Plan-v1.0.html` |
+| **`BRAND-SPEC.md` and `INTERIOR-SPEC.md`** — authoritative for colour, logo, cover geometry and interior page design, cited at §4 above | `Desktop\SESC\DOCUMENT DESIGN INSTRUCTIONS CLAUDE\` |
+| **The twenty-one signed documents**, to be migrated into `documents/` | `Desktop\SESC\QinetiQ\JOSCAR\Documents\` — **filed by JOSCAR questionnaire section. Do not carry that taxonomy forward.** Note POL-01…04 sit inside `2.7 Environment & Sustainability\2.2 Human Resources\`, a known filing defect to correct at migration time rather than twice. |
+| **The renderer to port** to `build/render_docx.py`, including **`patch_branded_cover()`** | `Desktop\SESC\QinetiQ\JOSCAR\Toolkit\policy_editor.py` |
+| **The four rendering traps**, §5 — the Branded TOC field, the signature table not being table 1, header text hidden in tables and textboxes, `set_cell()` style in an empty cell | `Desktop\SESC\QinetiQ\JOSCAR\Reference\Section workflow method.md` |
+| **The contradiction log** — known cross-document conflicts, do not rediscover them | `JOSCAR Master Register.md` §5 · `Reference\Cross-document consistency findings v1.0 - 17 Aug 2026.md` · `Reference\Gary decisions on C2-C8 - 17 Aug 2026.md` |
+| **The pre-written gap plan** | POL-05 §A31 · POL-13 §21 · POL-16 Q24 · POL-17 §13 · POL-18 §8 |
+| **Standard texts held** | `Desktop\SESC\ISO\` — 9001:2015 (**licensed to Unitspark Ltd, single user — clause numbering may be used, clause TEXT may not be reproduced**), 14001:**2015, superseded**, 45001:2018, **BS 99001:2022**. **No 14001:2026 and no 27001 in any form.** |
+| **CertiKit demo toolkits** | `Desktop\SESC\ISO\` — 9001 v3, 14001 v3 (**built for the 2026 edition**), 45001 v1-3, 27001 v13-1, 22301 v6-3, 20000 v10-1, **Cyber Essentials v7**. Every 27001 reference this project holds comes from the v13-1 guide, not from the standard. |
+| **Reusable structure from prior builds — TeraBox, cloud only, no local sync folder** | `POW Environmental Services\Procedures and Registers\` · `Pow Property Developments\...\Forms, registers\{Forms,Policy,Procedures,Registers}` · `ITC CERTIFIED\...\0. Context and Governance\`. **Structure only, never content — see §3.** |
+| **This repository** | `github.com/GaryHill0985/QMS`, and the working clone is `Desktop\SESC\ISO\CLAUDE ISO\` |
+
+---
+
+## 12. Rules that were nearly lost in the migration from the project instructions
+
+Recorded here because they exist in no other file in this repository.
+
+1. **The stop rule.** Gary Hill is not the director. **Where a task needs a decision that is
+   reserved to the director, say so and stop rather than assuming.** This is wider than signing —
+   it covers any decision reserved to the Board, any commitment of money, any acceptance of a
+   contractual term, and any statement made to a customer or an insurer.
+
+2. **How to treat the blockers.** The blockers at `SESC-IMS-Master-Register.md` §3 are named so
+   that **no chat proposes work that quietly assumes they are closed. None of them is a chat's
+   job.** Nothing in Phase 1 depends on them; everything in Phase 3 does.
+
+3. **Signed commits.** The repository requires protected `main`, **signed commits**, and every
+   change by pull request with a named human reviewer. Attribution of a controlled-document change
+   is an audit point, and retrofitting signatures to history is worthless.
+
+4. **ISO/IEC 27001, in full, so the deferral is not reopened by a chat that has forgotten why.**
+   Certify to **27001:2022 + Amd 1:2024** when the time comes. The standard is stable — systematic
+   review only, no revision approved — so **there is no penalty for deferring it**. Clause range
+   4.1–10.2 plus Annex A controls **A.5.1–A.8.34**. Buy **ISO/IEC 27002:2022** with it; without
+   27002 the control set cannot be applied. **The 27001:2013 transition expired 31 October 2025 —
+   treat any 2013-era certificate presented by a supplier as worthless**, which is a live rule for
+   supplier assessment today, not in 2028. MOD's September 2024 **Def Stan 05-138 ↔ 27001:2022
+   mapping** lets 27001 evidence be reused in the Cyber Security Model SAQ — an accelerator, not
+   the requirement.
+
+5. **UKAS verification, as a standing rule and not only a register row.** UKAS-accredited only.
+   Verify at `ukas.com/find-an-organisation` — Certification Bodies, open the Schedule of
+   Accreditation, confirm the standard, **the edition**, and that the scope covers **IAF sector 28,
+   construction**. Verify issued certificates at `certcheck.ukas.com`. IAF and ILAC merged into
+   **Global ACI** on 1 January 2026 — check Global ACI MRA signatory status, not the old IAF MLA.
+   UKAS publishes a list of bodies falsely claiming its accreditation. **An unaccredited
+   certificate submitted to JOSCAR is worse than no certificate.**
+
+6. **The gap report definition.** Any clause with no artefact, **or an artefact with zero records
+   in the last twelve months**, goes red. That twelve-month staleness rule is the whole point — a
+   clause covered by a document nobody has used in a year is not covered.
+
+7. **Why a "not relevant" climate conclusion is not defensible, in six words each:** flooding,
+   heat stress, Part L/F, F-gas, embodied carbon flow-down, and MOD net-zero via JOSCAR Zero.
+
+8. **The honesty convention reaches beyond this repository.** Every management-system manual must
+   carry a records-not-yet-held section, including the twenty-one legacy documents that are not
+   yet migrated. `validate.py` can only warn on files it can see.
+
+9. **The system is the deliverable; the certificates are a consequence.** This is the sentence
+   that stops the project optimising for a certificate instead of for a business that works.
+
+10. **Two claims were nearly overstated from memory already.** That is why §2 forbids stating a
+    certification, qualification or device capability without reading it off the issuing body's
+    own documentation.

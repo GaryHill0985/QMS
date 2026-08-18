@@ -3,10 +3,17 @@ site/
 build/__pycache__/
 *.pyc
 
-# Records layer. The database holds personal data (Architecture & Build Plan §8).
-# It does not go in git under any circumstances.
-records/ims.db
-records/attachments/
+# ---------------------------------------------------------------------------
+# The records layer holds personal data (Architecture & Build Plan 8, CLAUDE.md 8).
+# It does not go in git under any circumstances. The .gitkeep files ARE tracked,
+# so the directory structure survives a clone — without them, records/attachments/
+# does not exist for anyone who clones and the build breaks on checkout.
+# ---------------------------------------------------------------------------
+records/*
+!records/.gitkeep
+!records/attachments/
+records/attachments/*
+!records/attachments/.gitkeep
 *.sqlite
 *.sqlite3
 
@@ -18,3 +25,15 @@ out/
 # Local environment
 .venv/
 .env
+
+# ---------------------------------------------------------------------------
+# Planning documents that live alongside the repo in the same folder.
+# These are NOT controlled documents and are deliberately untracked, BUT that
+# means GitHub is not backing them up. See SESC-IMS-Master-Register.md D10.
+# ---------------------------------------------------------------------------
+SESC-IMS-Project-Instructions-v1.0.md
+SESC-IMS-Readiness-and-Gap-Analysis-v1.0.html
+SESC-IMS-Gap-Register-v1.0.xlsx
+sesc-ims-*.zip
+*-REVIEW.html
+*-REVIEW.pdf
