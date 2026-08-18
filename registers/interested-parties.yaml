@@ -1,0 +1,420 @@
+id: SESC-REG-05
+title: Interested Parties Register
+version: "0.1"
+status: draft
+owner: Chief Operating Officer
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso9001:  ["4.2"]
+  iso14001: ["4.2", "6.1.3"]
+  iso45001: ["4.2", "6.1.3"]
+parent_document: SESC-IMS-04
+
+notes:
+  - >
+    A party is relevant if its requirement, unmet, would affect the Employer's ability to
+    consistently provide conforming work, to prevent harm to workers, or to fulfil its
+    compliance obligations. Parties that merely exist are not listed.
+  - >
+    'obligation: legal' rows feed the compliance obligations register required by
+    ISO 14001 6.1.3 and ISO 45001 6.1.3. That register does not yet exist — the one held
+    is dated 2020 with dead drive links.
+  - >
+    Every row must name where the evidence sits, or say plainly that it does not exist.
+    A requirement with no evidence line is a finding waiting to happen.
+
+parties:
+
+  - ref: IP-01
+    party: Workers — employees & subcontractors
+    category: internal
+    requirements:
+      - requirement: A safe place of work, safe plant and equipment, and competent instruction
+        obligation: legal
+        basis: Health and Safety at Work etc. Act 1974 s.2; PUWER; LOLER; Work at Height Regulations 2005
+        evidence: SESC-POL-05; RAMS library; Training Matrix
+        status: partial
+        gap: 22 qualifications expired against 20 current; no PAT records; no LOLER report since 29 March 2023
+      - requirement: Consultation and participation, including non-managerial workers, with records of it operating
+        obligation: legal
+        basis: Health and Safety (Consultation with Employees) Regulations 1996; ISO 45001 cl. 5.4
+        evidence: NONE
+        status: absent
+        gap: >
+          THE HIGHEST-RISK GAP IN THE 45001 SET. Clause 5.4 requires a mechanism and records.
+          A paragraph in POL-05 will not pass. Due 31 October 2026, Health and Safety Officer.
+      - requirement: Health surveillance where the work requires it
+        obligation: legal
+        basis: COSHH; Control of Noise at Work Regulations 2005; Control of Vibration at Work Regulations 2005
+        evidence: NONE
+        status: absent
+        gap: No occupational health provider appointed. Due 30 September 2026.
+      - requirement: Pay at or above the Real Living Wage where committed to a customer
+        obligation: contractual
+        basis: Construction phase plan issued for an MOD site
+        evidence: Payroll
+        status: partial
+        gap: >
+          Gary confirmed 17 August 2026 that everyone other than four named apprentices is now
+          above the rate. POL-10 12(d) promises a dated payroll check recorded with the name of
+          the person who carried it out. THAT RECORD STILL DOES NOT EXIST.
+    risks: [A2, D1, D4, E5, F1]
+
+  - ref: IP-02
+    party: Customers — social housing, public sector, defence, commercial and domestic
+    category: external
+    requirements:
+      - requirement: Work conforming to specification, scheme rules, manufacturers' instructions and Building Regulations
+        obligation: contractual
+        evidence: SESC-POL-16; commissioning and test certificates; handover packs
+        status: partial
+        gap: Inspection and Test Plan issued as a form on 6 August 2026; no completed instance yet exists
+      - requirement: Accurate answers at prequalification and onboarding
+        obligation: contractual
+        evidence: The verified fact base built for the JOSCAR submission
+        status: partial
+        gap: >
+          SESC-REG-01 A3, scored 20. PI declared as £5m against an actual £250k; employee numbers
+          declared five ways; turnover three ways. Every customer holding an inaccurate declaration
+          must be written to and corrected.
+      - requirement: ISO 9001, 14001 and 45001 certification
+        obligation: expectation
+        evidence: NONE
+        status: absent
+        gap: This management system. Target 2027.
+      - requirement: Customer satisfaction to be monitored and acted on
+        obligation: standard
+        basis: ISO 9001 cl. 9.1.2 — a distinct requirement, not covered by complaints handling
+        evidence: NONE
+        status: absent
+        gap: Nothing exists. Due 31 December 2026, Quality Representative.
+      - requirement: A Carbon Reduction Plan on qualifying public contracts
+        obligation: contractual
+        basis: PPN 006
+        evidence: SESC-CRP-01, signed 12 August 2026
+        status: partial
+        gap: Scope 2 unmeasured; Scope 3 categories 4, 5, 6 and 7 incomplete
+    risks: [A3, B3, C2, C5, E1]
+
+  - ref: IP-03
+    party: Ministry of Defence, QinetiQ and site authorities including Boscombe Down
+    category: external
+    requirements:
+      - requirement: Compliance in full with site rules and the instructions of the site authority
+        obligation: contractual
+        evidence: SESC-CPP-001 Boscombe Down construction phase plan; SESC-RAMS-001
+        status: held
+      - requirement: Security clearance and vetting completed before mobilisation
+        obligation: contractual
+        evidence: PARTIAL
+        status: partial
+        gap: No DBS check has been completed for anyone. Vetting must start 6 weeks before mobilisation.
+      - requirement: Cyber Essentials
+        obligation: contractual
+        basis: DEFCON 658 and the Cyber Security Model — mandatory at every level, no contract-value threshold
+        evidence: NONE
+        status: absent
+        gap: >
+          Never applied for. £440 + VAT for the 10-49 band. Taken in place of ISO 27001, which is
+          deferred to 2028+. Also the forcing function for most of the 27001 technical evidence.
+      - requirement: Net zero flow-down
+        obligation: expectation
+        basis: MOD net-zero commitments via JOSCAR Zero
+        evidence: SESC-CRP-01
+        status: partial
+    risks: [C3, C5, H2]
+
+  - ref: IP-04
+    party: Main contractors and Principal Contractors
+    category: external
+    requirements:
+      - requirement: Compliance with their construction phase plan, site rules and directions
+        obligation: contractual
+        evidence: SESC-POL-05 A26
+        status: held
+      - requirement: SSIP or Common Assessment Standard prequalification maintained
+        obligation: contractual
+        evidence: SSIP Deem to Satisfy 1242304 valid to 30 June 2027; CHAS Elite membership 163381 to 30 June 2027
+        status: held
+        note: >
+          ISO 45001 satisfies SSIP ONLY IF SSIP is inside the certification scope. Ask the
+          certification body for it explicitly.
+      - requirement: Terms accepted that the Employer can actually carry
+        obligation: contractual
+        evidence: Contract review under SESC-POL-16 Q2
+        status: partial
+        gap: SESC-REG-01 B3 — terms signed without review; the Employer's own documents contradict each other on the guarantee period
+    risks: [B3, E1, E2]
+
+  - ref: IP-05
+    party: Steven A Coffen, as sole director
+    category: internal
+    requirements:
+      - requirement: Personal protection from criminal liability
+        obligation: legal
+        basis: Health and Safety at Work etc. Act 1974 s.37; CDM 2015
+        evidence: SESC-POL-05, signed 16 August 2026
+        status: partial
+        note: >
+          A functioning ISO 45001 system is the mechanism. Deferring 45001 to save money defers
+          the protection with the highest personal downside. This is why 45001 is not dropped
+          from the 2027 scope.
+      - requirement: Independence for decisions reserved to the Board
+        obligation: standard
+        evidence: Simon Davies FCCA, Rapture Accounts Limited, confirmed 17 August 2026
+        status: partial
+        gap: >
+          Appointed and named, but 20 documents still carry a BLANK independent professional
+          adviser row that must be filled and the PDFs rebuilt. A signature or a name typed into
+          a .docx does not reach a PDF already rendered.
+    risks: [A1, A2]
+
+  - ref: IP-06
+    party: Health and Safety Executive
+    category: external
+    requirements:
+      - requirement: Compliance with the Act and the regulations under it
+        obligation: legal
+        evidence: SESC-POL-05
+        status: partial
+      - requirement: RIDDOR reports made within the reporting timescales
+        obligation: legal
+        basis: RIDDOR 2013
+        evidence: SESC-REG-03 Accident, Incident and RIDDOR Register, opened 17 August 2026
+        status: partial
+      - requirement: An accident book, where 10 or more are normally employed
+        obligation: legal
+        basis: >
+          SI 1979/628 reg 25, Social Security (Claims and Payments) Regulations 1979 —
+          NOT SI 1979/141. Correct that citation wherever it appears.
+        evidence: SESC-REG-03
+        status: partial
+        gap: >
+          Retain 3 years from date of entry. The open-page B1510 format breaches UK GDPR —
+          use tear-out or electronic.
+      - requirement: Health and safety law poster displayed; written H&S policy where 5+ employed
+        obligation: legal
+        evidence: SESC-POL-05, signed
+        status: partial
+    enforcement_history: Nil return, checked against the HSE public register
+    risks: [D1, D2, D3, D4]
+
+  - ref: IP-07
+    party: Environment Agency
+    category: external
+    requirements:
+      - requirement: Duty of care for waste; correct EWC classification; transfer and consignment notes
+        obligation: legal
+        basis: Environmental Protection Act 1990 s.34; Hazardous Waste Regulations
+        evidence: SESC-POL-08 E6
+        status: partial
+        gap: No populated waste register exists
+      - requirement: Waste carrier, broker and dealer registration, at the correct tier
+        obligation: legal
+        evidence: Number CBDL569181 appears only at SESC-POL-19 Annex A
+        status: unverified
+        gap: >
+          TIER NOT CONFIRMED. Construction and demolition waste is EXCLUDED from the own-waste
+          exemption, so UPPER TIER is required even carrying only the Employer's own waste.
+          £191.02 new, £130.25 renewal, every 3 years. Due 30 September 2026.
+      - requirement: Notification of any change of company name or address within 28 days
+        obligation: legal
+        evidence: SESC-POL-08 34(a)
+        status: held
+    enforcement_history: Nil return
+    risks: []
+
+  - ref: IP-08
+    party: Information Commissioner's Office
+    category: external
+    requirements:
+      - requirement: Data protection fee paid and registration held
+        obligation: legal
+        evidence: NONE
+        status: unverified_absence
+        gap: >
+          Recorded as absent because no SESC record shows one and POL-14 5 says the position is
+          "being confirmed" — NOT because the public register was queried. QUERY IT FIRST, then
+          register. Tier 1 £52 or Tier 2 £78; the turnover and headcount tests are alternatives
+          so SESC may qualify for Tier 1. Due 30 September 2026.
+      - requirement: UK GDPR compliance, and a customer's express audit right exercisable
+        obligation: legal
+        evidence: SESC-POL-13, SESC-POL-14
+        status: partial
+        gap: >
+          A registered social landlord customer was told in February 2026 that suitable measures
+          are in place, and holds an express audit right. RoPA, privacy notice and breach
+          procedure are incomplete.
+    risks: [G1, G2]
+
+  - ref: IP-09
+    party: Competent person schemes — NICEIC, Gas Safe, MCS, PAS 2030, F-gas
+    category: external
+    requirements:
+      - requirement: Registration maintained, annual assessment passed, qualifying supervisor or nominated technical person in post
+        obligation: legal
+        evidence: >
+          NICEIC 612325000 (no printed expiry); Gas Safe 921327 to 21 April 2027;
+          MCS NIC600672; PAS 2030 NICI63181 (expiry illegible, replacement requested);
+          F-gas Quidos FGAS3016462 to 15 July 2027 and Refcom REF1021835 to 9 July 2027
+        status: held
+        gap: >
+          Each registration rests on one or two named individuals (SESC-REG-01 C4). No succession
+          position is recorded for any scheme.
+      - requirement: Notification and certification of notifiable work
+        obligation: legal
+        evidence: Scheme certification and notification records
+        status: held
+    lapsed:
+      - {scheme: OFTEC, number: C503088, expired: 2026-04-14, action: "Oil-fired work not offered. REMOVE THE OFTEC LOGO FROM THE WEBSITE."}
+      - {scheme: RECC, number: "00076352", expired: 2024-11-15, action: "The renewables workmanship warranty still routes consumers to the RECC dispute process 21 months after lapse. Correct it."}
+    not_held:
+      - {scheme: NFRC, status: "An application only. NEVER a membership. MUST NOT BE CLAIMED ANYWHERE."}
+      - {scheme: "NICEIC Consumer Protection Survey NIC13190", status: "Held since 11 December 2024 — hot water, heating, ASHP and PV. NEW FACT, appears in no project document. Decide whether it belongs in scope."}
+    risks: [C1, C4]
+
+  - ref: IP-10
+    party: Insurers — employers' liability, public liability, professional indemnity
+    category: external
+    requirements:
+      - requirement: Accurate declarations on the Statement of Fact
+        obligation: contractual
+        evidence: PARTIAL
+        status: partial
+        gap: >
+          The Markel Statement of Fact of 27 March 2026 declares NO to checking subcontractors'
+          and consultants' own PI cover, while POL-19 19 Stage 3 says it is checked. One of the
+          two is wrong and only Gary can say which. A wrong Statement of Fact is a COVER problem,
+          not a paperwork problem.
+      - requirement: Conditions precedent met
+        obligation: contractual
+        evidence: NONE
+        status: absent
+        gap: >
+          TWO CONDITIONS PRECEDENT ARE UNMET: portable appliance testing, and the written monthly
+          self-inspection programme for composite panel premises. This is a larger exposure than
+          the certificate. Due 31 August and 30 September 2026.
+      - requirement: The business description to cover the work actually carried out
+        obligation: contractual
+        evidence: NONE
+        status: absent
+        gap: >
+          SESC-REG-01 B1, scored 15. The policy covers roofing by bona fide subcontractors ONLY;
+          four operatives are directly employed on roofing and a roof replacement is running.
+          Sixteen endorsements checked, none removes the restriction. Obtain a written mid-term
+          amendment or stop roofing with directly employed labour. DO NOT RELY ON A VERBAL
+          ASSURANCE FROM THE BROKER.
+    held:
+      - {cover: "Employers' liability", insurer: "Iprism Underwriting", limit: "£10,000,000", period: "26 July 2026 to 25 July 2027", status: "NOT VERIFIED at POL-05 Annex C — schedule and broker letter give different policy numbers"}
+      - {cover: "Public liability", insurer: "Iprism Underwriting", limit: "£5,000,000", period: "26 July 2026 to 25 July 2027", status: "NOT VERIFIED — certificate not held"}
+      - {cover: "Professional indemnity", limit: "£250,000 aggregate, costs-inclusive", retroactive_date: 2025-04-28, status: "Low for the design responsibility taken on. Work before the retroactive date is uninsured."}
+    risks: [B1, B2, B3]
+
+  - ref: IP-11
+    party: Occupants, neighbours and the public
+    category: external
+    requirements:
+      - requirement: Not to be harmed by the Employer's undertaking
+        obligation: legal
+        basis: Health and Safety at Work etc. Act 1974 s.3
+        evidence: RAMS; SESC-POL-05
+        status: partial
+      - requirement: Avoidable dust, noise, vibration and run-off to be controlled
+        obligation: legal
+        evidence: SESC-POL-08
+        status: partial
+      - requirement: Protected species not to be disturbed
+        obligation: legal
+        basis: Wildlife and Countryside Act 1981; Conservation of Habitats and Species Regulations 2017
+        evidence: SESC-POL-08 69(a) — nesting birds and bats checked before roof, soffit, fascia, loft, chimney or external fabric work
+        status: held
+    risks: [D2, D3]
+
+  - ref: IP-12
+    party: Suppliers, subcontractors and sub-contracted designers
+    category: external
+    requirements:
+      - requirement: Fair, clear and timely terms, and the Supplier Code of Conduct communicated
+        obligation: contractual
+        evidence: SESC-POL-12, signed
+        status: partial
+        gap: >
+          The Supplier Code clause has NOT been inserted into the purchase-order terms. Three sets
+          exist in two forms plus a copy in the Contracts Manager's own folder edited more
+          recently than either. Gary must say which set actually goes out with orders.
+      - requirement: Requirements communicated to external providers
+        obligation: standard
+        basis: ISO 9001 cl. 8.4.3
+        evidence: PARTIAL
+        status: partial
+        gap: Standard terms of subcontract and purchase are still absent
+      - requirement: To be assessed and approved before use
+        obligation: standard
+        basis: ISO 9001 cl. 8.4.1; ISO 45001 cl. 8.1.4.2
+        evidence: NONE
+        status: absent
+        gap: >
+          NO COMPLETED SUBCONTRACTOR ASSESSMENT EXISTS ON FILE, and the questionnaire previously
+          in use was another organisation's document. Fifteen subcontractors already have full
+          insurance records, so assessing them is about a day's work. Due 30 September 2026.
+    risks: [E4]
+
+  - ref: IP-13
+    party: Landlord of Unit 19
+    category: external
+    requirements:
+      - requirement: Compliance with the lease
+        obligation: contractual
+        evidence: Not reviewed by this project
+        status: unknown
+      - requirement: "IN THE OTHER DIRECTION — the Employer needs 12 months of metered electricity, gas and water data"
+        obligation: expectation
+        evidence: NONE
+        status: absent
+        gap: >
+          Blocks Scope 2 of the Carbon Reduction Plan entirely. It is one email. SESC-REG-01 H3.
+          Due 31 March 2027, and it should be done far sooner.
+    risks: [H3]
+
+  - ref: IP-14
+    party: The certification body, once appointed
+    category: external
+    requirements:
+      - requirement: UKAS-accredited, with a scope covering IAF sector 28 construction
+        obligation: contractual
+        evidence: NONE — no body appointed
+        status: absent
+        gap: >
+          Verify at ukas.com/find-an-organisation, open the Schedule of Accreditation, confirm
+          the standard, THE EDITION, and the sector scope. Verify issued certificates at
+          certcheck.ukas.com. IAF and ILAC merged into GLOBAL ACI on 1 January 2026 — check
+          Global ACI MRA signatory status, not the old IAF MLA. UKAS publishes a list of bodies
+          falsely claiming its accreditation.
+      - requirement: "THE QUESTION TO ASK IN WRITING, OF EVERY BODY QUOTING"
+        obligation: contractual
+        evidence: NOT YET ASKED
+        status: absent
+        gap: >
+          "Have you completed your UKAS accreditation extension for ISO 14001:2026, and if not,
+          which tranche and what decision date?" Most UK CBs do not yet hold it; first decisions
+          conclude 30 November 2026. Also ask for the body's own effective-personnel calculation,
+          and for SSIP deemed-to-satisfy inside the scope. Three written quotes.
+    risks: [C2]
+
+  - ref: IP-15
+    party: Companies House and HMRC
+    category: external
+    requirements:
+      - requirement: Statutory accounts filed
+        obligation: legal
+        evidence: NONE since the year ended 31 March 2022
+        status: absent
+        gap: >
+          SESC-REG-01 E2, scored 20. Years ended 2023, 2024 and 2025 outstanding. Undermines
+          every financial declaration and every tender that assesses financial standing.
+          Due November 2026.
+    risks: [E2]

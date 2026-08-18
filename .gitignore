@@ -1,0 +1,20 @@
+# Generated output — never hand-edited, never committed
+site/
+build/__pycache__/
+*.pyc
+
+# Records layer. The database holds personal data (Architecture & Build Plan §8).
+# It does not go in git under any circumstances.
+records/ims.db
+records/attachments/
+*.sqlite
+*.sqlite3
+
+# Rendered output is a build artefact, not source
+out/
+*.docx
+*.pdf
+
+# Local environment
+.venv/
+.env

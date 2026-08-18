@@ -1,0 +1,92 @@
+standard: iso14001
+edition: "2026"
+title: "ISO 14001:2026 Environmental management systems — Requirements with guidance for use"
+verified: false
+# ============================================================================
+# ⚠  THIS FILE IS PROVISIONAL AND MUST NOT BE QUOTED TO A CUSTOMER OR AUDITOR
+# ============================================================================
+verified_note: >
+  ISO 14001:2026 HAS NOT BEEN READ BY ANYONE ON THIS PROJECT. ISO 14001:2015 was
+  WITHDRAWN on 15 April 2026 and the only copy held at Desktop\SESC\ISO\ is that
+  withdrawn edition. The clause structure below is carried across from :2015 on the
+  assumption that the Annex SL harmonised structure is unchanged. THAT ASSUMPTION IS
+  UNTESTED. Every clause below carries verified: false until the 2026 edition is bought
+  and read (decision D6). Do not let this file and the CertiKit v3 toolkit — which was
+  built for the 2026 edition — drift apart silently.
+certification_body_question: >
+  THE SINGLE MOST IMPORTANT CB-SELECTION QUESTION, to be asked in writing of every
+  certification body quoting: "Have you completed your UKAS accreditation extension for
+  ISO 14001:2026, and if not, which tranche and what decision date?" Most UK CBs do not
+  yet hold UKAS accreditation for :2026; the first decisions conclude 30 November 2026.
+  Do not accept a :2015 certificate.
+
+clauses:
+  - {id: "4.1", title: Understanding the organisation and its context, verified: false}
+  - {id: "4.2", title: Understanding the needs and expectations of interested parties, verified: false}
+  - {id: "4.3", title: Determining the scope of the environmental management system, documented_information: maintain, verified: false}
+  - {id: "4.4", title: Environmental management system, verified: false}
+
+  - {id: "5.1", title: Leadership and commitment, verified: false}
+  - {id: "5.2", title: Environmental policy, documented_information: maintain, verified: false}
+  - {id: "5.3", title: Organisational roles, responsibilities and authorities, verified: false}
+
+  - {id: "6.1.1", title: Actions to address risks and opportunities — general, documented_information: maintain, verified: false}
+  - id: "6.1.2"
+    title: Environmental aspects
+    documented_information: maintain
+    verified: false
+    critical: true
+    note: >
+      THE DEFINING ISO 14001 DOCUMENT, AND SESC'S HIGHEST-PRIORITY GAP. The aspects
+      register currently held belongs to a landscaping firm — it names an unconnected
+      individual, badgers and herbicides. It must be built from nothing, from SESC's own
+      activities. POL-08 §14 already says so: "Any aspects register that does not describe
+      the work SESC actually carries out must not be used."
+  - id: "6.1.3"
+    title: Compliance obligations
+    documented_information: maintain
+    verified: false
+    note: >
+      SESC's legal register is dated 2020 with dead Z:\ drive links. POL-08 §19 already
+      says a register listing another organisation's activities is not evidence of compliance.
+  - {id: "6.1.4", title: Planning action, verified: false}
+  - {id: "6.2.1", title: Environmental objectives, documented_information: maintain, verified: false}
+  - {id: "6.2.2", title: Planning actions to achieve environmental objectives, verified: false}
+
+  - {id: "7.1", title: Resources, verified: false}
+  - {id: "7.2", title: Competence, documented_information: retain, verified: false}
+  - {id: "7.3", title: Awareness, verified: false}
+  - {id: "7.4.1", title: Communication — general, documented_information: retain, verified: false}
+  - {id: "7.4.2", title: Internal communication, verified: false}
+  - {id: "7.4.3", title: External communication, verified: false}
+  - {id: "7.5.1", title: Documented information — general, verified: false}
+  - {id: "7.5.2", title: Creating and updating, verified: false}
+  - {id: "7.5.3", title: Control of documented information, verified: false}
+
+  - {id: "8.1", title: Operational planning and control, documented_information: maintain, verified: false}
+  - id: "8.2"
+    title: Emergency preparedness and response
+    documented_information: maintain
+    verified: false
+    note: >
+      The emergency plan currently held covers TYPHOONS and names Unitspark Limited.
+      It must be withdrawn and replaced with SESC's own.
+
+  - {id: "9.1.1", title: Monitoring, measurement, analysis and evaluation — general, documented_information: retain, verified: false}
+  - id: "9.1.2"
+    title: Evaluation of compliance
+    documented_information: retain
+    verified: false
+    note: >
+      Makes legal compliance DIRECTLY AUDITABLE. Statutory items to get right first:
+      ICO data protection fee (recorded absent); upper-tier waste carrier registration
+      CBDL569181 — construction and demolition waste is EXCLUDED from the own-waste
+      exemption, so upper tier is required even carrying only your own waste; F-gas;
+      hazardous waste consignee returns.
+  - {id: "9.2.1", title: Internal audit — general, verified: false}
+  - {id: "9.2.2", title: Internal audit programme, documented_information: retain, verified: false}
+  - {id: "9.3", title: Management review, documented_information: retain, verified: false}
+
+  - {id: "10.1", title: Improvement — general, verified: false}
+  - {id: "10.2", title: Nonconformity and corrective action, documented_information: retain, verified: false}
+  - {id: "10.3", title: Continual improvement, verified: false}

@@ -1,0 +1,480 @@
+id: SESC-REG-06
+title: Issues Register — internal and external issues relevant to the management system
+version: "0.1"
+status: draft
+owner: Chief Operating Officer
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso9001:  ["4.1", "6.1.1", "6.1.2"]
+  iso14001: ["4.1", "6.1.1"]
+  iso45001: ["4.1", "6.1.1"]
+parent_document: SESC-IMS-04
+derived_from: SESC-REG-01 Business Risk Register v1.0, signed 12 August 2026
+
+design_rules:
+  - >
+    RISKS AND OPPORTUNITIES ARE HELD IN SEPARATE FIELDS AND ARE NEVER MERGED.
+    ISO 9001:2026 separates them. Building it this way now costs nothing and saves a rebuild.
+  - >
+    Every issue traces to a scored, owned, dated risk in SESC-REG-01 or says plainly that it
+    does not. Issues invented for the register are worthless to the person running the business.
+  - >
+    Climate change is addressed as a set of SUBSTANTIVE issues, not a sentence. Amd 1:2024 to
+    ISO 9001:2015 and ISO 45001:2018 requires the determination to be made; ISO 14001:2026
+    carries it. For a building services contractor a "not relevant" conclusion is not defensible.
+  - >
+    One unified register, four lenses. Small businesses that keep separate quality, environmental,
+    safety and information risk registers end up reviewing none of them. The 'domains' field is
+    the filter.
+
+issues:
+
+  # ---------- EXTERNAL ----------
+
+  - ref: EXT-01
+    type: external
+    category: Customer and market
+    issue: >
+      Turnover is concentrated in a small number of customers and frameworks, in social housing,
+      public sector and defence. The loss of one framework place is material.
+    domains: [quality, commercial]
+    risks: [E1]
+    opportunities: []
+    owner: Managing Director
+
+  - ref: EXT-02
+    type: external
+    category: Customer and market
+    issue: >
+      Customers increasingly require ISO 9001, ISO 14001 and ISO 45001 certification, and the
+      Employer holds none. No certification body has ever assessed the Employer.
+    domains: [quality, environmental, ohs, commercial]
+    risks: [C2]
+    opportunities:
+      - >
+        Constructionline waives the quality module for ISO 9001 and the environmental module for
+        ISO 14001; ISO 45001 satisfies SSIP where SSIP is inside the certification scope.
+        Three prequalification exemptions from one exercise.
+      - >
+        IAF MD 11 caps the integrated audit-day reduction at 20%, and only for a genuinely
+        integrated system assessed across seven criteria. Three manuals, three audit programmes
+        and three management reviews earn ZERO. This is why the system is integrated.
+    owner: Managing Director
+
+  - ref: EXT-03
+    type: external
+    category: Regulatory
+    issue: >
+      CDM 2015; HSWA 1974 and the regulations under it; Building Safety Act 2022 and Building
+      Regulations Parts L and F; EPA 1990 duty of care and the waste hierarchy; hazardous waste
+      and POPs controls; the F-gas regime; UK REACH as a downstream user; UK GDPR and DPA 2018.
+    domains: [quality, environmental, ohs, information]
+    risks: []
+    opportunities: []
+    owner: Contracts Manager
+    note: >
+      Contractor and Principal Contractor duties under CDM apply whenever there is more than one
+      contractor, regardless of F10 notifiability. An auditor wants to see the notifiability
+      ASSESSMENT being made and recorded, not just the F10s.
+
+  - ref: EXT-04
+    type: external
+    category: Defence and secure sites
+    issue: >
+      Site rules, permits, inductions, security clearance and vetting, and restrictions on
+      photography, recording, mobile devices and data storage. Vetting and pass timescales are an
+      operational constraint, not an administrative one.
+    domains: [ohs, information, commercial]
+    risks: [H2]
+    opportunities: []
+    owner: Contracts Manager
+
+  - ref: EXT-05
+    type: external
+    category: Defence and secure sites
+    issue: >
+      For MOD-adjacent work Cyber Essentials is mandatory under DEFCON 658 and the Cyber Security
+      Model at every level, with no contract-value threshold. It is not held.
+    domains: [information, commercial]
+    risks: [C3, G1]
+    opportunities:
+      - >
+        Cyber Essentials builds most of the ISO 27001 technical evidence anyway — asset, software
+        and user inventories, patching to a 14-day rule, MFA, access review. Do CE first as a
+        forcing function, and 27001 in 2028 becomes a scope extension rather than a project.
+    owner: Chief Operating Officer
+
+  - ref: EXT-06
+    type: external
+    category: Supply chain and materials
+    issue: >
+      Copper, cable, insulation, roofing materials, heat pumps, inverters and modules are subject
+      to price movement and allocation, and lead times extend without notice. A large proportion
+      of the work is delivered by subcontractors, and most of the Employer's environmental impact
+      is embodied in the materials bought and the waste contractors used.
+    domains: [quality, environmental, commercial]
+    risks: [E3, E4]
+    opportunities: []
+    owner: Contracts Manager
+
+  - ref: EXT-07
+    type: external
+    category: Labour market
+    issue: >
+      A national shortage of gas, electrical and heat pump engineers, against which a small
+      employer competes on pay and benefits. Four apprentices are in training.
+    domains: [quality, ohs, commercial]
+    risks: [E5]
+    opportunities:
+      - Apprenticeships build the competence the schemes require and count towards social value scoring
+    owner: Managing Director
+
+  - ref: EXT-08
+    type: external
+    category: Scheme bodies
+    issue: >
+      Continued registration with NICEIC, Gas Safe, MCS, PAS 2030 and F-gas is a condition of
+      offering the work those schemes cover, and each rests on one or two named individuals.
+      OFTEC and RECC have lapsed.
+    domains: [quality, commercial]
+    risks: [C1, C4]
+    opportunities: []
+    owner: Contracts Manager
+
+  - ref: EXT-09
+    type: external
+    category: Insurance market
+    issue: >
+      Professional indemnity held is £250,000 in the aggregate, costs-inclusive, retroactive to
+      28 April 2025 — low against the design responsibility the Employer takes on, and below what
+      some customers require. The liability business description restricts roofing to bona fide
+      subcontractors only.
+    domains: [quality, commercial, ohs]
+    risks: [B1, B2]
+    opportunities: []
+    owner: Managing Director
+
+  - ref: EXT-10
+    type: external
+    category: Economic and financial
+    issue: >
+      Payment terms extended by main contractors, retentions held for long periods, and customer
+      financial checks and credit scoring against a company whose last filed statutory accounts
+      are for the year ended 31 March 2022.
+    domains: [commercial]
+    risks: [E2]
+    opportunities: []
+    owner: Managing Director
+
+  # ---------- CLIMATE CHANGE — the express determination ----------
+
+  - ref: CLI-00
+    type: determination
+    category: Climate change
+    issue: >
+      THE EMPLOYER HAS DETERMINED THAT CLIMATE CHANGE IS A RELEVANT ISSUE TO ITS MANAGEMENT
+      SYSTEM, AND THAT RELEVANT INTERESTED PARTIES HAVE CLIMATE-RELATED REQUIREMENTS.
+      Required expressly by Amd 1:2024 to ISO 9001:2015 and ISO 45001:2018 and carried into
+      ISO 14001:2026. The determination is recorded here with its reasons; the substance is at
+      CLI-01 to CLI-07.
+    domains: [quality, environmental, ohs]
+    determined_on: 2026-08-18
+    determined_by: Chief Operating Officer, for approval by the Managing Director
+    conclusion: RELEVANT
+    reasoning: >
+      A building services contractor working at height, in southern England, on and near chalk
+      catchments, in a defence supply chain committed to net zero, and whose growth market is
+      decarbonisation, cannot defensibly conclude otherwise.
+
+  - ref: CLI-01
+    type: external
+    category: Climate change — adaptation
+    issue: >
+      Wind, storm and rain stop roof and external work. Increasing frequency and intensity of
+      winter storms shortens working windows; a programme set without weather contingency turns a
+      weather event into a liquidated-damages event.
+    domains: [ohs, quality, commercial]
+    risks: [H1]
+    risk_note: "SESC-REG-01 H1 carries a likelihood of 5 — the highest on the register."
+    opportunities: []
+    owner: Contracts Manager
+
+  - ref: CLI-02
+    type: external
+    category: Climate change — adaptation
+    issue: >
+      Heat stress in occupied buildings, in roof voids and on roofs. Existing risk assessments
+      treat it as seasonal; it will need to be treated as recurrent.
+    domains: [ohs]
+    risks: []
+    risk_note: "No SESC-REG-01 risk covers this. It is a new issue and needs an entry at the next review."
+    opportunities: []
+    owner: Health and Safety Officer
+
+  - ref: CLI-03
+    type: external
+    category: Climate change — adaptation
+    issue: >
+      Heavier rainfall events increase both the risk of run-off carrying silt, bitumen, oils and
+      cleaning products to surface water drains, and the risk of a site or Unit 19 itself flooding.
+      The Employer works on and near chalk aquifers and chalk streams, in catchments draining to
+      Poole Harbour, Christchurch Harbour, the Solent and the Channel.
+    domains: [environmental, commercial]
+    risks: []
+    risk_note: "No SESC-REG-01 risk covers flooding of Unit 19. Needs an entry, and a check of the flood zone."
+    opportunities: []
+    owner: Environmental Manager
+
+  - ref: CLI-04
+    type: external
+    category: Climate change — adaptation
+    issue: >
+      Building fabric failure modes are changing. Interstitial condensation, mould and damp
+      remediation, and overheating retrofit are growing parts of the work precisely because the
+      climate is changing.
+    domains: [quality, commercial]
+    risks: []
+    opportunities:
+      - Mould and damp remediation is already a service line and the demand for it is structural, not cyclical
+    owner: Contracts Manager
+
+  - ref: CLI-05
+    type: internal
+    category: Climate change — mitigation
+    issue: >
+      The Employer's own measured emissions are Scope 1 fleet and plant fuel: 21,900 litres of
+      diesel over 75,026 business miles in the 2023 baseline year, 54.97 tCO2e, reducing to
+      46.07 tCO2e in 2025 — a 16.2 per cent reduction. Eight vehicles, seven with telematics,
+      and one forklift.
+    domains: [environmental]
+    risks: []
+    opportunities:
+      - Telematics already monitor mileage, idling and driving style; the data exists to set a real objective
+    owner: Contracts Manager
+
+  - ref: CLI-06
+    type: internal
+    category: Climate change — mitigation
+    issue: >
+      SCOPE 2 IS UNMEASURED. No metered electricity, gas or water data has ever been held for
+      Unit 19 separately from the landlord. SESC-CRP-01 publishes an accurate partial figure with
+      a stated completion date rather than an estimate it cannot substantiate — which is the right
+      treatment, and still a gap.
+    domains: [environmental, commercial]
+    risks: [H3]
+    opportunities: []
+    owner: Contracts Manager
+
+  - ref: CLI-07
+    type: external
+    category: Climate change — requirements imposed by others
+    issue: >
+      PPN 006 Carbon Reduction Plans on qualifying public contracts; MOD net-zero commitments
+      flowed down through JOSCAR Zero; embodied-carbon and materials disclosure required by main
+      contractors; social value and net-zero weightings in tender scoring; Building Regulations
+      Part L; and the F-gas phase-down constraining what may be installed.
+    domains: [environmental, commercial]
+    risks: [H3]
+    opportunities:
+      - >
+        THE LARGEST OPPORTUNITY THE EMPLOYER HAS. The heat pumps, solar PV, insulation and
+        energy-efficiency measures the Employer installs reduce customers' emissions by far more
+        than the Employer's own operations emit. Decarbonisation policy is the growth driver for
+        the renewables and retrofit side of the business.
+    owner: Managing Director
+
+  - ref: CLI-08
+    type: internal
+    category: Climate change — mitigation
+    issue: >
+      The Employer holds F-gas company certification and handles refrigerants whose global warming
+      potential is orders of magnitude above CO2. Containment, recovery and leak checking are the
+      single largest DIRECT climate control the Employer operates.
+    domains: [environmental]
+    risks: []
+    opportunities: []
+    owner: Environmental Manager
+
+  # ---------- INTERNAL ----------
+
+  - ref: INT-01
+    type: internal
+    category: Governance and key person
+    issue: >
+      A single director on whom direction, banking, customer relationships and technical decisions
+      all depend, with no second director, no second bank signatory and no documented alternate.
+    domains: [quality, environmental, ohs, commercial, information]
+    risks: [A1]
+    risk_note: "Scored 20 — joint highest on the register."
+    opportunities: []
+    owner: Managing Director
+
+  - ref: INT-02
+    type: internal
+    category: Governance and key person
+    issue: >
+      Independence for grievances, Speak Up reports, conflicts of interest and appeals involving
+      the Managing Director is achieved only through the independent professional adviser.
+    domains: [quality, ohs]
+    risks: [A2]
+    status: >
+      RESOLVED ON THE NAMING SIDE. Simon Davies FCCA of Rapture Accounts Limited confirmed
+      17 August 2026. NOT RESOLVED ON THE DOCUMENT SIDE — 20 documents still carry a blank
+      adviser row and their PDFs must be rebuilt.
+    opportunities: []
+    owner: Chief Operating Officer
+
+  - ref: INT-03
+    type: internal
+    category: Accuracy of past declarations
+    issue: >
+      Professional indemnity declared as £5,000,000 against an actual £250,000; employee numbers
+      declared as 5, 7, 12, 18 and about thirty; turnover declared as £842,919, £1,000,000 and
+      £2,400,000; supplier environmental arrangements and a supply chain compliance process
+      declared that did not exist; a data protection compliance statement made before any data
+      protection documentation existed.
+    domains: [quality, commercial, information]
+    risks: [A3]
+    risk_note: "Scored 20. A management system built on top of inaccurate declarations inherits them."
+    opportunities:
+      - >
+        The honesty convention is the answer, and it is now the most valuable single thing the
+        Employer owns. Five documents carry dated inventories of records that do NOT exist. It is
+        unusual, it is what makes the suite credible, and it is why an assessor can trust the rest.
+    owner: Managing Director
+
+  - ref: INT-04
+    type: internal
+    category: Records, not documents, are the constraint
+    issue: >
+      Twenty-one policies exist and all twenty-one are signed. What did not exist in the business
+      before 31 August 2026 was a single completed toolbox talk attendance record on any subject
+      for any date, a populated calibration register, one completed subcontractor assessment, an
+      accident book, a COSHH register of the Employer's own, an aspects register of the Employer's
+      own, or a corrective action log of the Employer's own.
+    domains: [quality, environmental, ohs]
+    risks: [D4]
+    milestone: >
+      The first quarter in which the Assurance Calendar is fully operated is the quarter ending
+      30 September 2026. THAT IS THE DATE TO QUOTE when asked when the management system started
+      working, and it is deliberately a real date rather than a claim that it has always been so.
+    opportunities: []
+    owner: Chief Operating Officer
+
+  - ref: INT-05
+    type: internal
+    category: Competence
+    issue: >
+      Two training matrices existed and the roofing team appeared on neither properly; twenty-two
+      qualifications across the site workforce are expired against twenty current; one asbestos
+      awareness certificate has lapsed; one EFAW certificate was issued in an incorrect name; and
+      no DBS check has been completed for anyone.
+    domains: [quality, ohs, information]
+    risks: [D4, C4, H2]
+    opportunities: []
+    owner: Health and Safety Officer
+
+  - ref: INT-06
+    type: internal
+    category: Independent assurance
+    issue: >
+      No internal audit has ever been carried out, under any system, for any period. No management
+      review has been minuted since 10 January 2023.
+    domains: [quality, environmental, ohs]
+    risks: []
+    risk_note: >
+      No SESC-REG-01 risk covers this directly. It is the longest pole in the certification
+      timetable — a certification body wants roughly three months of the system genuinely running,
+      one full internal audit round and one management review before Stage 2.
+    constraint: >
+      A single trained internal auditor cannot audit their own work in a business this size.
+      Train two (CQI/IRCA, 2 days, £1,130-£1,255 inc VAT each) and buy in the first cycle for
+      independence. Clause 9.2 asks only for objective, impartial and competent auditors —
+      certificated training is not required, but it is the cheapest defensible evidence of
+      competence and a defence supply chain will expect it.
+    opportunities: []
+    owner: Managing Director
+
+  - ref: INT-07
+    type: internal
+    category: Inherited material
+    issue: >
+      Documents adopted whole from other organisations have had to be withdrawn — a landscaping
+      firm's aspects register, a fabrication workshop's forty-five COSHH assessments, a typhoon
+      emergency plan naming an unconnected company, and a Health and Safety Policy 2024 stating
+      that CDM 2015 may not apply to the Employer.
+    domains: [quality, environmental, ohs]
+    risks: []
+    rule: >
+      BORROWED MATERIAL IS USED AS STRUCTURE AND NEVER AS CONTENT. Nothing enters this management
+      system carrying a POW, ITC, LARC or Unitspark reference.
+    opportunities: []
+    owner: Chief Operating Officer
+
+  - ref: INT-08
+    type: internal
+    category: Financial position
+    issue: >
+      No statutory accounts filed since the year ended 31 March 2022; the only accounts in
+      existence show net assets of £6,243. This constrains what the Employer can commit to and
+      how quickly.
+    domains: [commercial]
+    risks: [E2]
+    opportunities: []
+    owner: Managing Director
+
+  - ref: INT-09
+    type: internal
+    category: Capability the Employer should not understate
+    issue: >
+      A signed, internally consistent suite of twenty-one documents; trade scheme registrations
+      that already impose and verify real competence; an Assurance Calendar with twenty-nine
+      recurring obligations, named owners and dates; a scored and owned risk register; measured
+      Scope 1 emissions with a verified reduction; and a stated institutional preference for
+      saying what is not true rather than concealing it.
+    domains: [quality, environmental, ohs, commercial]
+    risks: []
+    opportunities:
+      - >
+        A small contractor that can produce those things is ahead of most of its peer group. The
+        honest gap inventories are the reason an assessor can trust the rest of the system.
+      - >
+        The Evidence Index pattern built for JOSCAR — question, exact answer, link to the
+        supporting page, note on what is weak — generalises directly to ISO clause coverage and
+        becomes the audit pack generator. It is worth more outside JOSCAR than inside it.
+    owner: Chief Operating Officer
+
+  - ref: INT-10
+    type: internal
+    category: Scope and applicability
+    issue: >
+      The Employer's capability statements say design within scheme scope is carried out in house;
+      the standard quotation says the client is entirely responsible for their own design and
+      excludes design responsibility. THE TWO CANNOT BOTH BE APPLIED, and an assessor comparing
+      them finds the conflict on one page. The ISO 9001 scope turns on the resolution.
+    domains: [quality, commercial]
+    risks: [B2, B3]
+    resolution_proposed: >
+      A carve-out, not a choice between them — see SESC-IMS-04 Part 7 paragraph 57. Awaiting the
+      Managing Director's approval. Nothing is applied to any customer-facing document until then.
+    opportunities: []
+    owner: Managing Director
+
+  - ref: INT-11
+    type: internal
+    category: Roofing assurance
+    issue: >
+      Roofing is the largest trade the Employer carries out for which it holds NO third-party
+      competent-person scheme registration. NFRC is an application only and must not be claimed.
+      The management system, rather than a scheme assessment, is the only assurance over roofing.
+    domains: [quality, ohs]
+    risks: [B1, C1, D1]
+    consequence: >
+      This RAISES rather than lowers what clause 8 must do for roofing. It is a genuine feature of
+      the context, not a defect to be hidden.
+    opportunities: []
+    owner: Contracts Manager

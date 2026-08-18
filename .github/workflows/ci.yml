@@ -1,0 +1,25 @@
+name: validate
+
+# The CI gate for controlled documents. It runs before any document lands, not after.
+# A validator added later validates nothing.
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: pip install pyyaml
+      - name: Validate front matter, clause map, dates, house style and the personal-data guard
+        run: python3 build/validate.py
+
+  # main is protected. Every change arrives by pull request with a named human reviewer.
+  # Steve approves, Gary authors and reviews. Never Claude.
+  # An unreviewed AI commit to a controlled document is a finding waiting to happen.

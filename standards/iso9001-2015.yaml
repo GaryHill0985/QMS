@@ -1,0 +1,197 @@
+standard: iso9001
+edition: "2015"
+title: "ISO 9001:2015 Quality management systems — Requirements"
+amendment: "Amd 1:2024 (climate action changes to 4.1 and 4.2)"
+verified: true
+verified_note: >
+  Clause structure read from ISO_9001_2015(en).pdf held at Desktop\SESC\ISO\.
+  NOTE: that copy is licensed to Unitspark Ltd, single user. SESC must buy its own
+  (decision D6). The clause NUMBERING below is a matter of public record and is not
+  in doubt; the clause TEXT must not be reproduced from the third-party copy.
+successor:
+  edition: "2026"
+  publishes: 2026-09-16
+  note: >
+    Accredited certification to 9001:2026 is unlikely before mid/late 2027 and the
+    transition period is NOT published — no Global ACI mandatory document and no UKAS
+    technical bulletin exists. Certify to :2015, write 2026-ready. See CLAUDE.md §6.
+
+clauses:
+  - id: "4.1"
+    title: Understanding the organisation and its context
+    documented_information: false
+    note: >
+      Amd 1:2024 adds: "The organization shall determine whether climate change is a
+      relevant issue." For a building services contractor a "not relevant" conclusion
+      is not defensible.
+  - id: "4.2"
+    title: Understanding the needs and expectations of interested parties
+    documented_information: false
+    note: 'Amd 1:2024 adds: "Relevant interested parties can have requirements related to climate change."'
+  - id: "4.3"
+    title: Determining the scope of the quality management system
+    documented_information: maintain
+  - id: "4.4.1"
+    title: Quality management system and its processes — establish, implement, maintain, improve
+    documented_information: false
+  - id: "4.4.2"
+    title: Documented information to support the operation of processes
+    documented_information: both
+
+  - id: "5.1.1"
+    title: Leadership and commitment — general
+  - id: "5.1.2"
+    title: Customer focus
+  - id: "5.2.1"
+    title: Establishing the quality policy
+    documented_information: maintain
+  - id: "5.2.2"
+    title: Communicating the quality policy
+    documented_information: maintain
+  - id: "5.3"
+    title: Organisational roles, responsibilities and authorities
+
+  - id: "6.1.1"
+    title: Actions to address risks and opportunities — determination
+  - id: "6.1.2"
+    title: Planning actions to address risks and opportunities
+    note: >
+      Keep risks and opportunities in SEPARATE columns or registers, never merged.
+      9001:2026 separates them.
+  - id: "6.2.1"
+    title: Quality objectives
+    documented_information: maintain
+  - id: "6.2.2"
+    title: Planning to achieve quality objectives
+  - id: "6.3"
+    title: Planning of changes
+
+  - id: "7.1.1"
+    title: Resources — general
+  - id: "7.1.2"
+    title: People
+  - id: "7.1.3"
+    title: Infrastructure
+  - id: "7.1.4"
+    title: Environment for the operation of processes
+  - id: "7.1.5.1"
+    title: Monitoring and measuring resources — general
+    documented_information: retain
+  - id: "7.1.5.2"
+    title: Measurement traceability
+    documented_information: retain
+    note: SESC calibration — most recent certificate on file is dated 26 April 2024 against a 12-month interval.
+  - id: "7.1.6"
+    title: Organisational knowledge
+  - id: "7.2"
+    title: Competence
+    documented_information: retain
+  - id: "7.3"
+    title: Awareness
+  - id: "7.4"
+    title: Communication
+  - id: "7.5.1"
+    title: Documented information — general
+  - id: "7.5.2"
+    title: Creating and updating documented information
+  - id: "7.5.3"
+    title: Control of documented information
+    documented_information: both
+
+  - id: "8.1"
+    title: Operational planning and control
+    documented_information: both
+  - id: "8.2.1"
+    title: Customer communication
+  - id: "8.2.2"
+    title: Determining the requirements for products and services
+  - id: "8.2.3"
+    title: Review of the requirements for products and services
+    documented_information: retain
+  - id: "8.2.4"
+    title: Changes to requirements for products and services
+    documented_information: maintain
+  - id: "8.3.1"
+    title: Design and development — general
+    applicable_to_sesc: true
+    note: >
+      IN SCOPE. POL-16 Q4 §19 states without qualification that the Employer designs or
+      specifies roof falls and drainage, heating and electrical systems and renewable
+      installations. POL-16 Annex B provides a 7-year retention for design records.
+      8.3 cannot be excluded. See SESC-IMS-04 Part 5.
+  - id: "8.3.2"
+    title: Design and development planning
+  - id: "8.3.3"
+    title: Design and development inputs
+    documented_information: retain
+  - id: "8.3.4"
+    title: Design and development controls
+    documented_information: retain
+  - id: "8.3.5"
+    title: Design and development outputs
+    documented_information: retain
+  - id: "8.3.6"
+    title: Design and development changes
+    documented_information: retain
+  - id: "8.4.1"
+    title: Control of externally provided processes, products and services — general
+    documented_information: retain
+  - id: "8.4.2"
+    title: Type and extent of control
+  - id: "8.4.3"
+    title: Information for external providers
+  - id: "8.5.1"
+    title: Control of production and service provision
+  - id: "8.5.2"
+    title: Identification and traceability
+    documented_information: retain
+  - id: "8.5.3"
+    title: Property belonging to customers or external providers
+    documented_information: retain
+  - id: "8.5.4"
+    title: Preservation
+  - id: "8.5.5"
+    title: Post-delivery activities
+  - id: "8.5.6"
+    title: Control of changes
+    documented_information: retain
+  - id: "8.6"
+    title: Release of products and services
+    documented_information: retain
+  - id: "8.7"
+    title: Control of nonconforming outputs
+    documented_information: retain
+
+  - id: "9.1.1"
+    title: Monitoring, measurement, analysis and evaluation — general
+    documented_information: retain
+  - id: "9.1.2"
+    title: Customer satisfaction
+    note: A distinct requirement. Nothing exists at SESC.
+  - id: "9.1.3"
+    title: Analysis and evaluation
+  - id: "9.2.1"
+    title: Internal audit — the requirement
+  - id: "9.2.2"
+    title: Internal audit programme
+    documented_information: both
+    note: No internal audit has ever been carried out at SESC, under any system, for any period.
+  - id: "9.3.1"
+    title: Management review — general
+  - id: "9.3.2"
+    title: Management review inputs
+    note: All of (a) to (f) are required inputs.
+  - id: "9.3.3"
+    title: Management review outputs
+    documented_information: retain
+    note: No management review has been minuted since 10 January 2023.
+
+  - id: "10.1"
+    title: Improvement — general
+  - id: "10.2.1"
+    title: Nonconformity and corrective action
+  - id: "10.2.2"
+    title: Documented information on nonconformities and corrective action
+    documented_information: retain
+  - id: "10.3"
+    title: Continual improvement

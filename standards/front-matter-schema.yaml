@@ -1,0 +1,53 @@
+# Front-matter schema for every controlled source file in this repository.
+# Enforced by build/validate.py, which runs in CI on every push.
+# Everything downstream — the page-1 control table, headers, footers, the site index,
+# the review-due dashboard, the audit pack — is GENERATED from this block.
+# Nobody types a version number into a table again.
+
+required:
+  id:            {type: string, pattern: '^SESC-(POL|PRO|WI|REG|FRM|REC|TPL|CAP|CRP|IMS)-[0-9]{2}$'}
+  title:         {type: string}
+  version:       {type: string, pattern: '^[0-9]+\.[0-9]+$'}
+  status:        {type: enum, values: [draft, in-review, approved, superseded]}
+  owner:         {type: string, note: "A ROLE, not a person. Roles survive leavers."}
+  approver:      {type: string, note: "Managing Director for anything issued. Never Claude."}
+  issued:        {type: date}
+  next_review:   {type: date}
+  classification: {type: enum, values: [public, internal, confidential]}
+  clauses:       {type: map, note: "standard -> list of clause ids. See below."}
+
+optional:
+  supersedes:      {type: string}
+  records_generated: {type: list, note: "record types this document causes to exist"}
+  registers_cited: {type: list}
+  personal_data:   {type: boolean, default: false}
+  official_sensitive: {type: boolean, default: false, note: "adds OFFICIAL-SENSITIVE bands head and foot, repeated on EVERY page"}
+  review_trigger:  {type: list, note: "events that force a review before next_review"}
+
+rules:
+  - "clauses keys must be one of: iso9001, iso14001, iso45001"
+  - "every clause id must exist in the matching standards/*.yaml file"
+  - "NEVER cite a clause the document does not genuinely address. A padded clause map
+     produces a green gap report over an empty system, which is worse than a red one."
+  - "personal_data: true or classification: confidential FAILS the build if the file is
+     in a tracked path. Personal data goes in the encrypted database only — see CLAUDE.md §8."
+  - "next_review must be after issued, and no more than 12 months after it"
+  - "status: approved requires a non-empty approver and an issued date not in the future"
+
+example: |
+  ---
+  id: SESC-IMS-04
+  title: Context of the Organisation
+  version: "0.1"
+  status: draft
+  owner: Chief Operating Officer
+  approver: Managing Director
+  issued: 2026-08-18
+  next_review: 2027-08-18
+  classification: internal
+  clauses:
+    iso9001:  ["4.1", "4.2", "4.3", "4.4.1", "4.4.2"]
+    iso14001: ["4.1", "4.2", "4.3", "4.4"]
+    iso45001: ["4.1", "4.2", "4.3", "4.4"]
+  registers_cited: [SESC-REG-01, SESC-REG-05, SESC-REG-06]
+  ---
