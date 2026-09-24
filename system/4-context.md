@@ -1,7 +1,7 @@
 ---
 id: SESC-IMS-04
 title: Context of the Organisation
-version: "0.2"
+version: "0.3"
 status: draft
 owner: Chief Operating Officer
 approver: Managing Director
@@ -27,7 +27,7 @@ supersedes: null
 
 **Clause 4 of ISO 9001:2015, ISO 14001:2026 and ISO 45001:2018 — written once, for all three.**
 
-> **Status: DRAFT, version 0.2, 18 August 2026. Not approved and not issued.**
+> **Status: DRAFT, version 0.3, 24 September 2026. Not approved and not issued.**
 > This document is the first artefact of the Integrated Management System. It is issued for
 > review by the Chief Operating Officer and approval by the Managing Director. Until the
 > Approval block at Part 9 is completed it evidences nothing.
@@ -46,7 +46,17 @@ supersedes: null
 > *Restored on 18 August 2026 after the portal build session overwrote v0.2 with v0.1. The
 > restoration was reconstructed from `SESC-IMS-04-Context-of-the-Organisation-v0.2-REVIEW.html`
 > and the change is exactly the one recorded above — read it before relying on it. See finding
-> F17.*
+> F16.* *(Corrected in v0.3: v0.2 cited F17, which is the index-lock finding. The overwrite is F16.)*
+>
+> **v0.3, 24 September 2026.** Mould and damp remediation is named in the scope statement at ¶14,
+> as remediation only (D11). Fire doors are removed from the scope wording (D11). The design
+> carve-out at ¶58 now reads as agreed under D8 and extended under D17 to ventilation specification
+> for mould and damp remediation. ¶58 cites the professional indemnity record page by page, and
+> **records that the record does not show cover for ventilation specification.** That point is
+> the Managing Director's to resolve before he signs. Other statements that no longer matched the
+> Master Register have been corrected; see Annex B. **The Managing Director agreed D8 and D11 by
+> telephone on 24 September 2026, as reported by the Chief Operating Officer. His signature on
+> this version is what makes D8, D11 and D17 formal.**
 
 ---
 
@@ -55,7 +65,10 @@ supersedes: null
 1. This document determines the context of the Employer, the interested parties relevant to
    the management system, the scope of that system, and the processes within it. It satisfies
    clause 4 of all three standards to which the Employer is building — ISO 9001:2015, ISO
-   14001:2026 and ISO 45001:2018.
+   14001:2026 and ISO 45001:2018. ISO 9001:2026 was published in September 2026. Until the
+   certification body advises whether the Employer can certify to it (decision D16), the
+   Employer builds to ISO 9001:2015 with Amendment 1:2024 and writes to be ready for the 2026
+   edition. That is why risks and opportunities are held apart at paragraph 24.
 
 2. It is written once. Three separate context documents would produce three separate scopes,
    three sets of interested parties and three answers to the same question, which is four
@@ -84,8 +97,10 @@ supersedes: null
    it does not cover any other company in which the director holds an interest.
 
 7. **What the Employer does.** The Employer carries out roofing, building fabric, mechanical,
-   electrical and renewable energy works, largely in existing and occupied buildings and on
-   customer and Government establishments.
+   electrical and renewable energy works, and mould and damp remediation, largely in existing
+   and occupied buildings and on customer and Government establishments. The signed policies
+   do not yet name mould and damp remediation. It is added to each at its next revision
+   (decision D11).
 
 8. **Where.** From a single leased unit at West Melbury comprising office and stores, and on
    customer sites. Much of the work is in Dorset, Wiltshire and Hampshire, on and near chalk
@@ -135,10 +150,11 @@ supersedes: null
 14. **The scope statement, in the form in which it will appear on any certificate:**
 
     > **The provision of roofing, building fabric, mechanical, electrical and renewable energy
-    > installation, refurbishment, maintenance and repair services to commercial, public sector,
-    > social housing, defence and domestic customers, including the design of building services
-    > and renewable energy systems within the scope of the certification schemes held; carried
-    > out from Unit 19 Melbury Business Park, West Melbury, Shaftesbury, Dorset SP7 0AF and at
+    > installation, refurbishment, maintenance and repair services, and mould and damp
+    > remediation services, to commercial, public sector, social housing, defence and domestic
+    > customers, including heat loss calculation, emitter and heat pump sizing, MCS solar PV
+    > design, and the specification of ventilation for mould and damp remediation; carried out
+    > from Unit 19 Melbury Business Park, West Melbury, Shaftesbury, Dorset SP7 0AF and at
     > customer premises and Government establishments.**
 
 15. **Roofing is inside the scope, and is named first.** It is named first in the business
@@ -159,14 +175,23 @@ supersedes: null
         it means the management system, rather than a scheme assessment, is the only assurance
         over roofing work, which raises rather than lowers what clause 8 must do.
 
-16. **⚠ Two trades are named in the project's own business description but appear in none of
-    the signed policies, and therefore appear in neither the scope statement above nor the list
-    at paragraph 19: MOULD AND DAMP REMEDIATION, and FIRE DOORS.** The signed documents describe
-    the business as *"roofing, building fabric, mechanical, electrical and renewable energy
-    works"*, which arguably absorbs both under *building fabric* — but a scope statement that
-    absorbs a trade does not name it, and **a Building Safety Act-adjacent trade omitted from a
-    scope statement is a finding**. If either is carried out, it is named expressly at
-    paragraph 14. This is decision D11 and it is not resolved by this document.
+16. **Mould and damp remediation is inside the scope, as remediation only (decision D11).** It
+    is named at paragraph 14. The Employer does not survey for or diagnose mould and damp, and
+    the scope statement does not claim that it does. Survey and diagnosis are added to the scope
+    only once the survey qualification the Employer intends to obtain is actually held. The
+    signed policies describe the business as *"roofing, building fabric, mechanical, electrical
+    and renewable energy works"* and do not name the trade. It is added to each at its next
+    revision. Two consequences follow and are recorded rather than avoided:
+
+    (a) **The liability business description does not name it.** The broker's letter of
+        6 August 2026 gives the employers' and public liability business description as alarm
+        installation, electrical contractor, plumbing and heating engineer, solar panel
+        installation, and roofing work undertaken by bona fide subcontractors only. Mould and
+        damp remediation is not among them. Whether the liability policy responds to that work
+        has not been confirmed in writing. **This is an open item at Part 8(r), and it is the
+        Managing Director's to resolve.**
+
+    (b) **The professional indemnity declaration does not name it either.** See paragraph 58(d).
 
 17. **Sites and boundaries.** One site, Unit 19, comprising office and stores, plus customer
     premises and Government establishments including Boscombe Down. Work carried out by the
@@ -174,7 +199,7 @@ supersedes: null
     and work carried out on that site by others, is outside it.
 
 18. **Functions and activities inside the scope.** Enquiry and contract review; procurement and
-    subcontractor control; design and specification within the scope of the schemes held;
+    subcontractor control; design and specification to the extent determined at paragraph 58;
     planning, RAMS and CDM duty-holder functions; installation, refurbishment, maintenance and
     repair in all trades named at paragraph 7; inspection, testing, commissioning and handover;
     guarantee and post-completion service; and the supporting functions of competence, plant and
@@ -210,6 +235,8 @@ supersedes: null
     paragraph 14 is a trade for which there is work on the books, an operative or a
     subcontractor who carries it out, and a record of it having been done. Where that ceases to
     be true of a trade, the scope statement is revised — it is not left to describe an ambition.
+    **For mould and damp remediation, the job records that show this are not yet cited in this
+    document. That is an open item at Part 8(s).**
 
 ---
 
@@ -285,7 +312,10 @@ supersedes: null
 31. **Insurance market.** The professional indemnity limit held is £250,000 in the aggregate,
     costs-inclusive, with a retroactive date of 28 April 2025 — low against the design
     responsibility described at Part 7 and below what some customers require
-    (SESC-REG-01 B2).
+    (SESC-REG-01 B2). The limit and the aggregate costs-inclusive basis are read from the Markel
+    policy schedule AHG015566 for 28 April 2026 to 27 April 2027, pages 2 and 3. The retroactive
+    date does not appear on the schedule. It is read from the Markel Statement of Fact of
+    20 April 2026, page 2.
 
 32. **Economic and financial.** Payment terms extended by main contractors, retentions held for
     long periods, and customer financial checks and credit scoring against a company whose last
@@ -296,7 +326,8 @@ supersedes: null
 33. **The Employer has determined that climate change is a relevant issue to its management
     system, and that the relevant interested parties have climate-related requirements.** This
     determination is made expressly, as required by Amendment 1:2024 to ISO 9001:2015 and
-    ISO 45001:2018 and as carried into ISO 14001:2026. **For a building services contractor
+    ISO 45001:2018, and as expected to carry into ISO 14001:2026, whose text has not yet been
+    read (Part 8(q)). **For a building services contractor
     working at height, in southern England, on and near chalk catchments, and in a defence
     supply chain committed to net zero, a "not relevant" conclusion would not be defensible.**
     The determination is substantive, not a sentence added to satisfy the clause:
@@ -375,9 +406,11 @@ supersedes: null
     toolbox talk attendance record on any subject for any date, a populated calibration register,
     one completed subcontractor assessment, an accident book, a COSHH register that is the
     Employer's own, an environmental aspects register that is the Employer's own, or a
-    corrective action log of the Employer's own. **The first quarter in which the Assurance
-    Calendar is fully operated is the quarter ending 30 September 2026, and that is the date to
-    quote when asked when the management system started working.**
+    corrective action log of the Employer's own. The first quarter in which the Assurance
+    Calendar was planned to be fully operated is the quarter ending 30 September 2026. Whether
+    it was is shown only by the records of that quarter. **The operating history of the
+    management system starts on the date of the first live record in the record capture forms.
+    That has not happened yet (Part 8(t)), and no earlier date is to be quoted.**
 
 40. **Competence and training records.** Two training matrices existed, the roofing team appeared
     on neither properly, twenty-two qualifications across the site workforce are expired against
@@ -463,17 +496,23 @@ supersedes: null
 
     | Layer | What it holds | Where it lives | How often it changes |
     |---|---|---|---|
-    | Documents | Policies, procedures, work instructions, form templates | Markdown with YAML front matter, in the `sesc-ims` repository | Monthly. Approved before issue. |
+    | Documents | Policies, procedures, work instructions, form templates | Markdown with YAML front matter, in the `GaryHill0985/QMS` repository | Monthly. Approved before issue. |
     | Registers | Risks, opportunities, issues, interested parties, aspects and impacts, compliance obligations, assets and calibration, approved suppliers, competence requirements, objectives | YAML in the same repository, so every change diffs and is attributable | Data with a review cycle. **Never a Word table.** |
-    | Records | Inspections, toolbox talks, training, calibration, incidents, audits, supplier assessments, management reviews, handovers | An encrypted database, with attachments in object storage. Append-only. | Daily, created by people on site. |
+    | Records | Inspections, toolbox talks, training, calibration, incidents, audits, supplier assessments, management reviews, handovers | **Target:** the SESC Platform, an encrypted database with attachments in object storage, append-only. **Until then:** Google Workspace forms and a restricted Shared Drive, as a stopgap (paragraph 51). | Daily, created by people on site. |
 
 51. **Personal data does not go in the repository.** Health surveillance, face-fit results,
     occupational health, accident detail naming individuals, individual training records,
     DBS and BPSS outcomes, right-to-work scans, disciplinary, grievance and Speak Up reports and
-    diversity monitoring data are held in the encrypted database only. Git history is immutable
-    and replicated, which is precisely wrong for a UK GDPR erasure request and for special
-    category data. The build fails if a file flagged as personal data is committed. **This is
-    enforced by the build, not by memory.**
+    diversity monitoring data are never held in the repository. Git history is immutable and
+    replicated, which is precisely wrong for a UK GDPR erasure request and for special category
+    data. The build fails if a file flagged as personal data is committed. **This is enforced by
+    the build, not by memory.** Until the SESC Platform is built, records are to be captured in
+    Google Workspace forms, with responses held in a restricted Shared Drive under SESC-POL-14
+    (decision D15). **That arrangement is a stopgap only, and it is not yet operating.** The forms
+    cannot take photographs, the response sheets are not tamper-proof, and an open form cannot
+    prove who submitted it. For those reasons the Chief Operating Officer decided on
+    24 September 2026 that the record capture section of the SESC Platform is to be built as soon
+    as possible.
 
 52. **Every document, register and form declares the clauses it satisfies in its own front
     matter.** From that single relation the system derives the audit pack for each standard, a
@@ -514,7 +553,9 @@ supersedes: null
 
     (d) The Employer's professional indemnity insurer holds a declaration of own-design build at
         eighty per cent of turnover, and professional indemnity cover exists precisely for design
-        liability.
+        liability. The declaration is at page 2 of the Markel Statement of Fact of 20 April 2026:
+        *"Turnover where the firm carries out construction/installation based on designs drawn up
+        by the firm — 80.00%"*.
 
 57. **There is a contradiction to resolve, and it is recorded rather than resolved by this
     document.** The Employer's standard quotation currently states that the client is entirely
@@ -523,21 +564,65 @@ supersedes: null
     portion. **Those two positions cannot both be applied.** An assessor comparing SESC-CAP-008
     with the quotation finds the conflict on one page.
 
-58. **The fix is a carve-out, not a choice between them.** The wording proposed on 17 August 2026
-    and awaiting the Managing Director's approval is:
+58. **The fix is a carve-out, not a choice between them.** The wording first proposed on
+    17 August 2026 was agreed under decision D8 and extended under decision D17 to the design
+    the Employer actually does in mould and damp remediation. It awaits the Managing Director's
+    approval and reads:
 
     > *"Design responsibility, professional indemnity design services and temporary works design
-    > are excluded, other than design carried out within the scope of the certification schemes we
-    > hold — heat loss calculation, emitter and heat pump sizing, and MCS solar PV design — for
-    > which we accept responsibility and hold professional indemnity cover. All other design,
-    > including architectural and product design, is the responsibility of the client or the
-    > client's architect or agent."*
+    > are excluded, other than: heat loss calculation, emitter and heat pump sizing, and MCS solar
+    > PV design, within the scope of the certification schemes we hold; and the specification of
+    > ventilation as part of mould and damp remediation. For that design we accept
+    > responsibility and hold professional indemnity cover. All other design, including
+    > architectural and product design, is the responsibility of the client or the client's
+    > architect or agent."*
 
-59. **Nothing is applied to any customer-facing document until that carve-out is approved or
-    replaced.** Until it is, the scope statement at paragraph 14 carries the design element in
-    the form the Employer's own capability statements and insurer already describe, because that
-    is the position supported by evidence. **This is an open item at Part 8 and it is the single
-    decision on which the ISO 9001 scope turns.**
+    (a) **ISO 9001 clause 8.3 stays in scope, and no non-applicability is claimed.** The
+        carve-out limits the design the Employer offers. It does not remove the requirement for
+        the design it does.
+
+    (b) **The record behind "hold professional indemnity cover", read page by page on
+        24 September 2026.** The Markel policy schedule AHG015566, *Design & constructs
+        professional risks combined policy*, has three pages. Page 1 gives the period of
+        insurance as 28 April 2026 to 27 April 2027, and states *"Cover provided: As shown in
+        section of cover 1"*. Page 2 gives section of cover 1, professional liability, with a
+        limit of £250,000, an excess of £1,000 and UK jurisdiction. Sections 2, 3 and 4 are
+        *"Not Insured"*. Page 3 is the aggregate costs-inclusive endorsement. It covers civil
+        liability for an act, error or omission *"committed during the carrying out of your
+        professional services"*. **The schedule does not define "professional services" and names
+        no design activity.** That definition sits in the policy wording, which is not held
+        (Part 8(u)). What the insurer was told is in the Statement of Fact of 20 April 2026. At
+        page 2 it declares 80 per cent own-design turnover and electrical engineering at
+        80 per cent. At page 3 it declares heating and ventilation engineering at 20 per cent,
+        and *"Sola Panel Installation, air source heat pumps included in heating engineering"*.
+
+    (c) **Heat pump and solar PV design.** Both are declared to the insurer, at Statement of Fact
+        page 3, alongside the 80 per cent own-design declaration. The record supports the
+        carve-out for them as far as the schedule and the declaration go. Confirmation that they
+        fall within "professional services" rests on the policy wording, which is not held.
+
+    (d) **⚠ Ventilation specification for mould and damp remediation: cover is NOT shown.**
+        Neither the schedule nor the Statement of Fact names mould and damp remediation.
+        Heating and ventilation engineering is declared, but neither document says that it
+        extends to ventilation specified as part of remediation work. **The words "and hold
+        professional indemnity cover" must not be applied to ventilation specification in any
+        customer-facing document until the insurer or broker confirms in writing that the policy
+        responds to it.** This is an open item at Part 8(u), and decision D17 stays open on this
+        point. It is the Managing Director's decision. He can obtain that written confirmation,
+        amending the declaration if the insurer requires it. Or he can take D17 option (b), and
+        have ventilation specified by others. If he takes option (b), the ventilation words are
+        removed from this paragraph and from paragraph 14 before he signs.
+
+59. **Nothing is applied to any customer-facing document until the carve-out is approved by
+    the Managing Director's signature on this document, and until paragraph 58(d) is resolved
+    for the ventilation element.** The Managing Director agreed D8 and D11 by telephone on
+    24 September 2026, as reported by the Chief Operating Officer. No written record of that
+    agreement exists, and his signature on this version is what makes it formal. The scope
+    statement at paragraph 14 now carries the design element in the carve-out form. Once the
+    carve-out is approved it is applied to the standard quotation and to SESC-CAP-008. Until
+    then, the quotation still excludes all design while the Employer designs heat pump and solar
+    PV systems. **This is an open item at Part 8, and it is the single decision on which the
+    ISO 9001 scope turns.**
 
 60. **Sub-contracted design remains inside clause 8.3.** Where design is placed with an external
     designer it is controlled under clause 8.4 as well, and the acceptance criteria at
@@ -576,10 +661,19 @@ supersedes: null
         exercise, and the annual security briefing;
 
     (e) SESC-CRP-01 Carbon Reduction Plan v1.0, with measured Scope 1 fleet and plant data for
-        the 2023 baseline and 2025 reporting years; and
+        the 2023 baseline and 2025 reporting years;
 
     (f) the accreditation and registration certificates scheduled at SESC-POL-16 Annex C and
-        SESC-POL-05 Annex C, each verified individually on 16 August 2026.
+        SESC-POL-05 Annex C, each verified individually on 16 August 2026;
+
+    (g) the Markel professional indemnity policy schedule AHG015566 for 28 April 2026 to
+        27 April 2027, three pages, with the aggregate costs-inclusive endorsement, and the Markel
+        Statement of Fact of 20 April 2026, four pages. Every page of both was read on
+        24 September 2026. They are cited at paragraphs 31, 56(d) and 58; and
+
+    (h) the broker's letter of 6 August 2026 confirming the employers' liability, public and
+        products liability and contract works cover for 26 July 2026 to 25 July 2027, two pages,
+        read on 24 September 2026, and cited at paragraph 16(a).
 
 64. **Records and determinations this document describes which do not yet exist.** Each carries
     the date by which it is created. **No earlier record of any of them exists and none is
@@ -588,22 +682,27 @@ supersedes: null
     | # | What does not exist | Position and date |
     |---|---|---|
     | (a) | **The directly-employed headcount, established from the payroll with the date it changed** | Not established. Declared five different ways historically. **Required before any figure is written into any document or questionnaire.** Owner: Chief Operating Officer. Due 30 September 2026. |
-    | (b) | **The Managing Director's decision on the design carve-out at paragraph 58** | Not made. The ISO 9001 scope turns on it. Owner: Managing Director. Due 30 September 2026. |
+    | (b) | **The Managing Director's written decision on the design carve-out at paragraph 58 (D8, D17) and on the scope at paragraphs 14 and 16 (D11)** | Agreed by telephone on 24 September 2026, as reported by the Chief Operating Officer. No written record exists. His signature on this version is the record. The ventilation element cannot be signed until (u) is resolved. Owner: Managing Director. Due 30 September 2026. |
     | (c) | **Environmental aspects and impacts register that is the Employer's own** | Does not exist. The register held belongs to a landscaping firm and must not be used. **This is the defining ISO 14001 document and the highest-priority gap in the whole system.** Owner: Environmental Manager. Due 30 November 2026. |
     | (d) | **Compliance obligations register, current, and an evaluation of compliance against it** | The register held is dated 2020 with dead drive links. Owner: Environmental Manager. Due 30 November 2026. |
     | (e) | **The ISO 45001 clause 5.4 worker consultation and participation mechanism, and records of it operating with non-managerial workers** | Does not exist as a mechanism with records. Owner: Health and Safety Officer. Due 31 October 2026. |
     | (f) | **Internal audit report, for any period, under any system** | None has ever existed. First completed by 31 October 2026 — and it requires a competent auditor who is not auditing their own work. Owner: Chief Operating Officer. |
     | (g) | **Minuted management review** | None since 10 January 2023. Next held by 30 September 2026. Owner: Managing Director. |
-    | (h) | **Nonconformity and corrective action log of the Employer's own** | Opens 31 August 2026. No earlier log of the Employer's own has ever been kept. Owner: Quality Representative. |
+    | (h) | **Nonconformity and corrective action log of the Employer's own** | It was due to open on 31 August 2026. That it has opened is not recorded. SESC-FRM-05 is a draft, and the record capture forms are not yet built. No earlier log of the Employer's own has ever been kept. **Revised date: the record capture go-live, target 9 October 2026.** Owner: Quality Representative. |
     | (i) | **Measurable objectives with dates, for quality, environment and health and safety** | Quality objectives are set for the year commencing 1 September 2026; no earlier dated set exists. Environmental and OH&S objectives not yet set. Owner: Managing Director. Due 30 September 2026. |
     | (j) | **Scope 2 emissions data for Unit 19** | No metered electricity, gas or water data has ever been held separately from the landlord. Twelve months to be obtained. Owner: Contracts Manager. Due 31 March 2027. |
     | (k) | **ICO registration and the data protection fee** | Recorded as absent — **but the public register has not been queried, so this is an unverified absence, not a verified one.** Query the register, then register and pay. Owner: Chief Operating Officer. Due 30 September 2026. |
     | (l) | **Verification of the waste carrier, broker and dealer registration tier** | SESC-POL-08 §34(a) states the registration is held; the number CBDL569181 appears only at SESC-POL-19 Annex A and the tier has not been confirmed. **Construction and demolition waste is excluded from the own-waste exemption, so upper tier is required even carrying only the Employer's own waste.** Owner: Environmental Manager. Due 30 September 2026. |
-    | (m) | **Employers' liability and public liability certificates, reconciled** | SESC-POL-05 Annex C records both as NOT VERIFIED, and the schedule and the broker letter of 6 August 2026 give different policy numbers. A statutory employers' liability certificate has since been located but the reconciliation has not been recorded. Owner: Accounts Manager. Due 31 August 2026. |
-    | (n) | **The mid-term amendment extending the liability business description to roofing carried out by directly employed operatives** | Not obtained. Paragraph 15(a). **Do not rely on a verbal assurance from the broker.** Owner: Managing Director. Due 31 August 2026. |
+    | (m) | **Employers' liability and public liability certificates, reconciled** | SESC-POL-05 Annex C records both as NOT VERIFIED, and the schedule and the broker letter of 6 August 2026 give different policy numbers. A statutory employers' liability certificate has since been located but the reconciliation has not been recorded. **Overdue against 31 August 2026. Revised date 31 October 2026, proposed in this draft for the owner to confirm.** Owner: Accounts Manager. |
+    | (n) | **The mid-term amendment extending the liability business description to roofing carried out by directly employed operatives** | Not obtained. Paragraph 15(a). **Do not rely on a verbal assurance from the broker.** The broker's letter of 6 August 2026 still restricts roofing to bona fide subcontractors only. **Overdue against 31 August 2026. Revised date 31 October 2026, proposed in this draft for the owner to confirm.** Owner: Managing Director. |
     | (o) | **Two trained internal auditors** | None trained. CQI/IRCA two-day internal auditor course, approximately £1,130 to £1,255 including VAT each. Owner: Managing Director. Book for November 2026. |
     | (p) | **Customer satisfaction monitoring** | Nothing exists. ISO 9001 clause 9.1.2 requires it as a distinct input. Owner: Quality Representative. Due 31 December 2026. |
-    | (q) | **ISO 14001:2026** | **The Employer does not hold the edition it intends to certify to, and no one on this project has read it.** Every ISO 14001 clause reference in this management system is carried across from the withdrawn 2015 edition and is marked unverified. Owner: Chief Operating Officer. **Buy before any environmental management system document is written.** |
+    | (q) | **ISO 14001:2026** | **The Employer does not hold the edition it intends to certify to, and no one on this project has read it.** Every ISO 14001 clause reference in this management system is carried across from the withdrawn 2015 edition and is marked unverified. Owner: Chief Operating Officer. **Buy before any environmental management system document is written.** The decision to buy the Employer's own copy, starting with ISO 14001:2026, was reported on 24 September 2026 (D6). It has not yet been bought. Due 31 October 2026. |
+    | (r) | **Written confirmation that the liability policies respond to mould and damp remediation** | Not held. The business description at paragraph 16(a) does not name the trade. **Required before mould and damp remediation is offered under this scope.** Owner: Managing Director. Due 31 October 2026. |
+    | (s) | **Job records showing mould and damp remediation carried out by the Employer** | Not yet cited in this document (paragraph 21). Owner: Chief Operating Officer. Due 31 October 2026. |
+    | (t) | **The first live record in the record capture forms: the start of the operating history** | Not yet created. The forms are built in the repository and not yet run in Google Workspace. Owner: Chief Operating Officer. Target 9 October 2026. |
+    | (u) | **Written confirmation from the insurer or broker that professional indemnity policy AHG015566 covers ventilation specification in mould and damp remediation, and the policy wording that defines "professional services"** | Not held. The schedule and the Statement of Fact do not show it (paragraph 58(d)). **Required before the ventilation element of paragraph 58 is approved.** Owner: Managing Director. Due before this version is signed, and no later than 30 September 2026. |
+    | (v) | **The certification body's answer on certifying to ISO 9001:2026 (D16)** | Not received. To be asked at the first certification body meeting on 6 October 2026 and in the written quotation requests (D2). Owner: Chief Operating Officer. Due 31 October 2026. |
 
 65. **Certification claims.** The Employer holds no ISO 9001, ISO 14001, ISO 45001 or ISO/IEC
     27001 certification, no BS 99001 certification, no Cyber Essentials certification and no NFRC
@@ -648,8 +747,10 @@ supersedes: null
 | Version | Date | Author | Change |
 |---|---|---|---|
 | 0.1 | 18 August 2026 | G A Hill | First draft. Created as the first document of the Integrated Management System. Derived from SESC-REG-01 v1.0, SESC-REG-02 v1.0, SESC-POL-05 v1.1, SESC-POL-08 v1.1, SESC-POL-16 v1.2 and SESC-CRP-01 v1.0. No content taken from any other organisation's document. |
+| 0.2 | 18 August 2026 | G A Hill | Added ¶16, raising decision D11. Paragraphs from 16 onwards renumbered. *(This row was missing from the table in v0.2 and was added in v0.3. The change is as recorded in the v0.2 note under the status banner.)* |
+| 0.3 | 24 September 2026 | G A Hill (drafted by Claude) | **D11:** ¶7 and ¶14 name mould and damp remediation, as remediation only. ¶16 rewritten, and fire doors removed from the scope wording. ¶16(a) records that the liability business description does not name the trade. **D8 and D17:** the carve-out at ¶58 now covers heat loss, emitter and heat pump sizing, MCS solar PV design, and ventilation specification for mould and damp remediation. ¶14 and ¶18 aligned with it. ¶58(b)–(d) cite the PI schedule and Statement of Fact page by page, and record that cover for ventilation specification is **not shown**. ¶59 rewritten. **Corrections of statements that no longer matched the Master Register v1.10:** ¶1 gains the D16 edition position. ¶33 no longer asserts the content of ISO 14001:2026, which has not been read. ¶39 no longer quotes 30 September 2026 as the start of operation (B3). ¶50 and ¶51 record the Google Workspace stopgap (D15) and the SESC Platform decision, instead of stating that an encrypted database exists. ¶50 gives the repository name. The v0.2 note cited F17 for F16. Missing revision row 0.2 added. Footer version corrected. **Part 8:** new records held (g) and (h). (b), (h), (m), (n) and (q) updated, with overdue dates flagged. New items (r) to (v). **The approval block at Part 9 is untouched and unsigned.** |
 
 ---
 
-*SESC Solutions Ltd · SESC-IMS-04 Context of the Organisation v0.1 · 18 August 2026 ·
+*SESC Solutions Ltd · SESC-IMS-04 Context of the Organisation v0.3 · 24 September 2026 ·
 **DRAFT — not approved, not issued** · Uncontrolled when printed*
