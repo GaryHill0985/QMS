@@ -1,6 +1,6 @@
 id: SESC-FRM-04
 title: Supplier and Subcontractor Evaluation
-version: "0.1"
+version: "0.2"
 status: draft
 owner: Contracts Manager
 approver: Managing Director
@@ -31,6 +31,16 @@ purpose: >
   safety criteria must be part of the procurement decision, not checked
   afterwards. SESC-POL-12 Supplier Code of Conduct sets the standards; this form
   is the evidence that they were applied to a named supplier on a date.
+
+revision_history:
+  - version: "0.2"
+    date: 2026-09-24
+    change: >
+      No job field: this record attaches to an organisation. Added correction_of so that a correction is a new entry referencing the
+      original, never an edit (D15). Drafted by Claude for G A Hill; not approved.
+  - version: "0.1"
+    date: 2026-08-18
+    change: First draft, QMS portal session 2b.
 
 fields:
   - key: date
@@ -103,3 +113,11 @@ fields:
     type: date
     required: true
     help: 8.4.1 requires re-evaluation, not just selection. A date or it does not happen.
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-01-0007). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

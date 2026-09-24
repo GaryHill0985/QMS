@@ -1,0 +1,142 @@
+id: SESC-FRM-07
+title: Site Inspection
+version: "0.1"
+status: draft
+owner: Health and Safety Officer
+approver: Managing Director
+issued: 2026-09-24
+next_review: 2027-09-24
+classification: internal
+clauses:
+  iso9001:  ["9.1.1"]
+  iso14001: ["9.1.1"]
+  iso45001: ["9.1.1"]
+personal_data: false
+records_generated: [site_inspection_record]
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    Google Workspace restricted Shared Drive (D15), outside git. An inspection
+    records conditions, not people; if a finding names an individual's conduct
+    the record is treated as personal data.
+  retention: 3 years from the date of the inspection
+  feeds_register: Nonconformity and Corrective Action Log via SESC-FRM-05, where an action is needed
+
+purpose: >
+  Monitoring that is not written down did not happen. Clause 9.1.1 of all three
+  standards asks for retained evidence of monitoring results. One walk-round,
+  one record, covering safety, environment and workmanship together — an
+  integrated system inspects once.
+
+guidance:
+  - Tick "Action needed" and say what in the findings. Never tick Satisfactory to be kind.
+  - If work was stopped, say so. Stopping work is the system working.
+  - Anything that failed a requirement goes on SESC-FRM-05 as well.
+
+fields:
+  - key: date
+    label: Date of inspection
+    type: date
+    required: true
+  - key: site
+    label: Site or location
+    type: text
+    required: true
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    help: Ties the inspection to a job, so it can move to the SESC Platform later without re-keying (D15).
+  - key: inspected_by
+    label: Inspected by
+    type: text
+    required: true
+  - key: inspection_type
+    label: Type of inspection
+    type: select
+    required: true
+    options: [Scheduled, Pre-start, Client or MOD site walk, Follow-up of an earlier finding, Unannounced]
+  - key: rams_on_site
+    label: RAMS on site
+    type: select
+    required: true
+    options: [Current and briefed, Current but not briefed, Not on site, Not required for this work]
+  - key: work_at_height
+    label: Access, work at height and roof edge protection
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: housekeeping
+    label: Housekeeping, access routes and storage
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: ppe
+    label: PPE worn and in condition
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: plant_and_tools
+    label: Plant, tools and portable appliance test labels
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+    help: Portable appliance testing is a condition of the Employer's insurance. See finding F4.
+  - key: electrical
+    label: Electrical isolation and temporary supplies
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: hazardous_substances
+    label: Hazardous substances (COSHH) and asbestos controls
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: fire_and_hot_works
+    label: Fire precautions and hot works permits
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: welfare_first_aid
+    label: Welfare and first aid
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: waste_environment
+    label: Waste segregation, spill control, noise and dust
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: workmanship
+    label: Workmanship against specification and drawings
+    type: select
+    required: true
+    options: [Satisfactory, Action needed, Not applicable]
+  - key: findings
+    label: Findings — what, who, by when
+    type: textarea
+    required: false
+    help: One line per "Action needed" above. Required in practice whenever any item needs action.
+  - key: stop_work
+    label: Was work stopped
+    type: select
+    required: true
+    options: ["No", Yes — stopped until made safe]
+  - key: ncr_raised
+    label: Nonconformity raised on SESC-FRM-05
+    type: select
+    required: true
+    options: [Not needed, Yes — raised, Needed but not yet raised]
+  - key: photos
+    label: Photographs
+    type: file
+    required: false
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-07-0012). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

@@ -1,6 +1,6 @@
 id: SESC-FRM-05
 title: Nonconformity and Corrective Action
-version: "0.1"
+version: "0.2"
 status: draft
 owner: Quality Representative
 approver: Managing Director
@@ -36,6 +36,16 @@ design_note: >
   domain tag. Separate logs are how a small business ends up reviewing none of
   them — the same reasoning as the unified issues register SESC-REG-06.
 
+revision_history:
+  - version: "0.2"
+    date: 2026-09-24
+    change: >
+      Added optional job_ref so an NCR arising on a job attaches to it (D15). Added correction_of so that a correction is a new entry referencing the
+      original, never an edit (D15). Drafted by Claude for G A Hill; not approved.
+  - version: "0.1"
+    date: 2026-08-18
+    change: First draft, QMS portal session 2b.
+
 fields:
   - key: date_raised
     label: Date raised
@@ -45,6 +55,13 @@ fields:
     label: Raised by
     type: text
     required: true
+  - key: job_ref
+    label: Job number
+    type: text
+    required: false
+    help: >
+      The SESC job number if you know it. It ties this record to a job, so it can
+      move to the SESC Platform later without re-keying (D15).
   - key: source
     label: How it came to light
     type: select
@@ -115,3 +132,11 @@ fields:
     type: textarea
     required: false
     help: 10.2.1 g). If nothing changed, say so and say why.
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-01-0007). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).
