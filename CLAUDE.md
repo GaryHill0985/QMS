@@ -25,7 +25,7 @@ regulation 7 competent person appointments.
 
 **May, without asking:**
 
-- Read anything in this repository, in `Desktop\SESC`, on TeraBox and on the Drive.
+- Read anything in this repository, in the TeraBox restore (`~/Documents/TeraBox Restore/SESC/SESC/`), on TeraBox and on the Drive.
 - Draft new documents, registers, procedures and forms **as a pull request**.
 - Build clause maps, gap reports, audit packs and checklists.
 - Correct a demonstrable factual error in a **draft**, recording the correction in the register.
@@ -36,8 +36,10 @@ regulation 7 competent person appointments.
 - Change an **issued** document without an explicit instruction naming the document and version.
 - **Merge to `main`.** Every change is reviewed by a named human. An unreviewed AI commit to a
   controlled document is a finding waiting to happen.
-- Move, rename or delete anything in `Desktop\SESC` or on the Drive. The 13 August 2026 Drive
-  rename incident is the reason. This repository is a **new location**, not a reorganisation.
+- Move, rename or delete anything in the TeraBox restore (`~/Documents/TeraBox Restore/SESC/SESC/`) or on the Drive. The
+  13 August 2026 Drive rename incident is the reason. This repository is a **new location**, not a
+  reorganisation. **Never write IMS work into the TeraBox restore:** it has no `.git`, may be stale,
+  and is read-only reference.
 - State a certification, qualification or device capability from memory. Read it off the issuing
   body's own documentation.
 - Claim ISO certification of any kind, BS 99001, NFRC membership, OFTEC or RECC currency, or
@@ -186,7 +188,7 @@ and subcontractor organisations, categories and criteria; aggregate metrics and 
 3. Work it end to end: draft → render → **verify** → write back.
 4. **Verification discipline: a script exiting cleanly is not verification.** Render to PDF and
    read a body page *and* the branded cover **as images**. Four known traps live in
-   `JOSCAR\Reference\Section workflow method.md` §5 — the Branded TOC field, the signature table
+   `QinetiQ/JOSCAR/Reference/Section workflow method.md` (in the TeraBox restore, §11) §5 — the Branded TOC field, the signature table
    not being table 1, header text hidden in tables and textboxes, and `set_cell()` style in an
    empty cell.
 5. Before finishing, update the register row, add findings, add tasks by owner, and write a
@@ -226,19 +228,25 @@ As at 18 August 2026:
 **None of these files is in this repository, and several of the rules above tell you to use them.
 Without this section a chat cannot find the document it is being told to obey.**
 
+**From 24 September 2026 the working machine is the MacBook; the MSI Windows laptop is retired from
+this project.** The `Desktop\SESC\...` paths used until then are read as the same folders inside the
+**TeraBox restore at `~/Documents/TeraBox Restore/SESC/SESC/`**, which is read-only reference (§2). Paths below are macOS paths.
+Give Gary **macOS Terminal (zsh)** commands, quote every path (`CLAUDE ISO` contains a space), and put
+any interactive command — a passphrase prompt, a first SSH connection — in a block of its own.
+
 | Thing | Location |
 |---|---|
-| **Architecture and build plan — AUTHORITATIVE for the repo design at §4–§9, and NOT to be re-derived** | `Desktop\SESC\ISO\SESC-IMS-Architecture-and-Build-Plan-v1.0.html` |
-| **`BRAND-SPEC.md` and `INTERIOR-SPEC.md`** — authoritative for colour, logo, cover geometry and interior page design, cited at §4 above | `Desktop\SESC\DOCUMENT DESIGN INSTRUCTIONS CLAUDE\` |
-| **The twenty-one signed documents**, to be migrated into `documents/` | `Desktop\SESC\QinetiQ\JOSCAR\Documents\` — **filed by JOSCAR questionnaire section. Do not carry that taxonomy forward.** Note POL-01…04 sit inside `2.7 Environment & Sustainability\2.2 Human Resources\`, a known filing defect to correct at migration time rather than twice. |
-| **The renderer to port** to `build/render_docx.py`, including **`patch_branded_cover()`** | `Desktop\SESC\QinetiQ\JOSCAR\Toolkit\policy_editor.py` |
-| **The four rendering traps**, §5 — the Branded TOC field, the signature table not being table 1, header text hidden in tables and textboxes, `set_cell()` style in an empty cell | `Desktop\SESC\QinetiQ\JOSCAR\Reference\Section workflow method.md` |
-| **The contradiction log** — known cross-document conflicts, do not rediscover them | `JOSCAR Master Register.md` §5 · `Reference\Cross-document consistency findings v1.0 - 17 Aug 2026.md` · `Reference\Gary decisions on C2-C8 - 17 Aug 2026.md` |
+| **Architecture and build plan — AUTHORITATIVE for the repo design at §4–§9, and NOT to be re-derived** | `~/Documents/TeraBox Restore/SESC/SESC/ISO/SESC-IMS-Architecture-and-Build-Plan-v1.0.html` |
+| **`BRAND-SPEC.md` and `INTERIOR-SPEC.md`** — authoritative for colour, logo, cover geometry and interior page design, cited at §4 above | `~/Documents/TeraBox Restore/SESC/SESC/DOCUMENT DESIGN INSTRUCTIONS CLAUDE/` |
+| **The twenty-one signed documents**, to be migrated into `documents/` | `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/Documents/` — **filed by JOSCAR questionnaire section. Do not carry that taxonomy forward.** On 18 August 2026 POL-01…04 were recorded as sitting inside `2.7 Environment & Sustainability\2.2 Human Resources\`, a filing defect; **in the TeraBox restore they sit in `Documents/2.2 Human Resources/`** (checked 24 Sep 2026). Confirm which is current before migrating them. |
+| **The renderer to port** to `build/render_docx.py`, including **`patch_branded_cover()`** | `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/Toolkit/policy_editor.py` |
+| **The four rendering traps**, §5 — the Branded TOC field, the signature table not being table 1, header text hidden in tables and textboxes, `set_cell()` style in an empty cell | `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/Reference/Section workflow method.md` |
+| **The contradiction log** — known cross-document conflicts, do not rediscover them | In `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/`: `JOSCAR Master Register.md` §5 · `Reference/Cross-document consistency findings v1.0 - 17 Aug 2026.md` · `Reference/Gary decisions on C2-C8 - 17 Aug 2026.md` |
 | **The pre-written gap plan** | POL-05 §A31 · POL-13 §21 · POL-16 Q24 · POL-17 §13 · POL-18 §8 |
-| **Standard texts held** | `Desktop\SESC\ISO\` — 9001:2015 (**licensed to Unitspark Ltd, single user — clause numbering may be used, clause TEXT may not be reproduced**), 14001:**2015, superseded**, 45001:2018, **BS 99001:2022**. **No 14001:2026 and no 27001 in any form.** |
-| **CertiKit demo toolkits** | `Desktop\SESC\ISO\` — 9001 v3, 14001 v3 (**built for the 2026 edition**), 45001 v1-3, 27001 v13-1, 22301 v6-3, 20000 v10-1, **Cyber Essentials v7**. Every 27001 reference this project holds comes from the v13-1 guide, not from the standard. |
+| **Standard texts held** | `~/Documents/TeraBox Restore/SESC/SESC/ISO/` — 9001:2015 (**licensed to Unitspark Ltd, single user — clause numbering may be used, clause TEXT may not be reproduced**), 14001:**2015, superseded**, 45001:2018, **BS 99001:2022**. **No 14001:2026 and no 27001 in any form.** |
+| **CertiKit demo toolkits** | `~/Documents/TeraBox Restore/SESC/SESC/ISO/` — 9001 v3, 14001 v3 (**built for the 2026 edition**), 45001 v1-3, 27001 v13-1, 22301 v6-3, 20000 v10-1, **Cyber Essentials v7**. Every 27001 reference this project holds comes from the v13-1 guide, not from the standard. |
 | **Reusable structure from prior builds — TeraBox, cloud only, no local sync folder** | `POW Environmental Services\Procedures and Registers\` · `Pow Property Developments\...\Forms, registers\{Forms,Policy,Procedures,Registers}` · `ITC CERTIFIED\...\0. Context and Governance\`. **Structure only, never content — see §3.** |
-| **This repository** | `github.com/GaryHill0985/QMS`, and the working clone is `Desktop\SESC\ISO\CLAUDE ISO\` |
+| **This repository** | `github.com/GaryHill0985/QMS`, and the working clone is **`~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** (from 24 Sep 2026; previously `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI) |
 
 ---
 
