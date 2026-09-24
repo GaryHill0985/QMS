@@ -1,6 +1,6 @@
 id: SESC-FRM-01
 title: Near Miss and Hazard Report
-version: "0.1"
+version: "0.2"
 status: draft
 owner: Health and Safety Officer
 approver: Managing Director
@@ -31,6 +31,16 @@ guidance:
   - No name is needed in the description. Describe what nearly happened, not who.
   - A report is never used as the basis of disciplinary action.
 
+revision_history:
+  - version: "0.2"
+    date: 2026-09-24
+    change: >
+      Added optional job_ref so every record attaches to a job (D15). Added correction_of so that a correction is a new entry referencing the
+      original, never an edit (D15). Drafted by Claude for G A Hill; not approved.
+  - version: "0.1"
+    date: 2026-08-18
+    change: First draft, QMS portal session 2b.
+
 fields:
   - key: date
     label: Date it happened
@@ -45,6 +55,13 @@ fields:
     type: text
     required: true
     help: Site name and the part of it — "Boscombe Down, Bldg 42 roof" beats "site".
+  - key: job_ref
+    label: Job number
+    type: text
+    required: false
+    help: >
+      The SESC job number if you know it. It ties this record to a job, so it can
+      move to the SESC Platform later without re-keying (D15).
   - key: reported_by
     label: Reported by
     type: text
@@ -95,3 +112,11 @@ fields:
     label: Photograph
     type: file
     required: false
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-01-0007). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

@@ -1,0 +1,120 @@
+id: SESC-FRM-06
+title: Toolbox Talk Record
+version: "0.1"
+status: draft
+owner: Health and Safety Officer
+approver: Managing Director
+issued: 2026-09-24
+next_review: 2027-09-24
+classification: internal
+clauses:
+  iso9001:  ["7.3"]
+  iso14001: ["7.3"]
+  iso45001: ["5.4", "7.3", "7.4.2"]
+personal_data: false
+records_generated: [toolbox_talk_record]
+
+# The TEMPLATE carries no personal data and lives in git. A COMPLETED record
+# lists the people present and does NOT. See CLAUDE.md 8.
+completed_record:
+  contains_personal_data: true
+  store: Google Workspace restricted Shared Drive (D15), outside git
+  retention: 3 years from the date of the talk
+  feeds_register: Training Matrix — attendance is read from this record
+
+purpose: >
+  A toolbox talk is the most frequent contact the Employer has with the people
+  doing the work. Done well, it is awareness (7.3), internal communication
+  (7.4.2) and, because the form captures what the team raised and what was done
+  about it, a worker participation mechanism operating on the record (ISO 45001
+  5.4). Done badly, it is a signature sheet.
+
+design_note: >
+  ONE record per talk, listing everyone present. Do not also raise a
+  SESC-FRM-03 for each attendee — the Training Matrix reads attendance from
+  this record. FRM-03 stays for qualifications, cards, inductions and
+  assessments.
+
+clause_note: >
+  ISO 45001 5.4 is cited because concerns_raised and response record
+  non-managerial workers being consulted and answered. It is one mechanism,
+  not the whole of 5.4. The clause is not covered by this form alone and the
+  gap report must not treat it as covered.
+
+guidance:
+  - Record what the team said, not only what you told them.
+  - A blank is not an answer. Write "None raised" if nothing was.
+  - If someone did not understand, record that and what you did about it.
+
+fields:
+  - key: date
+    label: Date of the talk
+    type: date
+    required: true
+  - key: site
+    label: Site or location
+    type: text
+    required: true
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    help: Ties the talk to a job, so it can move to the SESC Platform later without re-keying (D15).
+  - key: delivered_by
+    label: Delivered by
+    type: text
+    required: true
+  - key: topic
+    label: Topic
+    type: text
+    required: true
+    help: For example "Fragile roof lights — Bldg 42".
+  - key: domains
+    label: Domain
+    type: multiselect
+    required: true
+    options: [Health and safety, Environmental, Quality]
+  - key: rams_ref
+    label: RAMS or risk assessment it relates to
+    type: text
+    required: false
+  - key: key_points
+    label: Key points covered
+    type: textarea
+    required: true
+  - key: attendee_count
+    label: Number present
+    type: number
+    required: true
+  - key: attendees
+    label: Names of everyone present
+    type: textarea
+    required: true
+    help: One name per line, with company if not SESC. If a paper sheet was signed, photograph it below as well.
+  - key: understanding
+    label: Did everyone understand
+    type: select
+    required: true
+    options: [All confirmed they understood, Some needed explanation or translation — provided, Understanding not checked]
+  - key: concerns_raised
+    label: What the team raised
+    type: textarea
+    required: true
+    help: Hazards, ideas, objections. Write "None raised" if none were.
+  - key: response
+    label: What will be done about it, by whom, by when
+    type: textarea
+    required: false
+    help: Required in practice whenever something was raised. A concern with no response is a finding.
+  - key: attendance_sheet
+    label: Photograph of the signed sheet
+    type: file
+    required: false
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-06-0003). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

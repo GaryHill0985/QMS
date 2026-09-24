@@ -103,10 +103,11 @@ written this way and consistency is auditable.
   `SESC-REG-nn` registers · `SESC-FRM-nn` forms · `SESC-REC-nn` records · `SESC-TPL-nn` record
   templates · `SESC-CAP-nn` capability sheets · `SESC-CRP-nn` carbon reduction plan ·
   **`SESC-IMS-nn` the Annex SL spine, where `nn` is the clause number it covers (04 to 10).**
-- **Next free references, as at 18 August 2026** — `SESC-FRM-01` to `SESC-FRM-05` were taken by
-  the record capture forms drafted in the portal session; they are DRAFTS and decision D13
-  confirms or renumbers them **before** any is issued:
-  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-01` · `SESC-REG-08` · `SESC-FRM-06` · `SESC-REC-05` ·
+- **Next free references, as at 24 September 2026** — `SESC-FRM-01` to `SESC-FRM-05` were taken by
+  the record capture forms drafted in the portal session and confirmed by D14. `SESC-FRM-06`
+  (toolbox talk), `SESC-FRM-07` (site inspection) and `SESC-WI-01` (how to log a record on site)
+  were taken on 24 September 2026 for the Workspace record capture (workstream 1a). All are DRAFTS:
+  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-08` · `SESC-FRM-08` · `SESC-REC-05` ·
   `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-05`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**

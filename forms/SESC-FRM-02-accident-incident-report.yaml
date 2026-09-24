@@ -1,6 +1,6 @@
 id: SESC-FRM-02
 title: Accident and Incident Report
-version: "0.1"
+version: "0.2"
 status: draft
 owner: Health and Safety Officer
 approver: Managing Director
@@ -37,6 +37,16 @@ riddor_note: >
   probable RIDDOR case but it does not make the report. The Managing Director
   makes it.
 
+revision_history:
+  - version: "0.2"
+    date: 2026-09-24
+    change: >
+      Added optional job_ref so every record attaches to a job (D15). Added correction_of so that a correction is a new entry referencing the
+      original, never an edit (D15). Drafted by Claude for G A Hill; not approved.
+  - version: "0.1"
+    date: 2026-08-18
+    change: First draft, QMS portal session 2b.
+
 fields:
   - key: date
     label: Date of the accident or incident
@@ -50,6 +60,13 @@ fields:
     label: Site or location
     type: text
     required: true
+  - key: job_ref
+    label: Job number
+    type: text
+    required: false
+    help: >
+      The SESC job number if you know it. It ties this record to a job, so it can
+      move to the SESC Platform later without re-keying (D15).
   - key: person_status
     label: Who was involved
     type: select
@@ -114,3 +131,11 @@ fields:
     label: Photographs
     type: file
     required: false
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-01-0007). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

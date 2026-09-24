@@ -1,6 +1,6 @@
 id: SESC-FRM-03
 title: Training and Competence Record
-version: "0.1"
+version: "0.2"
 status: draft
 owner: Contracts Manager
 approver: Managing Director
@@ -29,6 +29,16 @@ purpose: >
 design_note: >
   Competence REQUIREMENTS are held by role and live in git. Competence EVIDENCE
   names a person and does not. This form is the bridge between them.
+
+revision_history:
+  - version: "0.2"
+    date: 2026-09-24
+    change: >
+      No job field: this record attaches to a person. Added correction_of so that a correction is a new entry referencing the
+      original, never an edit (D15). Drafted by Claude for G A Hill; not approved.
+  - version: "0.1"
+    date: 2026-08-18
+    change: First draft, QMS portal session 2b.
 
 fields:
   - key: date
@@ -78,3 +88,11 @@ fields:
     label: Evidence attached
     type: file
     required: false
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-01-0007). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).
