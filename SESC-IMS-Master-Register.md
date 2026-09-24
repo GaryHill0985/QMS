@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.8 · 24 September 2026.**
+**The state of the CLAUDE ISO project. v1.9 · 24 September 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -328,6 +328,7 @@ and is not a second register.**
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.9 | 24 September 2026 | Claude, for G A Hill | **Correction to the v1.6 row.** The first drafting of v1.6 was **not** lost or overwritten. It was committed at 14:58 on 24 Sep 2026 as `18c9979` onto the `register-v1.5` branch, after PR #3 had already merged that branch, so it never reached `main` and left a stray pull request open. The re-applied draft was committed as `2cfb96d` and merged as PR #4. The two differ only in the v1.6 revision note. The stray pull request from `register-v1.5` is closed without merging. **Lesson: after a pull request is merged, start the next change from an up-to-date `main` on a new branch — never commit onto a branch that has already been merged.** |
 | 1.8 | 24 September 2026 | Claude, for G A Hill | D17: option (a) — ventilation specification into the ¶58 carve-out, PI cover confirmed by Gary; schedule citation still to be added. D6: decision to purchase the Employer's own copies, 14001:2026 first; not yet bought. |
 | 1.7 | 24 September 2026 | Claude, for G A Hill | F23 closed — `CLAUDE.md` §2, §9.4 and §11 moved to macOS paths, committed separately on the same branch. F24 closed on Gary's confirmation. F20: the James Milligan meeting moves to 6 October 2026. D6: licence position of the standards held recorded — none licensed to the Employer, 9001 and 14001:2015 licensed to Unitspark Ltd. D8 and D11: Steve agreed by phone on 24 Sep 2026, reported by Gary; mould & damp in scope as remediation only. New D17: ventilation design in mould & damp work falls outside the D8 carve-out. |
 | 1.6 | 24 September 2026 | Claude, for G A Hill | D4: MacBook signing key fingerprint recorded (`SHA256:e17PhFZEmyBE1JG4LR51Du2P9Ozr5M8LJCuNTulCBwI`); Gary confirmed on GitHub that `4b9648d` and `b167f32` show Verified. MSI signing key removed from GitHub, 24 Sep 2026 (Gary). v1.5 merged as PR #3 (`7746188`). **A first drafting of this v1.6 change was made in the working clone and was no longer there when Gary came to commit it — cause not established; re-applied (see §7.7).** F14 updated: the no-passphrase point now applies to the retired MSI key only. |
