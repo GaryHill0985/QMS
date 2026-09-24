@@ -13,7 +13,7 @@ NOTHING IN site/ IS WRITTEN BY HAND. Every page is generated from:
     registers/*.yaml      the registers
     forms/*.yaml          the record capture schemas
     portal/config.yaml    organisation facts and the audience model
-    portal/documents.yaml the legacy document estate (PDFs outside the repo)
+    registers/documents.yaml  SESC-REG-07, the legacy document estate (PDFs outside the repo)
     portal/obligations.yaml   SESC-REG-02 as data
     portal/actions.yaml   blockers, decisions, findings and gaps
 
@@ -101,7 +101,7 @@ class System:
     def __init__(self, asof):
         self.asof = asof
         self.cfg = load("portal/config.yaml")
-        self.docs_legacy = load("portal/documents.yaml")
+        self.docs_legacy = load("registers/documents.yaml")   # SESC-REG-07
         self.obl = load("portal/obligations.yaml")
         self.act = load("portal/actions.yaml")
         self.recidx = load("portal/records-index.yaml")
@@ -999,7 +999,9 @@ def p_about(s, aud):
             ("registers/*.yaml", "Registers. YAML, never Word tables."),
             ("forms/*.yaml", "Record capture schemas."),
             ("portal/config.yaml", "Organisation facts and the audience model."),
-            ("portal/documents.yaml", "The legacy document estate — PDFs outside the repository."),
+            ("registers/documents.yaml", "SESC-REG-07 Document Register — every managed "
+                                        "document, including the legacy PDFs outside the "
+                                        "repository. Claims clause 7.5.3."),
             ("portal/obligations.yaml", "SESC-REG-02 Assurance Calendar, as data."),
             ("portal/actions.yaml", "Blockers, decisions, findings and gaps."),
             ("portal/records-index.yaml", "An index of records — reference, date and clauses. "
