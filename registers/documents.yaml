@@ -1,4 +1,30 @@
-# portal/documents.yaml — the legacy document estate.
+id: SESC-REG-07
+title: Document Register
+version: "0.1"
+status: draft
+owner: Chief Operating Officer
+approver: Managing Director
+issued: 2026-08-18
+next_review: 2027-08-18
+classification: internal
+clauses:
+  iso9001:  ["7.5.3"]
+  iso14001: ["7.5.3"]
+  iso45001: ["7.5.3"]
+personal_data: false
+
+# SESC-REG-07 Document Register — every managed document, its reference, version,
+# state, issue date, review date, owner and clause map, in one place.
+#
+# Clause 7.5.3 of all three standards requires documented information to be
+# controlled: available where needed, adequately protected, and controlled for
+# distribution, access, version and retention. A register that names every
+# document with its version and its review date is what makes that demonstrable.
+# It claims 7.5.3 and nothing else. It is not a document control PROCEDURE — that
+# is SESC-PRO-nn and it does not exist yet (gap G9).
+#
+# It became a controlled register on 18 August 2026 by decision D13. Before that
+# it sat at portal/documents.yaml as portal source data with no reference.
 #
 # These are the twenty-one signed documents and the registers, records and
 # templates issued alongside them. They live OUTSIDE this repository, as branded
@@ -15,8 +41,9 @@
 #   clause map produces a green gap report over an empty system.
 #   See CLAUDE.md 7.
 #
-# NOT a controlled register. If it should become SESC-REG-07 Document Register,
-# say so and it will be moved to registers/ with front matter and validated.
+# NOW a controlled register — SESC-REG-07, by decision D13, 18 August 2026.
+# validate.py checks its front matter, its clause references and its dates on
+# every push. It is a DRAFT and has not been approved.
 
 meta:
   source: Evidence Pack document register, built 18 August 2026

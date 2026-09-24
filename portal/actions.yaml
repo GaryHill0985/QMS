@@ -4,11 +4,11 @@
 # has to do something by a date. They are held in one list so that nobody has to
 # read three tables to find out what is owed.
 #
-# Sourced from SESC-IMS-Master-Register.md v1.0 (18 Aug 2026) sections 3, 4, 5
+# Sourced from SESC-IMS-Master-Register.md v1.4 (18 Aug 2026) sections 3, 4, 5
 # and CLAUDE.md 10. If the register moves, this file is stale — the portal
 # prints the register version it was built from on every page.
 
-source_register: SESC-IMS-Master-Register.md v1.1, 18 August 2026
+source_register: SESC-IMS-Master-Register.md v1.4, 18 August 2026
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -29,7 +29,9 @@ actions:
       Simon Davies FCCA of Rapture Accounts Limited confirmed 17 August 2026.
       Twenty documents still carry a blank adviser row and their branded PDFs
       must be rebuilt. A name typed into a .docx does not reach a PDF already
-      rendered.
+      rendered. NINE of those documents route an actual control through that
+      person, so in those nine the blank row is not cosmetic — the control does
+      not operate.
     internal: false
 
   - ref: B2
@@ -98,6 +100,8 @@ actions:
     internal: false
 
   # ------------------------------ DECISIONS ------------------------------
+  # Mirrors SESC-IMS-Master-Register.md section 4. The register is the source.
+  # Re-run the build after it changes; this file goes stale, it does not lead.
 
   - ref: D2
     kind: decision
@@ -109,7 +113,9 @@ actions:
       Three written quotes. Ask in writing: "Have you completed your UKAS
       accreditation extension for ISO 14001:2026, and if not, which tranche and
       what decision date?" Also ask for the body's own effective-personnel
-      calculation and for SSIP deemed-to-satisfy inside the scope.
+      calculation, for SSIP deemed-to-satisfy inside the scope, and for how much
+      live operating history it requires before Stage 2 — neither figure the
+      project holds for that is sourced (F13).
     internal: true
 
   - ref: D3
@@ -119,18 +125,6 @@ actions:
     status: open
     severity: medium
     detail: Train two, buy in the first cycle for independence.
-    internal: true
-
-  - ref: D4
-    kind: decision
-    title: Git host and named approver
-    owner: Chief Operating Officer
-    status: closed
-    severity: high
-    detail: >
-      CLOSED 18 August 2026. The repository is live at github.com/GaryHill0985/QMS
-      with protected main, signed commits, and every change by pull request with a
-      named human reviewer. Steve approves, Gary authors and reviews.
     internal: true
 
   - ref: D6
@@ -143,7 +137,8 @@ actions:
     detail: >
       ISO 14001:2026 not held in any form. ISO/IEC 27001:2022 not held in any
       form. The 9001:2015 PDF held is licensed to Unitspark Ltd, single user.
-      Buy own copies.
+      Buy own copies — and ISO/IEC 27002:2022 with 27001, because without 27002
+      the Annex A control set cannot be applied.
     internal: true
 
   - ref: D8
@@ -155,7 +150,7 @@ actions:
     detail: >
       THE ISO 9001 SCOPE TURNS ON THIS. The capability statements and the
       standard quotation contradict each other on whether the Employer designs.
-      Proposed wording at system/4-context.md 57. Nothing is applied to any
+      Proposed wording at system/4-context.md 58. Nothing is applied to any
       customer-facing document until it is approved or replaced.
     internal: false
 
@@ -166,61 +161,79 @@ actions:
     status: open
     severity: low
     detail: >
-      nn is the clause number it covers, 04 context through 10 improvement. The
-      alternative was to number the scope document SESC-POL-20, which would file
-      a scope statement as a policy. Confirm or overturn.
+      nn is the clause number it covers, 04 context through 10 improvement.
+      Confirm or overturn.
     internal: true
+
+  - ref: D10
+    kind: decision
+    title: Should the four planning files be tracked in the repository
+    owner: Chief Operating Officer
+    status: open
+    severity: medium
+    detail: >
+      The project instructions, the Readiness and Gap Analysis, the Gap Register
+      xlsx and the review copies sit untracked in the clone, so GitHub is not
+      backing them up and the only copy is the laptop.
+    internal: true
+
+  - ref: D11
+    kind: decision
+    title: >
+      Are fire doors and mould & damp remediation named trades for the
+      certificate scope
+    owner: Managing Director
+    status: open
+    severity: critical
+    detail: >
+      IT CHANGES THE SCOPE STATEMENT. The project instructions describe the
+      business as M&E, roofing, mould and damp remediation, fire doors and
+      renewables. The signed policies say roofing, building fabric, mechanical,
+      electrical and renewable energy works, and name neither. A
+      Building-Safety-Act-adjacent trade omitted from a scope statement is a
+      finding. Recorded at SESC-IMS-04 paragraph 16.
+    internal: false
 
   - ref: D12
     kind: decision
-    title: Should the legacy document list become SESC-REG-07 Document Register
+    title: Should Steve be a collaborator on the repository
     owner: Chief Operating Officer
     status: open
-    severity: low
+    severity: medium
     detail: >
-      portal/documents.yaml currently holds the legacy estate as portal source
-      data with no controlled reference. ISO 7.5.3 wants a document register. If
-      it should be SESC-REG-07, it moves to registers/ with front matter and the
-      validator picks it up. Raised by this build.
+      The sole-director problem again. CLAUDE.md requires two named humans, but
+      required approvals on the ruleset is 0 because GitHub will not let a person
+      approve their own pull request and 1 would deadlock a solo repository. The
+      pull request gate and the visible diff exist; the second human does not.
+      See F15.
     internal: true
 
   - ref: D13
     kind: decision
-    title: Confirm SESC-FRM-01 to FRM-05 for the record capture forms
+    title: The document register becomes SESC-REG-07
     owner: Chief Operating Officer
-    status: open
+    status: closed
     severity: low
     detail: >
-      This build drafts five record forms and takes the next five free FRM
-      references. They are drafts and nothing is issued. Confirm the numbering,
-      or renumber before any of them is issued — a reference is never reused.
-      Raised by this build.
+      DECIDED 18 August 2026. The legacy document estate moved from
+      portal/documents.yaml to registers/documents.yaml with front matter, and is
+      now validated on every push. It claims clause 7.5.3 of all three standards
+      and nothing else. CLAUDE.md 5 now reads SESC-REG-08 as next free. It is a
+      DRAFT and has not been approved.
+    internal: true
+
+  - ref: D14
+    kind: decision
+    title: SESC-FRM-01 to FRM-05 confirmed for the record capture forms
+    owner: Chief Operating Officer
+    status: closed
+    severity: low
+    detail: >
+      DECIDED 18 August 2026. The five references stand. All five remain DRAFTS
+      and none is issued. CLAUDE.md 5 reads SESC-FRM-06 as next free.
     internal: true
 
   # ------------------------------- FINDINGS ------------------------------
-
-  - ref: F2
-    kind: finding
-    title: Project instructions still record the documents as unsigned
-    owner: Chief Operating Officer
-    status: part-closed
-    severity: high
-    detail: >
-      SESC-IMS-Project-Instructions-v1.0.md 4.1 and 4.2 still need correcting.
-      A chat starting from that file would draft wrong findings. Project memory
-      has been corrected.
-    internal: true
-
-  - ref: F3
-    kind: finding
-    title: Next-free-reference line was stale
-    owner: Chief Operating Officer
-    status: part-closed
-    severity: medium
-    detail: >
-      Corrected in CLAUDE.md 5. SESC-IMS-Project-Instructions-v1.0.md still says
-      SESC-REG-02 is free when REG-02, 03 and 04 are all issued.
-    internal: true
 
   - ref: F4
     kind: finding
@@ -242,9 +255,7 @@ actions:
     due: 2027-08-12
     status: open
     severity: medium
-    detail: >
-      Heat stress (CLI-02) and flooding of Unit 19 or a site (CLI-03). Add at the
-      next register review.
+    detail: Heat stress (CLI-02) and flooding of Unit 19 or a site (CLI-03).
     internal: false
 
   - ref: F6
@@ -266,9 +277,7 @@ actions:
     due: 2026-08-31
     status: open
     severity: medium
-    detail: >
-      That is an unverified absence, not a verified one. Query the ICO register
-      before the absence is stated anywhere again.
+    detail: An unverified absence, not a verified one. Query the ICO register first.
     internal: false
 
   - ref: F8
@@ -295,7 +304,69 @@ actions:
       Decide whether it belongs in the IMS scope.
     internal: false
 
-  - ref: F14
+  - ref: F11
+    kind: finding
+    title: The project instructions file is actively wrong in five places
+    owner: Chief Operating Officer
+    status: open
+    severity: high
+    detail: >
+      It says the 21 documents are unsigned, the adviser is unappointed,
+      SESC-REG-02 is next free, headcount is around 13 to 20, and the EL
+      certificate is not held. A chat reading it would draft wrong findings.
+      Safe to retire once D10 is settled.
+    internal: true
+
+  - ref: F12
+    kind: finding
+    title: The QinetiQ question was never asked and has no owner
+    owner: Chief Operating Officer
+    status: open
+    severity: medium
+    detail: >
+      "Is ISO 27001 a requirement or a scoring advantage at SESC's tier?" Five
+      minutes to their supply chain team. It is the one answer that could reverse
+      the certification route at D1. Until answered, the plan stands.
+    internal: true
+
+  - ref: F13
+    kind: finding
+    title: Neither figure for pre-Stage-2 operating history is sourced
+    owner: Chief Operating Officer
+    status: open
+    severity: medium
+    detail: Ask the certification body directly — see D2.
+    internal: true
+
+  - ref: F15
+    kind: finding
+    title: The "two named humans" approval rule is not yet operable
+    owner: Chief Operating Officer
+    status: open
+    severity: medium
+    detail: >
+      Required approvals is 0 and Steve is not a collaborator. The pull request
+      gate exists; the second human does not. The control exists on paper only.
+      See D12.
+    internal: true
+
+  - ref: F16
+    kind: finding
+    title: Two sessions worked on this repository at once, and one overwrote the other
+    owner: Chief Operating Officer
+    due: 2026-08-19
+    status: part-closed
+    severity: high
+    detail: >
+      18 August 2026. The portal session reverted registers/interested-parties.yaml
+      and system/4-context.md to their committed content, losing work done in
+      between. Both have since been restored. The lesson is in the method, not the
+      files: re-read a file off disk immediately before writing it, never copy a
+      whole tree over a working copy, and commit early — an uncommitted change has
+      no history to recover it from.
+    internal: false
+
+  - ref: F18
     kind: finding
     title: SESC-REG-02 8(a) does not reconcile with its own tables
     owner: Chief Operating Officer
@@ -303,24 +374,23 @@ actions:
     status: open
     severity: low
     detail: >
-      8(a) says eleven of twenty-nine recurring obligations have never been done.
-      The tables hold 23 scheduled obligations, of which 15 have never been done,
-      plus 6 event-driven triggers. Correct at the next reissue. Raised by this
-      build.
+      It states eleven of twenty-nine recurring obligations have never been done.
+      The tables hold 23 scheduled obligations of which 15 have never been done,
+      plus 6 event-driven triggers. Correct at the next reissue.
     internal: false
 
-  - ref: F15
+  - ref: F19
     kind: finding
-    title: Document owner is not recoverable for any legacy document
+    title: Document owner is not recoverable for any of the 45 legacy documents
     owner: Chief Operating Officer
     due: 2026-09-30
     status: open
     severity: medium
     detail: >
-      Every branded PDF carries a document owner in its page-1 control table, but
-      the Evidence Pack extraction did not capture it and no machine-readable
-      copy exists. Until a document has a named owning ROLE, nobody is
-      accountable for reviewing it. Raised by this build.
+      The value exists in every PDF control table; the Evidence Pack extraction
+      did not capture it and no machine-readable copy exists. Until a document
+      has a named owning ROLE, nobody is accountable for reviewing it — and
+      SESC-REG-07 now has an empty owner column to prove it.
     internal: false
 
   # ------------------ the things that are not yet true -------------------
@@ -426,97 +496,4 @@ actions:
       Document control (7.5), internal audit (9.2), management review (9.3) and
       nonconformity and corrective action (10.2). The procedures a certification
       body asks for first, and which no SESC document currently provides.
-    internal: false
-
-  # ---- raised by the parallel session on 18 August 2026, register v1.1 ----
-  # Recorded here so this portal is not a second, staler copy of the truth.
-  # SESC-IMS-Master-Register.md remains the source. Re-run the build after it changes.
-
-  - ref: D10
-    kind: decision
-    title: Should the four loose planning files be tracked in the repository
-    owner: Chief Operating Officer
-    status: open
-    severity: medium
-    detail: >
-      SESC-IMS-Project-Instructions-v1.0.md, the Readiness and Gap Analysis, the
-      Gap Register xlsx and the review copies sit untracked in the clone, so
-      GitHub is not backing them up and the only copy is the laptop. Move them
-      into planning/ and track them, or leave them and accept the backup risk.
-    internal: true
-
-  - ref: D11
-    kind: decision
-    title: >
-      Are fire doors and mould & damp remediation named trades for the
-      certificate scope
-    owner: Managing Director
-    status: open
-    severity: critical
-    detail: >
-      IT CHANGES THE SCOPE STATEMENT. The project instructions describe the
-      business as M&E, roofing, mould and damp remediation, fire doors and
-      renewables. The signed policies say roofing, building fabric, mechanical,
-      electrical and renewable energy works, and name neither. A
-      Building-Safety-Act-adjacent trade omitted from a scope statement is a
-      finding. If they are carried out, they are named at IMS-04 14.
-    internal: false
-
-  - ref: F12
-    kind: finding
-    title: See SESC-IMS-Master-Register.md v1.1 section 5
-    owner: Chief Operating Officer
-    status: open
-    severity: medium
-    detail: >
-      Raised by the parallel session and not transcribed here. Read the register.
-      Two copies of one thing drifting apart is the failure mode this project has
-      already had three times.
-    internal: true
-
-  - ref: F13
-    kind: finding
-    title: See SESC-IMS-Master-Register.md v1.1 section 5
-    owner: Chief Operating Officer
-    status: open
-    severity: medium
-    detail: >
-      Raised by the parallel session and not transcribed here. Read the register.
-    internal: true
-
-  - ref: F16
-    kind: finding
-    title: Two chats edited this repository at the same time on 18 August 2026
-    owner: Chief Operating Officer
-    due: 2026-08-19
-    status: open
-    severity: high
-    detail: >
-      Session 2 (repository migration audit) and session 2b (this portal) ran
-      concurrently and both wrote a register v1.1, independently allocating D10,
-      D11, F10 and F11 to different things. The portal build renumbered its own
-      to D12, D13, F14, F15 rather than overwrite. CLAUDE.md 9 says one workstream
-      per chat; it does not say one chat at a time, and it now needs to.
-      Reference allocation must move to a single place before the next parallel
-      session, or a reference will be reused — which CLAUDE.md 5 forbids outright.
-    internal: false
-
-  - ref: F17
-    kind: finding
-    title: >
-      The portal session overwrote two files edited by the parallel session
-    owner: Chief Operating Officer
-    due: 2026-08-19
-    status: part-closed
-    severity: high
-    detail: >
-      system/4-context.md was at v0.2 and was reverted to v0.1. RESTORED — the
-      change was one added paragraph (16, mould & damp remediation and fire
-      doors) plus renumbering from 16 onwards, reconstructed from the rendered
-      v0.2 review copy, and paragraph 58 now matches the reference at D8.
-      registers/interested-parties.yaml was also reverted and its session-2 edits
-      are NOT recoverable — no rendered copy exists and the change was never
-      committed. Ask the session-2 chat what it changed in SESC-REG-05 before its
-      context is gone. Commit early is the lesson; an uncommitted change has no
-      history to recover it from.
     internal: false

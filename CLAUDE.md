@@ -104,7 +104,7 @@ written this way and consistency is auditable.
 - **Next free references, as at 18 August 2026** — `SESC-FRM-01` to `SESC-FRM-05` were taken by
   the record capture forms drafted in the portal session; they are DRAFTS and decision D13
   confirms or renumbers them **before** any is issued:
-  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-01` · `SESC-REG-07` · `SESC-FRM-06` · `SESC-REC-05` ·
+  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-01` · `SESC-REG-08` · `SESC-FRM-06` · `SESC-REC-05` ·
   `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-05`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**

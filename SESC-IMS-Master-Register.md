@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.3 · 18 August 2026.**
+**The state of the CLAUDE ISO project. v1.4 · 18 August 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -133,6 +133,69 @@ all cases where the old file is stale and the new set is right — see F11.
 
 ---
 
+## 2c. The QMS portal — 18 August 2026, session 2b
+
+**Ran in parallel with session 2 and overwrote two of its files. Both restored. See F16 — the
+lesson is recorded there and the method rules at §7 now cover it.**
+
+**Gary's brief:** the Evidence Pack HTML format, the evidence index against the policies, and
+what needs to be actioned and when — ideally an application the SESC team can access, add to,
+edit, organise, retrieve and use in an audit, by permission.
+
+**Stage 1 is a generated portal, not an application, and the reasoning is recorded because it
+will be challenged later:**
+
+1. A static site generated from this repository is the only option that does not make document
+   control **worse**. Git already gives every change an author, a date and a reason, and
+   `git checkout <sha> && python3 build/build_portal.py` reproduces any past state. A
+   database-backed application must have all of that built, and built badly it becomes a system
+   in which a controlled document can be changed silently — a self-inflicted major
+   nonconformity against 7.5.3.
+2. **Generation is why the Evidence Pack works.** Its own line — *an item leaves this list when
+   the file is on disk, not when someone decides it does not matter* — holds only because
+   nobody can type into it. An editable status field turns a gap report into a self-assessment.
+3. A hosted application holding accident, training and conflicts records is a new information
+   asset: a DPIA against POL-14, a controller/processor decision, an entry on SESC-REC-01,
+   restore evidence for POL-15 and access review evidence for POL-13. Five obligations fed and
+   no certificate earned, while **B3 zero operating history** is the actual long pole.
+4. It is not a dead end. **What forces stage 2 is record capture, not policy editing** — an
+   operative logging a near miss at 19:00 from a phone is the one thing a folder cannot do, and
+   near-miss records are exactly what 45001 will want twelve months of. The five form schemas
+   are fixed now so that nothing has to be migrated later.
+
+| Built | Where | Status |
+|---|---|---|
+| `build/build_portal.py` and `build/portal_theme.py` — the generator and the house look | `build/` | Done |
+| **The portal — 31 pages, four audience builds** | `site/` (gitignored, generated) | Regenerate with `python3 build/build_portal.py` |
+| `portal/config.yaml` — organisation facts and the audience model | `portal/` | Done |
+| **`SESC-REG-07` Document Register** — the 45-document legacy estate, every one `clause_map: pending` | `registers/documents.yaml` | **Draft v0.1.** Decision D13 |
+| `portal/obligations.yaml` — SESC-REG-02 as data, 23 scheduled + 6 event-driven | `portal/` | Done |
+| `portal/actions.yaml` — 38 items, mirroring §3, §4 and §5 of this register | `portal/` | Done |
+| `portal/records-index.yaml` — record metadata only, so §12.6's staleness rule is computable | `portal/` | Done |
+| **`SESC-FRM-01` Near Miss and Hazard Report** | `forms/` | **Draft v0.1.** Decision D14 |
+| **`SESC-FRM-02` Accident and Incident Report** | `forms/` | **Draft v0.1** |
+| **`SESC-FRM-03` Training and Competence Record** | `forms/` | **Draft v0.1** |
+| **`SESC-FRM-04` Supplier and Subcontractor Evaluation** | `forms/` | **Draft v0.1** |
+| **`SESC-FRM-05` Nonconformity and Corrective Action** | `forms/` | **Draft v0.1** |
+
+**The headline the portal computes, and it is not flattering: 0 of 134 clauses are evidenced.
+33 are addressed by a draft; 101 by nothing at all.** Correct and deliberate. A clause counts
+only where a controlled file declares it in front matter **and** a record sits behind it inside
+twelve months — the gap report definition at `CLAUDE.md` §12.6, now implemented rather than
+merely written down. **No clause was inferred from a document title**, which is why the
+twenty-one signed policies contribute nothing until they are migrated. The number moves for the
+first time when POL-16 comes in.
+
+**Audiences are distribution, not authentication.** Four builds — controller, approver,
+contributor, auditor — each generated with what that audience must not see left out. Handing
+over the auditor folder is a real control; it is not access control and no page claims it is.
+Nothing bearing on conformity is hidden from the auditor build; what is withheld is commercial
+decision-making and the project's own management. **The known-gap list IS published to the
+auditor build, deliberately** — a supplier that has found a gap, dated it and named an owner is
+in a different position from one that has not.
+
+---
+
 ## 3. Blockers — the four, restated with what has actually moved
 
 | # | Blocker | Position at 18 August 2026 |
@@ -162,6 +225,8 @@ all cases where the old file is stale and the new set is right — see F11.
 | **D10** | **Should the four planning files be tracked in the repo?** | **Gary** | **NEW.** `SESC-IMS-Project-Instructions-v1.0.md`, the Readiness & Gap Analysis, the Gap Register xlsx and the review copies sit untracked in the clone, so **GitHub is not backing them up and the only copy is the laptop.** Options: move them into a `planning/` folder and track them, or leave them and accept the backup risk. Moving files inside `Desktop\SESC` is reserved to Gary. |
 | **D12** | **Should Steve be a collaborator on the repository?** | **Gary** | **NEW, and it is the sole-director problem again.** `CLAUDE.md` says *"Steve approves, Gary authors and reviews. Two named humans."* **Required approvals on the ruleset is set to 0, because GitHub will not let a person approve their own pull request and 1 would deadlock a solo repository.** So the PR gate and the diff exist, but the second human does not. **Adding Steve as a collaborator and raising required approvals to 1 is what makes the rule operable** — exactly as appointing Simon Davies made the Board-independence clause operable. Until then the two-human rule is written and not operated, which is the failure pattern POL-08 is marked down for. |
 | **D11** | **Are fire doors and mould & damp remediation named trades for the certificate scope?** | **Steve** | **NEW, and it changes the scope statement.** The project instructions describe the business as "M&E, roofing, **mould and damp remediation, fire doors** and renewables". The signed policies say "roofing, building fabric, mechanical, electrical and renewable energy works" and name neither. **A Building-Safety-Act-adjacent trade omitted from a scope statement is a finding.** If they are carried out, they are named at IMS-04 ¶14. |
+| **D13** | **The document register becomes `SESC-REG-07`** | **Gary** | **CLOSED 18 Aug 2026 — Gary's decision.** The legacy document estate moved from `portal/documents.yaml` to `registers/documents.yaml` with front matter and is now validated on every push. It claims clause **7.5.3** of all three standards and nothing else — it is a register, not the document control PROCEDURE, which does not exist (G9). **Draft v0.1, not approved.** `CLAUDE.md` §5 now reads `SESC-REG-08` as next free. |
+| **D14** | **`SESC-FRM-01` to `FRM-05` confirmed for the record capture forms** | **Gary** | **CLOSED 18 Aug 2026 — Gary's decision.** The five references stand: near miss, accident/incident, training and competence, supplier evaluation, nonconformity and corrective action. **All five remain DRAFTS and none is issued.** `CLAUDE.md` §5 reads `SESC-FRM-06` as next free. |
 
 ---
 
@@ -186,6 +251,8 @@ all cases where the old file is stale and the new set is right — see F11.
 | F15 | **The "two named humans" approval rule is not yet operable** — required approvals is 0 and Steve is not a collaborator. The control exists on paper only. | **Medium** | Gary, via D12 |
 | F16 | **⚠ TWO SESSIONS WORKED ON THIS REPOSITORY AT ONCE ON 18 AUGUST, AND ONE OVERWROTE THE OTHER.** A Claude Code session built a portal generator (`build/build_portal.py`, `portal/*.yaml`, README changes) between 11:59 and 12:12. **In the process `registers/interested-parties.yaml` was reverted from v0.2 back to the v0.1 committed content, silently losing three restorations** — the first-aid needs assessment obligation, the "an unaccredited certificate submitted to JOSCAR is worse than no certificate" line, and Sovereign Housing named against IP-02. Found only because a file expected to be modified did not appear in `git status`. **This is the fourth time on this project that two copies of one thing have drifted.** | **High** | v0.2 restored. **Rule below.** |
 | F17 | **A stale `.git/index.lock` blocked `git add` and `git commit`**, so a branch was pushed with no commits on it. Cause: a `git status` run through the device bridge, which cannot remove its own lock file. **Do not run git commands against the working clone through the device bridge.** | Medium | Closed — lock removed, rule recorded at §7.7 |
+| F18 | **`SESC-REG-02` §8(a) does not reconcile with its own tables.** It states eleven of twenty-nine recurring obligations have never been done. The tables hold **23 scheduled** obligations, of which **15 have never been done**, plus 6 event-driven triggers. Correct at the next reissue. | Low | Gary |
+| F19 | **Document owner is not recoverable for any of the 45 legacy documents.** The value exists in every PDF control table; the Evidence Pack extraction did not capture it and no machine-readable copy exists. **Until a document has a named owning ROLE, nobody is accountable for reviewing it** — and `SESC-REG-07` now carries an empty owner column that proves it. | Medium | Gary |
 
 ---
 
@@ -227,6 +294,7 @@ all cases where the old file is stale and the new set is right — see F11.
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.4 | 18 August 2026 | Claude, for G A Hill | Session 2b, the QMS portal. New §2c. `build/build_portal.py`, `build/portal_theme.py`, `portal/*`, 31 pages across four audience builds, and the §12.6 twelve-month staleness rule implemented. **D13 and D14 closed on Gary's decision** — the document register becomes `SESC-REG-07` and `SESC-FRM-01…05` stand. New findings F18, F19. Next free references now `SESC-REG-08` and `SESC-FRM-06`. |
 | 1.0 | 18 August 2026 | Claude, for G A Hill | Created. Closes finding F1. Records the QMS build session 1: repository, clause map, `SESC-IMS-04`, `SESC-REG-05`, `SESC-REG-06`, validator and CI. |
 | 1.3 | 18 August 2026 | Claude, for G A Hill | F16 — concurrent-session overwrite found and `registers/interested-parties.yaml` v0.2 restored. F17 — stale index.lock from the device bridge. Two new rules at §7.7 and §7.8. Portal generator built by a parallel Claude Code session noted and left intact. |
 | 1.2 | 18 August 2026 | Claude, for G A Hill | GitHub controls completed — ruleset "Protect main - controlled documents" Active with four rules, and commit signing configured. New §2b. D4 fully closed. New decision D12 (Steve as collaborator, so the two-human rule is operable) and findings F14, F15. **Direct pushes to `main` are no longer possible.** |
