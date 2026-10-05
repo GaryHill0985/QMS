@@ -20,6 +20,20 @@ jobs:
       - name: Validate front matter, clause map, dates, house style and the personal-data guard
         run: python3 build/validate.py
 
+  render:
+    # The renderer's tests (build/test_render_docx.py). Without LibreOffice on the
+    # runner the PDF-level numbering test is reported SKIPPED, never passed; the
+    # DOCX-level numbering test, the front-matter, marking and signature tests run.
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: '3.12'}
+      - run: sudo apt-get install -y fonts-liberation
+      - run: pip install pyyaml python-docx pillow numpy
+      - name: Renderer tests — every printed paragraph number checked against the source (F27, F34)
+        run: python3 build/test_render_docx.py
+
   # main is protected. Every change arrives by pull request with a named human reviewer.
   # Steve approves, Gary authors and reviews. Never Claude.
   # An unreviewed AI commit to a controlled document is a finding waiting to happen.
