@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.11 · 24 September 2026.**
+**The state of the CLAUDE ISO project. v1.13 · 5 October 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -27,7 +27,7 @@
 | **Standards editions** | 9001:**2015** (written 2026-ready) · 14001:**2026** · 45001:**2018**. See `CLAUDE.md` §6. |
 | **Repository** | **`github.com/GaryHill0985/QMS`**, pushed 18 August 2026, commit `d3782f7`. The working clone was `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI; **from 24 September 2026 it is `~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** — see §2d. **D4 CLOSED.** |
 | **Master document count** | 21 signed (POL-01…19, CRP-01, REG-01) + REG-02, REG-03, REG-04 + REC-01…04 + TPL-01…04. |
-| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. |
+| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** |
 
 ### 1.1 The phase plan, and the principle that governs it
 
@@ -328,6 +328,211 @@ repository is public).
 
 ---
 
+## 2g. Workstream 2 — the branded renderer, and SESC-IMS-04 v0.3 rendered, 24 September 2026
+
+**Taken:** workstream 2 only. **Started once `main` was confirmed to contain PR #10.** Checked read-only
+in the clone (`git --no-optional-locks`): `main` and `origin/main` both at **`02650c7`** (*Merge pull request #10 from
+GaryHill0985/workstream-1b-ims04-v0.3*), parents `4490e88` and `3965225`. The merge tree `f34d1eb` is identical
+to the tree of `3965225`, so nothing was changed in the merge. **`a082eff` (workstream 1b) and `3965225`
+(register v1.11) both carry SSH signatures; Gary confirmed both show *Verified* on GitHub, 24 Sep 2026.** Local
+`git log` still shows them as `N`, because `gpg.ssh.allowedSignersFile` is not configured on the MacBook (see D4).
+`02650c7` carries GitHub's own web-flow signature. The GitHub API could not be reached from this session, so the
+*Verified* status rests on Gary's check, not on this chat's.
+
+**`SESC-IMS-04` was not changed.** It is still draft v0.3, and its approval block is still unsigned.
+
+| Built | Where | Status |
+|---|---|---|
+| **`build/render_docx.py`**: ported from `policy_editor.py` and `sesc_cover.py` (TeraBox restore, read-only, not modified). **It generates** a branded DOCX from a Markdown source: the cover's six fields, the page-3 control table, the running header (`ID · Vn.n — Title`) and the footer are **all generated from front matter. No version number is typed anywhere.** **It also keeps** the amend-in-place API for the legacy estate: `replace_runs`, `append_para`, `add_contents_entry`, `set_cell` (trap 4 fixed), `find_signature_table` (trap 2), `patch_header_footer_text` (trap 3) and `patch_branded_cover()`. | `build/` | Done |
+| Brand assets copied from `DOCUMENT DESIGN INSTRUCTIONS CLAUDE/`: `sesc-3d-background.jpg`, `sesc-logo-reversed.png`, `sesc-logo-dark.png`. SESC's own brand files, not borrowed material. | `build/assets/` | Done |
+| **`build/test_render_docx.py`**, 19 tests. **F27/F34: every paragraph number and sub-paragraph label is compared with the source, both as written into the DOCX and as printed in the PDF** (read from the PDF text layer by position, so a table cell holding "(a)" is not counted). The source numbers are read straight off the Markdown lines, not through the renderer's parser. A mutation test confirms that a source numbered 1, 2, 5 prints 1, 2, 5. The other tests cover: front matter drives the header and control table; *uncontrolled when printed* with PAGE/NUMPAGES intact; OFFICIAL-SENSITIVE only on `official_sensitive: true`; the signature block renders empty; a draft with a filled signature row is **refused**; a typed footer that disagrees with the front matter fails the build; and the four §5 traps. | `build/` | **19/19 pass on the MacBook**, including the PDF test |
+| `standards/front-matter-schema.yaml`: two optional fields, `revised` (date of this version) and `prepared_by`. Where they are absent, the renderer takes both from the revision-history row for the current version. **IMS-04 does not carry them, and was not edited to add them.** | `standards/` | Done |
+| `.gitignore`: `.DS_Store` (F36) | root | Done |
+| A `render` job for CI, running the renderer tests. **Not applied:** `.github/workflows/ci.yml` is protected against writes from this session (F37). | `Claude outputs/ci.yml.workstream-2` | **Gary to copy in** |
+
+**How the renderer behaves on a draft.** For a draft, nothing is printed that implies issue or approval. The
+cover and control table read *REVISION 0.3 — DRAFT, NOT ISSUED* · *Issue date: Not issued* · *Approved by: Not yet
+approved (Managing Director)* · *Next review: Set on issue*. The header's right-hand side reads *DRAFT — NOT
+ISSUED*. The revision date (24 September 2026) and the author (*G A Hill (drafted by Claude)*) come from Annex B
+row 0.3. The contents page is generated from the headings. **No TOC field is used (trap 1).** The source's own
+typed footer line (*"…v0.3…"*) is dropped, after checking that its version agrees with the front matter (F40).
+
+**Rendered and verified — IMS-04 v0.3.** `Claude outputs/SESC-IMS-04-v0.3-DRAFT.docx` and `.pdf`, **21 pages**,
+rendered on the MacBook with LibreOffice. Both are untracked (`*.pdf` and `*.docx` are gitignored). **Read as images:**
+the cover (p1), the contents (p2), the control page (p3), the scope page with ¶14 (p6), the ¶58 page (p15), and the
+approval and annex pages (p19–21). Each was compared side by side with the signed branded **POL-16 v1.2**
+(`QinetiQ/JOSCAR/Documents/2.8 Quality/Branded/Signed/`, pages 1, 3, 4 and 5).
+
+1. **Cover.** `make_cover()` is `sesc_cover.make_cover()` with its constants unchanged. Given POL-16's own field
+   values, it reproduces the POL-16 cover PNG to a **mean difference of 0.24 on a 0–765 scale**. The only differing
+   pixels are in rows 3–4, which were patched in POL-16 by `patch_branded_cover()`. **The cover was not redesigned.**
+   The IMS-04 cover reads MANAGEMENT SYSTEM · CLAUSE 4 // ISO 9001 · ISO 14001 · ISO 45001 · *Context of the
+   Organisation*. The six fields read as above. That wording is a reference to the standards, not a certification claim.
+2. **Interior.** It uses POL-16's page geometry (A4; margins 1077/1474/1361; header and footer 567 twips), its
+   full-bleed black header and footer bars with the 18-eighths red keyline, and its heading, numbered-paragraph and
+   table formats run for run. The watermark matches POL-16's embedded image to a mean difference of 0.43.
+3. **¶14 scope page.** The scope statement renders whole, as an indented quote kept with ¶14. **¶58 page:** the
+   carve-out quote, then (a) to (d), with ¶58(d)'s warning intact.
+4. **Approval block (Part 9).** Kept on one page. *Reviewed by*, all three *Date* cells and the *Signature* row are
+   **empty**. Nothing was filled.
+5. **Differences from POL-16, recorded rather than hidden.** The contents page has no page numbers and no "press F9"
+   note, because it is not a field. Body tables have slightly more cell padding than POL-16's. The ⚠ in ¶58(d) prints
+   as a colour glyph from a fallback font. Page breaks differ slightly between the container render and the MacBook
+   render, because of font metrics. **Full parity, meaning "a branded PDF built from the repo is indistinguishable
+   from the current one", can only be shown on a migrated signed document. That is workstream 7 (POL-16).** It is
+   not claimed here.
+6. **OFFICIAL-SENSITIVE** was rendered on a test fixture and read as images. The bands appear at head and foot of the
+   cover and of every interior page. With the flag off, no marking appears.
+
+**`build/validate.py` on the clone:** 0 errors, 10 warnings (all the expected 14001 `verified: false`), 3 notes. BUILD PASSES.
+
+### 2g.1 Recommendation: add the F27 trap to `Section workflow method.md` §5
+
+**Not applied. The TeraBox restore is read-only (CLAUDE.md §2).** When that file is next maintained, add this as a
+fifth bullet under §5:
+
+> **Numbered paragraphs restart, or get renumbered, after a table (F27, F34).** A Markdown renderer treats an
+> indented continuation as a code block, and restarts an ordered list after a table, or after anything else that
+> interrupts the list. SESC-WI-01 printed ¶3–6 as 1–4, and SESC-IMS-04 printed ¶13 as "14.". **Never use Markdown
+> list numbering or Word auto-numbering for controlled paragraphs. Write the source number into the paragraph as
+> literal text,** as the signed documents already do (`"1."` + tab, bold), and test every printed number against the
+> source: `build/test_render_docx.py`.
+
+`CLAUDE.md` §9.4 also says "four known traps". It should say five, and point to `build/render_docx.py`. That is a
+`CLAUDE.md` change, so it goes by PR in a later chat, not this one.
+
+### 2g.2 Status carried forward, as given by Gary on 24 Sep 2026
+
+- **F29 (Steve): no change.** No written confirmation from the insurer or broker, and D17 option (b) has not been
+  taken. The ventilation element of IMS-04 v0.3 still cannot be signed. Target 30 Sep 2026 stands.
+- **F35 (Gary): still public, decision open.** The repository remains public. This register, now carrying F29–F31
+  and F39, is readable by anyone. The recommendation stands: decide before the next push.
+
+**Tasks by owner, from this session:**
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | **F36:** unstage the `.DS_Store` found staged in the index at the start of this session (`git restore --staged .DS_Store`). The commands below do it. | before the commit |
+| **Gary** | **F37:** copy `Claude outputs/ci.yml.workstream-2` over `.github/workflows/ci.yml` (the commands below do it), then check that the `render` job goes green on the pull request. | with this PR |
+| **Gary** | Review and merge the workstream 2 pull request. **Claude does not merge.** | — |
+| **Gary** | **F35:** decide whether the repository goes private | before the next push |
+| **Steve** | **F29:** unchanged, see §2f | 30 Sep 2026 |
+| Gary | Optional: set `gpg.ssh.allowedSignersFile`, so that local `git log --show-signature` can check signatures without relying on GitHub (D4) | when convenient |
+| Later chat | `CLAUDE.md` §9.4: five traps, with a pointer to `build/render_docx.py` (2g.1) | by PR |
+| Later chat | **F39:** correct `portal/config.yaml`: the trades line, and the 30 Sep 2026 "date to quote" milestone | Phase 1 |
+| Later chat (IMS-04 v0.4) | **F40:** remove the typed footer line. Consider adding `revised:` and `prepared_by:` to the front matter. | at v0.4 |
+| Workstream 7 | Migrate POL-16 and render it with `render_docx.py`. **That is the parity test proper** (Phase 1 gate). | Phase 1 |
+
+**Completion note.** The renderer exists, generates every control field from front matter, prints the source's
+paragraph numbers and proves it on the printed page, and leaves the signature block empty. IMS-04 v0.3 renders to
+a 21-page branded PDF that sits beside POL-16 on the same cover and interior system. **Nothing was signed, merged or
+issued. IMS-04 was not edited.** Two things this chat could not do from here: write `ci.yml` (F37), and verify
+signatures on GitHub itself. Both are with Gary. F29 remains the one thing standing between IMS-04 v0.3 and
+Steve's signature.
+
+---
+
+## 2h. Pre-meeting review, 5 October 2026 — James Milligan's Dropbox template set
+
+**Taken:** a read of James Milligan's email of 26 September 2026 (*"ISO Company Management System - Drop Box"*,
+to Steve, cc Gary) and of the shared folder he refers to, which Gary duplicated to `~/Documents/SESC/SESC
+Solutions Limited/` (173 files, 20 numbered folders plus `To be Allocated`). Every `.docx`, `.doc`, `.xlsx` and
+`.xls` in it was opened and text-extracted; the CMS Manual, the H&S Policy Manual, the folder guides, the four
+core procedures, the COTO log, the legal register, the aspects register, the NC-CAR log, the supplier list,
+the calibration log and the toolbox-talk index were read. **Nothing in the repository was changed by this
+session except this register. Nothing was uploaded to Dropbox.**
+
+**What James proposes.** He has set up a template document system on his own Dropbox subscription, offers it
+as *"the document builder"* from which SESC can later *"download and transfer all over to whatever system you
+use"* — or, alternatively, that SESC gives him access to its own system and *"we build to that"*. He asks for
+every existing SESC document and process to be dropped into a `To be uploaded` folder, which he will file.
+The job he describes is to go through each folder and *"make each document your own"* — logo and description.
+This is to be discussed at the meeting on **6 October 2026, 11:00**.
+
+**What the set is.** A generic consultant's template CMS, not a certification body's. The evidence:
+
+| | Found | Where |
+|---|---|---|
+| Provenance | *"Folder contents guide: green is provided by ISO Cert …"* — 32 control-table rows read `ISO Certification Ltd \| Reviewed by:`; the H&S Policy Manual template names *"James Milligan TechIOSH, ISO Certification Limited"* as the contracted H&S consultant; the supplier-list template's only real row is `ISO Certification Limited, james.milligan@isocertification.uk.com, 07808 666380, Bournemouth`, entered 2019. **This answers F20's open question: isocertification.uk.com is James's business**, now trading as The Milco Group Ltd (company 15837992, Shaftesbury) per his signature. | `0. Contents/`, `1. Context…/CMS Health and Safety Policy Manual.docx`, `8. Approved Suppliers/` |
+| Third-party content | **93 toolbox talks carry `HCPL-TBT-nnn` document numbers**, index dated 6 July 2021 — another company's controlled documents. 92 of 128 `.docx` files mention HCPL. | `20. Health and Safety/Toolbox Talks WORKING ON/Generic/` |
+| Editions | The manual and policies cite **ISO 14001:2015 (withdrawn 15 April 2026)**; the Generic Risk Assessments still cite ISO 9001:2008 and ISO 14001:2004. No 2026-edition content anywhere. | `CMS Manual.docx` ¶ Scope; `Generic Risk Assessments.docx` |
+| Template state | `ADD ADDRESS`, `ADD SCOPE WORDING`, `LARGE COMPANY LOGO HERE`; demo data — a forklift at "Acme Calibration Labs", a supplier disapproved because *"They poisoned us at Xmas party"*, "attorney" and "CPA" in the COTO log (US-origin template); the quality policy promises *"to make the management of our customer's compliance an easy and enjoyable experience"*, which is a compliance consultancy's policy, not a contractor's. | throughout |
+| Style | "The Company" 291 times; "the Employer" once. No numbered paragraphs. No control block of SESC's form. **No "Records held, records not yet held" section in any document.** | throughout |
+| Aspects register | Office-based generic (lighting, photocopying, company cars, furniture). Not a contractor's. **Does not close §6 item 4**, which stays blocked on buying 14001:2026. | `13. Aspects and Impacts/` |
+| Legal register | 111 rows, typed by topic, with links and a "last reviewed" date of 1 January 2026 on every row. **Useful as structure for §6 item 5** (SESC's own is dated 2020 with dead `Z:\` links) — every row still has to be evaluated against SESC's actual activities before any of it is SESC's. | `14. Legal and Regulatory Requirements/` |
+| Internal audit model | Procedure stage 1: *"Audits completed by trained and independent auditors, such as ISO Certification Limited."* The consultant who supplies the documents also audits them. Bears on D3 and B5. | `7. …/CMS Procedure - Internal Audit.doc` |
+| Scope creep | COTO log carries a `Risks 27001` tab (v1 01/08/2024). ISO 27001 is deferred (D1, CLAUDE.md §12.4). | `CMS COTO Log.xlsx` |
+| Empty folders | 2, 4, 5, 6, 10, 11, 12, 15, 16, 18 (with 16 sub-folders), 19 — the records folders are empty, as they must be. The folder taxonomy itself is a reasonable picture of what an auditor expects to be shown. | — |
+
+**What this changes, and what it does not.**
+
+1. **The architecture does not change.** The repository stays the single master (CLAUDE.md §5, §7.7). IDs, clause
+   tags, front-matter-generated control blocks, the honesty convention and the Workspace record capture all
+   stand. James's "give me access and we build to that" is the one option that fits the master-copy rule; his
+   Dropbox is an **inbox and a transfer folder, never a second master** — two copies of one thing have drifted
+   four times on this project already.
+2. **D2 was mis-framed.** The 6 October meeting is a **consultant** conversation, not the certification body
+   conversation. Who certifies is still open, and the impartiality question in F20 now has a sharper form:
+   *which UKAS-accredited body does James intend SESC to use, is he an agent, reseller or auditor for it, and
+   has it accepted that he built the system?* A body cannot certify a system it, or anyone linked to it, built.
+3. **Borrowed material is structure, never content** (§7.2) applies to the whole set. **`HCPL` joins POW, ITC,
+   LARC and Unitspark** on the list of references that never enter the repository. What *is* worth taking as
+   structure: the 20-folder evidence taxonomy as an auditor-facing **view** that the portal could generate
+   (never as the filing system); the legal register's topic typing for §6 item 5; the four core procedures'
+   stage / responsibility / control / record layout for §6 item 6; and the toolbox-talk **titles only** as a
+   topic list for `SESC-FRM-06`.
+4. **His edition position is a competence test.** The templates are built to 14001:2015. Ask him directly about
+   14001:2026 and 9001:2026 and record the answer at D16 and B4.
+5. **Personal data does not go to his Dropbox.** It is a store under a third party's subscription and control.
+   Accident detail naming people, individual training records, DBS and right-to-work material stay in Workspace
+   under POL-14 (CLAUDE.md §8). Nothing from `Insurance Docs/`, no file marked `CONTAINS PERSONAL DATA`, and
+   not this register.
+6. **The stop rule.** Whether SESC engages James as its ISO consultant, on what terms, and for what fee, is
+   **Steve's decision**. This session proposes nothing on that.
+
+**What goes into `To be uploaded`, if Gary decides to upload anything before the meeting** — issued documents
+only, from the TeraBox restore `QinetiQ/JOSCAR/Documents/*/Branded/`: the 21 signed PDFs (POL-01…POL-19,
+CRP-01, REG-01) and REG-02 Assurance Calendar. `SESC-IMS-04 v0.3` may go in **only clearly marked DRAFT and
+unsigned**, because it is the scope statement he will otherwise invent from his manual's `ADD SCOPE WORDING`
+— Gary's call; it carries the Part 8 inventory of records not yet held, including the insurance gaps F29–F31.
+**Not uploaded:** REG-03, REC-01…04, TPL-01…04, anything in `2.13 Licences/Individual technician registrations/`,
+`Insurance Docs/`, `CLAUDE.md`, this register, the forms YAML, the Workspace sheets.
+
+**Questions for the meeting** (recorded here so the answers have somewhere to go):
+
+| # | Question | Record the answer at |
+|---|---|---|
+| Q1 | Which certification body do you intend SESC to use, and is it UKAS-accredited for ISO 9001:2015, **ISO 14001:2026** and ISO 45001:2018 with IAF sector 28 in scope? | D2 |
+| Q2 | What is your relationship with that body — agent, reseller, contracted auditor, none? Has it accepted in writing that the consultant who built the system is not its auditor? | F20 |
+| Q3 | Your templates cite ISO 14001:2015, withdrawn in April 2026. What is your plan for 14001:2026, and for 9001:2026? | B4, D16 |
+| Q4 | How much live operating history does that body require before Stage 2? Will you get it in writing? | §1.1, F13 |
+| Q5 | Who carries out the internal audits — you, or SESC's own trained auditors? If you, who audits the documents you wrote? | D3, B5 |
+| Q6 | Your toolbox talks are numbered HCPL. Whose are they, and are they licensed for SESC to adopt? | F41 |
+| Q7 | The Dropbox is on your subscription. Who else has access, is 2-step verification enforced, and what happens to SESC's copies if the engagement ends? Is there a data-processing agreement? | F45 |
+| Q8 | SESC's master copy is a version-controlled repository with generated control blocks and a records layer in Workspace. Will you work to that ("we build to that"), with Dropbox as the transfer folder? | §2h.1 |
+| Q9 | What are you proposing commercially — scope, fee, duration? | **Steve** |
+
+**Tasks by owner, from this session:**
+
+| Owner | Task | By |
+|---|---|---|
+| Gary | Take Q1–Q9 to the meeting; record every answer in this register the same day | 6 Oct 2026 |
+| Gary | Decide whether to upload the issued PDFs (and IMS-04 v0.3 as DRAFT) to `To be uploaded` before 11:00 | 6 Oct 2026 |
+| Gary | Do not give James write access to the repository or the Workspace Shared Drive before Steve has decided the engagement | — |
+| **Steve** | **Decide whether SESC engages The Milco Group Ltd as ISO consultant, and on what terms (Q9).** Nothing is committed at the meeting. | after 6 Oct |
+| Gary | Verify the body named at Q1 on `ukas.com` (schedule: standard, edition, IAF 28) before any further step | after the meeting |
+| Later chat (§6 item 5) | Read James's legal register as a *structural* seed for the compliance obligations register. Every obligation re-evaluated against SESC's activities. No row copied. | Phase 1 |
+| Later chat (§6 item 6) | The four core procedures may use the stage / responsibility / control / record layout. Content is SESC's. | Phase 1 |
+| Later chat | `CLAUDE.md` §3 and §7.2: add `HCPL` to the forbidden-reference list, by PR | next PR |
+
+**Completion note.** The email was read in full; the folder was inventoried and every Office file in it opened, with the key documents read. The set is a generic ISO Certification Ltd
+template kit, built to the withdrawn 14001 edition, carrying another company's controlled documents, and
+holding no records. It confirms that James is the consultant side of this, not the certifying side, which
+makes the impartiality question answerable and moves "who certifies" back to Steve as an open decision.
+SESC's plan does not change; its master stays where it is. Nothing was signed, uploaded, merged or committed.
+
+---
+
 ## 3. Blockers — the four, restated with what has actually moved
 
 | # | Blocker | Position at 18 August 2026, updated 24 September 2026 |
@@ -346,7 +551,7 @@ repository is public).
 | # | Decision | Owner | Position |
 |---|---|---|---|
 | D1 | Certification route and scope | Gary | **Settled.** 9001+14001+45001 integrated 2027; 27001 2028+. Roofing IS in scope, and the insurance schedule must be fixed to match. |
-| D2 | Certification body | Steve | **Open.** Three written quotes. Ask in writing: *"Have you completed your UKAS accreditation extension for ISO 14001:2026, and if not, which tranche and what decision date?"* Also ask for the body's own effective-personnel calculation, for SSIP deemed-to-satisfy inside the scope, and **for how much live operating history it requires before Stage 2** (see §1.1).<br><br>**24 Sep 2026: now in motion.** First conversation: James Milligan (isocertification.uk.com), **now 6 October 2026** (moved from week commencing 28 Sep). **Read F20 first.** The requirement for **three written quotes stands.** Add F20's questions to the written questions above — who issues the certificate; whether that body is UKAS-accredited for 9001:2015, 14001:2026 and 45001:2018 with IAF 28 in scope; whether it, or anyone linked to it, has consulted on SESC's system — and D16's edition question. **Engaging a certification body is Steve's decision.**<br><br>**The cost basis, recorded so it is not re-derived — and its caveat, recorded so it is not repeated as fact.** Three standards integrated: ~13 audit days before reduction, **£7k–£13k** of CB fees in year one. All four: ~18 days, **£12k–£20k**. SESC's largest single contract is about £50,000. **⚠ Those figures assume an effective personnel count of 16–25 (IAF MD 5 base 3.0 / 4.5 / 5.5 = 13.0 days). SESC's payroll mean is about thirteen, which falls in the 11–15 band, where the base figures are lower and were NOT read from the source. And the pricing is triangulated from UK vendor sources, not quoted.** Three written quotes settle it. |
+| D2 | Certification body | Steve | **Open.** Three written quotes. Ask in writing: *"Have you completed your UKAS accreditation extension for ISO 14001:2026, and if not, which tranche and what decision date?"* Also ask for the body's own effective-personnel calculation, for SSIP deemed-to-satisfy inside the scope, and **for how much live operating history it requires before Stage 2** (see §1.1).<br><br>**24 Sep 2026: now in motion.** First conversation: James Milligan (isocertification.uk.com), **now 6 October 2026** (moved from week commencing 28 Sep). **Read F20 first.** The requirement for **three written quotes stands.** Add F20's questions to the written questions above — who issues the certificate; whether that body is UKAS-accredited for 9001:2015, 14001:2026 and 45001:2018 with IAF 28 in scope; whether it, or anyone linked to it, has consulted on SESC's system — and D16's edition question. **Engaging a certification body is Steve's decision.**<br><br>**5 Oct 2026: the 6 October meeting is a CONSULTANT conversation, not the certification body conversation** (§2h). James Milligan is offering to build SESC's documents from his ISO Certification Ltd template kit on his Dropbox. Which body certifies is still open and still needs three written quotes. Record James's answer to Q1 here.<br><br>**The cost basis, recorded so it is not re-derived — and its caveat, recorded so it is not repeated as fact.** Three standards integrated: ~13 audit days before reduction, **£7k–£13k** of CB fees in year one. All four: ~18 days, **£12k–£20k**. SESC's largest single contract is about £50,000. **⚠ Those figures assume an effective personnel count of 16–25 (IAF MD 5 base 3.0 / 4.5 / 5.5 = 13.0 days). SESC's payroll mean is about thirteen, which falls in the 11–15 band, where the base figures are lower and were NOT read from the source. And the pricing is triangulated from UK vendor sources, not quoted.** Three written quotes settle it. |
 | D3 | Internal auditor — train or buy | Steve | **Open.** Train two, buy in the first cycle for independence. |
 | D4 | Git host and approver | Gary | **FULLY CLOSED 18 Aug 2026.** `github.com/GaryHill0985/QMS`. Ruleset **"Protect main - controlled documents"** (id 20986828), **Active**, targeting `main`, bypass list empty, **four rules: restrict deletions · require a pull request before merging · block force pushes · require signed commits.** Commit signing configured on MSI with an ed25519 SSH key added to GitHub as a **Signing Key** (`SHA256:5IUWBrgogowui5I6MXWcc9uYYQPIvcUKVTAb9Waw18Y`). Steve approves, Gary authors and reviews — see D12.<br><br>**24 Sep 2026 — commit signing moved to the MacBook.** New ed25519 key `~/.ssh/id_ed25519_sesc`, registered on GitHub as both an Authentication key and a Signing key. **This key HAS a passphrase**, held in the macOS keychain. That reverses the §2b trade-off, which existed only because Git Bash on Windows had no ssh-agent. **Fingerprint: `SHA256:e17PhFZEmyBE1JG4LR51Du2P9Ozr5M8LJCuNTulCBwI`** (ED25519, 256-bit, comment `garyadamhill@outlook.com`), read by Gary with `ssh-keygen -lf ~/.ssh/id_ed25519_sesc.pub` on 24 Sep 2026. **The MacBook's first commit is `4b9648d`, the D13 recovery.** Local `git log` cannot check signatures, because `gpg.ssh.allowedSignersFile` is not configured on the MacBook. **Confirmed by Gary on GitHub, 24 Sep 2026: `4b9648d` and the v1.5 commit `b167f32` both show Verified.** The unbroken signed chain therefore continues from 18 August 2026 across the change of machine. **The MSI signing key (`SHA256:5IUWBrgogowui5I6MXWcc9uYYQPIvcUKVTAb9Waw18Y`) was removed from GitHub by Gary on 24 Sep 2026.** |
 | D5 | Independent professional adviser | Steve | **Closed on naming** — see B1. |
@@ -391,13 +596,13 @@ repository is public).
 | F17 | **A stale `.git/index.lock` blocked `git add` and `git commit`**, so a branch was pushed with no commits on it. Cause: a `git status` run through the device bridge, which cannot remove its own lock file. **Do not run git commands against the working clone through the device bridge.** | Medium | Closed — lock removed, rule recorded at §7.7 |
 | F18 | **`SESC-REG-02` §8(a) does not reconcile with its own tables.** It states eleven of twenty-nine recurring obligations have never been done. The tables hold **23 scheduled** obligations, of which **15 have never been done**, plus 6 event-driven triggers. Correct at the next reissue. | Low | Gary |
 | F19 | **Document owner is not recoverable for any of the 45 legacy documents.** The value exists in every PDF control table; the Evidence Pack extraction did not capture it and no machine-readable copy exists. **Until a document has a named owning ROLE, nobody is accountable for reviewing it** — and `SESC-REG-07` now carries an empty owner column that proves it. | Medium | Gary |
-| F20 | **Check accreditation and impartiality before the James Milligan meeting.** James is SESC's retained external H&S adviser (POL-05 Annex C) and is named as internal SHEQ Manager in SESC-CPP-001. The JOSCAR brief §4 records a "Subcontractor Performance Review (**ISO Certification Ltd**)" scored 10/10 by the supplier about itself, and the Architecture Plan §11 item 6 calls it an "unaccredited-looking ISO Certification Ltd relationship that will not satisfy a defence customer". **Whether isocertification.uk.com is that business has not been established.** The website could not be read on 24 Sep (TLS certificate verification failure). **Before any commitment:** who issues the certificate; is that body UKAS-accredited for 9001:2015, 14001:**2026** and 45001:2018 with IAF 28 in scope; and has that body, or anyone linked to it, consulted on SESC's system? A body cannot certify a system it helped build. **The stop rule applies: engaging a certification body is Steve's decision.** | **High** | Gary, before the meeting on **6 Oct 2026** |
+| F20 | **Check accreditation and impartiality before the James Milligan meeting.** James is SESC's retained external H&S adviser (POL-05 Annex C) and is named as internal SHEQ Manager in SESC-CPP-001. The JOSCAR brief §4 records a "Subcontractor Performance Review (**ISO Certification Ltd**)" scored 10/10 by the supplier about itself, and the Architecture Plan §11 item 6 calls it an "unaccredited-looking ISO Certification Ltd relationship that will not satisfy a defence customer". **Whether isocertification.uk.com is that business has not been established.** The website could not be read on 24 Sep (TLS certificate verification failure). **Before any commitment:** who issues the certificate; is that body UKAS-accredited for 9001:2015, 14001:**2026** and 45001:2018 with IAF 28 in scope; and has that body, or anyone linked to it, consulted on SESC's system? A body cannot certify a system it helped build. **The stop rule applies: engaging a certification body is Steve's decision.**<br><br>**5 Oct 2026, from James's own template set (§2h): isocertification.uk.com IS James's business** — his templates name *"James Milligan TechIOSH, ISO Certification Limited"* and carry `james.milligan@isocertification.uk.com`; he now trades as The Milco Group Ltd (15837992). **He is the consultant, not a certification body.** The question becomes: which UKAS-accredited body does he intend, what is his link to it, and has it accepted that the builder is not the auditor. Q1–Q2 at §2h. | **High** | Gary, at the meeting on **6 Oct 2026**; then **Steve** |
 | F21 | **The Master Register was not updated between 18 August and 24 September 2026**, although JOSCAR approval, D8, D11 and the records route all moved in that time. | Medium | **Closed by this v1.5 merge.** |
 | F22 | **The design carve-out has not yet reached the standard quotation.** Until it does, quotations still exclude all design while SESC designs heat pump and solar PV systems. | Medium | Steve / Gary |
 | F23 | **`CLAUDE.md` §11 gives Windows paths (`Desktop\SESC\...`)** that no longer exist on the working machine, and the handover's "Give Gary Git Bash syntax" rule no longer applies. Correct §11 to the MacBook paths by PR — **a separate commit from this one** (§7.8). The Claude Project instructions v2.0 already carry the Mac paths and zsh syntax.<br><br>**Closed 24 Sep 2026** by a separate commit on the same branch as register v1.7: `CLAUDE.md` §2, §9.4 and §11 now give macOS paths into the TeraBox restore and the MacBook clone, with the zsh rule. Every §11 path was checked to exist on the MacBook. **One correction found:** POL-01…04 sit in `QinetiQ/JOSCAR/Documents/2.2 Human Resources/` in the TeraBox restore, not nested under `2.7 Environment & Sustainability` as recorded on 18 August — confirm which is current before migrating them. | Medium | **Closed** |
 | F25 | **The record forms cannot capture photographs as built.** Apps Script's `Form` class documents no method for adding a file upload question (checked 24 Sep 2026). A Google Docs Editors community guide, which is **not Google's own documentation**, says uploads force sign-in and are not possible for forms on a Shared Drive. The gap is recorded row by row in each `_field_map` as `NOT CREATED`, not hidden. | Medium | Gary, via D18 |
 | F26 | **`SESC-FRM-02` Accident and Incident Report has no "reported by" field.** On an open form, nothing records who raised an accident report. RIDDOR and the investigation will want to know. **Not changed in this session**, because whether to capture it, and how given that witness names are deliberately kept out, is a design choice. | Medium | Health and Safety Officer / Gary, at FRM-02 v0.3 |
-| F27 | **Renderer trap for workstream 2: numbered paragraphs restart at 1 after a table.** When SESC-WI-01 was rendered with plain Markdown, ¶3–6 printed as 1–4, and ¶7 onward restarted too. The `sane_lists` extension fixed it in the preview. `build/render_docx.py` must keep the source numbering. Add this to the four traps in `Section workflow method.md` §5. | Medium | Workstream 2 |
+| F27 | **Renderer trap for workstream 2: numbered paragraphs restart at 1 after a table.** When SESC-WI-01 was rendered with plain Markdown, ¶3–6 printed as 1–4, and ¶7 onward restarted too. The `sane_lists` extension fixed it in the preview. `build/render_docx.py` must keep the source numbering. Add this to the four traps in `Section workflow method.md` §5. **24 Sep 2026: closed in `build/render_docx.py`. Source numbers are written as literal text, and `build/test_render_docx.py` checks every printed number. The recommendation for §5 is at §2g.1.** | Medium | **Closed (workstream 2)**; §5 wording is a recommendation only |
 | F28 | **Google says forms created by API after 30 June 2026 start unpublished and receive no responses** (Forms API "API changes" guide). Whether this applies to Apps Script `FormApp.create` was not confirmed. `Code.gs` publishes where the method exists, and README §6.5 makes checking **Published** in the editor mandatory. | Medium | Gary, at build |
 | F24 | **Before the MSI was retired, it was the only home of any unpushed work and of the untracked planning files (D10).** **Confirmed in part on 24 Sep 2026: the D13 change and register v1.4 had never been pushed**, and were recovered from the TeraBox restore as `4b9648d`. A comparison of the clone against the TeraBox copy of `CLAUDE ISO` on 24 Sep found every tracked file identical. **Present only in the TeraBox restore, not in the clone:** the D10 planning and review files (`SESC-IMS-Project-Instructions-v1.0.md`, `SESC-IMS-Readiness-and-Gap-Analysis-v1.0.html`, `SESC-IMS-Gap-Register-v1.0.xlsx`, `SESC-IMS-04-Context-of-the-Organisation-v0.2-REVIEW.html`, `SESC-Business-System-Project-Brief.md`, `SESC-Business-System-Project-Handover-v1.0.md`) and `sesc-ims-portal-2026-08-18.zip`. **What the TeraBox copy cannot show is anything on the MSI newer than the backup, or on an unpushed branch.** Record here whether the MSI was checked before retirement, and the date — or that it was not.<br><br>**Closed 24 Sep 2026: Gary confirmed the MSI was checked before retirement and nothing is outstanding.** | Medium | **Closed** |
 | F29 | **The PI record does not show cover for ventilation specification in mould and damp remediation.** Markel schedule AHG015566 2026-27 (3 pp) covers *"your professional services"* without defining them. The Statement of Fact (4 pp) does not declare mould and damp remediation. The policy wording is not held. D17 was recorded on Gary's report that PI covers it, and that report has no record behind it yet. **Recorded at IMS-04 v0.3 ¶58(d) and Part 8(u). Not written as covered.** | **High**, because it blocks the ventilation element of v0.3 | **Steve** |
@@ -405,8 +610,20 @@ repository is public).
 | F31 | **The PI Statement of Fact of 20 Apr 2026 does not match the Employer.** It gives the trade as *"Electrical Contractor"* and **the number of directors as 2**, when the Employer has a sole director. Its employee and turnover figures are not reconciled to payroll or accounts. It declares no roofing and no mould and damp work. And it gives the basis of limit as *"Any one claim"*, while the schedule endorsement makes it aggregate. The Statement of Fact itself says that failure to correct it *"may make your policy voidable"*. **This is a statement to an insurer, so under the stop rule it is Steve's.** Not repeated in IMS-04, which states no headcount or turnover. | **High** | **Steve** |
 | F32 | **`EL IP25BCONT00022472100.pdf` and `PL IP24BCONT00022472100.pdf` in `Insurance Docs/` are byte-identical** (MD5 `31ca4113…`). Both are the broker letter of 6 Aug 2026, not policy documents. The PL filename says `IP24B…` while the letter gives `IP24A…`. Feed this into IMS-04 Part 8(m). | Low | Accounts Manager |
 | F33 | **IMS-04 v0.2 carried statements stale against this register:** 14001:2026 content asserted, the operating start date quoted as 30 Sep 2026, an encrypted records database described as existing, the wrong finding number, a missing revision row, a v0.1 footer, and three Part 8 due dates passed. **All corrected in v0.3 and listed in its Annex B.** | Low | **Closed in v0.3** |
-| F34 | **F27 reproduced on IMS-04.** A plain Markdown render printed ¶13 as "14.". The preview was fixed by rendering each numbered paragraph with its source number, and all 67 were checked. **`render_docx.py` must do the same, and its test must compare every printed number with the source.** | Medium | Workstream 2 |
-| F35 | **The repository `github.com/GaryHill0985/QMS` is PUBLIC** (GitHub API, 24 Sep 2026: `"private": false`, `"visibility": "public"`). Anyone can read this register and every draft, including the insurance positions, the gap inventories and F31, and CLAUDE.md §8 personal-data rules then depend entirely on the validator. Found because the device shell cloned it over HTTPS with no credentials. **Making it private is a repository setting, so Gary's.** It does not affect signed commits or the ruleset. | **High** | **Gary** |
+| F34 | **F27 reproduced on IMS-04.** A plain Markdown render printed ¶13 as "14.". The preview was fixed by rendering each numbered paragraph with its source number, and all 67 were checked. **`render_docx.py` must do the same, and its test must compare every printed number with the source.** **24 Sep 2026: done.** All 99 labels on IMS-04 (67 paragraph numbers, 32 sub-labels) are checked against the source, in the DOCX and on the printed PDF: 19/19 tests pass. | Medium | **Closed (workstream 2)** |
+| F35 | **The repository `github.com/GaryHill0985/QMS` is PUBLIC** (GitHub API, 24 Sep 2026: `"private": false`, `"visibility": "public"`). Anyone can read this register and every draft, including the insurance positions, the gap inventories and F31, and CLAUDE.md §8 personal-data rules then depend entirely on the validator. Found because the device shell cloned it over HTTPS with no credentials. **Making it private is a repository setting, so Gary's.** It does not affect signed commits or the ruleset. **24 Sep 2026 (Gary): still public, decision open.** | **High** | **Gary** |
+| F36 | **`.DS_Store` was staged in the clone's index** (`git status` showed `A  .DS_Store`) when this session started. Nothing in `.gitignore` excluded it, so the next `git commit -a` or `git add .` would have committed Finder metadata. `.gitignore` now excludes it. **It must still be unstaged by hand.** | Low | Gary, before the workstream 2 commit |
+| F37 | **`.github/workflows/ci.yml` cannot be written from a Cowork session** (the device bridge refuses: a protected file). The renderer tests are therefore not in CI until Gary copies `Claude outputs/ci.yml.workstream-2` into place. A control Claude cannot change without Gary is arguably the right way round. | Low | Gary |
+| F38 | **`issued:` on a draft does not mean issued.** IMS-04 v0.3 is a draft that has never been issued, yet its front matter carries `issued: 2026-08-18` (the first-draft date), because the schema requires the field. The renderer prints *Not issued* for any draft, so no document says otherwise. But the schema should say what `issued` means before a first issue, or allow it to be empty for a draft. | Low | Gary, at the next schema change |
+| F39 | **`portal/config.yaml` is stale against this register.** Its `trades` line omits mould and damp remediation (D11). Its milestone for 30 Sep 2026 says *"The date to quote when asked when the management system started working"*. That contradicts B3, and IMS-04 ¶39 was corrected for the same statement in v0.3 (F33). The portal publishes it, including to the auditor build. | **Medium** | Later chat |
+| F40 | **IMS-04's source ends with a typed footer carrying "v0.3".** That is the kind of typed version number CLAUDE.md §5 forbids. The renderer drops it, and fails the build if its version ever disagrees with the front matter, so it cannot drift silently. Remove it at v0.4. | Low | Later chat, at IMS-04 v0.4 |
+| **F41** | **James Milligan's template set carries another company's controlled documents.** 93 toolbox talks are numbered `HCPL-TBT-nnn` (index dated 6 July 2021) and 92 of 128 `.docx` files reference HCPL. 32 control rows read "ISO Certification Ltd". Under §7.2 none of it enters the repository as content. **Add `HCPL` to the forbidden-reference list in `CLAUDE.md` §3 and §7.2.** | **High** | Later chat, by PR |
+| **F42** | **James's templates are built to ISO 14001:2015, withdrawn 15 April 2026**, and his Generic Risk Assessments still cite ISO 9001:2008 and 14001:2004. A consultant proposing to build SESC's EMS has not updated for the edition SESC must certify to. Ask (Q3) and record at B4 / D16. | **High** | Gary, at the meeting |
+| **F43** | **F20's open question is answered by James's own documents: isocertification.uk.com is his business.** He is a consultant (now The Milco Group Ltd), not a certification body. The impartiality risk therefore sits with whichever body he introduces, not with him directly — unless he audits for it. Q1–Q2. | Medium | Gary → Steve |
+| **F44** | **James's internal audit procedure names "ISO Certification Limited" as the independent auditor** — the consultant who supplies the documents audits them. Acceptable to some certification bodies, weak evidence of independence for ISO 45001 9.2.2 c) and 9001 9.2.2 c), and it leaves B5 (a second competent person at SESC) exactly where it is. | Medium | Steve, via D3 |
+| **F45** | **The Dropbox is a third-party-controlled store on James's subscription.** No personal data (CLAUDE.md §8, POL-14), no insurance documents and not this register go to it. If SESC uses it for anything beyond transfer, a data-processing arrangement and 2-step verification on every account are needed — and access ends when the engagement ends. Q7. | Medium | Gary |
+| **F46** | **James's option (a), "use this as the document builder, then transfer", would create a second master.** Four drift incidents on this project say no. His option (b), "give me access and we build to that", fits CLAUDE.md §5 and §7.7 — but no access is given before Steve decides the engagement (Q8, Q9). | Medium | Gary → Steve |
+| **F47** | **Workstream 2 was never committed, and the v1.12 row misattributes PR #10.** `git status` on 5 Oct 2026 showed `build/render_docx.py`, `build/test_render_docx.py` and `build/assets/` untracked, `.gitignore` and `standards/front-matter-schema.yaml` modified and unstaged, and the register modified — with `main` up to date with `origin/main`. `git show --stat 02650c7` lists only `SESC-IMS-Master-Register.md` and `system/4-context.md`: **PR #10 is workstream 1b.** So `main` holds register v1.11, and register v1.12 and the whole of workstream 2 existed only in the working tree for eleven days. The v1.12 row is corrected below. The `.DS_Store` of F36 was also still staged. Found by §7.7: a file expected to be committed, and which was not. | **High** | Gary — commit workstream 2 and the register as two commits on one branch, 5 Oct 2026 |
 
 ---
 
@@ -420,7 +637,7 @@ repository is public).
 | **1a** | **NEW 24 Sep 2026 — Google Workspace record capture** (D15): Forms for FRM-01…05 plus toolbox talk and site inspection, the Shared Drive, and a one-page "how to log it" for site. **Repository side DONE 24 Sep 2026 (§2e): FRM-06, FRM-07, WI-01 and the generator. Workspace side is Gary's: README §2–§7.** | **Starts the B3 clock. Nothing else moves the certification date as much.** | 1 session + Gary's build |
 | **1b** | **NEW 24 Sep 2026 — `SESC-IMS-04` v0.3.** **DRAFTED 24 Sep 2026 (§2f):** mould & damp named at ¶14, D8 + D17 carve-out at ¶58, fire doors removed. **With Steve for F29 (PI cover for ventilation), then signature.** | The scope statement is the first thing a certification body reads. | Done, awaiting Steve |
 | **1c** | **NEW 24 Sep 2026 (D20) — the record capture section of the SESC Platform**, brought forward from item 8: photos, tamper-evident append-only records, and an authenticated submitter, with field names aligned with `forms/SESC-FRM-01…07`. **A separate workstream. Its own chat.** | The Workspace forms cannot take photos, are not tamper-proof, and cannot prove who submitted an open form. | Platform sessions |
-| 2 | **Port `policy_editor.py` to `build/render_docx.py`** and render `SESC-IMS-04` to a branded PDF, then **read the cover and a body page as images**. | Renderer parity is the Phase 1 gate. Four known traps live in `Reference\Section workflow method.md` §5. | 1 session |
+| ~~2~~ | **DONE 24 Sep 2026 (§2g).** **Port `policy_editor.py` to `build/render_docx.py`** and render `SESC-IMS-04` to a branded PDF, then **read the cover and a body page as images**. | Renderer parity is the Phase 1 gate. Four known traps live in `Reference\Section workflow method.md` §5. | 1 session |
 | 3 | **`SESC-IMS-05` Leadership**, including the integrated IMS policy that supersedes the three separate policy statements, and the 45001 clause 5.4 worker consultation mechanism. | 5.4 is the clause 45001 auditors test hardest and it is entirely absent. | 1 session |
 | 4 | **The environmental aspects and impacts register, built from SESC's own activities.** | **The defining ISO 14001 document and the highest-priority gap in the system.** The one held belongs to a landscaping firm. Blocked on buying 14001:2026 (D6). | 1–2 sessions |
 | 5 | **The compliance obligations register**, replacing the 2020 register with dead drive links. | 14001 6.1.3 and 45001 6.1.3 are both dual maintain-AND-retain. | 1 session |
@@ -453,6 +670,8 @@ repository is public).
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.13 | 5 October 2026 | Claude, for G A Hill | **Pre-meeting review of James Milligan's Dropbox template set.** New §2h. The email of 26 Sep 2026 read; all 173 files inventoried, every Office file opened and text-extracted, the key documents read. The set is a generic ISO Certification Ltd template kit built to 14001:2015, carrying 93 HCPL-numbered toolbox talks and no records. F20 updated: isocertification.uk.com confirmed as James's business; he is the consultant, not a certification body. D2 re-framed: 6 Oct is a consultant conversation; who certifies stays open. New findings F41–F46. Nine meeting questions Q1–Q9 and an upload list recorded at §2h. **Nothing uploaded, signed, merged or committed; no other file changed.** **Then, from `git status`: F47 — workstream 2 and register v1.12 were never committed; PR #10 was 1b. v1.12 row annotated.** |
+| 1.12 | 24 September 2026 | Claude, for G A Hill | **Workstream 2.** New §2g. `build/render_docx.py` ported from `policy_editor.py` and `sesc_cover.py`, with the control block, header and footer generated from front matter. `build/test_render_docx.py` (19 tests) checks every printed paragraph number against the source (F27 and F34 closed). Brand assets added to `build/assets/`. Optional `revised` and `prepared_by` added to the front-matter schema. `.DS_Store` added to `.gitignore`. IMS-04 v0.3 rendered to a 21-page branded DOCX and PDF, read as images, and compared with signed POL-16 v1.2. **IMS-04 not edited, nothing signed.** The F27 trap recommended for `Section workflow method.md` §5 (§2g.1); the TeraBox file was not edited. **PR #10 recorded as merged at `02650c7`; `a082eff` and `3965225` Verified on GitHub (Gary).** ~~That PR is workstream 1b; this workstream 2 and this v1.12 were NOT committed on 24 Sep 2026 — see F47, found 5 Oct 2026.~~ F29: no change. F35: still public, decision open. New findings F36–F40. |
 | 1.11 | 24 September 2026 | Claude, for G A Hill | **Workstream 1b.** New §2f. `SESC-IMS-04` amended in place to **draft v0.3**: D11 (mould & damp remediation named, as remediation only; fire doors removed), D8 + D17 carve-out at ¶58, with the PI record cited page by page. **The PI schedule does not show cover for ventilation specification. The chat stopped on that point (F29, Steve).** D8, D11 and D17 rows updated. D15 updated. **New D20: Workspace forms are a stopgap only, and the Platform record capture section is built as soon as possible (Gary). §6 item 8 brought forward as 1c.** New findings F29–F35, including **F35: the repository is public.** PR #9 (1a) confirmed merged as `4490e88`. |
 | 1.10 | 24 September 2026 | Claude, for G A Hill | **Workstream 1a, repository side.** New §2e. New `SESC-FRM-06` Toolbox Talk Record and `SESC-FRM-07` Site Inspection (draft v0.1). `SESC-FRM-01…05` amended to v0.2, adding `correction_of` and, where a job applies, `job_ref`. New `SESC-WI-01` How to Log a Record on Site (draft v0.1). New `build/workspace_forms/` generator and runbook. `CLAUDE.md` §5: next free references are now FRM-08 and WI-02. B3, B6 and D15 updated. D17: PI schedule located, not yet read. New D18 (photos) and D19 (sign-in). New findings F25–F28. **Not yet run in Workspace. The B3 clock has not started.** |
 | 1.9 | 24 September 2026 | Claude, for G A Hill | **Correction to the v1.6 row.** The first drafting of v1.6 was **not** lost or overwritten. It was committed at 14:58 on 24 Sep 2026 as `18c9979` onto the `register-v1.5` branch, after PR #3 had already merged that branch, so it never reached `main` and left a stray pull request open. The re-applied draft was committed as `2cfb96d` and merged as PR #4. The two differ only in the v1.6 revision note. The stray pull request from `register-v1.5` is closed without merging. **Lesson: after a pull request is merged, start the next change from an up-to-date `main` on a new branch — never commit onto a branch that has already been merged.** |

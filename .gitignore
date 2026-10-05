@@ -26,6 +26,9 @@ out/
 .venv/
 .env
 
+# macOS Finder metadata
+.DS_Store
+
 # ---------------------------------------------------------------------------
 # Planning documents that live alongside the repo in the same folder.
 # These are NOT controlled documents and are deliberately untracked, BUT that

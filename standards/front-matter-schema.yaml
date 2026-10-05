@@ -23,6 +23,8 @@ optional:
   personal_data:   {type: boolean, default: false}
   official_sensitive: {type: boolean, default: false, note: "adds OFFICIAL-SENSITIVE bands head and foot, repeated on EVERY page"}
   review_trigger:  {type: list, note: "events that force a review before next_review"}
+  revised:         {type: date, note: "date of THIS version. Read by build/render_docx.py for the control block. If absent, the renderer takes the date from the revision-history row for this version, and fails if there is none. If both exist they must agree."}
+  prepared_by:     {type: string, note: "author of this version, as printed on the cover. If absent, the renderer takes the author from the revision-history row for this version."}
 
 rules:
   - "clauses keys must be one of: iso9001, iso14001, iso45001"
