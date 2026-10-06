@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.13 · 5 October 2026.**
+**The state of the CLAUDE ISO project. v1.14 · 6 October 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -533,6 +533,93 @@ SESC's plan does not change; its master stays where it is. Nothing was signed, u
 
 ---
 
+## 2i. Outcome of the James Milligan meeting, 6 October 2026
+
+**Source: Gary's account of the meeting, given the same afternoon. Nothing below is signed or contracted. Every
+commitment of money, and the choice of certification body, remains Steve's (stop rule).**
+
+| Item | Position reported by Gary, 6 Oct 2026 | Recorded at |
+|---|---|---|
+| **First deliverable** | James asks for the **CMS Manual** first, using his template (`1. Context of the Organisation/CMS Manual.docx`) as the starting point; he will review and suggest changes. He said himself that this template, and many others in his folder, may not be relevant to SESC. | D21 |
+| **Stage 1 target** | **Stage 1 assessment by the end of October 2026.** This brings Stage 1 forward from Phase 4 (Apr–Jul 2027) to Phase 1. | §2i.2, D22 |
+| **Internal auditor** | **James Milligan.** | D3 |
+| **External auditor / certification body** | **Stephen Lloyd of PJR** (Perry Johnson Registrars). | D2 |
+| **Fire risk assessment** | James can carry out the premises fire risk assessment. His initial walk-round flagged twelve items to put right before it, and before Stage 2. | §2i.3, F49 |
+
+### 2i.1 PJR, checked against UKAS on 6 October 2026
+
+Read from the UKAS schedule of accreditation **0105, Perry Johnson Registrars, Inc (Troy, Michigan), Issue 046,
+22 April 2026** (`ukas.com/download-schedule/0105/ManagementSystems`):
+
+- **ISO 9001:2015, IAF 28 Construction: Full.**
+- **ISO 45001:2018, IAF 28 Construction: Limited — "Construction excluding demolition as primary activity".** SESC
+  does not demolish as a primary activity, so the limit does not appear to bite. **Confirm with PJR.**
+- **ISO 14001: the schedule lists ISO 14001:2015 only, IAF 28 Construction: Full. No ISO 14001:2026 appears.**
+- The schedule lists no UK office. Whether Stephen Lloyd audits under PJR Inc's UKAS accreditation or under another
+  PJR entity's is **not established. Ask.**
+
+**PJR is UKAS-accredited (Gary's understanding, confirmed by the schedule above).** **What this means.** PJR is UKAS-accredited for SESC's sector on two of the three standards at the editions planned.
+On ISO 14001 it is not yet accredited to the 2026 edition, which `CLAUDE.md` §6 says SESC must certify to. Either
+PJR extends its accreditation to 14001:2026 in time, or SESC certifies to 14001:2015 during the transition and
+upgrades, **which `CLAUDE.md` §6 currently forbids.** That rule was written from the project's understanding of the
+withdrawal and has not been checked against the IAF transition arrangements for 14001:2026. **It is a decision for
+Gary and Steve, made on PJR's written answer, and recorded at B4.** Do not change `CLAUDE.md` §6 until then.
+
+### 2i.2 Stage 1 by end of October — what it requires, and what it does not
+
+Stage 1 is a readiness review, not certification. Findings at Stage 1 are normal and are closed before Stage 2.
+What remains true: **Stage 2 needs operating history — records, one internal audit round and a minuted management
+review** (§1.1). Bringing Stage 1 forward does not bring certification forward unless the records exist.
+
+What PJR is likely to look for at Stage 1 (confirm the list with Stephen Lloyd in writing — not read from PJR's own
+documents): the scope statement; the policy; the manual or equivalent; the environmental aspects and compliance
+obligations registers; hazard identification; objectives; and evidence that internal audit and management review are
+planned. **Against that, at 6 Oct 2026:** IMS-04 v0.3 (scope) is unsigned, held on F29–F31; there is no aspects
+register of SESC's own; the compliance obligations register is the 2020 one; no internal audit programme exists; no
+management review is scheduled; the Workspace forms are not live. **Three and a half weeks.** Ask PJR the maximum
+interval it allows between Stage 1 and Stage 2, so that an early Stage 1 does not have to be repeated.
+
+### 2i.3 Premises fire safety — items flagged by James before the fire risk assessment
+
+Unit 19 Melbury Business Park. **Reported by Gary, 6 Oct 2026, from James's walk-round.** Items 1–11 given at the
+meeting; item 12 added by Gary the same afternoon; items 13 and 14 added by Gary on 6 Oct 2026. **Every item that costs money is Steve's to approve.** None is
+claimed as done.
+
+| # | Item | Owner | Status |
+|---|---|---|---|
+| FS-01 | Muster point established and signed | Steve / Craig | Open |
+| FS-02 | Sufficient emergency lighting from the office to the muster point | Steve | Open |
+| FS-03 | Emergency lighting above each exit door | Steve | Open |
+| FS-04 | Emergency lighting internally: front office door and end of corridor | Steve | Open |
+| FS-05 | 5 L water and 2 kg CO2 extinguishers installed, wall-fixed beside the office entrance / fire exit, and commissioned | Steve | Open |
+| FS-06 | Fire compartmentation: fill holes in the ceiling around the office where necessary | Steve / Craig | Open |
+| FS-07 | Which doors must be fire doors | **James** to confirm | Open |
+| FS-08 | Fire blanket in the kitchen | Craig | Open |
+| FS-09 | Sanitary bin in the toilet (welfare, not fire) | Craig | Open |
+| FS-10 | Illuminated exit (green running man) sign above the kitchen door and other necessary doors | Steve | Open |
+| FS-11 | Smoke detectors in the necessary rooms | Steve | Open |
+| FS-12 | Electrical cupboard in Scott's office to be boxed off | Steve / Craig | Open |
+| FS-13 | Self-closing devices (door closers) fitted to every door confirmed as a fire door at FS-07 | Steve | Open — follows FS-07 |
+| FS-14 | Establish the fire detection and alarm category for the office under BS 5839-1 (M, L1–L5, P1–P2). **Set by the fire risk assessment, not chosen in advance.** Decides the scope of FS-11 (smoke detectors) and any alarm upgrade | James, through the FRA; Steve approves the works | Open |
+
+**Fire doors here are premises fire safety, not a trade SESC sells.** D11 (fire doors out of the certification
+scope) is unaffected.
+
+**Tasks by owner, from this section:**
+
+| Owner | Task | By |
+|---|---|---|
+| **Steve** | Confirm PJR as certification body (D2) and James as internal auditor (D3), and approve the fire safety spend (FS-01…12) | before any contract |
+| Gary | Ask PJR in writing: 14001 edition and 2026 extension date; which PJR entity holds the accreditation Stephen Lloyd audits under; the Stage 1 document list; the maximum Stage 1–Stage 2 interval; the operating history wanted before Stage 2; James's relationship to PJR (Q2) | this week |
+| Gary | D21: decide the CMS Manual's reference and how it relates to IMS-04, then draft it — **in SESC's house style, from SESC's facts, with James's template as a heading checklist only** | next chat |
+| **Steve** | Buy the Employer's own ISO 14001 (edition per PJR's answer) and ISO 9001 — the aspects register cannot be built without it (B4, D6) | now |
+| **Steve** | F29–F31: broker's written answer, so IMS-04 can be signed before Stage 1 | before Stage 1 |
+| Gary | Run the Workspace forms build (README §2–§7) — the records clock is now on the critical path for Stage 2 | this week |
+| Craig | Log FS-01…12 as records (FRM-05 or the fire log) as each is closed, with date and evidence | as closed |
+| James | Confirm FS-07; carry out the premises fire risk assessment once FS items are closed | per Steve's engagement |
+
+---
+
 ## 3. Blockers — the four, restated with what has actually moved
 
 | # | Blocker | Position at 18 August 2026, updated 24 September 2026 |
@@ -551,8 +638,8 @@ SESC's plan does not change; its master stays where it is. Nothing was signed, u
 | # | Decision | Owner | Position |
 |---|---|---|---|
 | D1 | Certification route and scope | Gary | **Settled.** 9001+14001+45001 integrated 2027; 27001 2028+. Roofing IS in scope, and the insurance schedule must be fixed to match. |
-| D2 | Certification body | Steve | **Open.** Three written quotes. Ask in writing: *"Have you completed your UKAS accreditation extension for ISO 14001:2026, and if not, which tranche and what decision date?"* Also ask for the body's own effective-personnel calculation, for SSIP deemed-to-satisfy inside the scope, and **for how much live operating history it requires before Stage 2** (see §1.1).<br><br>**24 Sep 2026: now in motion.** First conversation: James Milligan (isocertification.uk.com), **now 6 October 2026** (moved from week commencing 28 Sep). **Read F20 first.** The requirement for **three written quotes stands.** Add F20's questions to the written questions above — who issues the certificate; whether that body is UKAS-accredited for 9001:2015, 14001:2026 and 45001:2018 with IAF 28 in scope; whether it, or anyone linked to it, has consulted on SESC's system — and D16's edition question. **Engaging a certification body is Steve's decision.**<br><br>**5 Oct 2026: the 6 October meeting is a CONSULTANT conversation, not the certification body conversation** (§2h). James Milligan is offering to build SESC's documents from his ISO Certification Ltd template kit on his Dropbox. Which body certifies is still open and still needs three written quotes. Record James's answer to Q1 here.<br><br>**The cost basis, recorded so it is not re-derived — and its caveat, recorded so it is not repeated as fact.** Three standards integrated: ~13 audit days before reduction, **£7k–£13k** of CB fees in year one. All four: ~18 days, **£12k–£20k**. SESC's largest single contract is about £50,000. **⚠ Those figures assume an effective personnel count of 16–25 (IAF MD 5 base 3.0 / 4.5 / 5.5 = 13.0 days). SESC's payroll mean is about thirteen, which falls in the 11–15 band, where the base figures are lower and were NOT read from the source. And the pricing is triangulated from UK vendor sources, not quoted.** Three written quotes settle it. |
-| D3 | Internal auditor — train or buy | Steve | **Open.** Train two, buy in the first cycle for independence. |
+| D2 | Certification body | Steve | **Open.** Three written quotes. Ask in writing: *"Have you completed your UKAS accreditation extension for ISO 14001:2026, and if not, which tranche and what decision date?"* Also ask for the body's own effective-personnel calculation, for SSIP deemed-to-satisfy inside the scope, and **for how much live operating history it requires before Stage 2** (see §1.1).<br><br>**24 Sep 2026: now in motion.** First conversation: James Milligan (isocertification.uk.com), **now 6 October 2026** (moved from week commencing 28 Sep). **Read F20 first.** The requirement for **three written quotes stands.** Add F20's questions to the written questions above — who issues the certificate; whether that body is UKAS-accredited for 9001:2015, 14001:2026 and 45001:2018 with IAF 28 in scope; whether it, or anyone linked to it, has consulted on SESC's system — and D16's edition question. **Engaging a certification body is Steve's decision.**<br><br>**5 Oct 2026: the 6 October meeting is a CONSULTANT conversation, not the certification body conversation** (§2h). James Milligan is offering to build SESC's documents from his ISO Certification Ltd template kit on his Dropbox. Which body certifies is still open and still needs three written quotes. Record James's answer to Q1 here.<br><br>**6 Oct 2026 (Gary, after the meeting): PJR — Perry Johnson Registrars, auditor Stephen Lloyd — to be the certification body.** UKAS schedule 0105 issue 046 (22 Apr 2026) read the same day: 9001:2015 and 45001:2018 IAF 28 in scope (45001 limited to construction excluding demolition as primary activity); **14001 at :2015 only.** See §2i.1. **Steve's decision to confirm; no written quote recorded; the three-quote requirement has not been met.**<br><br>**The cost basis, recorded so it is not re-derived — and its caveat, recorded so it is not repeated as fact.** Three standards integrated: ~13 audit days before reduction, **£7k–£13k** of CB fees in year one. All four: ~18 days, **£12k–£20k**. SESC's largest single contract is about £50,000. **⚠ Those figures assume an effective personnel count of 16–25 (IAF MD 5 base 3.0 / 4.5 / 5.5 = 13.0 days). SESC's payroll mean is about thirteen, which falls in the 11–15 band, where the base figures are lower and were NOT read from the source. And the pricing is triangulated from UK vendor sources, not quoted.** Three written quotes settle it. |
+| D3 | Internal auditor — train or buy | Steve | **Open.** Train two, buy in the first cycle for independence.<br><br>**6 Oct 2026 (Gary): James Milligan to be the internal auditor.** That buys independence from SESC staff. **It does not give independence from James's own work:** he is to review the CMS Manual and carry out the fire risk assessment, and ISO 9001 and ISO 45001 9.2.2 c) want auditors who do not audit their own work. Agree with James which areas someone else audits. **B5 (a second competent person inside SESC) is not closed by this.** Steve to confirm. |
 | D4 | Git host and approver | Gary | **FULLY CLOSED 18 Aug 2026.** `github.com/GaryHill0985/QMS`. Ruleset **"Protect main - controlled documents"** (id 20986828), **Active**, targeting `main`, bypass list empty, **four rules: restrict deletions · require a pull request before merging · block force pushes · require signed commits.** Commit signing configured on MSI with an ed25519 SSH key added to GitHub as a **Signing Key** (`SHA256:5IUWBrgogowui5I6MXWcc9uYYQPIvcUKVTAb9Waw18Y`). Steve approves, Gary authors and reviews — see D12.<br><br>**24 Sep 2026 — commit signing moved to the MacBook.** New ed25519 key `~/.ssh/id_ed25519_sesc`, registered on GitHub as both an Authentication key and a Signing key. **This key HAS a passphrase**, held in the macOS keychain. That reverses the §2b trade-off, which existed only because Git Bash on Windows had no ssh-agent. **Fingerprint: `SHA256:e17PhFZEmyBE1JG4LR51Du2P9Ozr5M8LJCuNTulCBwI`** (ED25519, 256-bit, comment `garyadamhill@outlook.com`), read by Gary with `ssh-keygen -lf ~/.ssh/id_ed25519_sesc.pub` on 24 Sep 2026. **The MacBook's first commit is `4b9648d`, the D13 recovery.** Local `git log` cannot check signatures, because `gpg.ssh.allowedSignersFile` is not configured on the MacBook. **Confirmed by Gary on GitHub, 24 Sep 2026: `4b9648d` and the v1.5 commit `b167f32` both show Verified.** The unbroken signed chain therefore continues from 18 August 2026 across the change of machine. **The MSI signing key (`SHA256:5IUWBrgogowui5I6MXWcc9uYYQPIvcUKVTAb9Waw18Y`) was removed from GitHub by Gary on 24 Sep 2026.** |
 | D5 | Independent professional adviser | Steve | **Closed on naming** — see B1. |
 | D6 | Buy the standards | Steve | **OPEN.** ISO 14001:2026 not held in any form. ISO/IEC 27001:2022 not held in any form. The 9001:2015 PDF held is licensed to Unitspark Ltd, single user. Buy own copies — **and ISO/IEC 27002:2022 with 27001, because without 27002 the Annex A control set cannot be applied.**<br><br>**24 Sep 2026:** Gary reports standards activity. **Record here which standards have been bought, the edition and the licensee** — not yet recorded.<br><br>**Checked 24 Sep 2026 against the PDFs in the TeraBox restore `ISO/` folder (the same files are in the Claude Project knowledge): the Employer holds no licensed copy of its own of any standard.** ISO 9001:2015 and ISO 14001:**2015 (withdrawn)** both read *"Licensed to Unitspark Ltd / Tamsin Horne … ISO Store Order OP-248594 / Downloaded 2017-11-07 · Single user licence only, copying and networking prohibited"*. BS ISO 45001:2018 and BS 99001:2022 show no licensee in their text layer, so whose licence they carry is **not established**. **ISO 14001:2026 is still not held in any form (B4).** Buying the Employer's own copies — at least 14001:2026 and 9001 — is a spending decision and **Steve's**.<br><br>**24 Sep 2026, reported by Gary: the Employer will purchase its own copies, starting with ISO 14001:2026.** Not yet bought. Record the order date, edition and licensee here when it is; B4 closes on purchase **and** reading. |
@@ -570,6 +657,9 @@ SESC's plan does not change; its master stays where it is. Nothing was signed, u
 | **D18** | **Photographs and attachments on the record forms** | **Gary** | **NEW 24 Sep 2026.** Five schemas carry a `file` field. Apps Script cannot create a file upload question (F25). A Google community guide says upload questions force sign-in and **do not work for a form held on a Shared Drive**. Options: (a) **photos are filed by hand** in a `Record photos` folder on the Shared Drive, named by record reference, which is the default written into WI-01 ¶4; (b) add upload questions by hand to the domain-sign-in forms, **only if** testing shows uploads work on the Shared Drive; (c) wait for the SESC Platform. **Tell site nothing different from WI-01 until this is decided.** |
 | **D19** | **Who needs an SESC sign-in to submit** | **Gary** | **NEW 24 Sep 2026.** Default in `Code.gs`: FRM-01 and FRM-02 **open**, with no sign-in (the near miss is anonymous by design). FRM-03…07 need a **domain sign-in**, with the verified email recorded. **If supervisors hold no SESC account, FRM-06 and FRM-07 must be open too.** Record the choice here before the build. |
 | **D20** | **Workspace forms are a stopgap only, and the SESC Platform record capture section is built as soon as possible** | **Gary** | **NEW, CLOSED 24 Sep 2026: Gary's decision.** The Google Workspace forms (D15) stay as a stopgap only, to start the B3 clock. **A record capture section of the SESC Platform is to be built as soon as possible,** because the forms: (1) **cannot take photographs** (D18, F25); (2) **are not tamper-proof**, since the owning account and Shared Drive Managers can still edit (D15, README §10); and (3) **cannot prove who submitted an open form** (D19, F26). §6 item 8 is brought forward as **workstream 1c**. The Platform build is a separate workstream, not the 1b chat's. Field names stay aligned with `forms/SESC-FRM-01…07`, so nothing is re-keyed. Recorded at SESC-IMS-04 v0.3 ¶51. |
+| **D21** | **The CMS Manual: its reference, and how it relates to SESC-IMS-04…10** | **Gary** | **NEW 6 Oct 2026.** James asks for the CMS Manual first. SESC already has IMS-04 (clause 4) and the `SESC-IMS-nn` spine for clauses 4–10. Options: (a) one **Integrated Management System Manual** as the top document, citing IMS-04…10 and the policies rather than repeating them; (b) the manual **is** the spine, IMS-04…10 as its chapters. Either way it is written in house style from SESC's facts; James's template is a heading checklist only (§7.2, F41). **Decide before drafting, and take the reference from §5 in the same turn.** |
+| **D22** | **Stage 1 by end of October 2026** | **Steve** | **NEW 6 Oct 2026, agreed at the meeting (Gary).** Replaces Phase 4's Stage 1 window. Stage 2 still waits on records (§1.1). §2i.2, F50. |
+| **D23** | **Site inspections in iAuditor (SafetyCulture)?** | **Gary, then Steve (spend)** | **NEW 6 Oct 2026.** James recommends iAuditor for Craig's site visits. SESC already has `SESC-FRM-07` Site Inspection for Workspace, with the Platform to follow (D15, D20). Using iAuditor as well would make a **third** place records live. Options: (a) iAuditor for site inspections, its template built field for field from FRM-07 so records export and migrate without re-keying; (b) stay with Workspace FRM-07 now and the Platform later. **Before choosing, read from SafetyCulture's own documentation: cost per user, export format, data location, and whether records are append-only.** A subscription is Steve's spend. |
 
 ---
 
@@ -624,6 +714,10 @@ SESC's plan does not change; its master stays where it is. Nothing was signed, u
 | **F45** | **The Dropbox is a third-party-controlled store on James's subscription.** No personal data (CLAUDE.md §8, POL-14), no insurance documents and not this register go to it. If SESC uses it for anything beyond transfer, a data-processing arrangement and 2-step verification on every account are needed — and access ends when the engagement ends. Q7. | Medium | Gary |
 | **F46** | **James's option (a), "use this as the document builder, then transfer", would create a second master.** Four drift incidents on this project say no. His option (b), "give me access and we build to that", fits CLAUDE.md §5 and §7.7 — but no access is given before Steve decides the engagement (Q8, Q9). | Medium | Gary → Steve |
 | **F47** | **Workstream 2 was never committed, and the v1.12 row misattributes PR #10.** `git status` on 5 Oct 2026 showed `build/render_docx.py`, `build/test_render_docx.py` and `build/assets/` untracked, `.gitignore` and `standards/front-matter-schema.yaml` modified and unstaged, and the register modified — with `main` up to date with `origin/main`. `git show --stat 02650c7` lists only `SESC-IMS-Master-Register.md` and `system/4-context.md`: **PR #10 is workstream 1b.** So `main` holds register v1.11, and register v1.12 and the whole of workstream 2 existed only in the working tree for eleven days. The v1.12 row is corrected below. The `.DS_Store` of F36 was also still staged. Found by §7.7: a file expected to be committed, and which was not. | **High** | Gary — commit workstream 2 and the register as two commits on one branch, 5 Oct 2026 |
+| **F48** | **PJR's UKAS schedule (0105, issue 046, 22 Apr 2026) does not list ISO 14001:2026.** `CLAUDE.md` §6 requires 14001:2026 and forbids a :2015 certificate. Either PJR extends in time, or the rule is revisited on PJR's written answer. Also not established: which PJR entity's accreditation Stephen Lloyd audits under (the schedule lists no UK office). §2i.1. | **High** | Gary → Steve |
+| **F49** | **No fire risk assessment for the Employer's own premises (Unit 19) was found in the project records searched on 6 Oct 2026** (the register, the JOSCAR evidence pack, POL-05, REG-02). POL-05 ¶119 and ¶142 cover fire risk per project, through the RAMS. **Confirmed by Gary, 6 Oct 2026: SESC does not currently have a fire risk assessment for its premises.** That is a legal duty under the Regulatory Reform (Fire Safety) Order 2005 now, before it is an ISO 45001 8.2 point, so it should not wait for the ISO timetable. James's walk-round items FS-01…12 are at §2i.3. Item FS-12 (electrical cupboard) sits beside F4 (PAT testing as an insurance condition precedent). | **High** | Steve / Craig |
+| **F50** | **Stage 1 is targeted for end of October 2026, but the scope statement is unsigned (F29–F31), no aspects register of SESC's own exists, no internal audit programme or management review is scheduled, and no live record exists.** Stage 1 can still run and raise findings; Stage 2 cannot pass without operating history. Ask PJR the Stage 1 document list and the maximum Stage 1–Stage 2 interval. §2i.2. | **High** | Gary |
+| **F51** | **Craig Bartle's NEBOSH qualification is not on the record.** Gary believes Craig holds a current NEBOSH qualification (6 Oct 2026). No certificate has been read on this project; the only NEBOSH qualification recorded is James Milligan's NGC. **Read Craig's certificate (award, grade, date) before any document names it.** NEBOSH certificates do not expire, so whether it is current means whether his CPD and role-relevant training are current. Craig is already named across the signed documents as Quality Representative, H&S Officer, Environmental Manager and regulation 7 competent person; **he reviews and is named, but only Steve signs** (D12, CLAUDE.md §2). His certificate is personal data: it is held in Workspace under POL-14, never in git. | Medium | Craig → Gary |
 
 ---
 
@@ -670,6 +764,7 @@ SESC's plan does not change; its master stays where it is. Nothing was signed, u
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.14 | 6 October 2026 | Claude, for G A Hill | **Outcome of the James Milligan meeting** (Gary's account). New D23 (iAuditor for site inspections) and F51 (Craig's NEBOSH certificate not yet read). New §2i: PJR / Stephen Lloyd as certification body (D2), James as internal auditor (D3), CMS Manual first (new D21), Stage 1 by end Oct 2026 (new D22), premises fire safety items FS-01…14. PJR's UKAS schedule 0105 read: 14001 at :2015 only (F48). No premises fire risk assessment found (F49). Stage 1 readiness gaps (F50). **Nothing signed, contracted or committed.** |
 | 1.13 | 5 October 2026 | Claude, for G A Hill | **Pre-meeting review of James Milligan's Dropbox template set.** New §2h. The email of 26 Sep 2026 read; all 173 files inventoried, every Office file opened and text-extracted, the key documents read. The set is a generic ISO Certification Ltd template kit built to 14001:2015, carrying 93 HCPL-numbered toolbox talks and no records. F20 updated: isocertification.uk.com confirmed as James's business; he is the consultant, not a certification body. D2 re-framed: 6 Oct is a consultant conversation; who certifies stays open. New findings F41–F46. Nine meeting questions Q1–Q9 and an upload list recorded at §2h. **Nothing uploaded, signed, merged or committed; no other file changed.** **Then, from `git status`: F47 — workstream 2 and register v1.12 were never committed; PR #10 was 1b. v1.12 row annotated.** |
 | 1.12 | 24 September 2026 | Claude, for G A Hill | **Workstream 2.** New §2g. `build/render_docx.py` ported from `policy_editor.py` and `sesc_cover.py`, with the control block, header and footer generated from front matter. `build/test_render_docx.py` (19 tests) checks every printed paragraph number against the source (F27 and F34 closed). Brand assets added to `build/assets/`. Optional `revised` and `prepared_by` added to the front-matter schema. `.DS_Store` added to `.gitignore`. IMS-04 v0.3 rendered to a 21-page branded DOCX and PDF, read as images, and compared with signed POL-16 v1.2. **IMS-04 not edited, nothing signed.** The F27 trap recommended for `Section workflow method.md` §5 (§2g.1); the TeraBox file was not edited. **PR #10 recorded as merged at `02650c7`; `a082eff` and `3965225` Verified on GitHub (Gary).** ~~That PR is workstream 1b; this workstream 2 and this v1.12 were NOT committed on 24 Sep 2026 — see F47, found 5 Oct 2026.~~ F29: no change. F35: still public, decision open. New findings F36–F40. |
 | 1.11 | 24 September 2026 | Claude, for G A Hill | **Workstream 1b.** New §2f. `SESC-IMS-04` amended in place to **draft v0.3**: D11 (mould & damp remediation named, as remediation only; fire doors removed), D8 + D17 carve-out at ¶58, with the PI record cited page by page. **The PI schedule does not show cover for ventilation specification. The chat stopped on that point (F29, Steve).** D8, D11 and D17 rows updated. D15 updated. **New D20: Workspace forms are a stopgap only, and the Platform record capture section is built as soon as possible (Gary). §6 item 8 brought forward as 1c.** New findings F29–F35, including **F35: the repository is public.** PR #9 (1a) confirmed merged as `4490e88`. |
