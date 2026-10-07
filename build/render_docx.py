@@ -641,7 +641,8 @@ def header_xml(hdr, fm, marking, wm_rid):
 def header_right(fm):
     m = re.match(r"SESC-IMS-(\d{2})", fm["id"])
     if m:
-        return f"IMS · Clause {int(m.group(1))}"
+        # SESC-IMS-00 is the manual, the overview ahead of the clause chapters 04-10 (D21).
+        return "IMS · Manual" if m.group(1) == "00" else f"IMS · Clause {int(m.group(1))}"
     return SERIES.get(fm["id"].split("-")[1], "")
 
 
@@ -857,7 +858,8 @@ def cover_note(fm):
     m = re.match(r"SESC-IMS-(\d{2})", fm["id"])
     stds = "  ·  ".join(STD_LABEL[k] for k in (fm.get("clauses") or {}) if k in STD_LABEL)
     if m:
-        return f"CLAUSE {int(m.group(1))}  //  {stds}".upper()
+        lead = "MANUAL" if m.group(1) == "00" else f"CLAUSE {int(m.group(1))}"
+        return f"{lead}  //  {stds}".upper()
     return stds.upper()
 
 
