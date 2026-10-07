@@ -319,6 +319,22 @@ class TestFixture(unittest.TestCase):
         self.assertEqual(fonts.get(R.qn("w:ascii")), "Arial")
 
 
+class TestIMS00Labels(unittest.TestCase):
+    """SESC-IMS-00 is the manual (D21). Its header and cover note must not read
+    'Clause 0'. The clause chapters 04-10 are unchanged."""
+
+    def test_manual_header_and_cover_note(self):
+        fm = {"id": "SESC-IMS-00", "clauses": {"iso9001": [], "iso14001": [], "iso45001": []}}
+        self.assertEqual(R.header_right(fm), "IMS · Manual")
+        self.assertEqual(R.cover_note(fm), "MANUAL  //  ISO 9001  ·  ISO 14001  ·  ISO 45001")
+        self.assertNotIn("0", R.header_right(fm))
+
+    def test_clause_chapter_unchanged(self):
+        fm = {"id": "SESC-IMS-04", "clauses": {"iso9001": [], "iso14001": [], "iso45001": []}}
+        self.assertEqual(R.header_right(fm), "IMS · Clause 4")
+        self.assertEqual(R.cover_note(fm), "CLAUSE 4  //  ISO 9001  ·  ISO 14001  ·  ISO 45001")
+
+
 class TestCoverOpacity(unittest.TestCase):
     """D21 (24 Sep 2026): the red triangle runs at 70%, the white wedge at 37%.
     Sampled below the diagonal rule, where the handover note measured it:
