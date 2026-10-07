@@ -1,0 +1,357 @@
+id: SESC-REG-08
+title: Opportunity Register — opportunities arising from the Employer's context, scored and owned
+version: "0.1"
+status: draft
+owner: Chief Operating Officer
+approver: Managing Director
+issued: 2026-10-07
+next_review: 2027-10-07
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso9001:  ["6.1.1"]
+  iso14001: ["6.1.1"]
+  iso45001: ["6.1.1"]
+parent_document: SESC-IMS-04
+derived_from: SESC-REG-06 Issues Register v0.1 — the 'opportunities' field of each issue
+registers_cited: [SESC-REG-01, SESC-REG-05, SESC-REG-06]
+personal_data: false
+
+# SESC-REG-08 Opportunity Register.
+#
+# Reference taken from CLAUDE.md 5 on 7 October 2026 under decision D24 (register 2k).
+#
+# Why it exists. ISO 9001:2026 separates risks from opportunities. SESC-REG-06 already holds
+# opportunities in a field of their own, never merged with risks; this register lifts each of
+# those into a row that is scored, owned, planned and dated, so that clause 6.1.1 can be shown
+# as ACTED ON rather than merely LISTED. Risks stay in SESC-REG-01 and are never held here.
+#
+# What it claims. Clause 6.1.1 of all three standards, and nothing more. It does not claim
+# 6.1.2 (planning of actions / aspects / hazards), 6.2 (objectives) or 10.3 (continual
+# improvement): an opportunity with a pursuit plan is not an objective with a measure, and
+# nothing here has yet produced evidence of improvement. When a pursuit plan is carried out and
+# recorded, the clause map is revisited at the next version.
+#
+# Where the rows come from. EVERY ROW IN v0.1 IS SEEDED FROM AN OPPORTUNITY ALREADY RECORDED IN
+# SESC-REG-06 v0.1. Nothing was invented. The 'source' field names the REG-06 issue. The
+# wording is REG-06's, lightly shortened where a sentence was an argument rather than an
+# opportunity; the REG-06 text remains the authoritative statement.
+#
+# Scores and pursuit plans in v0.1 are PROPOSALS by the author for the named owner to confirm,
+# and every row says so (confirmed_by_owner: false). A pursuit plan is written only where a
+# recorded decision or document already gives one; otherwise the row says 'not yet defined'
+# and names who defines it. Statuses state what the record shows, not what is hoped.
+#
+# Any opportunity NOT taken from REG-06 enters as status 'candidate' with confirmed_by_owner:
+# false, and stays a candidate until the Chief Operating Officer confirms it. v0.1 holds none.
+
+design_rules:
+  - >
+    OPPORTUNITIES ARE HELD HERE AND RISKS ARE HELD IN SESC-REG-01. THE TWO ARE NEVER MERGED.
+    ISO 9001:2026 separates them; building it this way now costs nothing and saves a rebuild.
+  - >
+    Every row traces to a SESC-REG-06 issue (source) or is marked candidate. An opportunity
+    invented for the register is worth nothing to the person running the business.
+  - >
+    Score = likelihood x benefit, each 1 to 5, so the scale is the same shape as SESC-REG-01's
+    likelihood x impact. The band says what the score requires; the status says what has
+    actually happened. They are different fields because they are different facts.
+  - >
+    A pursuit plan names the document, decision or record it rests on. Where none exists the
+    plan reads 'not yet defined' with the role that defines it. Nothing here asserts that an
+    action has been taken unless a record shows it.
+
+scoring:
+  likelihood:
+    1: Remote — no route to it exists today
+    2: Unlikely — a route exists but nothing is in motion
+    3: Possible — in motion, outcome uncertain
+    4: Likely — in motion with a recorded plan and owner
+    5: Near certain — already partly realised, or follows directly from a decision taken
+  benefit:
+    1: Negligible — no measurable effect on the Employer
+    2: Minor — convenience or a small saving
+    3: Moderate — a measurable gain in one process or one customer relationship
+    4: Major — a gain across the business, or a condition of keeping or winning work
+    5: Transformational — changes what the Employer can sell or how it is assessed
+  score: likelihood x benefit, 1 to 25
+  bands:
+    pursue:   {min: 15, means: "Needs a pursuit plan, an owner and a review date now"}
+    evaluate: {min: 8,  means: "Evaluate at the next review; a plan may follow"}
+    hold:     {min: 1,  means: "Recorded; no action required unless the score changes"}
+  bands_note: >
+    Band thresholds are PROPOSED in v0.1 for the Managing Director to confirm on approval.
+
+statuses:
+  candidate:   Proposed, not yet confirmed by the Chief Operating Officer; not counted
+  identified:  Recorded in SESC-REG-06; no pursuit plan carried out yet
+  pursuing:    A recorded plan is in motion, with a document or decision to point at
+  realised:    The benefit has been obtained and a record shows it
+  not_pursued: Considered and declined, with the reason recorded
+  closed:      Overtaken by events; the reason recorded
+
+opportunities:
+
+  - ref: OPP-01
+    source: EXT-02
+    process: Context, leadership and planning
+    opportunity: >
+      Constructionline waives the quality module for ISO 9001 and the environmental module for
+      ISO 14001; ISO 45001 satisfies SSIP where SSIP is inside the certification scope. Three
+      prequalification exemptions from one exercise.
+    likelihood: 4
+    benefit: 4
+    score: 16
+    band: pursue
+    pursuit_plan: >
+      Rests on the integrated certification route (register D1, settled) and on the
+      certification body being asked IN WRITING for SSIP deemed-to-satisfy inside the scope
+      (SESC-REG-05 IP-04 note; D2). The exemptions arrive only with the certificates, so the
+      plan is the IMS project itself, and the written SSIP question to the body.
+    owner: Managing Director
+    status: pursuing
+    review_date: 2026-11-30
+    record_ref: SESC-IMS-Master-Register D1, D2; SESC-REG-05 IP-04
+    confirmed_by_owner: false
+    note: Score proposed. Nothing is exempt until a certificate is issued.
+
+  - ref: OPP-02
+    source: EXT-02
+    process: Context, leadership and planning
+    opportunity: >
+      IAF MD 11 caps the integrated audit-day reduction at 20 per cent, and only for a genuinely
+      integrated system assessed across seven criteria. Three manuals, three audit programmes and
+      three management reviews earn nothing. This is why the system is integrated.
+    likelihood: 4
+    benefit: 3
+    score: 12
+    band: evaluate
+    pursuit_plan: >
+      One system, one manual (SESC-IMS-00, D21 option (a)), one audit programme and one
+      management review, by design. Ask the certification body for its effective-personnel
+      calculation and its integration assessment with the written quote (D2). The reduction
+      is the body's to grant, not the Employer's to claim.
+    owner: Managing Director
+    status: pursuing
+    review_date: 2026-11-30
+    record_ref: SESC-IMS-00 v0.1 (draft); SESC-IMS-Master-Register D2, D21
+    confirmed_by_owner: false
+    note: Score proposed. Audit-day figures are estimates until written quotes arrive (CLAUDE.md 11).
+
+  - ref: OPP-03
+    source: EXT-05
+    process: Documented information and records
+    opportunity: >
+      Cyber Essentials builds most of the ISO 27001 technical evidence anyway — asset, software
+      and user inventories, patching to a 14-day rule, MFA, access review. Do Cyber Essentials
+      first as a forcing function, and ISO 27001 in 2028 becomes a scope extension rather than
+      a project.
+    likelihood: 3
+    benefit: 4
+    score: 12
+    band: evaluate
+    pursuit_plan: >
+      Cyber Essentials is taken in place of ISO 27001 (D1; CLAUDE.md 6 and 12.4), targeted in
+      Phase 3 of the plan (register 1.1). It has never been applied for (SESC-REG-05 IP-03).
+      No application date is recorded. The Chief Operating Officer sets one.
+    owner: Chief Operating Officer
+    status: identified
+    review_date: 2027-01-31
+    record_ref: SESC-IMS-Master-Register 1.1 Phase 3, D1; SESC-REG-05 IP-03
+    confirmed_by_owner: false
+    note: >
+      Score proposed. Benefit scored 4 because Cyber Essentials is also a contractual gate for
+      MOD-adjacent work (DEFCON 658, SESC-REG-06 EXT-05), not only an ISO 27001 head start.
+
+  - ref: OPP-04
+    source: EXT-07
+    process: Competence, training and awareness
+    opportunity: >
+      Apprenticeships build the competence the schemes require and count towards social value
+      scoring.
+    likelihood: 4
+    benefit: 3
+    score: 12
+    band: evaluate
+    pursuit_plan: >
+      Four apprentices are in training (SESC-REG-06 EXT-07). Their competence records enter
+      SESC-FRM-03 from the Workspace go-live. No plan beyond continuing the apprenticeships is
+      recorded; the Managing Director defines whether one is needed.
+    owner: Managing Director
+    status: pursuing
+    review_date: 2027-04-30
+    record_ref: SESC-REG-06 EXT-07; SESC-FRM-03 (draft, not yet live)
+    confirmed_by_owner: false
+    note: Score proposed. Individual training records are personal data and never enter git (CLAUDE.md 8).
+
+  - ref: OPP-05
+    source: CLI-04
+    process: Enquiry, survey and quotation
+    opportunity: >
+      Mould and damp remediation is already a service line and the demand for it is structural,
+      not cyclical.
+    likelihood: 4
+    benefit: 4
+    score: 16
+    band: pursue
+    pursuit_plan: >
+      Named in the certification scope at SESC-IMS-04 v0.3 paragraph 14 as REMEDIATION ONLY
+      (D11). Survey and diagnosis are added to the scope only once the survey qualification is
+      actually held, never before. Before any customer-facing claim: the liability business
+      description must name the trade (F30) and professional indemnity cover for ventilation
+      specification must be confirmed in writing (F29, D17). Both are with the Managing Director.
+    owner: Contracts Manager
+    status: pursuing
+    review_date: 2026-12-31
+    record_ref: SESC-IMS-04 v0.3 paragraphs 7, 14, 16, 58 (draft); SESC-IMS-Master-Register D11, D17, F29, F30
+    confirmed_by_owner: false
+    note: Score proposed. The insurance gaps F29 and F30 cap what can be claimed, not what can be done.
+
+  - ref: OPP-06
+    source: CLI-05
+    process: Plant, equipment, vehicles and premises
+    opportunity: >
+      Telematics already monitor mileage, idling and driving style; the data exists to set a
+      real objective.
+    likelihood: 3
+    benefit: 3
+    score: 9
+    band: evaluate
+    pursuit_plan: >
+      Not yet defined. Seven of eight vehicles carry telematics and the Scope 1 baseline is in
+      SESC-CRP-01 (SESC-REG-06 CLI-05). An environmental objective under clause 6.2 would be
+      set in the clause 6 spine document when it is written; none exists yet. The Contracts
+      Manager defines the objective and its measure.
+    owner: Contracts Manager
+    status: identified
+    review_date: 2027-03-31
+    record_ref: SESC-CRP-01 v1.0 (signed); SESC-REG-06 CLI-05
+    confirmed_by_owner: false
+    note: Score proposed. No objective is claimed to exist.
+
+  - ref: OPP-07
+    source: CLI-07
+    process: Enquiry, survey and quotation
+    opportunity: >
+      The largest opportunity the Employer has. The heat pumps, solar PV, insulation and
+      energy-efficiency measures the Employer installs reduce customers' emissions by far more
+      than the Employer's own operations emit. Decarbonisation policy is the growth driver for
+      the renewables and retrofit side of the business.
+    likelihood: 4
+    benefit: 5
+    score: 20
+    band: pursue
+    pursuit_plan: >
+      Not yet defined as a plan. What is recorded: the design carve-out (D8) takes design
+      responsibility for heat pumps and MCS solar PV within the schemes held, so the Employer
+      can sell those systems designed as well as installed; SESC-CRP-01 is the public carbon
+      position. A commercial plan for the renewables and retrofit side is the Managing
+      Director's to define, and nothing here commits money.
+    owner: Managing Director
+    status: identified
+    review_date: 2026-12-31
+    record_ref: SESC-IMS-04 v0.3 paragraph 58 (draft); SESC-CRP-01 v1.0; SESC-IMS-Master-Register D8
+    confirmed_by_owner: false
+    note: >
+      Score proposed. Scored highest on the register because SESC-REG-06 itself names it the
+      largest opportunity the Employer has. MCS, F-gas and the other scheme registrations each
+      rest on one or two named individuals (SESC-REG-06 EXT-08), which is the risk side and
+      lives in SESC-REG-01, not here.
+
+  - ref: OPP-08
+    source: INT-03
+    process: Documented information and records
+    opportunity: >
+      The honesty convention is the answer to the record of inaccurate past declarations, and it
+      is now the most valuable single thing the Employer owns. Five documents carry dated
+      inventories of records that do not exist. It is unusual, it is what makes the suite
+      credible, and it is why an assessor can trust the rest.
+    likelihood: 5
+    benefit: 4
+    score: 20
+    band: pursue
+    pursuit_plan: >
+      In operation by rule: every management-system document carries a 'Records held, records
+      not yet held' section (CLAUDE.md 3); the known-gap list is published to the auditor build
+      of the portal (register 2c); SESC-IMS-00 Part 10 is a 23-row dated inventory. The plan is
+      to keep doing it, and validate.py warns on any spine document that omits the section.
+    owner: Managing Director
+    status: pursuing
+    review_date: 2027-04-30
+    record_ref: CLAUDE.md 3; SESC-IMS-04 v0.3 Part 8; SESC-IMS-00 v0.1 Part 10; build/validate.py
+    confirmed_by_owner: false
+    note: Score proposed. Overlaps OPP-09, which SESC-REG-06 records separately under INT-09.
+
+  - ref: OPP-09
+    source: INT-09
+    process: Context, leadership and planning
+    opportunity: >
+      A small contractor that can produce a signed, internally consistent suite, verified scheme
+      registrations, an assurance calendar with named owners, a scored risk register and measured
+      Scope 1 emissions is ahead of most of its peer group. The honest gap inventories are the
+      reason an assessor can trust the rest of the system.
+    likelihood: 4
+    benefit: 3
+    score: 12
+    band: evaluate
+    pursuit_plan: >
+      Not yet defined beyond the certification project. How the position is used commercially
+      (prequalification answers, tenders, the company brochure) is the Managing Director's to
+      define. No certification, membership or accreditation is claimed in doing so.
+    owner: Chief Operating Officer
+    status: identified
+    review_date: 2027-04-30
+    record_ref: SESC-REG-06 INT-09; SESC-REG-07 (the signed estate)
+    confirmed_by_owner: false
+    note: >
+      Score proposed. Candidate for merging with OPP-08 at the next review — both rest on the
+      honesty convention. Kept as two rows in v0.1 because SESC-REG-06 records them as two.
+
+  - ref: OPP-10
+    source: INT-09
+    process: Performance evaluation and improvement
+    opportunity: >
+      The Evidence Index pattern built for JOSCAR — question, exact answer, link to the
+      supporting page, note on what is weak — generalises directly to ISO clause coverage and
+      becomes the audit pack generator. It is worth more outside JOSCAR than inside it.
+    likelihood: 5
+    benefit: 3
+    score: 15
+    band: pursue
+    pursuit_plan: >
+      Being built: build/build_portal.py generates the clause coverage and gap report from front
+      matter and portal/records-index.yaml, with the twelve-month staleness rule implemented
+      (register 2c; CLAUDE.md 12.6). The audit pack proper follows the migration of the signed
+      documents (register 6 item 7), because until then no signed document declares a clause.
+    owner: Chief Operating Officer
+    status: pursuing
+    review_date: 2027-02-28
+    record_ref: build/build_portal.py; portal/records-index.yaml; SESC-IMS-Master-Register 2c
+    confirmed_by_owner: false
+    note: Score proposed. The generator exists; the audit pack it will produce does not yet show a green clause.
+
+records:
+  held:
+    - SESC-REG-06 v0.1, the source of every row (registers/issues.yaml)
+    - This register, draft v0.1, 7 October 2026
+  not_yet_held:
+    - record: Owner confirmation of each row's score, plan, status and review date
+      due: 2026-11-30
+      owner: Chief Operating Officer, with each named owner
+    - record: A review of this register minuted at a management review
+      due: 2027-04-30
+      owner: Managing Director
+      note: No management review has been minuted since 10 January 2023 (CLAUDE.md 10).
+    - record: Evidence that any pursuit plan has produced its benefit (status realised)
+      due: 2027-10-07
+      owner: Each named owner
+      note: None exists. No row is marked realised, and none will be until a record shows it.
+
+revision_history:
+  - version: "0.1"
+    date: 2026-10-07
+    author: G A Hill (drafted by Claude)
+    change: >
+      Created under D24 (workstream 2b). Ten rows seeded from the opportunity fields of
+      SESC-REG-06 v0.1; scoring scale, bands and statuses defined; every score and plan
+      marked as proposed. Reference SESC-REG-08 taken from CLAUDE.md 5 the same day.

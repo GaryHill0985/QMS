@@ -1,14 +1,20 @@
-# portal/actions.yaml — one action list, from four sources.
+# portal/actions.yaml — one action list, from five sources.
 #
-# Blockers, open decisions and findings all resolve to the same thing: somebody
-# has to do something by a date. They are held in one list so that nobody has to
-# read three tables to find out what is owed.
+# Blockers, open decisions, findings, the gaps CLAUDE.md 10 names, and the
+# records SESC-IMS-00 Part 10 says do not yet exist all resolve to the same
+# thing: somebody has to do something by a date. They are held in one list so
+# that nobody has to read five tables to find out what is owed.
 #
-# Sourced from SESC-IMS-Master-Register.md v1.4 (18 Aug 2026) sections 3, 4, 5
-# and CLAUDE.md 10. If the register moves, this file is stale — the portal
-# prints the register version it was built from on every page.
+# Sourced from SESC-IMS-Master-Register.md v1.17 (7 Oct 2026) sections 2l, 3, 4
+# and 5, CLAUDE.md 10, and SESC-IMS-00 v0.1 Part 10 (a)-(w). If the register
+# moves, this file is stale — the portal prints the register version it was
+# built from on every page. Resynced 7 October 2026 (it had been sourced from
+# v1.4 since 18 August 2026).
+#
+# Closed items are kept, marked closed, so the list shows what moved; the
+# portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.4, 18 August 2026
+source_register: SESC-IMS-Master-Register.md v1.17, 7 October 2026
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -22,16 +28,15 @@ actions:
     kind: blocker
     title: Independent professional adviser — named, but not in the documents
     owner: Chief Operating Officer
-    due: 2026-09-30
+    due: 2026-11-30
     status: part-closed
     severity: high
     detail: >
       Simon Davies FCCA of Rapture Accounts Limited confirmed 17 August 2026.
       Twenty documents still carry a blank adviser row and their branded PDFs
-      must be rebuilt. A name typed into a .docx does not reach a PDF already
-      rendered. NINE of those documents route an actual control through that
-      person, so in those nine the blank row is not cosmetic — the control does
-      not operate.
+      must be rebuilt. NINE of those documents route an actual control through
+      that person, so in those nine the blank row is not cosmetic. Follows the
+      migration of the signed documents (workstream 7).
     internal: false
 
   - ref: B2
@@ -47,111 +52,117 @@ actions:
 
   - ref: B3
     kind: blocker
-    title: Zero operating history
+    title: Zero operating history — the clock has not started
     owner: Chief Operating Officer
-    due: 2026-09-30
+    due: 2026-10-09
     status: open
     severity: critical
     detail: >
-      THE LONG POLE. The first quarter in which the Assurance Calendar is fully
-      operated is the quarter ending 30 September 2026. A certification body
-      wants roughly three months of the system running, one full internal audit
-      round and one management review before Stage 2. Nothing buys this down
-      except time and records.
+      THE LONG POLE. The clock starts on the date of the first LIVE record in the
+      Google Workspace forms (D15), and no such record exists. The forms are
+      built in the repository and have not been run in Workspace. Stage 2 needs
+      records, one internal audit round and one minuted management review; how
+      much history the certification body wants is not established (F13).
+      Target for go-live 9 October 2026.
     internal: false
 
   - ref: B4
     kind: blocker
     title: ISO 14001:2026 is not held and has never been read
     owner: Managing Director
-    due: 2026-08-31
+    due: 2026-10-31
     status: open
     severity: critical
     detail: >
       Every 14001 clause reference held is carried from the withdrawn :2015
-      edition, which was withdrawn on 15 April 2026. standards/iso14001-2026.yaml
-      is marked verified:false throughout and must not be quoted to a customer or
-      an auditor. Buy the edition before writing any EMS document.
+      edition. standards/iso14001-2026.yaml is marked verified:false throughout
+      and must not be quoted to a customer or an auditor. The Employer decided on
+      24 September 2026 to buy its own copies, 14001:2026 first; not yet bought.
+      PJR's UKAS schedule lists 14001:2015 only (F48), so the edition to certify
+      to is itself open.
     internal: false
 
   - ref: B5
     kind: blocker
-    title: No internal auditor is trained
+    title: No internal auditor is trained inside SESC
     owner: Managing Director
     due: 2026-11-30
     status: open
     severity: high
     detail: >
-      Book two onto the CQI/IRCA two-day course for November 2026, about
-      GBP 1,130 to 1,255 inc VAT each. Train two, buy in the first cycle for
-      independence.
+      James Milligan is proposed as internal auditor (D3), which buys
+      independence from SESC staff but not from his own work on the manual and
+      the fire risk assessment. A second competent person inside SESC is still
+      needed; the CQI/IRCA two-day course is the cheapest defensible evidence.
     internal: false
 
   - ref: B6
     kind: blocker
     title: Google Workspace 2-step verification unverified
-    owner: Managing Director
-    due: 2026-08-25
+    owner: Chief Operating Officer
+    due: 2026-10-09
     status: open
-    severity: medium
+    severity: high
     detail: >
-      Recorded as off on 17 August 2026. Five minutes of work. Nobody has
-      confirmed it since. An unverified control is an absent control.
+      Recorded as off on 17 August 2026 and not confirmed since. It now matters
+      twice, because the records stopgap puts personal data in Workspace. Step 1
+      of the forms build runbook; the build is not to run until it is done.
     internal: false
 
   # ------------------------------ DECISIONS ------------------------------
   # Mirrors SESC-IMS-Master-Register.md section 4. The register is the source.
-  # Re-run the build after it changes; this file goes stale, it does not lead.
 
   - ref: D2
     kind: decision
-    title: Choose the certification body
+    title: Confirm the certification body
     owner: Managing Director
     status: open
     severity: high
     detail: >
-      Three written quotes. Ask in writing: "Have you completed your UKAS
-      accreditation extension for ISO 14001:2026, and if not, which tranche and
-      what decision date?" Also ask for the body's own effective-personnel
-      calculation, for SSIP deemed-to-satisfy inside the scope, and for how much
-      live operating history it requires before Stage 2 — neither figure the
-      project holds for that is sourced (F13).
+      PJR (Perry Johnson Registrars, auditor Stephen Lloyd) proposed on 6 October
+      2026. UKAS schedule 0105: 9001:2015 and 45001:2018 in scope for IAF 28;
+      14001 at :2015 only. No written quote; the three-quote requirement has not
+      been met. Written questions to PJR are with the Chief Operating Officer
+      (see T-W).
     internal: true
 
   - ref: D3
     kind: decision
-    title: Internal auditor — train or buy
+    title: Confirm the internal auditor
     owner: Managing Director
     status: open
     severity: medium
-    detail: Train two, buy in the first cycle for independence.
+    detail: >
+      James Milligan proposed 6 October 2026. He must not audit his own work
+      (the manual review, the fire risk assessment); agree which areas someone
+      else audits. Does not close B5.
     internal: true
 
   - ref: D6
     kind: decision
     title: Buy the standards
     owner: Managing Director
-    due: 2026-08-31
+    due: 2026-10-31
     status: open
     severity: high
     detail: >
-      ISO 14001:2026 not held in any form. ISO/IEC 27001:2022 not held in any
-      form. The 9001:2015 PDF held is licensed to Unitspark Ltd, single user.
-      Buy own copies — and ISO/IEC 27002:2022 with 27001, because without 27002
-      the Annex A control set cannot be applied.
+      No licensed copy of any standard is the Employer's own. ISO 14001:2026 is
+      not held in any form. Decision to buy taken 24 September 2026; order date,
+      edition and licensee to be recorded when bought.
     internal: true
 
   - ref: D8
     kind: decision
-    title: The design carve-out for the standard quotation
+    title: Approve the design carve-out at SESC-IMS-04 paragraph 58
     owner: Managing Director
     status: open
     severity: critical
     detail: >
-      THE ISO 9001 SCOPE TURNS ON THIS. The capability statements and the
-      standard quotation contradict each other on whether the Employer designs.
-      Proposed wording at system/4-context.md 58. Nothing is applied to any
-      customer-facing document until it is approved or replaced.
+      Heat loss, emitter and heat pump sizing, MCS solar PV design, and
+      ventilation specification for mould and damp remediation in; all other
+      design out; clause 8.3 stays in scope. Agreed by phone 24 September 2026;
+      formal on signature of SESC-IMS-04 v0.3, which waits on F29. Then apply to
+      the standard quotation and SESC-CAP-008 (F22).
     internal: false
 
   - ref: D9
@@ -161,37 +172,33 @@ actions:
     status: open
     severity: low
     detail: >
-      nn is the clause number it covers, 04 context through 10 improvement.
-      Confirm or overturn.
+      In use since 18 August 2026 (IMS-04) and extended to IMS-00 on 6 October
+      2026 by instruction, but never formally confirmed or overturned in the
+      register. Record the confirmation and close.
     internal: true
 
   - ref: D10
     kind: decision
-    title: Should the four planning files be tracked in the repository
+    title: Should the planning files be tracked in the repository
     owner: Chief Operating Officer
     status: open
     severity: medium
     detail: >
-      The project instructions, the Readiness and Gap Analysis, the Gap Register
-      xlsx and the review copies sit untracked in the clone, so GitHub is not
-      backing them up and the only copy is the laptop.
+      The planning and review files now sit only in the TeraBox restore, which
+      has no .git. GitHub is not backing them up.
     internal: true
 
   - ref: D11
     kind: decision
-    title: >
-      Are fire doors and mould & damp remediation named trades for the
-      certificate scope
+    title: Mould and damp remediation in scope, fire doors out
     owner: Managing Director
     status: open
     severity: critical
     detail: >
-      IT CHANGES THE SCOPE STATEMENT. The project instructions describe the
-      business as M&E, roofing, mould and damp remediation, fire doors and
-      renewables. The signed policies say roofing, building fabric, mechanical,
-      electrical and renewable energy works, and name neither. A
-      Building-Safety-Act-adjacent trade omitted from a scope statement is a
-      finding. Recorded at SESC-IMS-04 paragraph 16.
+      Agreed by phone 24 September 2026 and drafted at SESC-IMS-04 v0.3
+      paragraphs 7, 14 and 16 as REMEDIATION ONLY; survey and diagnosis are added
+      only once the qualification is held. Formal on signature of v0.3. The
+      liability business description does not name the trade (F30).
     internal: false
 
   - ref: D12
@@ -201,11 +208,84 @@ actions:
     status: open
     severity: medium
     detail: >
-      The sole-director problem again. CLAUDE.md requires two named humans, but
-      required approvals on the ruleset is 0 because GitHub will not let a person
-      approve their own pull request and 1 would deadlock a solo repository. The
-      pull request gate and the visible diff exist; the second human does not.
-      See F15.
+      Required approvals on the ruleset is 0 and Steve is not a collaborator, so
+      the two-named-humans rule is written and not operated (F15).
+    internal: true
+
+  - ref: D16
+    kind: decision
+    title: Which ISO 9001 edition to certify to
+    owner: Managing Director
+    status: open
+    severity: medium
+    detail: >
+      9001:2026 is published. Build to :2015 + Amd 1:2024 and write 2026-ready
+      until the certification body answers whether it can certify to :2026 in
+      SESC's window. Ask PJR in writing; record the answer.
+    internal: true
+
+  - ref: D17
+    kind: decision
+    title: Ventilation design in mould and damp work — insurance cover
+    owner: Managing Director
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: >
+      Option (a) chosen: ventilation specification goes into the carve-out. But
+      the PI schedule does not show cover for it (F29). Written confirmation from
+      the insurer or broker, or option (b), before SESC-IMS-04 v0.3 is signed.
+    internal: false
+
+  - ref: D18
+    kind: decision
+    title: Photographs and attachments on the record forms
+    owner: Chief Operating Officer
+    due: 2026-10-09
+    status: open
+    severity: medium
+    detail: >
+      Apps Script cannot create a file-upload question (F25). Default: photos
+      filed by hand in a Record photos folder named by record reference, as
+      SESC-WI-01 says. Decide before the forms build.
+    internal: false
+
+  - ref: D19
+    kind: decision
+    title: Who needs an SESC sign-in to submit a record
+    owner: Chief Operating Officer
+    due: 2026-10-09
+    status: open
+    severity: medium
+    detail: >
+      Default: FRM-01 and FRM-02 open (the near miss is anonymous by design);
+      FRM-03 to FRM-07 need a domain sign-in. If supervisors hold no SESC
+      account, FRM-06 and FRM-07 must be open too. Decide before the build.
+    internal: false
+
+  - ref: D22
+    kind: decision
+    title: Stage 1 assessment by the end of October 2026
+    owner: Managing Director
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: >
+      Agreed at the 6 October 2026 meeting. Stage 1 is a readiness review;
+      Stage 2 still waits on operating history. See F50 for what is not ready.
+    internal: true
+
+  - ref: D23
+    kind: decision
+    title: Site inspections in iAuditor (SafetyCulture)?
+    owner: Chief Operating Officer
+    status: open
+    severity: low
+    detail: >
+      Recommended by James Milligan. Would make a third place records live.
+      Before choosing, read SafetyCulture's own documentation for cost, export
+      format, data location and whether records are append-only. A subscription
+      is the Managing Director's spend.
     internal: true
 
   - ref: D13
@@ -214,12 +294,7 @@ actions:
     owner: Chief Operating Officer
     status: closed
     severity: low
-    detail: >
-      DECIDED 18 August 2026. The legacy document estate moved from
-      portal/documents.yaml to registers/documents.yaml with front matter, and is
-      now validated on every push. It claims clause 7.5.3 of all three standards
-      and nothing else. CLAUDE.md 5 now reads SESC-REG-08 as next free. It is a
-      DRAFT and has not been approved.
+    detail: DECIDED 18 August 2026; recovered and committed 24 September 2026.
     internal: true
 
   - ref: D14
@@ -228,9 +303,25 @@ actions:
     owner: Chief Operating Officer
     status: closed
     severity: low
-    detail: >
-      DECIDED 18 August 2026. The five references stand. All five remain DRAFTS
-      and none is issued. CLAUDE.md 5 reads SESC-FRM-06 as next free.
+    detail: DECIDED 18 August 2026. All remain drafts; FRM-06 and FRM-07 added 24 September 2026.
+    internal: true
+
+  - ref: D21
+    kind: decision
+    title: SESC-IMS-00 Integrated Management System Manual
+    owner: Chief Operating Officer
+    status: closed
+    severity: low
+    detail: DECIDED 6 October 2026, option (a). Drafted as v0.1 the same day; unsigned.
+    internal: true
+
+  - ref: D24
+    kind: decision
+    title: COTO Log — registers stay the master; SESC-REG-08 and a generated workbook
+    owner: Chief Operating Officer
+    status: closed
+    severity: low
+    detail: DECIDED 6 October 2026; built 7 October 2026 (register 2l). SESC-REG-08 is a draft.
     internal: true
 
   # ------------------------------- FINDINGS ------------------------------
@@ -244,8 +335,8 @@ actions:
     severity: critical
     detail: >
       Portable appliance testing, and the monthly self-inspection of composite
-      panel premises. This is a larger exposure than any certificate: a condition
-      precedent unmet can void cover on a claim.
+      panel premises. A larger exposure than any certificate: a condition
+      precedent unmet can void cover on a claim. Overdue.
     internal: false
 
   - ref: F5
@@ -265,32 +356,31 @@ actions:
     due: 2027-08-12
     status: open
     severity: medium
-    detail: >
-      The single longest pole in the certification timetable does not appear in
-      the business risk register.
+    detail: The single longest pole in the certification timetable is not in SESC-REG-01.
     internal: false
 
   - ref: F7
     kind: finding
     title: ICO registration recorded as absent, but the public register was never queried
     owner: Chief Operating Officer
-    due: 2026-08-31
+    due: 2026-10-31
     status: open
     severity: medium
-    detail: An unverified absence, not a verified one. Query the ICO register first.
+    detail: An unverified absence, not a verified one. Query the ICO register first, then register.
     internal: false
 
   - ref: F8
     kind: finding
     title: Waste carrier registration tier not confirmed
-    owner: Contracts Manager
-    due: 2026-09-30
+    owner: Environmental Manager
+    due: 2026-10-31
     status: open
     severity: medium
     detail: >
       CBDL569181 appears only at POL-19 Annex A. Construction and demolition
       waste is excluded from the own-waste exemption, so UPPER TIER is required
-      even carrying only the Employer's own waste.
+      even carrying only the Employer's own waste. Overdue against 30 September
+      2026; IMS-00 Part 10 (r).
     internal: false
 
   - ref: F9
@@ -299,22 +389,18 @@ actions:
     owner: Chief Operating Officer
     status: open
     severity: low
-    detail: >
-      Hot water, heating, ASHP and PV, certificated since 11 December 2024.
-      Decide whether it belongs in the IMS scope.
+    detail: Held since 11 December 2024. Decide whether it belongs in the IMS scope.
     internal: false
 
   - ref: F11
     kind: finding
-    title: The project instructions file is actively wrong in five places
+    title: The project instructions file v1.0 is actively wrong in five places
     owner: Chief Operating Officer
     status: open
-    severity: high
+    severity: medium
     detail: >
-      It says the 21 documents are unsigned, the adviser is unappointed,
-      SESC-REG-02 is next free, headcount is around 13 to 20, and the EL
-      certificate is not held. A chat reading it would draft wrong findings.
-      Safe to retire once D10 is settled.
+      Superseded by CLAUDE.md and the Claude Project instructions v2.0. Safe to
+      retire once D10 is settled; do not delete before then.
     internal: true
 
   - ref: F12
@@ -322,11 +408,11 @@ actions:
     title: The QinetiQ question was never asked and has no owner
     owner: Chief Operating Officer
     status: open
-    severity: medium
+    severity: low
     detail: >
-      "Is ISO 27001 a requirement or a scoring advantage at SESC's tier?" Five
-      minutes to their supply chain team. It is the one answer that could reverse
-      the certification route at D1. Until answered, the plan stands.
+      "Is ISO 27001 a requirement or a scoring advantage at SESC's tier?"
+      QinetiQ approved JOSCAR without raising it, which lowers the priority but
+      does not answer it.
     internal: true
 
   - ref: F13
@@ -335,7 +421,7 @@ actions:
     owner: Chief Operating Officer
     status: open
     severity: medium
-    detail: Ask the certification body directly — see D2.
+    detail: Ask PJR in writing (T-W). Plan on four months until answered.
     internal: true
 
   - ref: F15
@@ -344,27 +430,8 @@ actions:
     owner: Chief Operating Officer
     status: open
     severity: medium
-    detail: >
-      Required approvals is 0 and Steve is not a collaborator. The pull request
-      gate exists; the second human does not. The control exists on paper only.
-      See D12.
+    detail: Required approvals is 0 and Steve is not a collaborator. See D12.
     internal: true
-
-  - ref: F16
-    kind: finding
-    title: Two sessions worked on this repository at once, and one overwrote the other
-    owner: Chief Operating Officer
-    due: 2026-08-19
-    status: part-closed
-    severity: high
-    detail: >
-      18 August 2026. The portal session reverted registers/interested-parties.yaml
-      and system/4-context.md to their committed content, losing work done in
-      between. Both have since been restored. The lesson is in the method, not the
-      files: re-read a file off disk immediately before writing it, never copy a
-      whole tree over a working copy, and commit early — an uncommitted change has
-      no history to recover it from.
-    internal: false
 
   - ref: F18
     kind: finding
@@ -373,127 +440,519 @@ actions:
     due: 2027-08-17
     status: open
     severity: low
-    detail: >
-      It states eleven of twenty-nine recurring obligations have never been done.
-      The tables hold 23 scheduled obligations of which 15 have never been done,
-      plus 6 event-driven triggers. Correct at the next reissue.
+    detail: Correct at the next reissue.
     internal: false
 
   - ref: F19
     kind: finding
     title: Document owner is not recoverable for any of the 45 legacy documents
     owner: Chief Operating Officer
-    due: 2026-09-30
+    due: 2026-11-30
     status: open
     severity: medium
     detail: >
-      The value exists in every PDF control table; the Evidence Pack extraction
-      did not capture it and no machine-readable copy exists. Until a document
-      has a named owning ROLE, nobody is accountable for reviewing it — and
-      SESC-REG-07 now has an empty owner column to prove it.
+      SESC-REG-07 carries an empty owner column. Fill it as each document is
+      migrated (workstream 7).
     internal: false
 
+  - ref: F20
+    kind: finding
+    title: Accreditation and impartiality of the certification route
+    owner: Managing Director
+    status: open
+    severity: high
+    detail: >
+      James Milligan is the consultant (The Milco Group Ltd), not a certification
+      body. PJR is proposed as the body. Still to establish in writing: James's
+      relationship to PJR, and that PJR accepts that the consultant who built
+      the system is not its auditor.
+    internal: true
+
+  - ref: F22
+    kind: finding
+    title: The design carve-out has not yet reached the standard quotation
+    owner: Managing Director
+    status: open
+    severity: medium
+    detail: >
+      Quotations still exclude all design while SESC designs heat pump and
+      solar PV systems. Apply to the quotation and SESC-CAP-008 within 30 days
+      of SESC-IMS-04 being signed (IMS-00 Part 10 (p)).
+    internal: false
+
+  - ref: F26
+    kind: finding
+    title: SESC-FRM-02 has no "reported by" field
+    owner: Health and Safety Officer
+    status: open
+    severity: medium
+    detail: On an open form nothing records who raised an accident report. Decide at FRM-02 v0.3.
+    internal: false
+
+  - ref: F28
+    kind: finding
+    title: Forms created by API may start unpublished and receive no responses
+    owner: Chief Operating Officer
+    due: 2026-10-09
+    status: open
+    severity: medium
+    detail: Check Published in the Forms editor for every form at build (runbook 6.5).
+    internal: false
+
+  - ref: F29
+    kind: finding
+    title: The PI record does not show cover for ventilation specification
+    owner: Managing Director
+    due: 2026-10-31
+    status: open
+    severity: critical
+    detail: >
+      Markel schedule AHG015566 covers "your professional services" without
+      defining them; the Statement of Fact does not declare mould and damp
+      remediation. Blocks the ventilation element of SESC-IMS-04 v0.3 and its
+      signature. Written confirmation from the insurer or broker, or D17
+      option (b).
+    internal: false
+
+  - ref: F30
+    kind: finding
+    title: The EL/PL business description does not name mould and damp remediation
+    owner: Managing Director
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: Written confirmation that the liability policies respond to the trade.
+    internal: false
+
+  - ref: F31
+    kind: finding
+    title: The PI Statement of Fact of 20 April 2026 does not match the Employer
+    owner: Managing Director
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: >
+      Trade given as Electrical Contractor; two directors declared against a sole
+      director; no roofing, no mould and damp; basis of limit contradicts the
+      schedule. The form itself warns the policy may be voidable. A statement to
+      an insurer, so the Managing Director's.
+    internal: false
+
+  - ref: F32
+    kind: finding
+    title: The EL and PL files in Insurance Docs are byte-identical broker letters
+    owner: Accounts Manager
+    due: 2026-10-31
+    status: open
+    severity: low
+    detail: Neither is a policy document. Reconcile the EL and PL records (IMS-04 Part 8(m)).
+    internal: false
+
+  - ref: F35
+    kind: finding
+    title: The repository is public
+    owner: Chief Operating Officer
+    status: open
+    severity: high
+    detail: >
+      Anyone can read the register, every draft, the insurance positions and the
+      gap inventories. Making it private is a repository setting. Decision open
+      since 24 September 2026.
+    internal: true
+
+  - ref: F37
+    kind: finding
+    title: The renderer tests are not in CI
+    owner: Chief Operating Officer
+    status: open
+    severity: low
+    detail: Copy Claude outputs/ci.yml.workstream-2 over .github/workflows/ci.yml and check the render job goes green.
+    internal: true
+
+  - ref: F38
+    kind: finding
+    title: 'The front-matter field "issued" on a draft does not mean issued'
+    owner: Chief Operating Officer
+    status: open
+    severity: low
+    detail: The schema should say what issued means before a first issue, or allow it to be empty for a draft.
+    internal: true
+
+  - ref: F39
+    kind: finding
+    title: portal/config.yaml was stale against the register
+    owner: Chief Operating Officer
+    status: closed
+    severity: medium
+    detail: >
+      CLOSED 7 October 2026. The trades line now names mould and damp
+      remediation (D11), and the 30 September 2026 milestone no longer calls
+      itself the date the system started working — that is the first live
+      record (B3), which does not exist.
+    internal: true
+
+  - ref: F41
+    kind: finding
+    title: James Milligan's template set carries another company's controlled documents (HCPL)
+    owner: Chief Operating Officer
+    status: open
+    severity: high
+    detail: Add HCPL to the forbidden-reference list in CLAUDE.md 3 and 7.2, by PR. Nothing from the set enters as content.
+    internal: true
+
+  - ref: F42
+    kind: finding
+    title: James's templates are built to ISO 14001:2015, withdrawn April 2026
+    owner: Chief Operating Officer
+    status: open
+    severity: high
+    detail: His plan for 14001:2026 and 9001:2026 is not recorded. Ask and record at B4 and D16.
+    internal: true
+
+  - ref: F44
+    kind: finding
+    title: The proposed internal auditor also supplies the documents
+    owner: Managing Director
+    status: open
+    severity: medium
+    detail: Weak evidence of independence for 9.2.2 c). Agree which areas someone else audits (D3). B5 stands.
+    internal: true
+
+  - ref: F45
+    kind: finding
+    title: The consultant's Dropbox is a third-party-controlled store
+    owner: Chief Operating Officer
+    status: open
+    severity: medium
+    detail: No personal data, no insurance documents and not the register go to it. Transfer folder only.
+    internal: true
+
+  - ref: F46
+    kind: finding
+    title: Building in Dropbox and transferring later would create a second master
+    owner: Chief Operating Officer
+    status: open
+    severity: medium
+    detail: The repository stays the master. No access given before the engagement is decided.
+    internal: true
+
+  - ref: F48
+    kind: finding
+    title: PJR's UKAS schedule does not list ISO 14001:2026
+    owner: Managing Director
+    status: open
+    severity: high
+    detail: >
+      Either PJR extends in time, or the CLAUDE.md 6 rule against a :2015
+      certificate is revisited on PJR's written answer. Also not established:
+      which PJR entity's accreditation Stephen Lloyd audits under.
+    internal: true
+
+  - ref: F49
+    kind: finding
+    title: No fire risk assessment for Unit 19
+    owner: Managing Director
+    due: 2026-11-30
+    status: open
+    severity: critical
+    detail: >
+      A legal duty under the Regulatory Reform (Fire Safety) Order 2005 now,
+      before it is an ISO 45001 point. Fourteen walk-round items FS-01 to FS-14
+      are logged in the register; James Milligan to carry out the assessment
+      once they are closed. IMS-00 Part 10 (e).
+    internal: false
+
+  - ref: F50
+    kind: finding
+    title: Stage 1 is targeted for end of October 2026 and the inputs are not ready
+    owner: Chief Operating Officer
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: >
+      Scope statement unsigned (F29-F31), no aspects register of SESC's own, no
+      audit programme or management review scheduled, no live record. Ask PJR
+      the Stage 1 document list and the maximum Stage 1-Stage 2 interval.
+    internal: false
+
+  - ref: F51
+    kind: finding
+    title: Craig Bartle's NEBOSH qualification is not on the record
+    owner: Contracts Manager
+    status: open
+    severity: medium
+    detail: Read the certificate before any document names it. Held in Workspace under POL-14, never in git.
+    internal: false
+
+  - ref: F54
+    kind: finding
+    title: Six-column tables wrap single words in narrow columns
+    owner: Chief Operating Officer
+    status: open
+    severity: low
+    detail: Cosmetic; fix in the renderer's _widths(), not by shortening the words.
+    internal: true
+
+  - ref: F55
+    kind: finding
+    title: SESC-REG-05 holds 44 requirements, not the 43 recorded
+    owner: Chief Operating Officer
+    status: open
+    severity: low
+    detail: Correct the count in the REG-05 notes and the register 2 row at REG-05 v0.3.
+    internal: true
+
+  - ref: F16
+    kind: finding
+    title: Two sessions worked on this repository at once, and one overwrote the other
+    owner: Chief Operating Officer
+    status: closed
+    severity: high
+    detail: 18 August 2026. Both files restored; rule at register 7.7.
+    internal: false
+
+  - ref: F36
+    kind: finding
+    title: .DS_Store was staged in the clone's index
+    owner: Chief Operating Officer
+    status: closed
+    severity: low
+    detail: .gitignore excludes it; the working tree was clean on 7 October 2026.
+    internal: true
+
+  - ref: F47
+    kind: finding
+    title: Workstream 2 was never committed on 24 September 2026
+    owner: Chief Operating Officer
+    status: closed
+    severity: high
+    detail: build/render_docx.py and its tests are on main as at 7 October 2026 (PR #14 lineage).
+    internal: true
+
+  - ref: F53
+    kind: finding
+    title: The register-v1.14 branch carried an uncommitted register
+    owner: Chief Operating Officer
+    status: closed
+    severity: medium
+    detail: Closed by PR #14 (965535b), 7 October 2026.
+    internal: true
+
   # ------------------ the things that are not yet true -------------------
-  # CLAUDE.md 10. These are not findings against anybody. They are the gap.
+  # CLAUDE.md 10 and SESC-IMS-00 Part 10 (a)-(w). These are not findings
+  # against anybody. They are the gap. Dates marked proposed are proposed in
+  # IMS-00 v0.1 for the owner to confirm.
 
   - ref: G1
     kind: gap
     title: No internal audit has ever been carried out
     owner: Chief Operating Officer
-    due: 2026-12-31
+    due: 2026-11-30
     status: open
     severity: critical
-    detail: Under any system, for any period. ISO 9.2 for all three standards.
+    detail: >
+      Under any system, for any period. Clause 9.2 for all three standards.
+      IMS-00 Part 10 (u): programme due 31 October 2026, first audit 30 November
+      2026 (proposed); auditor to be appointed by the Managing Director (D3).
     internal: false
 
   - ref: G2
     kind: gap
     title: No management review has been minuted since 10 January 2023
     owner: Managing Director
-    due: 2026-12-31
+    due: 2026-10-31
     status: open
     severity: critical
-    detail: ISO 9.3 for all three standards.
+    detail: Clause 9.3 for all three standards. Overdue against 30 September 2026; IMS-00 Part 10 (h), 31 October 2026 proposed.
     internal: false
 
   - ref: G3
     kind: gap
     title: No nonconformity and corrective action log of the Employer's own
-    owner: Chief Operating Officer
-    due: 2026-08-31
+    owner: Quality Representative
+    due: 2026-10-09
     status: open
     severity: high
-    detail: ISO 10.2 for all three standards. None opened before 31 August 2026.
+    detail: Clause 10.2. Opens with SESC-FRM-05 at record capture go-live. IMS-00 Part 10 (i).
     internal: false
 
   - ref: G4
     kind: gap
     title: The environmental aspects and impacts register does not exist
-    owner: Contracts Manager
-    due: 2026-10-31
+    owner: Environmental Manager
+    due: 2026-11-30
     status: open
     severity: critical
     detail: >
       THE DEFINING ISO 14001 DOCUMENT AND THE HIGHEST-PRIORITY GAP IN THE SYSTEM.
-      The one held belongs to a landscaping firm. Blocked on buying 14001:2026.
+      The one held belongs to a landscaping firm. Blocked on buying 14001:2026
+      (B4). IMS-00 Part 10 (f); workstream 4.
     internal: false
 
   - ref: G5
     kind: gap
     title: The compliance obligations register is dated 2020 with dead drive links
-    owner: Contracts Manager
+    owner: Environmental Manager
     due: 2026-11-30
     status: open
     severity: high
-    detail: >
-      ISO 14001 6.1.3 and ISO 45001 6.1.3 are both dual maintain-AND-retain.
+    detail: 14001 6.1.3 and 45001 6.1.3 are both dual maintain-AND-retain. IMS-00 Part 10 (g); workstream 5.
     internal: false
 
   - ref: G6
     kind: gap
     title: ISO 45001 clause 5.4 worker consultation has no mechanism and no records
-    owner: Contracts Manager
+    owner: Health and Safety Officer
     due: 2026-10-31
     status: open
     severity: critical
     detail: >
       Requires a mechanism AND records of it operating, with non-managerial
-      workers. A paragraph in POL-05 will not pass. This is the clause 45001
-      auditors test hardest and the one small firms fail.
+      workers. SESC-FRM-06 (draft) is the first intended record; the mechanism
+      itself goes in SESC-IMS-05. IMS-00 Part 10 (d).
     internal: false
 
   - ref: G7
     kind: gap
     title: The directly-employed headcount is disputed
     owner: Chief Operating Officer
-    due: 2026-08-31
     status: open
     severity: medium
-    detail: >
-      Declared five different ways. No figure is stated anywhere in the
-      repository until payroll produces one with the date it changed.
+    detail: No figure is stated anywhere in the repository until payroll produces one with the date it changed.
     internal: false
 
   - ref: G8
     kind: gap
     title: EL and PL certificates are recorded at POL-05 Annex C as NOT VERIFIED
-    owner: Chief Operating Officer
-    due: 2026-08-27
+    owner: Accounts Manager
+    due: 2026-10-31
     status: open
     severity: high
-    detail: >
-      The schedule and the broker letter give different policy numbers.
+    detail: The schedule and the broker letter give different policy numbers. See F32.
     internal: false
 
   - ref: G9
     kind: gap
     title: The four core procedures do not exist
     owner: Chief Operating Officer
-    due: 2026-12-31
+    due: 2026-11-30
     status: open
     severity: critical
     detail: >
       Document control (7.5), internal audit (9.2), management review (9.3) and
-      nonconformity and corrective action (10.2). The procedures a certification
-      body asks for first, and which no SESC document currently provides.
+      nonconformity and corrective action (10.2). IMS-00 Part 10 (o), 30
+      November 2026 proposed; workstream 6.
     internal: false
+
+  - ref: G10
+    kind: gap
+    title: No measurable environmental or OH&S objectives
+    owner: Managing Director
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: >
+      Quality objectives exist for the year from 1 September 2026; environmental
+      and OH&S objectives are not set and no plan to achieve all three sets
+      exists. Clause 6.2. Overdue against 30 September 2026; IMS-00 Part 10 (j),
+      31 October 2026 proposed. Not previously in the register's task tables.
+    internal: false
+
+  - ref: G11
+    kind: gap
+    title: No register of monitoring and measuring equipment with calibration status
+    owner: Contracts Manager
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: Clause 7.1.5 (9001) and 9.1.1 (14001, 45001). IMS-00 Part 10 (k), proposed. Not previously in the task tables.
+    internal: false
+
+  - ref: G12
+    kind: gap
+    title: No consolidated register of role-based competence requirements
+    owner: Contracts Manager
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      Requirements exist in SESC-POL-05 and the scheme rules; no register in the
+      repository. Role-based requirements may be in git; individual records may
+      not. IMS-00 Part 10 (l), proposed. Not previously in the task tables.
+    internal: false
+
+  - ref: G13
+    kind: gap
+    title: No approved supplier and subcontractor register of the Employer's own
+    owner: Contracts Manager
+    due: 2026-11-30
+    status: open
+    severity: high
+    detail: >
+      No completed subcontractor assessment exists; SESC-FRM-04 is a draft.
+      Fifteen subcontractors already have full insurance records. Overdue
+      against 30 September 2026 (REG-05 IP-12); IMS-00 Part 10 (q), 30 November
+      2026 proposed.
+    internal: false
+
+  - ref: G14
+    kind: gap
+    title: No record of an environmental emergency or spill response test
+    owner: Environmental Manager
+    due: 2027-01-31
+    status: open
+    severity: medium
+    detail: Clause 8.2 (14001). IMS-00 Part 10 (s), proposed. Not previously in the task tables.
+    internal: false
+
+  - ref: G15
+    kind: gap
+    title: No customer satisfaction monitoring
+    owner: Quality Representative
+    due: 2026-12-31
+    status: open
+    severity: medium
+    detail: Clause 9.1.2 (9001), distinct from complaints handling. REG-05 IP-02; IMS-00 Part 10 (t). Not previously in the task tables.
+    internal: false
+
+  - ref: G16
+    kind: gap
+    title: SESC-IMS-05 Leadership and the integrated policy statement do not exist
+    owner: Chief Operating Officer
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: >
+      The three signed policy statements stand. The integrated statement and the
+      5.4 mechanism go in IMS-05, the next spine document (workstream 3). IMS-00
+      Part 10 (c), proposed; Managing Director to sign.
+    internal: false
+
+  - ref: G17
+    kind: gap
+    title: The twenty-one signed documents are not migrated into the repository
+    owner: Chief Operating Officer
+    due: 2026-11-30
+    status: open
+    severity: high
+    detail: >
+      Until migrated they declare no clause and contribute nothing to coverage.
+      SESC-POL-16 first (workstream 7). IMS-00 Part 10 (v), proposed.
+    internal: false
+
+  # ---------------- tasks by owner that sit in no other list ---------------
+
+  - ref: T-W
+    kind: gap
+    title: The certification body's written answers are not received
+    owner: Chief Operating Officer
+    due: 2026-10-31
+    status: open
+    severity: high
+    detail: >
+      Ask PJR in writing: ISO 14001 edition and 2026 extension date; which PJR
+      entity holds the accreditation; the Stage 1 document list; the maximum
+      Stage 1-Stage 2 interval; the operating history wanted before Stage 2;
+      whether it will certify to 9001:2026; James Milligan's relationship to it.
+      IMS-00 Part 10 (w). The Managing Director decides on the answers.
+    internal: true

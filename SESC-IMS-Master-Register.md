@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.16 · 6 October 2026.**
+**The state of the CLAUDE ISO project. v1.17 · 7 October 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -27,7 +27,7 @@
 | **Standards editions** | 9001:**2015** (written 2026-ready) · 14001:**2026** · 45001:**2018**. See `CLAUDE.md` §6. |
 | **Repository** | **`github.com/GaryHill0985/QMS`**, pushed 18 August 2026, commit `d3782f7`. The working clone was `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI; **from 24 September 2026 it is `~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** — see §2d. **D4 CLOSED.** |
 | **Master document count** | 21 signed (POL-01…19, CRP-01, REG-01) + REG-02, REG-03, REG-04 + REC-01…04 + TPL-01…04. |
-| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** **From 6 Oct 2026: `SESC-IMS-00` IMS Manual, draft v0.1 (§2j).** |
+| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** **From 6 Oct 2026: `SESC-IMS-00` IMS Manual, draft v0.1 (§2j).** **From 7 Oct 2026: `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`, the generated COTO Log workbook (§2l).** |
 
 ### 1.1 The phase plan, and the principle that governs it
 
@@ -735,6 +735,122 @@ an opportunity register, is queued as workstream 2b with its reference to be tak
 
 ---
 
+## 2l. Workstream 2b — `SESC-REG-08` Opportunity Register and `build/export_coto.py`, 7 October 2026
+
+**Taken:** workstream 2b only (D24). **Started once `main` was confirmed to contain PR #14.** Read-only
+`git --no-optional-locks log` in the clone: `main` at **`965535b`** (*Merge pull request #14 from
+GaryHill0985/workstream-ims00-manual*), parents `a4ab77f` (register v1.15–v1.16) and `c71f25c` (IMS-00 draft
+v0.1, renderer labels, `CLAUDE.md` §5); `git ls-tree main` lists `system/0-manual.md`. Working tree clean apart
+from the untracked `Claude outputs/` folder. **F53 is therefore CLOSED by that merge** — the v1.14 additions
+(FS-13, FS-14, F51) are in `a4ab77f`. Nothing else in the system was changed except as listed below.
+
+| Built | Where | Status |
+|---|---|---|
+| **`SESC-REG-08` Opportunity Register.** Reference taken from `CLAUDE.md` §5 in the same change. **Ten rows, every one seeded from an opportunity already recorded in `SESC-REG-06` v0.1** — the ten `opportunities:` bullets across EXT-02 (2), EXT-05, EXT-07, CLI-04, CLI-05, CLI-07, INT-03 and INT-09 (2) become OPP-01…OPP-10, each carrying its `source`. **Nothing was invented, and no candidate row exists**: the register defines a `candidate` status for any opportunity not taken from REG-06, and v0.1 holds none. Each row: process (from IMS-00 ¶19, itself a draft), likelihood 1–5 × benefit 1–5 = score, band, pursuit plan, owner, status, review date, record reference. **Every score and plan is marked `confirmed_by_owner: false`** and the header says they are proposals. A pursuit plan is written only where a recorded decision or document gives one (D1, D2, D8, D11, D17, D21, F29, F30, CLAUDE.md §3, §2c); otherwise it reads *not yet defined* and names the role that defines it. Risks stay in REG-01 and are never held here. Carries a *Records held, records not yet held* block (three absent records, dated) and a revision history. | `registers/opportunities.yaml` | **Draft v0.1** |
+| **Clause map claimed: 6.1.1 of all three standards, and nothing more.** Not 6.1.2, not 6.2 (an opportunity with a plan is not an objective with a measure), not 10.3 (nothing here has produced evidence of improvement). The file header says why. | front matter | — |
+| **Scoring scale.** 1–5 likelihood × 1–5 benefit, the same shape as REG-01's likelihood × impact, so the two registers read alike without being merged. **Bands (pursue ≥ 15, evaluate 8–14, hold ≤ 7) are proposed for Steve to confirm on approval**, and the YAML says so. Scores in v0.1: two at 20 (OPP-07 decarbonisation, OPP-08 the honesty convention), one at 16 ×2, one at 15, five at 9–12. | `scoring:` block | proposed |
+| **`build/export_coto.py`.** Writes the read-only *SESC COTO Log* workbook from REG-05, REG-06 and REG-08 to `out/SESC-COTO-Log.xlsx` (`out/` is gitignored — a build artefact, never committed). Tabs, in the template's order: **Cover** (banner *GENERATED FROM THE REPOSITORY — DO NOT EDIT*, generation time, HEAD commit read with `--no-optional-locks` plus a flag if `registers/` has uncommitted changes, a source table with each register's version and status, eight notes) · **Parties** (REG-05, one row per requirement) · **Issues** (REG-06, with *Bias* derived from what each row holds and an *Opportunities — REG-08* column pointing at OPP refs) · **Risk Register** (**REG-01 reference and pointer only**, control data read from REG-07 at run time, plus the 21 REG-01 risk ids REG-06 refers to) · **Opportunity Register** (REG-08) · **Lists** (the scales, bands, statuses and value lists, all read from the registers). **No Risks 27001 tab (D1).** Every sheet is protected and the workbook structure locked — a signal, not a security control, and the cover says so. `--check` reopens the file and compares every data tab's row count with the YAML. | `build/export_coto.py` | Done |
+| **Structure from the template, no content (§7.2, F41).** Read from `CMS COTO Log.xlsx` (`~/Documents/SESC/SESC Solutions Limited/1. Context of the Organisation/`, access granted for this chat): the six tab names, the one-row-per-item shape, the Lists-tab idea, and that the Opp Register scores probability × benefit with a pursuit plan and a status. **Column headings are SESC's field names. Not one party, issue, risk, opportunity, process, scale label or list value was copied.** The template's benefit sub-columns, likelihood wording, process list and demo rows were not carried. | — | — |
+| `CLAUDE.md` §5: next-free line records `SESC-REG-08` as taken on 7 Oct 2026 under D24; next free register is `SESC-REG-09`. | `CLAUDE.md` | Done |
+
+**Verification.**
+
+1. `build/validate.py`: **0 errors**, 12 warnings (the expected 14001 `verified: false`, now including
+   `registers/opportunities.yaml`), 3 notes. BUILD PASSES. 14 controlled files.
+2. `python3 build/export_coto.py --check`: Parties 44 = 44, Issues 30 = 30, Opportunity Register 10 = 10,
+   15 distinct parties = 15, Risk Register pointer only, Cover banner present. **Counted independently with
+   `grep`** on the YAML: 44 `- requirement:` lines, 15 `IP-` refs, 30 issue refs, 10 `OPP-` refs, and **10
+   opportunity bullets in REG-06** — so REG-08 holds exactly the opportunities REG-06 records.
+3. **The workbook was opened** (openpyxl: six tabs in the right order, all protected) **and rendered** with
+   LibreOffice to a 12-page landscape PDF (`Claude outputs/coto/`), **read as images**: the cover (p1), the
+   Parties tab (p2), the Issues tab (p5), the Risk Register pointer (p7), the Opportunity Register (p8, both
+   halves) and the Lists tab (p9). Every column prints, the banner is on every tab, and the footer reads
+   *generated from the repository — do not edit — page n of 12*. The first render printed as 44 strip pages
+   because the fit-to-width setting had not reached the file (F56); fixed and re-rendered.
+4. **F55 found by the count:** this register's §2 row and the REG-05 title say *43 requirements*; REG-05 v0.2
+   holds **44**. The F16 restoration added the first-aid needs assessment requirement at IP-06. 44 is right.
+
+### 2l.1 IMS-00 Part 10 (a)–(w) reconciled against §6 and the task tables; `portal/actions.yaml` resynced
+
+**Added by Gary mid-chat as task 5.** Every row of IMS-00 v0.1 Part 10 ¶63 was checked for a home in §3–§6 and
+in the tasks-by-owner tables of §2e–§2k. **Thirteen of twenty-three had an owner and a date in a task table.
+Ten did not, in whole or in part — four of them (j, k, l, s) appeared nowhere in this register** — and are
+added below as tasks by owner, and to `portal/actions.yaml` as new gaps G10–G17 with G1, G2 and G6 updated.
+Dates are IMS-00's, *proposed* where it says so; nothing is re-dated here.
+
+| Part 10 | Already recorded at | Gap in the tables |
+|---|---|---|
+| (a) standards | B4, D6 | — |
+| (b) signed IMS-04 and the insurance records | D17, F29–F31, §2f Steve tasks | — |
+| (c) integrated policy statement and IMS-05 | §6 item 3 only | **No owner task.** Added: COO drafts, Steve signs, 31 Oct 2026 (proposed). G16 |
+| (d) 5.4 mechanism with records | REG-05 IP-01, G6 | **Task table holds only the first toolbox talk.** Added: H&S Officer, mechanism in IMS-05, 31 Oct 2026. G6 updated |
+| (e) premises FRA | F49, FS-01…14, §2i tasks | — |
+| (f) aspects register | §6 item 4, G4 | — |
+| (g) compliance obligations register | §6 item 5, G5 | — |
+| (h) minuted management review | G2, CLAUDE.md §10 | **No owner task, and overdue against 30 Sep.** Added: Steve, 31 Oct 2026 (proposed). G2 updated |
+| (i) NC/CA log | G3, go-live tasks | — |
+| (j) environmental and OH&S objectives | **nowhere** | **Overdue against 30 Sep; absent from every table.** Added: Steve, 31 Oct 2026 (proposed). New G10 |
+| (k) calibration register | **nowhere** | Added: Contracts Manager, 30 Nov 2026 (proposed). New G11 |
+| (l) role-based competence register | **nowhere** | Added: Contracts Manager, 30 Nov 2026 (proposed). New G12 |
+| (m) induction and toolbox talk records | §2e H&S Officer and Contracts Manager tasks | — |
+| (n) first live record | B3, §2e Gary tasks | — |
+| (o) PRO-01 and the core procedures | §6 item 6, G9 | — |
+| (p) quotation and CAP-008 | F22 | — |
+| (q) approved supplier register | REG-05 IP-12 (overdue 30 Sep), §2e Contracts Manager FRM-04 task | **Register itself has no task.** Added: Contracts Manager, 30 Nov 2026 (proposed). New G13 |
+| (r) waste carrier tier | F8 | — (overdue; F8 re-dated 31 Oct in actions.yaml per Part 10) |
+| (s) spill response test | **nowhere** | Added: Environmental Manager, 31 Jan 2027 (proposed). New G14 |
+| (t) customer satisfaction | REG-05 IP-02 | **No task.** Added: Quality Representative, 31 Dec 2026. New G15 |
+| (u) audit programme, auditor, first audit | D3, B5, G1 | **Programme has no owner task.** Added: COO, programme 31 Oct 2026; first audit 30 Nov (proposed). G1 updated |
+| (v) migration of the 21 documents | §6 item 7 | — (G17 added so the portal shows it) |
+| (w) the certification body's written answers | §2i Gary task "this week" | — (T-W in actions.yaml) |
+
+**`portal/actions.yaml` resynced** from register v1.4 (18 Aug 2026) to v1.17: 81 actions (71 open) across
+B1–B6, fourteen open and four closed decisions, every open finding F4–F55, the CLAUDE.md §10 gaps G1–G9 with
+their Part 10 dates, the new G10–G17, and T-W. Closed items are kept and marked closed so the list shows what
+moved; the portal does not print them. Owners of open items: COO 34, Managing Director 22, Contracts Manager 5,
+Environmental Manager 4, H&S Officer 2, Accounts Manager 2, Quality Representative 2. **`portal/config.yaml`:
+F39 CLOSED** — the trades line names mould and damp remediation (D11, remediation only), and the 30 Sep 2026
+milestone now says it is *not* the date the system started working, with the go-live target (9 Oct) and the
+Stage 1 target (31 Oct, D22) added as milestones. `build/build_portal.py` rebuilt: 31 pages, 81 actions, and
+the generated pages carry *v1.17, 7 October 2026*, G10–G17 and the corrected milestone (checked by grep on
+`site/`, which is gitignored).
+
+**Not done, deliberately.** Nothing was committed: Claude does not run git against the clone (§7.7). The
+workbook is not committed and must not be — it is regenerated. Nothing was sent to James Milligan; whether the
+workbook goes to him, and marked how, is Gary's call (F45, F46). `Claude outputs/coto/` holds the render and
+page PNGs; none is needed after Gary has looked at the PDF.
+
+**Tasks by owner, from this session:**
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | Commit this workstream as **two commits on one branch** (§7.8): (1) `registers/opportunities.yaml` + `build/export_coto.py` + `CLAUDE.md` §5 + `portal/actions.yaml` + `portal/config.yaml`; (2) register v1.17. Commands below. **Claude does not merge.** | this week |
+| Gary | Read REG-08 v0.1 end to end and confirm, change or strike each proposed score, band, status and review date; set `confirmed_by_owner` as each owner confirms. The owners are Steve (6 rows), Gary (3), Craig (1). | 30 Nov 2026 |
+| **Steve** | Confirm the band thresholds (pursue ≥ 15, evaluate 8–14, hold ≤ 7) on approval of REG-08, and the six rows he owns (OPP-01, 02, 04, 07, 08, 09). **Approval is a signature; nothing is signed yet.** | with IMS-04 |
+| Gary | Decide whether the generated workbook goes to James Milligan and PJR, and marked how. If so, regenerate from a committed `main` first so the cover's commit is a real one. | after commit |
+| Later chat (REG-06 v0.2) | Add *processes affected* to each REG-06 issue, against the IMS-00 ¶19 process list, so the Issues tab's empty column fills from the YAML (§2k). | Phase 1 |
+| Later chat (REG-05 v0.3) | F55: correct the *43 requirements* count in the REG-05 notes and in this register's §2 row to 44. | next REG-05 change |
+| **Steve** | Part 10 (h): hold and minute a management review — none since 10 January 2023. **Overdue against 30 Sep 2026.** | 31 Oct 2026 (*proposed*) |
+| **Steve** | Part 10 (j): set measurable environmental and OH&S objectives with dates, and the plan to achieve all three sets. **Overdue against 30 Sep 2026.** | 31 Oct 2026 (*proposed*) |
+| Gary (COO) | Part 10 (c): draft IMS-05 Leadership with the integrated policy statement (§6 item 3); Steve signs. | 31 Oct 2026 (*proposed*) |
+| Gary (COO) | Part 10 (u): write the internal audit programme; the auditor is Steve's to appoint (D3). | 31 Oct 2026 |
+| Health and Safety Officer | Part 10 (d): the 5.4 consultation and participation mechanism, with records of it operating with non-managerial workers — the mechanism goes in IMS-05, the records in FRM-06. | 31 Oct 2026 |
+| Contracts Manager | Part 10 (k): register of monitoring and measuring equipment with calibration status. | 30 Nov 2026 (*proposed*) |
+| Contracts Manager | Part 10 (l): role-based competence requirements as a register in the repository (requirements only; individual records stay in Workspace). | 30 Nov 2026 (*proposed*) |
+| Contracts Manager | Part 10 (q): approved supplier and subcontractor register of the Employer's own, from FRM-04 evaluations. **Overdue against 30 Sep 2026** (REG-05 IP-12). | 30 Nov 2026 (*proposed*) |
+| Environmental Manager | Part 10 (s): environmental emergency or spill response test, recorded. | 31 Jan 2027 (*proposed*) |
+| Quality Representative | Part 10 (t): customer satisfaction monitoring (9001 9.1.2). | 31 Dec 2026 |
+| Gary | Re-run `python3 build/build_portal.py` after each register change; `portal/actions.yaml` now says v1.17 and goes stale from the next version. | each register change |
+| Workstream 7 | When REG-01 is migrated, `export_coto.py` `tab_risk_pointer()` is replaced by a rows tab; the REG-01 ids on the Issues tab then resolve. | Phase 1 |
+
+**Completion note.** The opportunity register exists as ten scored, owned, dated rows that trace one for one
+to what REG-06 already said, with every score flagged as a proposal and no row claiming to be realised. The
+export script writes a six-tab workbook that cannot drift from the registers because it is regenerated from
+them, carries REG-01 as a pointer until it is migrated, and has no ISO 27001 tab. Validated, exported, counted
+three ways and read as images. Nothing signed, committed, sent or merged. F53 closed by PR #14.
+
+---
+
 ## 3. Blockers — the four, restated with what has actually moved
 
 | # | Blocker | Position at 18 August 2026, updated 24 September 2026 |
@@ -774,7 +890,7 @@ an opportunity register, is queued as workstream 2b with its reference to be tak
 | **D20** | **Workspace forms are a stopgap only, and the SESC Platform record capture section is built as soon as possible** | **Gary** | **NEW, CLOSED 24 Sep 2026: Gary's decision.** The Google Workspace forms (D15) stay as a stopgap only, to start the B3 clock. **A record capture section of the SESC Platform is to be built as soon as possible,** because the forms: (1) **cannot take photographs** (D18, F25); (2) **are not tamper-proof**, since the owning account and Shared Drive Managers can still edit (D15, README §10); and (3) **cannot prove who submitted an open form** (D19, F26). §6 item 8 is brought forward as **workstream 1c**. The Platform build is a separate workstream, not the 1b chat's. Field names stay aligned with `forms/SESC-FRM-01…07`, so nothing is re-keyed. Recorded at SESC-IMS-04 v0.3 ¶51. |
 | **D21** | **The CMS Manual: its reference, and how it relates to SESC-IMS-04…10** | **Gary** | **NEW 6 Oct 2026.** James asks for the CMS Manual first. SESC already has IMS-04 (clause 4) and the `SESC-IMS-nn` spine for clauses 4–10. Options: (a) one **Integrated Management System Manual** as the top document, citing IMS-04…10 and the policies rather than repeating them; (b) the manual **is** the spine, IMS-04…10 as its chapters. Either way it is written in house style from SESC's facts; James's template is a heading checklist only (§7.2, F41). **Decide before drafting, and take the reference from §5 in the same turn.**<br><br>**CLOSED 6 Oct 2026 — Gary's decision: option (a), one Integrated Management System Manual on top.** It walks clauses 4–10 in the order of James's template headings, says briefly how the Employer meets each, and points to IMS-04, the policies, registers and forms rather than repeating them. Where something does not exist yet, the manual says so with a date (records held, records not yet held). **Reference proposed: `SESC-IMS-00`** (the spine's overview, ahead of the clause chapters 04–10). That extends the `SESC-IMS-nn` rule in `CLAUDE.md` §5, so confirm it at the start of the drafting chat and add the line to §5 by PR in the same change. Drafting is the next workstream, in its own chat.<br><br>**6 Oct 2026, drafting chat: reference `SESC-IMS-00` CONFIRMED by Gary's instruction and TAKEN.** `CLAUDE.md` §5 amended in the same change. **Drafted as v0.1 — see §2j.** Claims clauses 4.4 and 7.5.1 only. With Gary to commit and send to James for review; Steve's signature follows IMS-04's. |
 | **D22** | **Stage 1 by end of October 2026** | **Steve** | **NEW 6 Oct 2026, agreed at the meeting (Gary).** Replaces Phase 4's Stage 1 window. Stage 2 still waits on records (§1.1). §2i.2, F50. |
-| **D24** | **The COTO Log: SESC's version is REG-01 + REG-05 + REG-06, plus a new opportunity register and a generated workbook view** | **Gary** | **NEW, CLOSED 6 Oct 2026 — Gary's decision (§2k).** No COTO log is built from the template. SESC's context data stays as YAML registers in the repository (one master). Two additions: **`SESC-REG-08` Opportunity Register** (scored, with pursuit plan, owner and status, separate from risks — 9001:2026-ready), and **a generated read-only workbook** in the template's tab layout for James and the certification body, written by a build script from the registers so it can never drift from them. Workstream 2b, next chat. Risks 27001 tab not carried (D1). |
+| **D24** | **The COTO Log: SESC's version is REG-01 + REG-05 + REG-06, plus a new opportunity register and a generated workbook view** | **Gary** | **NEW, CLOSED 6 Oct 2026 — Gary's decision (§2k).** No COTO log is built from the template. SESC's context data stays as YAML registers in the repository (one master). Two additions: **`SESC-REG-08` Opportunity Register** (scored, with pursuit plan, owner and status, separate from risks — 9001:2026-ready), and **a generated read-only workbook** in the template's tab layout for James and the certification body, written by a build script from the registers so it can never drift from them. Workstream 2b, next chat. Risks 27001 tab not carried (D1).<br><br>**7 Oct 2026, workstream 2b: BUILT — see §2l.** `SESC-REG-08` taken and drafted as v0.1 (ten rows, all from REG-06, scores proposed); `build/export_coto.py` writes the workbook with REG-01 as a pointer. With Gary to commit; Steve confirms the bands and his six rows on approval. |
 | **D25** | **The H&S Policy Manual: SESC-POL-05 is SESC's version; no new manual** | **Gary** | **NEW, CLOSED 6 Oct 2026 — Gary's decision (§2k).** James is sent the signed POL-05 v1.1 with the comparison note. Four candidate gaps (housekeeping, DSE, young persons, electricity at work) and two to-confirms go to **POL-05 v1.2 after a full read of all 32 pages** — they are candidates, not findings, until then. Any change is an amendment in place by PR, signed by Steve. |
 | **D23** | **Site inspections in iAuditor (SafetyCulture)?** | **Gary, then Steve (spend)** | **NEW 6 Oct 2026.** James recommends iAuditor for Craig's site visits. SESC already has `SESC-FRM-07` Site Inspection for Workspace, with the Platform to follow (D15, D20). Using iAuditor as well would make a **third** place records live. Options: (a) iAuditor for site inspections, its template built field for field from FRM-07 so records export and migrate without re-keying; (b) stay with Workspace FRM-07 now and the Platform later. **Before choosing, read from SafetyCulture's own documentation: cost per user, export format, data location, and whether records are append-only.** A subscription is Steve's spend. |
 
@@ -822,7 +938,7 @@ an opportunity register, is queued as workstream 2b with its reference to be tak
 | F36 | **`.DS_Store` was staged in the clone's index** (`git status` showed `A  .DS_Store`) when this session started. Nothing in `.gitignore` excluded it, so the next `git commit -a` or `git add .` would have committed Finder metadata. `.gitignore` now excludes it. **It must still be unstaged by hand.** | Low | Gary, before the workstream 2 commit |
 | F37 | **`.github/workflows/ci.yml` cannot be written from a Cowork session** (the device bridge refuses: a protected file). The renderer tests are therefore not in CI until Gary copies `Claude outputs/ci.yml.workstream-2` into place. A control Claude cannot change without Gary is arguably the right way round. | Low | Gary |
 | F38 | **`issued:` on a draft does not mean issued.** IMS-04 v0.3 is a draft that has never been issued, yet its front matter carries `issued: 2026-08-18` (the first-draft date), because the schema requires the field. The renderer prints *Not issued* for any draft, so no document says otherwise. But the schema should say what `issued` means before a first issue, or allow it to be empty for a draft. | Low | Gary, at the next schema change |
-| F39 | **`portal/config.yaml` is stale against this register.** Its `trades` line omits mould and damp remediation (D11). Its milestone for 30 Sep 2026 says *"The date to quote when asked when the management system started working"*. That contradicts B3, and IMS-04 ¶39 was corrected for the same statement in v0.3 (F33). The portal publishes it, including to the auditor build. | **Medium** | Later chat |
+| F39 | **`portal/config.yaml` is stale against this register.** Its `trades` line omits mould and damp remediation (D11). Its milestone for 30 Sep 2026 says *"The date to quote when asked when the management system started working"*. That contradicts B3, and IMS-04 ¶39 was corrected for the same statement in v0.3 (F33). The portal publishes it, including to the auditor build.<br><br>**Closed 7 Oct 2026 (§2l.1):** trades line and milestone corrected; `portal/actions.yaml` resynced from v1.4 to v1.17 in the same change. | **Medium** | **Closed (§2l.1)** |
 | F40 | **IMS-04's source ends with a typed footer carrying "v0.3".** That is the kind of typed version number CLAUDE.md §5 forbids. The renderer drops it, and fails the build if its version ever disagrees with the front matter, so it cannot drift silently. Remove it at v0.4. | Low | Later chat, at IMS-04 v0.4 |
 | **F41** | **James Milligan's template set carries another company's controlled documents.** 93 toolbox talks are numbered `HCPL-TBT-nnn` (index dated 6 July 2021) and 92 of 128 `.docx` files reference HCPL. 32 control rows read "ISO Certification Ltd". Under §7.2 none of it enters the repository as content. **Add `HCPL` to the forbidden-reference list in `CLAUDE.md` §3 and §7.2.** | **High** | Later chat, by PR |
 | **F42** | **James's templates are built to ISO 14001:2015, withdrawn 15 April 2026**, and his Generic Risk Assessments still cite ISO 9001:2008 and 14001:2004. A consultant proposing to build SESC's EMS has not updated for the edition SESC must certify to. Ask (Q3) and record at B4 / D16. | **High** | Gary, at the meeting |
@@ -835,8 +951,10 @@ an opportunity register, is queued as workstream 2b with its reference to be tak
 | **F49** | **No fire risk assessment for the Employer's own premises (Unit 19) was found in the project records searched on 6 Oct 2026** (the register, the JOSCAR evidence pack, POL-05, REG-02). POL-05 ¶119 and ¶142 cover fire risk per project, through the RAMS. **Confirmed by Gary, 6 Oct 2026: SESC does not currently have a fire risk assessment for its premises.** That is a legal duty under the Regulatory Reform (Fire Safety) Order 2005 now, before it is an ISO 45001 8.2 point, so it should not wait for the ISO timetable. James's walk-round items FS-01…12 are at §2i.3. Item FS-12 (electrical cupboard) sits beside F4 (PAT testing as an insurance condition precedent). | **High** | Steve / Craig |
 | **F50** | **Stage 1 is targeted for end of October 2026, but the scope statement is unsigned (F29–F31), no aspects register of SESC's own exists, no internal audit programme or management review is scheduled, and no live record exists.** Stage 1 can still run and raise findings; Stage 2 cannot pass without operating history. Ask PJR the Stage 1 document list and the maximum Stage 1–Stage 2 interval. §2i.2. | **High** | Gary |
 | **F52** | **The renderer labelled `SESC-IMS-00` as "Clause 0".** `header_right()` and `cover_note()` derived the label from the two-digit suffix with no case for the manual. Found before the first render by reading the code; fixed and tested in the same change (§2j). | Low | **Closed (§2j)** |
-| **F53** | **The clone's `register-v1.14` branch carried an uncommitted, modified register when this session began**, newer than the committed `48ddbba` (FS-13, FS-14, F51 are in the working tree only). Not a drift between two copies, but §7.7 says record it: if the working tree were lost, those additions would go with it. This session built on the working-tree copy. | Medium | Gary — confirm and commit before adding §2j on top |
+| **F53** | **The clone's `register-v1.14` branch carried an uncommitted, modified register when this session began**, newer than the committed `48ddbba` (FS-13, FS-14, F51 are in the working tree only). Not a drift between two copies, but §7.7 says record it: if the working tree were lost, those additions would go with it. This session built on the working-tree copy.<br><br>**Closed 7 Oct 2026:** the additions are in `a4ab77f`, merged to `main` by PR #14 (`965535b`). | Medium | **Closed (PR #14)** |
 | **F54** | **Six-column tables wrap single words in narrow columns** — *Manage-ment* in IMS-00 ¶19, *CLAUS-E* in the Annex B header. Cosmetic; a `_widths()` minimum-width rule would fix it. Do not shorten the words to suit the renderer. | Low | Later chat |
+| **F55** | **`SESC-REG-05` v0.2 holds 44 requirements, not 43.** This register's §2 row and the REG-05 file both say 43; the F16 restoration added the first-aid needs assessment requirement at IP-06 and the count was not updated. Found by `export_coto.py --check` on 7 Oct 2026. Correct at REG-05 v0.3. | Low | Later chat |
+| **F56** | **A file written through the device bridge did not change, and reported that it had.** On 7 Oct 2026 a corrected `build/export_coto.py` was written over the first version; the bridge reported *written*, but the file on disk kept the old content (confirmed by `md5sum` and `grep`). Writing the file under a new staged name landed it. §7.7 applies in a new form: **after any write through the bridge, check the file on disk, not the tool's reply.** | Low | Recorded; rule at §7.9 |
 | **F51** | **Craig Bartle's NEBOSH qualification is not on the record.** Gary believes Craig holds a current NEBOSH qualification (6 Oct 2026). No certificate has been read on this project; the only NEBOSH qualification recorded is James Milligan's NGC. **Read Craig's certificate (award, grade, date) before any document names it.** NEBOSH certificates do not expire, so whether it is current means whether his CPD and role-relevant training are current. Craig is already named across the signed documents as Quality Representative, H&S Officer, Environmental Manager and regulation 7 competent person; **he reviews and is named, but only Steve signs** (D12, CLAUDE.md §2). His certificate is personal data: it is held in Workspace under POL-14, never in git. | Medium | Craig → Gary |
 
 ---
@@ -853,7 +971,7 @@ an opportunity register, is queued as workstream 2b with its reference to be tak
 | **1c** | **NEW 24 Sep 2026 (D20) — the record capture section of the SESC Platform**, brought forward from item 8: photos, tamper-evident append-only records, and an authenticated submitter, with field names aligned with `forms/SESC-FRM-01…07`. **A separate workstream. Its own chat.** | The Workspace forms cannot take photos, are not tamper-proof, and cannot prove who submitted an open form. | Platform sessions |
 | ~~2~~ | **DONE 24 Sep 2026 (§2g).** **Port `policy_editor.py` to `build/render_docx.py`** and render `SESC-IMS-04` to a branded PDF, then **read the cover and a body page as images**. | Renderer parity is the Phase 1 gate. Four known traps live in `Reference\Section workflow method.md` §5. | 1 session |
 | **2a** | **DONE 6 Oct 2026 (§2j) — `SESC-IMS-00` Integrated Management System Manual, draft v0.1** (D21). With Gary to commit; to James for review; Steve signs after IMS-04. | James asked for the manual first (§2i); it is also what a Stage 1 assessor opens first. | Done |
-| **2b** | **NEW 6 Oct 2026 (D24) — `SESC-REG-08` Opportunity Register and `build/export_coto.py`**, the generated *SESC COTO Log* workbook from REG-05, REG-06, REG-08 (and REG-01 once migrated). Reference taken in that chat. | James and PJR will expect a COTO log to look like a workbook; the registers already hold the content. Separating opportunities from risks is 9001:2026-ready. | 1 session |
+| **2b** | **DONE 7 Oct 2026 (§2l) — `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`**, the generated *SESC COTO Log* workbook from REG-05, REG-06, REG-08 (REG-01 as a pointer until migrated). With Gary to commit; Steve confirms bands and rows on approval. | James and PJR will expect a COTO log to look like a workbook; the registers already hold the content. Separating opportunities from risks is 9001:2026-ready. | 1 session |
 | 3 | **`SESC-IMS-05` Leadership**, including the integrated IMS policy that supersedes the three separate policy statements, and the 45001 clause 5.4 worker consultation mechanism. **Now next: IMS-00 Part 10 (c) and (d) point at it.** | 5.4 is the clause 45001 auditors test hardest and it is entirely absent. | 1 session |
 | 4 | **The environmental aspects and impacts register, built from SESC's own activities.** | **The defining ISO 14001 document and the highest-priority gap in the system.** The one held belongs to a landscaping firm. Blocked on buying 14001:2026 (D6). | 1–2 sessions |
 | 5 | **The compliance obligations register**, replacing the 2020 register with dead drive links. | 14001 6.1.3 and 45001 6.1.3 are both dual maintain-AND-retain. | 1 session |
@@ -879,6 +997,9 @@ an opportunity register, is queued as workstream 2b with its reference to be tak
    remove its own `.git/index.lock` and will block the next commit (F17).
 8. **Commit one workstream per commit.** A commit message that describes one thing while carrying
    another makes history untrustworthy, which is the whole reason the history exists.
+9. **After writing a file through the device bridge, check the file on disk** — `md5sum` or `grep`
+   for the change — not the tool's reply. On 7 October 2026 the bridge reported a write that did not
+   land (F56).
 
 ---
 
@@ -886,6 +1007,7 @@ an opportunity register, is queued as workstream 2b with its reference to be tak
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.17 | 7 October 2026 | Claude, for G A Hill | **Workstream 2b (D24): `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`.** New §2l. REG-08 reference taken from `CLAUDE.md` §5 (next free register now REG-09). Ten rows seeded one for one from REG-06's opportunity fields, scored 1–5 × 1–5, every score and plan marked proposed; claims 6.1.1 only. `export_coto.py` writes the six-tab *SESC COTO Log* workbook (REG-01 as pointer, no 27001 tab) to the gitignored `out/`; validated (0 errors), exported, counted three ways (44 / 30 / 10) and read as images. **F53 closed by PR #14 (`965535b`).** New F55 (REG-05 holds 44 requirements, not 43) and F56 (a bridge write that did not land); new rule §7.9. D24 and §6 row 2b updated. **Task 5 (§2l.1): IMS-00 Part 10 (a)–(w) reconciled — ten items had no owner task in whole or in part and are added (c, d, h, j, k, l, q, s, t, u); `portal/actions.yaml` resynced from v1.4 to v1.17 (81 actions, new G10–G17); `portal/config.yaml` corrected and F39 closed; portal rebuilt.** **Nothing signed, committed, sent or merged.** |
 | 1.16 | 6 October 2026 | Claude, for G A Hill | **Review of James Milligan's H&S Policy Manual and COTO Log templates** (§2k, same chat as §2j, analysis only). Both found to duplicate documents SESC already holds. **New D24** (COTO: registers stay the master; add REG-08 Opportunity Register and a generated workbook view — workstream 2b) and **D25** (POL-05 is SESC's H&S manual; four candidate gaps to v1.2 after a full read). Comparison note for James written to `Claude outputs/`. §6 row 2b added. **Nothing built, uploaded, signed, committed or merged.** |
 | 1.15 | 6 October 2026 | Claude, for G A Hill | **Workstream: `SESC-IMS-00` IMS Manual, draft v0.1** (D21 confirmed and taken). New §2j. `system/0-manual.md`: 68 paragraphs, clauses 4–10 in the template's heading order, pointers only, Part 10 inventory of 23 absent records (a)–(w), Annex B document map. Claims 4.4 and 7.5.1 only. Renderer `IMS-00` labels fixed with two new tests (F52 closed); 22/22 pass. `CLAUDE.md` §5 names IMS-00. Validated (0 errors), rendered to 20 pages, all 68 numbers checked, six pages read as images, approval block empty. New F53 (uncommitted register in the working tree at start) and F54 (six-column table wraps). §6 row 2a added. **Nothing signed, committed, uploaded or merged.** |
 | 1.14 | 6 October 2026 | Claude, for G A Hill | **Outcome of the James Milligan meeting** (Gary's account). New D23 (iAuditor for site inspections) and F51 (Craig's NEBOSH certificate not yet read). New §2i: PJR / Stephen Lloyd as certification body (D2), James as internal auditor (D3), CMS Manual first (new D21), Stage 1 by end Oct 2026 (new D22), premises fire safety items FS-01…14. PJR's UKAS schedule 0105 read: 14001 at :2015 only (F48). No premises fire risk assessment found (F49). Stage 1 readiness gaps (F50). **Nothing signed, contracted or committed.** |
