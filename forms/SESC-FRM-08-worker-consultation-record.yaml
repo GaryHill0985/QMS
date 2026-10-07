@@ -1,0 +1,200 @@
+id: SESC-FRM-08
+title: Worker Consultation Record
+version: "0.1"
+status: draft
+owner: Health and Safety Officer
+approver: Managing Director
+issued: 2026-10-07
+next_review: 2027-10-07
+classification: internal
+clauses:
+  iso45001: ["5.4"]
+personal_data: false
+records_generated: [consultation_record]
+
+# The TEMPLATE carries no personal data and lives in git. A COMPLETED record
+# names the people present and does NOT. See CLAUDE.md 8.
+completed_record:
+  contains_personal_data: true
+  store: Google Workspace restricted Shared Drive (D15), outside git
+  retention: 5 years from the date of the event
+  feeds_register: none — the record IS the consultation log; metadata only to portal/records-index.yaml
+
+purpose: >
+  The record of the ISO 45001 clause 5.4 mechanism designed at SESC-IMS-05
+  Part 5, for everything the toolbox talk record (SESC-FRM-06) cannot carry:
+  the weekly review that carries an item raised at a talk to an owner, a due
+  date and an answer; the quarterly consultation meeting of all non-managerial
+  workers on the system itself (the policy, the objectives, the audit
+  programme, the roles, procurement controls, improvement); and participation
+  in a risk assessment review, an incident investigation, PPE selection or a
+  competence decision. One entry per event, or per answer.
+
+design_note: >
+  Append-only. An item raised in one entry is answered or closed by a LATER
+  entry that names it in answers_item. Nothing is edited. The chain from "a
+  worker said" to "the Employer did" is the set of entries that share an item
+  reference. The first intended record is the consultation of the whole
+  non-managerial workforce, including the four apprentices, on the draft
+  integrated policy statement at SESC-IMS-05 Part 3, before the Managing
+  Director signs it (SESC-IMS-05 Part 6(b)).
+
+clause_note: >
+  ISO 45001 5.4 is cited because this form records non-managerial workers
+  being consulted on, and taking part in, the matters the clause names, and
+  records each item to an answer. Together with SESC-FRM-06 it is the record
+  of the mechanism at SESC-IMS-05 Part 5. NO COMPLETED RECORD EXISTS at the
+  date of this draft; the mechanism is designed, not operating, and the gap
+  report must not treat the clause as covered until a record sits behind it.
+
+guidance:
+  - Record what the workers said, not what management told them.
+  - Every item gets its own line and its own reference. One answer per item.
+  - '"We will look into it" is not an answer and does not close an item.'
+  - Ask the apprentices by name, and record that you did.
+  - If someone did not understand, record that and what you did about it.
+
+fields:
+  - key: date
+    label: Date of the consultation or of the answer
+    type: date
+    required: true
+  - key: event_type
+    label: What this entry records
+    type: select
+    required: true
+    options:
+      - Weekly review of items raised at toolbox talks and on near-miss reports (IMS-05 ¶38(b))
+      - Quarterly consultation meeting of all non-managerial workers (IMS-05 ¶38(c))
+      - Consultation on a document — the policy, an objective, a procedure or a RAMS (IMS-05 ¶38(c) and (e))
+      - Participation in a risk assessment or method statement review (IMS-05 ¶38(e))
+      - Participation in an accident, incident or near-miss investigation (IMS-05 ¶38(e))
+      - Participation in PPE, RPE or competence decisions (IMS-05 ¶38(e))
+      - Answer to, or closure of, an item raised in an earlier entry
+  - key: consulted_on
+    label: What was consulted on
+    type: text
+    required: true
+    help: The document and version, the RAMS reference, the incident record reference, or the topic. For the quarterly meeting, list the agenda items covered.
+  - key: job_ref
+    label: Job number, if the event relates to a job
+    type: text
+    required: false
+    help: Leave blank for a system-level consultation such as the policy or the audit programme. Where given, it ties the record to the job for migration to the SESC Platform (D15).
+  - key: led_by
+    label: Led by
+    type: text
+    required: true
+  - key: md_present
+    label: Was the Managing Director present
+    type: select
+    required: true
+    options: [Yes, No, Not applicable to this type of entry]
+  - key: how_run
+    label: How it was run
+    type: textarea
+    required: true
+    help: Where, how long, in paid time or not, how understanding was checked, any translation provided, and how people were invited to speak.
+  - key: non_managerial_count
+    label: Number of non-managerial workers present
+    type: number
+    required: true
+    help: Operatives, apprentices and subcontractors' operatives. Not the Managing Director, the Chief Operating Officer, the Contracts Manager or Site Supervisors.
+  - key: apprentice_count
+    label: Number of apprentices present
+    type: number
+    required: true
+  - key: attendees
+    label: Names of everyone present
+    type: textarea
+    required: true
+    help: One name per line, with company if not SESC, and marked (A) for an apprentice, (S) for a Site Supervisor. A completed record is personal data and is held in Workspace only.
+  - key: representative
+    label: Workers' representative present
+    type: text
+    required: false
+    help: Leave blank. None has been elected or appointed; the Managing Director has not decided whether to offer one (D26). Name one here only once that decision is taken and recorded.
+  - key: items_raised
+    label: Items raised by the workers
+    type: textarea
+    required: true
+    help: >
+      One item per line, numbered 1, 2, 3 so each can be referred to as
+      FRM-08-nnnn/1, FRM-08-nnnn/2. Write "None raised" if nothing was. Record
+      who raised each item, or "anonymous" if it came through SESC-FRM-01.
+  - key: clause_matters
+    label: Which clause 5.4 matters the items serve
+    type: multiselect
+    required: true
+    options:
+      - The consultation mechanism itself
+      - Needs and expectations of interested parties
+      - The policy
+      - Roles, responsibilities and authorities
+      - Legal and other requirements
+      - Objectives and planning
+      - Outsourcing, procurement and contractor controls
+      - What needs to be monitored and measured
+      - The audit programme
+      - Continual improvement
+      - Hazard identification and risk assessment
+      - Actions to eliminate hazards and reduce risks
+      - Competence and training needs
+      - What needs to be communicated and how
+      - Control measures and their use
+      - Investigation of incidents and nonconformities
+      - None of these — raised for information only
+  - key: response
+    label: Response, owner and due date for each item
+    type: textarea
+    required: true
+    help: >
+      For each item: what will be done, by whom, by when — or the answer given
+      on the day. Where an item cannot be answered yet, say when the answer
+      will come and why. A refusal is an answer if it says why. A blank is not.
+  - key: routed_to
+    label: Where each item went next
+    type: multiselect
+    required: true
+    options:
+      - Answered on the day — closed
+      - Carried as an open item with owner and due date
+      - SESC-FRM-01 near miss or hazard report raised
+      - SESC-FRM-05 nonconformity raised
+      - Proposed change to a controlled document, to the Chief Operating Officer
+      - Spend or decision for the Managing Director (IMS-05 ¶38(d))
+      - Referred to the subcontractor's own employer
+      - No action required, and the reason recorded
+  - key: answers_item
+    label: Does this entry answer or close an earlier item
+    type: text
+    required: false
+    help: >
+      Give the item reference (for example FRM-08-0003/2). The answer goes in
+      the response field, and feedback_given records how the person who raised
+      it was told. Records are never edited; an answer is a new entry.
+  - key: feedback_given
+    label: How and when the people who raised it were told the answer
+    type: textarea
+    required: false
+    help: >
+      Required when closing an item. For example "Given at the toolbox talk on
+      site X, 14 Oct 2026, FRM-06-0007" or "Told in person on 12 Oct 2026".
+      An item is closed only by an answer that was fed back.
+  - key: changed_as_a_result
+    label: What changed as a result
+    type: textarea
+    required: false
+    help: The control, document, equipment or decision that changed, with the reference of the new version or record. This is the evidence of participation, not just consultation.
+  - key: record_photo
+    label: Photograph of the signed attendance sheet or the flip chart
+    type: file
+    required: false
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-08-0003). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

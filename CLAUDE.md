@@ -110,9 +110,10 @@ written this way and consistency is auditable.
   (toolbox talk), `SESC-FRM-07` (site inspection) and `SESC-WI-01` (how to log a record on site)
   were taken on 24 September 2026 for the Workspace record capture (workstream 1a). **`SESC-IMS-00`
   (the IMS Manual) was taken on 6 October 2026 under D21. `SESC-REG-08` (the Opportunity Register)
-  was taken on 7 October 2026 under D24.** All are DRAFTS:
-  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-09` · `SESC-FRM-08` · `SESC-REC-05` ·
-  `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-05`.
+  was taken on 7 October 2026 under D24. `SESC-IMS-05` (Leadership) and `SESC-FRM-08` (Worker
+  Consultation Record) were taken on 7 October 2026 for workstream 3 (register §2m).** All are DRAFTS:
+  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-09` · `SESC-FRM-09` · `SESC-REC-05` ·
+  `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-06`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**
 - Everything downstream is generated from front matter — the page-1 control table, headers,
