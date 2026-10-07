@@ -11,7 +11,9 @@ organisation:
   company_number: "07606236"
   registered_office: >
     Unit 19, Melbury Business Park, West Melbury, Shaftesbury, Dorset SP7 0AF
-  trades: Roofing, building fabric, mechanical, electrical and renewable energy works
+  # Mould and damp remediation added 7 Oct 2026 (D11, register F39): in scope as
+  # REMEDIATION ONLY, per SESC-IMS-04 v0.3 paragraph 14 (draft, unsigned).
+  trades: Roofing, building fabric, mechanical, electrical and renewable energy works, and mould and damp remediation
   joscar_supplier: "10101706"
 
 # Roles are DISTRIBUTION AUDIENCES, not logins. A generated site cannot
@@ -67,10 +69,20 @@ standards:
 
 milestones:
   - date: 2026-09-30
-    label: First quarter in which SESC-REG-02 is fully operated ends
+    label: End of the first quarter in which SESC-REG-02 was planned to be fully operated
     note: >
-      The date to quote when asked when the management system started working.
-      SESC-REG-02 8(d).
+      NOT the date the system started working. That date is the first LIVE
+      record in the Workspace forms (register B3), which does not yet exist.
+      Corrected 7 October 2026 (F39; the same statement was corrected at
+      SESC-IMS-04 paragraph 39 in v0.3).
+  - date: 2026-10-09
+    label: Target for the Workspace record capture go-live — the B3 clock starts on the first live record
+    note: Register 2e; build/workspace_forms/README.md.
+  - date: 2026-10-31
+    label: Stage 1 assessment target agreed 6 October 2026 (D22)
+    note: >
+      A readiness review, not certification. Stage 2 waits on operating
+      history. The certification body is proposed and not yet confirmed (D2).
   - date: 2026-09-16
     label: ISO 9001:2026 publishes
     note: Certification to it is unlikely before mid/late 2027. Certify to :2015.
