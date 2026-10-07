@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.14 · 6 October 2026.**
+**The state of the CLAUDE ISO project. v1.16 · 6 October 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -27,7 +27,7 @@
 | **Standards editions** | 9001:**2015** (written 2026-ready) · 14001:**2026** · 45001:**2018**. See `CLAUDE.md` §6. |
 | **Repository** | **`github.com/GaryHill0985/QMS`**, pushed 18 August 2026, commit `d3782f7`. The working clone was `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI; **from 24 September 2026 it is `~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** — see §2d. **D4 CLOSED.** |
 | **Master document count** | 21 signed (POL-01…19, CRP-01, REG-01) + REG-02, REG-03, REG-04 + REC-01…04 + TPL-01…04. |
-| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** |
+| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** **From 6 Oct 2026: `SESC-IMS-00` IMS Manual, draft v0.1 (§2j).** |
 
 ### 1.1 The phase plan, and the principle that governs it
 
@@ -620,6 +620,121 @@ scope) is unaffected.
 
 ---
 
+## 2j. Workstream — `SESC-IMS-00` Integrated Management System Manual, draft v0.1, 6 October 2026
+
+**Taken:** the D21 drafting workstream only. Gary's instruction *"Draft SESC-IMS-00, the IMS Manual, per D21"*
+confirms the reference proposed at D21. **`SESC-IMS-00` is DRAFT v0.1, not approved and not issued. The approval
+block at Part 11 is empty.** Nothing else in the system was changed except as listed below.
+
+**State of the clone at the start (read-only `git --no-optional-locks status`):** branch `register-v1.14`,
+tracking `origin/register-v1.14` at `48ddbba`, with **`SESC-IMS-Master-Register.md` modified and uncommitted**
+and `Claude outputs/` untracked. Per §7.7 this is recorded, not assumed: the working-tree register (v1.14 with
+FS-13, FS-14 and F51) is newer than the committed v1.14, and this session built on the working-tree copy.
+**Gary to confirm that the uncommitted v1.14 additions are his and commit them before, or with, this change.**
+
+| Built | Where | Status |
+|---|---|---|
+| **`SESC-IMS-00` Integrated Management System Manual.** Option (a) of D21: one manual on top of the spine. 68 numbered paragraphs in eleven Parts plus three annexes. Parts 3–9 walk clauses 4–10 in the heading order of James Milligan's template manual (used as a **heading checklist only**; no sentence, list or table was taken from it). Each Part says how the Employer meets the requirement and points to IMS-04, the signed policies, the registers and the forms; where nothing exists it says so. Part 10 is the dated inventory of 23 records and documents not yet held, (a)–(w). Annex B is the **document map**: every clause of the three standards against the document that addresses it today, or *not yet* with the Part 10 reference. The scope statement is reproduced verbatim from IMS-04 ¶14. | `system/0-manual.md` | **Draft v0.1** |
+| **Clause map claimed: 4.4 (9001 4.4.1, 4.4.2) and 7.5.1, all three standards — and nothing else.** The manual describes the system and its processes, and defines the documented information the system consists of and how it is controlled. It does **not** claim 5.3 although it summarises roles, because IMS-04 ¶11 and the policies are the authoritative statements; Annex A says so. | front matter | — |
+| **Renderer: `header_right()` and `cover_note()` handle `IMS-00`.** Without the change the header printed *IMS · Clause 0* and the cover *CLAUSE 0 // …*. Now *IMS · Manual* and *MANUAL // ISO 9001 · ISO 14001 · ISO 45001*. Clause chapters 04–10 unchanged. **Two tests added** (`TestIMS00Labels`); 22/22 pass on the MacBook. | `build/render_docx.py`, `build/test_render_docx.py` | Done |
+| `CLAUDE.md` §5: the series rule now names `SESC-IMS-00`; the next-free line records it as taken on 6 Oct 2026. | `CLAUDE.md` | Done |
+
+**Facts the manual states, and their sources.** Every present-tense statement traces to IMS-04 v0.3 (identity,
+governance, roles at ¶11, scope at ¶14, the 8.3 determination, Part 8), to this register (what does not exist:
+no audit ever, no management review since 10 Jan 2023, no aspects register, 2020 obligations register, no NC log,
+forms not live, no premises FRA — F49, waste tier unconfirmed — F8, standards not held — D6/B4), or to
+`registers/documents.yaml` (the titles and versions of the 21 signed documents and REG-02…04, REC-01…04,
+CAP-002…014). **Where the manual points into a signed policy it names the document and, only where this register
+already records the section (POL-16 Annex B and Annex C, POL-05 Annex C, POL-19 Annex A), the section.** Four
+sentences drafted from assumption about the content of POL-05, POL-08 and POL-14 were caught on review and
+rewritten before render. Headcount, turnover and PI limit appear nowhere. **PJR and James Milligan's proposed
+roles are not named in the manual**: the certification body and the internal auditor are "proposed, before the
+Managing Director" (Part 10 (u), (w)), because neither is decided (D2, D3, stop rule). James is named only in
+the role he already holds, retained external H&S adviser, from IMS-04 ¶11.
+
+**Verification.**
+
+1. `build/validate.py`: **0 errors**, 11 warnings (the expected 14001 `verified: false`, now including
+   `system/0-manual.md`), 3 notes. BUILD PASSES.
+2. `python3 -m unittest build.test_render_docx`: **22/22 pass**, including the two new IMS-00 tests and the
+   IMS-04 printed-number test.
+3. Rendered on the MacBook with `build/render_docx.py --pdf` to `Claude outputs/ims00/SESC-IMS-00-v0.1-DRAFT.docx`
+   and `.pdf`: **20 pages** (cover + 19). **All 68 source paragraph numbers print in order** (checked from the PDF
+   text layer against the Markdown; 68 = 68, no gaps, no restarts).
+4. **Read as images:** the cover (p1), the control page (p3), the process table ¶19 (p6), the Part 10 table
+   (p15), the approval block and Annex A (p17) and the Annex B document map (p18). Cover: MANAGEMENT SYSTEM ·
+   *MANUAL // ISO 9001 · ISO 14001 · ISO 45001*, six fields reading *0.1 — DRAFT, NOT ISSUED* · *Not yet approved
+   (Managing Director)* · *G A Hill (drafted by Claude)*. Control table: *Issue date: Not issued*, *Next review: Set
+   on issue*. **Approval block: Reviewed by, all three Dates and Signature are empty.** The status banner and the
+   "holds no ISO certification" callout render as the red-keyline callout.
+5. **Two cosmetic defects, not fixed:** the Group column of the ¶19 table wraps *Manage-ment* over two lines, and
+   the Annex B header wraps *CLAUS-E*. Both are column-width effects of the renderer's `_widths()` on six-column
+   tables. Recorded as F54; fix in the renderer, not by shortening the words.
+
+**Not done, deliberately.** The manual was not uploaded to James's Dropbox (F45, F46; Gary's call — it may go
+to `To be uploaded` **only clearly marked DRAFT**, which the file is on every page). Nothing was committed:
+Claude does not run git against the clone (§7.7). `Claude outputs/ims00/` holds the render plus twenty page PNGs
+and a LibreOffice lock file; all gitignored, none needed after Gary has looked at the PDF.
+
+**Tasks by owner, from this session:**
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | Confirm the uncommitted register v1.14 working-tree additions are his; then commit this workstream as **two commits on one branch** (§7.8): (1) `system/0-manual.md` + renderer + tests + `CLAUDE.md` §5; (2) register v1.15. Commands below. **Claude does not merge.** | this week |
+| Gary | Read the 20-page PDF in `Claude outputs/ims00/` end to end before it goes anywhere. | before sending |
+| Gary | Send IMS-00 v0.1 to James Milligan for his review, **as a DRAFT**, with IMS-04 v0.3 DRAFT alongside — he asked for the manual first (§2i). Record his comments here; changes go in as v0.2 by PR. | after commit |
+| Gary | Decide whether the manual goes into the Dropbox `To be uploaded` folder (F45/F46) or by email. | with the above |
+| **Steve** | Review IMS-00 v0.1 Part 10 — it is the list of what he will be asked for at Stage 1 — and confirm or re-date the rows marked *proposed*. **Signature follows IMS-04's, not before.** | before Stage 1 |
+| Later chat | F54: `_widths()` for six-column tables. | with the next renderer change |
+| Later chat | IMS-05 Leadership (§6 item 3) is now the next spine document: the integrated policy statement and the 5.4 mechanism. Part 10 (c) and (d) of the manual depend on it. | next chat |
+| Later chat | When IMS-05…10 are issued, IMS-00 Annex B rows move from the policies to the spine, by PR, as a new version. The front-matter `review_trigger` says so. | each spine issue |
+
+**Completion note.** The manual exists as a 20-page branded draft that claims two clauses, points to everything
+else, and carries a 23-row dated inventory of what is not yet there. It names no headcount, no turnover, no
+insurance limit, no certification body and no certification. The renderer now knows what `IMS-00` is, and
+proves it in a test. The approval block is empty, nothing was committed, and the clone's branch carried an
+uncommitted register when this session began — that last point is Gary's to resolve before this change is added
+on top.
+
+---
+
+## 2k. Review — James Milligan's CMS H&S Policy Manual and COTO Log templates, 6 October 2026
+
+**Taken:** a read of the two remaining files in `1. Context of the Organisation` (`CMS Health and Safety Policy
+Manual.docx`, 1,313 paragraphs, 34 sections and four appendices; `CMS COTO Log.xlsx`, six sheets: Parties, Issues,
+Risk Register, Opp Register, Lists, Risks 27001), after Gary asked for SESC versions of both. **Same chat as §2j,
+analysis only — nothing was built, under the one-workstream rule.** The device link dropped mid-read; the read of
+POL-05 below is from its contents page and the lead sentence of each of its 175 paragraphs, **not all 32 pages**.
+
+**Finding on both: SESC's version already exists, and a new document from either template would be a second
+master.**
+
+| Template | SESC already holds | What the template adds |
+|---|---|---|
+| H&S Policy Manual | **SESC-POL-05 v1.1**, signed, 32 pp: Part 1 statement, Part 2 O1–O7, Part 3 A1–A31, Annexes A–D including A31 records-not-yet-held. Every template section maps to a POL-05 section or a separate signed policy (POL-08, POL-11, POL-06) except **four candidates with no named section found: housekeeping (9.0), DSE (18.0), young persons (19.0), electricity at work (29.0)**. The template still carries fabrication-workshop content (lathes, metalworking fluid, machine guarding) and the adviser's CV as an appendix. | Nothing as content. The four candidates go to POL-05 v1.2 **after a full read of all 32 pages**. |
+| COTO Log | Parties → **SESC-REG-05** (15 parties, 43 requirements with obligation type, evidence and gap — richer than the template's three columns). Issues → **SESC-REG-06** (30 issues; risks and opportunities in separate fields). Risk Register → **SESC-REG-01** (signed, 26 scored risks). Risks 27001 → out of scope (D1). | **A scored opportunity register with a pursuit plan and status, kept apart from risks** — which 9001:2026 wants and REG-06 holds only as a field. Also the Issues sheet's *processes affected* and *treatment* columns, which would tie REG-06 to the process model at IMS-00 ¶19. Demo rows ("attorney", "CPA", "Acme Calibration Labs") and "ISO Certification Ltd" control rows confirm §7.2: structure only. |
+
+**Decisions taken by Gary this session:** D24 and D25 below.
+
+**Delivered:** `Claude outputs/SESC - POL-05 against the CMS H&S Policy Manual template - 6 Oct 2026.md` — a one-page
+section-by-section map for James, marking the four candidates as candidates, not findings, and saying what POL-05
+has that the template lacks.
+
+**Tasks by owner, from this section:**
+
+| Owner | Task | By |
+|---|---|---|
+| Gary | Send James the **signed** POL-05 v1.1 PDF (`QinetiQ/JOSCAR/Documents/2.6 Health & Safety/Branded/Signed/`) with the comparison note, as SESC's H&S Policy Manual. Not the template filled in. | with IMS-00 |
+| Next chat (**workstream 2b**) | **D24:** `SESC-REG-08` Opportunity Register as YAML, with a scoring scale, pursuit plan, owner and status; a `build/export_coto.py` that writes a read-only *SESC COTO Log* workbook from REG-01 (when migrated), REG-05, REG-06 and REG-08 in the template's tab layout, marked *generated — do not edit*. Take REG-08 from `CLAUDE.md` §5 in that chat and update the next-free line. REG-01 is not yet in the repository, so the first export carries its reference and a pointer, not its rows. | next chat |
+| Later chat (POL-05 v1.2) | **D25:** read all 32 pages of POL-05; confirm or close the four candidates (housekeeping, DSE, young persons, electricity at work) and the two to-confirms (visitors to Unit 19; skin surveillance in A22); add mould and damp remediation to ¶2 (D11); reference the premises FRA from A25 once it exists (F49). Amend in place as v1.2 by PR; Steve signs. | after James's review |
+| James | Review POL-05 v1.1 and the four candidates; say what would not satisfy 45001 at Stage 1 | per engagement |
+
+**Completion note.** Both templates read in full; both found to duplicate documents SESC already holds. Nothing
+built, nothing uploaded, nothing changed in the system except this register. The one structural idea worth taking,
+an opportunity register, is queued as workstream 2b with its reference to be taken in that chat.
+
+---
+
 ## 3. Blockers — the four, restated with what has actually moved
 
 | # | Blocker | Position at 18 August 2026, updated 24 September 2026 |
@@ -657,8 +772,10 @@ scope) is unaffected.
 | **D18** | **Photographs and attachments on the record forms** | **Gary** | **NEW 24 Sep 2026.** Five schemas carry a `file` field. Apps Script cannot create a file upload question (F25). A Google community guide says upload questions force sign-in and **do not work for a form held on a Shared Drive**. Options: (a) **photos are filed by hand** in a `Record photos` folder on the Shared Drive, named by record reference, which is the default written into WI-01 ¶4; (b) add upload questions by hand to the domain-sign-in forms, **only if** testing shows uploads work on the Shared Drive; (c) wait for the SESC Platform. **Tell site nothing different from WI-01 until this is decided.** |
 | **D19** | **Who needs an SESC sign-in to submit** | **Gary** | **NEW 24 Sep 2026.** Default in `Code.gs`: FRM-01 and FRM-02 **open**, with no sign-in (the near miss is anonymous by design). FRM-03…07 need a **domain sign-in**, with the verified email recorded. **If supervisors hold no SESC account, FRM-06 and FRM-07 must be open too.** Record the choice here before the build. |
 | **D20** | **Workspace forms are a stopgap only, and the SESC Platform record capture section is built as soon as possible** | **Gary** | **NEW, CLOSED 24 Sep 2026: Gary's decision.** The Google Workspace forms (D15) stay as a stopgap only, to start the B3 clock. **A record capture section of the SESC Platform is to be built as soon as possible,** because the forms: (1) **cannot take photographs** (D18, F25); (2) **are not tamper-proof**, since the owning account and Shared Drive Managers can still edit (D15, README §10); and (3) **cannot prove who submitted an open form** (D19, F26). §6 item 8 is brought forward as **workstream 1c**. The Platform build is a separate workstream, not the 1b chat's. Field names stay aligned with `forms/SESC-FRM-01…07`, so nothing is re-keyed. Recorded at SESC-IMS-04 v0.3 ¶51. |
-| **D21** | **The CMS Manual: its reference, and how it relates to SESC-IMS-04…10** | **Gary** | **NEW 6 Oct 2026.** James asks for the CMS Manual first. SESC already has IMS-04 (clause 4) and the `SESC-IMS-nn` spine for clauses 4–10. Options: (a) one **Integrated Management System Manual** as the top document, citing IMS-04…10 and the policies rather than repeating them; (b) the manual **is** the spine, IMS-04…10 as its chapters. Either way it is written in house style from SESC's facts; James's template is a heading checklist only (§7.2, F41). **Decide before drafting, and take the reference from §5 in the same turn.** |
+| **D21** | **The CMS Manual: its reference, and how it relates to SESC-IMS-04…10** | **Gary** | **NEW 6 Oct 2026.** James asks for the CMS Manual first. SESC already has IMS-04 (clause 4) and the `SESC-IMS-nn` spine for clauses 4–10. Options: (a) one **Integrated Management System Manual** as the top document, citing IMS-04…10 and the policies rather than repeating them; (b) the manual **is** the spine, IMS-04…10 as its chapters. Either way it is written in house style from SESC's facts; James's template is a heading checklist only (§7.2, F41). **Decide before drafting, and take the reference from §5 in the same turn.**<br><br>**CLOSED 6 Oct 2026 — Gary's decision: option (a), one Integrated Management System Manual on top.** It walks clauses 4–10 in the order of James's template headings, says briefly how the Employer meets each, and points to IMS-04, the policies, registers and forms rather than repeating them. Where something does not exist yet, the manual says so with a date (records held, records not yet held). **Reference proposed: `SESC-IMS-00`** (the spine's overview, ahead of the clause chapters 04–10). That extends the `SESC-IMS-nn` rule in `CLAUDE.md` §5, so confirm it at the start of the drafting chat and add the line to §5 by PR in the same change. Drafting is the next workstream, in its own chat.<br><br>**6 Oct 2026, drafting chat: reference `SESC-IMS-00` CONFIRMED by Gary's instruction and TAKEN.** `CLAUDE.md` §5 amended in the same change. **Drafted as v0.1 — see §2j.** Claims clauses 4.4 and 7.5.1 only. With Gary to commit and send to James for review; Steve's signature follows IMS-04's. |
 | **D22** | **Stage 1 by end of October 2026** | **Steve** | **NEW 6 Oct 2026, agreed at the meeting (Gary).** Replaces Phase 4's Stage 1 window. Stage 2 still waits on records (§1.1). §2i.2, F50. |
+| **D24** | **The COTO Log: SESC's version is REG-01 + REG-05 + REG-06, plus a new opportunity register and a generated workbook view** | **Gary** | **NEW, CLOSED 6 Oct 2026 — Gary's decision (§2k).** No COTO log is built from the template. SESC's context data stays as YAML registers in the repository (one master). Two additions: **`SESC-REG-08` Opportunity Register** (scored, with pursuit plan, owner and status, separate from risks — 9001:2026-ready), and **a generated read-only workbook** in the template's tab layout for James and the certification body, written by a build script from the registers so it can never drift from them. Workstream 2b, next chat. Risks 27001 tab not carried (D1). |
+| **D25** | **The H&S Policy Manual: SESC-POL-05 is SESC's version; no new manual** | **Gary** | **NEW, CLOSED 6 Oct 2026 — Gary's decision (§2k).** James is sent the signed POL-05 v1.1 with the comparison note. Four candidate gaps (housekeeping, DSE, young persons, electricity at work) and two to-confirms go to **POL-05 v1.2 after a full read of all 32 pages** — they are candidates, not findings, until then. Any change is an amendment in place by PR, signed by Steve. |
 | **D23** | **Site inspections in iAuditor (SafetyCulture)?** | **Gary, then Steve (spend)** | **NEW 6 Oct 2026.** James recommends iAuditor for Craig's site visits. SESC already has `SESC-FRM-07` Site Inspection for Workspace, with the Platform to follow (D15, D20). Using iAuditor as well would make a **third** place records live. Options: (a) iAuditor for site inspections, its template built field for field from FRM-07 so records export and migrate without re-keying; (b) stay with Workspace FRM-07 now and the Platform later. **Before choosing, read from SafetyCulture's own documentation: cost per user, export format, data location, and whether records are append-only.** A subscription is Steve's spend. |
 
 ---
@@ -717,6 +834,9 @@ scope) is unaffected.
 | **F48** | **PJR's UKAS schedule (0105, issue 046, 22 Apr 2026) does not list ISO 14001:2026.** `CLAUDE.md` §6 requires 14001:2026 and forbids a :2015 certificate. Either PJR extends in time, or the rule is revisited on PJR's written answer. Also not established: which PJR entity's accreditation Stephen Lloyd audits under (the schedule lists no UK office). §2i.1. | **High** | Gary → Steve |
 | **F49** | **No fire risk assessment for the Employer's own premises (Unit 19) was found in the project records searched on 6 Oct 2026** (the register, the JOSCAR evidence pack, POL-05, REG-02). POL-05 ¶119 and ¶142 cover fire risk per project, through the RAMS. **Confirmed by Gary, 6 Oct 2026: SESC does not currently have a fire risk assessment for its premises.** That is a legal duty under the Regulatory Reform (Fire Safety) Order 2005 now, before it is an ISO 45001 8.2 point, so it should not wait for the ISO timetable. James's walk-round items FS-01…12 are at §2i.3. Item FS-12 (electrical cupboard) sits beside F4 (PAT testing as an insurance condition precedent). | **High** | Steve / Craig |
 | **F50** | **Stage 1 is targeted for end of October 2026, but the scope statement is unsigned (F29–F31), no aspects register of SESC's own exists, no internal audit programme or management review is scheduled, and no live record exists.** Stage 1 can still run and raise findings; Stage 2 cannot pass without operating history. Ask PJR the Stage 1 document list and the maximum Stage 1–Stage 2 interval. §2i.2. | **High** | Gary |
+| **F52** | **The renderer labelled `SESC-IMS-00` as "Clause 0".** `header_right()` and `cover_note()` derived the label from the two-digit suffix with no case for the manual. Found before the first render by reading the code; fixed and tested in the same change (§2j). | Low | **Closed (§2j)** |
+| **F53** | **The clone's `register-v1.14` branch carried an uncommitted, modified register when this session began**, newer than the committed `48ddbba` (FS-13, FS-14, F51 are in the working tree only). Not a drift between two copies, but §7.7 says record it: if the working tree were lost, those additions would go with it. This session built on the working-tree copy. | Medium | Gary — confirm and commit before adding §2j on top |
+| **F54** | **Six-column tables wrap single words in narrow columns** — *Manage-ment* in IMS-00 ¶19, *CLAUS-E* in the Annex B header. Cosmetic; a `_widths()` minimum-width rule would fix it. Do not shorten the words to suit the renderer. | Low | Later chat |
 | **F51** | **Craig Bartle's NEBOSH qualification is not on the record.** Gary believes Craig holds a current NEBOSH qualification (6 Oct 2026). No certificate has been read on this project; the only NEBOSH qualification recorded is James Milligan's NGC. **Read Craig's certificate (award, grade, date) before any document names it.** NEBOSH certificates do not expire, so whether it is current means whether his CPD and role-relevant training are current. Craig is already named across the signed documents as Quality Representative, H&S Officer, Environmental Manager and regulation 7 competent person; **he reviews and is named, but only Steve signs** (D12, CLAUDE.md §2). His certificate is personal data: it is held in Workspace under POL-14, never in git. | Medium | Craig → Gary |
 
 ---
@@ -732,7 +852,9 @@ scope) is unaffected.
 | **1b** | **NEW 24 Sep 2026 — `SESC-IMS-04` v0.3.** **DRAFTED 24 Sep 2026 (§2f):** mould & damp named at ¶14, D8 + D17 carve-out at ¶58, fire doors removed. **With Steve for F29 (PI cover for ventilation), then signature.** | The scope statement is the first thing a certification body reads. | Done, awaiting Steve |
 | **1c** | **NEW 24 Sep 2026 (D20) — the record capture section of the SESC Platform**, brought forward from item 8: photos, tamper-evident append-only records, and an authenticated submitter, with field names aligned with `forms/SESC-FRM-01…07`. **A separate workstream. Its own chat.** | The Workspace forms cannot take photos, are not tamper-proof, and cannot prove who submitted an open form. | Platform sessions |
 | ~~2~~ | **DONE 24 Sep 2026 (§2g).** **Port `policy_editor.py` to `build/render_docx.py`** and render `SESC-IMS-04` to a branded PDF, then **read the cover and a body page as images**. | Renderer parity is the Phase 1 gate. Four known traps live in `Reference\Section workflow method.md` §5. | 1 session |
-| 3 | **`SESC-IMS-05` Leadership**, including the integrated IMS policy that supersedes the three separate policy statements, and the 45001 clause 5.4 worker consultation mechanism. | 5.4 is the clause 45001 auditors test hardest and it is entirely absent. | 1 session |
+| **2a** | **DONE 6 Oct 2026 (§2j) — `SESC-IMS-00` Integrated Management System Manual, draft v0.1** (D21). With Gary to commit; to James for review; Steve signs after IMS-04. | James asked for the manual first (§2i); it is also what a Stage 1 assessor opens first. | Done |
+| **2b** | **NEW 6 Oct 2026 (D24) — `SESC-REG-08` Opportunity Register and `build/export_coto.py`**, the generated *SESC COTO Log* workbook from REG-05, REG-06, REG-08 (and REG-01 once migrated). Reference taken in that chat. | James and PJR will expect a COTO log to look like a workbook; the registers already hold the content. Separating opportunities from risks is 9001:2026-ready. | 1 session |
+| 3 | **`SESC-IMS-05` Leadership**, including the integrated IMS policy that supersedes the three separate policy statements, and the 45001 clause 5.4 worker consultation mechanism. **Now next: IMS-00 Part 10 (c) and (d) point at it.** | 5.4 is the clause 45001 auditors test hardest and it is entirely absent. | 1 session |
 | 4 | **The environmental aspects and impacts register, built from SESC's own activities.** | **The defining ISO 14001 document and the highest-priority gap in the system.** The one held belongs to a landscaping firm. Blocked on buying 14001:2026 (D6). | 1–2 sessions |
 | 5 | **The compliance obligations register**, replacing the 2020 register with dead drive links. | 14001 6.1.3 and 45001 6.1.3 are both dual maintain-AND-retain. | 1 session |
 | 6 | **The four core procedures** — document control (7.5), internal audit (9.2), management review (9.3), nonconformity and corrective action (10.2). | The procedures the certification body asks for first, and which no SESC document currently provides. | 2 sessions |
@@ -764,6 +886,8 @@ scope) is unaffected.
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.16 | 6 October 2026 | Claude, for G A Hill | **Review of James Milligan's H&S Policy Manual and COTO Log templates** (§2k, same chat as §2j, analysis only). Both found to duplicate documents SESC already holds. **New D24** (COTO: registers stay the master; add REG-08 Opportunity Register and a generated workbook view — workstream 2b) and **D25** (POL-05 is SESC's H&S manual; four candidate gaps to v1.2 after a full read). Comparison note for James written to `Claude outputs/`. §6 row 2b added. **Nothing built, uploaded, signed, committed or merged.** |
+| 1.15 | 6 October 2026 | Claude, for G A Hill | **Workstream: `SESC-IMS-00` IMS Manual, draft v0.1** (D21 confirmed and taken). New §2j. `system/0-manual.md`: 68 paragraphs, clauses 4–10 in the template's heading order, pointers only, Part 10 inventory of 23 absent records (a)–(w), Annex B document map. Claims 4.4 and 7.5.1 only. Renderer `IMS-00` labels fixed with two new tests (F52 closed); 22/22 pass. `CLAUDE.md` §5 names IMS-00. Validated (0 errors), rendered to 20 pages, all 68 numbers checked, six pages read as images, approval block empty. New F53 (uncommitted register in the working tree at start) and F54 (six-column table wraps). §6 row 2a added. **Nothing signed, committed, uploaded or merged.** |
 | 1.14 | 6 October 2026 | Claude, for G A Hill | **Outcome of the James Milligan meeting** (Gary's account). New D23 (iAuditor for site inspections) and F51 (Craig's NEBOSH certificate not yet read). New §2i: PJR / Stephen Lloyd as certification body (D2), James as internal auditor (D3), CMS Manual first (new D21), Stage 1 by end Oct 2026 (new D22), premises fire safety items FS-01…14. PJR's UKAS schedule 0105 read: 14001 at :2015 only (F48). No premises fire risk assessment found (F49). Stage 1 readiness gaps (F50). **Nothing signed, contracted or committed.** |
 | 1.13 | 5 October 2026 | Claude, for G A Hill | **Pre-meeting review of James Milligan's Dropbox template set.** New §2h. The email of 26 Sep 2026 read; all 173 files inventoried, every Office file opened and text-extracted, the key documents read. The set is a generic ISO Certification Ltd template kit built to 14001:2015, carrying 93 HCPL-numbered toolbox talks and no records. F20 updated: isocertification.uk.com confirmed as James's business; he is the consultant, not a certification body. D2 re-framed: 6 Oct is a consultant conversation; who certifies stays open. New findings F41–F46. Nine meeting questions Q1–Q9 and an upload list recorded at §2h. **Nothing uploaded, signed, merged or committed; no other file changed.** **Then, from `git status`: F47 — workstream 2 and register v1.12 were never committed; PR #10 was 1b. v1.12 row annotated.** |
 | 1.12 | 24 September 2026 | Claude, for G A Hill | **Workstream 2.** New §2g. `build/render_docx.py` ported from `policy_editor.py` and `sesc_cover.py`, with the control block, header and footer generated from front matter. `build/test_render_docx.py` (19 tests) checks every printed paragraph number against the source (F27 and F34 closed). Brand assets added to `build/assets/`. Optional `revised` and `prepared_by` added to the front-matter schema. `.DS_Store` added to `.gitignore`. IMS-04 v0.3 rendered to a 21-page branded DOCX and PDF, read as images, and compared with signed POL-16 v1.2. **IMS-04 not edited, nothing signed.** The F27 trap recommended for `Section workflow method.md` §5 (§2g.1); the TeraBox file was not edited. **PR #10 recorded as merged at `02650c7`; `a082eff` and `3965225` Verified on GitHub (Gary).** ~~That PR is workstream 1b; this workstream 2 and this v1.12 were NOT committed on 24 Sep 2026 — see F47, found 5 Oct 2026.~~ F29: no change. F35: still public, decision open. New findings F36–F40. |
