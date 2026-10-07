@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.17 · 7 October 2026.**
+**The state of the CLAUDE ISO project. v1.18 · 7 October 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -27,7 +27,7 @@
 | **Standards editions** | 9001:**2015** (written 2026-ready) · 14001:**2026** · 45001:**2018**. See `CLAUDE.md` §6. |
 | **Repository** | **`github.com/GaryHill0985/QMS`**, pushed 18 August 2026, commit `d3782f7`. The working clone was `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI; **from 24 September 2026 it is `~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** — see §2d. **D4 CLOSED.** |
 | **Master document count** | 21 signed (POL-01…19, CRP-01, REG-01) + REG-02, REG-03, REG-04 + REC-01…04 + TPL-01…04. |
-| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** **From 6 Oct 2026: `SESC-IMS-00` IMS Manual, draft v0.1 (§2j).** **From 7 Oct 2026: `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`, the generated COTO Log workbook (§2l).** |
+| **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** **From 6 Oct 2026: `SESC-IMS-00` IMS Manual, draft v0.1 (§2j).** **From 7 Oct 2026: `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`, the generated COTO Log workbook (§2l).** **From 7 Oct 2026, workstream 3: `SESC-IMS-05` Leadership, draft v0.1, with the integrated policy statement and the 45001 5.4 mechanism, and `SESC-FRM-08` Worker Consultation Record, draft v0.1 (§2m).** **From 7 Oct 2026 the project has three sources only: `~/Documents/SESC/ISO/`, GitHub `QMS`, and the Drive for record capture (§2n, `CLAUDE.md` §11).** |
 
 ### 1.1 The phase plan, and the principle that governs it
 
@@ -824,7 +824,7 @@ page PNGs; none is needed after Gary has looked at the PDF.
 
 | Owner | Task | By |
 |---|---|---|
-| **Gary** | Commit this workstream as **two commits on one branch** (§7.8): (1) `registers/opportunities.yaml` + `build/export_coto.py` + `CLAUDE.md` §5 + `portal/actions.yaml` + `portal/config.yaml`; (2) register v1.17. Commands below. **Claude does not merge.** | this week |
+| **Gary** | ~~Commit this workstream as **two commits on one branch** (§7.8): (1) `registers/opportunities.yaml` + `build/export_coto.py` + `CLAUDE.md` §5 + `portal/actions.yaml` + `portal/config.yaml`; (2) register v1.17. Commands below. **Claude does not merge.**~~ **CLOSED: merged as PR #15 (`93dbe9f`), confirmed 7 Oct 2026 (§2m). The push failed repeatedly first — F57.** | ~~this week~~ Done |
 | Gary | Read REG-08 v0.1 end to end and confirm, change or strike each proposed score, band, status and review date; set `confirmed_by_owner` as each owner confirms. The owners are Steve (6 rows), Gary (3), Craig (1). | 30 Nov 2026 |
 | **Steve** | Confirm the band thresholds (pursue ≥ 15, evaluate 8–14, hold ≤ 7) on approval of REG-08, and the six rows he owns (OPP-01, 02, 04, 07, 08, 09). **Approval is a signature; nothing is signed yet.** | with IMS-04 |
 | Gary | Decide whether the generated workbook goes to James Milligan and PJR, and marked how. If so, regenerate from a committed `main` first so the cover's commit is a real one. | after commit |
@@ -832,9 +832,9 @@ page PNGs; none is needed after Gary has looked at the PDF.
 | Later chat (REG-05 v0.3) | F55: correct the *43 requirements* count in the REG-05 notes and in this register's §2 row to 44. | next REG-05 change |
 | **Steve** | Part 10 (h): hold and minute a management review — none since 10 January 2023. **Overdue against 30 Sep 2026.** | 31 Oct 2026 (*proposed*) |
 | **Steve** | Part 10 (j): set measurable environmental and OH&S objectives with dates, and the plan to achieve all three sets. **Overdue against 30 Sep 2026.** | 31 Oct 2026 (*proposed*) |
-| Gary (COO) | Part 10 (c): draft IMS-05 Leadership with the integrated policy statement (§6 item 3); Steve signs. | 31 Oct 2026 (*proposed*) |
+| Gary (COO) | Part 10 (c): ~~draft IMS-05 Leadership with the integrated policy statement (§6 item 3)~~ **drafted 7 Oct 2026 as v0.1 (§2m)**; Steve signs after the FRM-08 consultation and IMS-04. | 31 Oct 2026 (*proposed*) |
 | Gary (COO) | Part 10 (u): write the internal audit programme; the auditor is Steve's to appoint (D3). | 31 Oct 2026 |
-| Health and Safety Officer | Part 10 (d): the 5.4 consultation and participation mechanism, with records of it operating with non-managerial workers — the mechanism goes in IMS-05, the records in FRM-06. | 31 Oct 2026 |
+| Health and Safety Officer | Part 10 (d): the 5.4 consultation and participation mechanism, with records of it operating with non-managerial workers — **the mechanism is drafted at IMS-05 Part 5 (§2m); the records are FRM-06 and FRM-08, and none exists.** First record: the workforce consultation on the draft policy statement. | 31 Oct 2026 |
 | Contracts Manager | Part 10 (k): register of monitoring and measuring equipment with calibration status. | 30 Nov 2026 (*proposed*) |
 | Contracts Manager | Part 10 (l): role-based competence requirements as a register in the repository (requirements only; individual records stay in Workspace). | 30 Nov 2026 (*proposed*) |
 | Contracts Manager | Part 10 (q): approved supplier and subcontractor register of the Employer's own, from FRM-04 evaluations. **Overdue against 30 Sep 2026** (REG-05 IP-12). | 30 Nov 2026 (*proposed*) |
@@ -848,6 +848,162 @@ to what REG-06 already said, with every score flagged as a proposal and no row c
 export script writes a six-tab workbook that cannot drift from the registers because it is regenerated from
 them, carries REG-01 as a pointer until it is migrated, and has no ISO 27001 tab. Validated, exported, counted
 three ways and read as images. Nothing signed, committed, sent or merged. F53 closed by PR #14.
+
+---
+
+## 2m. Workstream 3 — `SESC-IMS-05` Leadership, draft v0.1, and `SESC-FRM-08`, 7 October 2026
+
+**Taken:** workstream 3 only (§6 item 3; IMS-00 Part 10 (c) and (d); G6, G16). **Started once `main` was confirmed to
+contain PR #15.** This chat ran in the claude.ai Project, not Cowork, so it could not see the MacBook clone; it read a
+**fresh clone of `GaryHill0985/QMS` from GitHub** (read-only `git --no-optional-locks log`): `main` at **`93dbe9f`**
+(*Merge pull request #15 from GaryHill0985/workstream-2b-reg08-coto*), parents `0c2ee40` (register v1.17) and `ee19a6b`
+(REG-08, `export_coto.py`, CLAUDE.md §5, portal resync); `git ls-tree main` lists `registers/opportunities.yaml` and
+`build/export_coto.py`; the clone's tree was clean. **The §2l commit task is therefore CLOSED by PR #15.** Whether the
+MacBook working tree is clean apart from `Claude outputs/` is for Gary's own `git status` in Terminal (§7.7); this chat
+could not check it. **The TeraBox restore was not reachable either** — see the provenance note below.
+
+| Built | Where | Status |
+|---|---|---|
+| **`SESC-IMS-05` Leadership.** Reference taken from `CLAUDE.md` §5 in the same change. 53 numbered paragraphs in seven Parts plus two annexes. Part 2: how the Managing Director demonstrates leadership (5.1) and customer focus (9001 5.1.2), each present-tense statement pointing at a signed document or marked absent at Part 6. **Part 3: the integrated policy statement** (¶22–¶28), written to supersede Part 1 of POL-16 v1.2, POL-05 v1.1 and POL-08 v1.1 **on Steve's signature and not before** (¶3, ¶32, ¶52); ¶29 maps every commitment in the three signed Part 1s to where it is carried, ¶30 maps each clause 5.2 requirement to the paragraph that meets it; carries the CLI-00 climate determination (¶24) and an ethics and quality-culture statement (¶25); names no headcount, turnover or PI limit; asserts no record. Part 4 points to IMS-04 ¶11 and **does not claim 5.3**. **Part 5: the 45001 5.4 mechanism** (below). Part 6: 13 absent records, each dated, (a)–(m). Part 7: approval block, **empty**. | `system/5-leadership.md` | **Draft v0.1** |
+| **Clause map claimed:** 9001 5.1.1, 5.1.2, 5.2.1, 5.2.2 · 14001 5.1, 5.2 (**unverified** edition) · 45001 5.1, 5.2, **5.4 as the documented mechanism, with the clause note that records of it operating are not yet held** (Annex A). Not 5.3 (IMS-04 ¶11 is the statement), not 6.2 (the policy is the framework for objectives, not the objectives), not 7.4. | front matter | — |
+| **`SESC-FRM-08` Worker Consultation Record.** Taken because FRM-06 cannot: record system-level consultation (policy, objectives, audit programme, roles, procurement controls — no job, no site); track an item to an answer across weeks or record that feedback was given; tag which clause 5.4 matter an item serves; or record participation in a RAMS review, an incident investigation or PPE selection (IMS-05 ¶44). 20 fields, one entry per event or per answer, `answers_item` closes an earlier item by reference, append-only (D15), `representative` left blank until D26. Claims 45001 5.4 only, with a clause note that **no completed record exists**. Picked up by `export_forms.py` (its glob); one `file` field needs adding by hand, like FRM-06/07. | `forms/SESC-FRM-08-worker-consultation-record.yaml` | **Draft v0.1** |
+| `CLAUDE.md` §5: IMS-05 and FRM-08 recorded as taken on 7 Oct 2026; next free `SESC-IMS-06`, `SESC-FRM-09`. `build/workspace_forms/README.md`: FRM-08 row. `portal/actions.yaml`: G6 and G16 detail updated (status stays **open** — the mechanism is drafted, not operating; the statement is unsigned). Portal rebuilt: 31 pages, 16 controlled files, 81 actions. | `CLAUDE.md`, `build/workspace_forms/`, `portal/` | Done |
+| **`build/test_render_docx.py`: `TestIMS05`**, three tests — DOCX labels = source, printed PDF labels = source, cover note *CLAUSE 5*. | `build/` | **25/25 pass** in the container (LibreOffice + pdftotext present) |
+
+**The 5.4 mechanism, as designed (IMS-05 Part 5).** Direct consultation of **all** non-managerial workers — every
+directly employed operative, **each of the four apprentices individually**, and subcontractors' operatives on the job
+they are on — in paid time. Five parts, each with a named record (¶38): (a) the weekly site toolbox talk with "what did
+you see / what worries you / what would you change" asked of everyone by name, on **FRM-06**; (b) the H&S Officer's
+weekly review carrying every unanswered item to **FRM-08** with owner and due date within five working days; (c) the
+**quarterly consultation meeting** of the whole non-managerial workforce with the Managing Director present, on the
+matters 45001 names (policy, objectives, monitoring, audit, roles, procurement controls, improvement), on FRM-08;
+(d) the monthly report of open items to the Managing Director alongside the corrective action log; (e) event-driven
+participation in RAMS reviews, incident investigations, PPE selection and competence decisions, recorded on FRM-08.
+Every item is answered within ten working days or told when, fed back in person at the next talk, and closed only by an
+answer (¶40). Six barriers named and addressed (¶43), the apprentices explicitly (¶43(d)). Measures at ¶42, none yet
+taken. **No workers' representative has been elected or appointed and none is assumed: offering one is D26, Steve's.**
+**The first intended FRM-08 record is the consultation of the workforce on the draft policy statement itself, before
+Steve signs it, due 31 Oct 2026**; the first FRM-06 record is the first live toolbox talk after go-live. **Neither
+exists. The mechanism is designed, not operating, and the document says so (¶35, ¶46, Part 6 (b), (d), (e), (f)).**
+
+**Provenance of the three signed statements, recorded honestly.** CLAUDE.md §11 (as it then stood) put the signed PDFs in
+the TeraBox restore, which this chat could not reach; from §2n they are at `~/Documents/SESC/ISO/Signed/`. The three were read from the Employer's **Google Drive**
+"(signed)" copies uploaded 18 Aug 2026 — POL-16 v1.2 (21 pages, 731,315 bytes), POL-05 v1.1 (32 pages, 812,667 bytes),
+POL-08 v1.1 (23 pages, 708,485 bytes) — **every page, text layer, on 7 Oct 2026**. The byte sizes equal those of the
+signed set on the Drive dated 17 Aug 2026. **Gary to confirm by SHA-256 that they are the same files as the `Signed/` copies**
+before IMS-05 ¶20 and ¶49(a) are relied on (task below; hashes at §2n). The Drive copies were read only; nothing on the Drive was
+moved, renamed or written.
+
+**Verification.**
+
+1. `build/validate.py`: **0 errors**, 13 warnings (the expected 14001 `verified: false`, now including
+   `system/5-leadership.md`), 5 notes (one new: IMS-05 cites 45001 5.4, flagged CRITICAL). BUILD PASSES. **16 controlled
+   files.** A first run failed on a YAML quoting error in FRM-08's `guidance` list; fixed.
+2. `python3 build/workspace_forms/export_forms.py`: eight forms, FRM-08 reported with its `file` field to add by hand.
+3. Rendered with `build/render_docx.py --pdf` to `Claude outputs/ims05/SESC-IMS-05-v0.1-DRAFT.docx` and `.pdf`:
+   **19 pages**. **All 81 source labels (53 paragraph numbers, 28 sub-labels) print in order**, checked from the DOCX
+   and from the PDF text layer against the Markdown (81 = 81 = 81; sequential 1–53).
+4. **Read as images:** the cover (p1: MANAGEMENT SYSTEM · *CLAUSE 5 // ISO 9001 · ISO 14001 · ISO 45001* · *Leadership*;
+   fields *0.1 — DRAFT, NOT ISSUED* · *7 October 2026* · *G A Hill (drafted by Claude)* · *Not yet approved (Managing
+   Director)*), the policy statement page (p7, ¶23(e)–(k), ¶24–¶26, header *DRAFT — NOT ISSUED*), the ¶38 mechanism
+   table (p13, rows (c) and (d)), the Part 6 table and approval block (p18: **Reviewed by, all three Dates and Signature
+   empty**), and Annex A and B (p19).
+5. `python3 -m unittest build.test_render_docx`: **25/25 pass**, including the three new IMS-05 tests.
+6. **The first render was refused** — `SignatureError: the source carries content in a signature row` — because the
+   ¶29 table's header cell read *Signed statement* and `SIG_LABELS` matches any first cell beginning "signed", header
+   rows included. Header renamed *Statement*; the guard's false positive is **F58**.
+7. **Cosmetic, not fixed:** the six-column ¶38 table gets equal column widths, so the *What* column runs to three pages
+   of narrow text. **F54 applies** (`_widths()` on six-column tables). Readable; recorded, not shortened.
+
+**Not done, deliberately.** Nothing was committed, pushed, merged or signed. Nothing was applied to POL-16, POL-05
+or POL-08 — they are superseded only by Steve's signature on IMS-05, and amended at their next revision after it
+(¶32). IMS-00 Annex B and Part 10 were **not** edited: Annex B moves its 5.1/5.2/5.4 rows to the spine only when IMS-05
+is issued (IMS-00 `review_trigger`), and Part 10 (c)/(d) go to v0.2 with it. **This chat's files exist in a sandbox,
+not on the MacBook:** Gary applies the patch below into the clone, then commits.
+
+**Tasks by owner, from this session:**
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | Apply `Claude outputs/workstream-3.patch` to a new branch from an up-to-date `main` (commands below), check `git status` shows exactly the seven files, then commit as **two commits on one branch** (§7.8): (1) `system/5-leadership.md` + `forms/SESC-FRM-08…yaml` + `CLAUDE.md` + `build/test_render_docx.py` + `build/workspace_forms/README.md` + `portal/actions.yaml`; (2) register v1.18. Open the PR. **Claude does not merge.** | this week |
+| Gary | Confirm that the Drive "(signed)" PDFs read for IMS-05 are the signed originals, now copied to `~/Documents/SESC/ISO/Signed/` (F59): run the `shasum -a 256` check in §2n against the hashes recorded there. If any differs, re-read the `Signed/` copy against IMS-05 ¶29 before the PR merges. | before merge |
+| Gary | Re-render on the MacBook (`python3 build/render_docx.py system/5-leadership.md --pdf --out "Claude outputs/ims05"`), run the tests, and read the 19-page PDF end to end before it goes to anyone. | before sending |
+| Gary | Send IMS-05 v0.1 to James Milligan **as a DRAFT**, with IMS-00 and IMS-04, for his view on whether Part 5 would satisfy 45001 5.4 at Stage 1. Record his comments here; changes go in as v0.2 by PR. | after commit |
+| Gary | Run the Workspace build (README §2–§7) — now eight forms. FRM-08 is a domain-sign-in form; set `CONFIG` accordingly (D19). B3 clock. | this week |
+| **Steve** | **D26: decide whether to offer the workforce an elected representative of employee safety.** Direct consultation stands until he does. | 31 Oct 2026 (*proposed*) |
+| **Steve** | Read the integrated policy statement (IMS-05 ¶22–¶28). **Do not sign before (i) the workforce consultation on it is recorded on FRM-08 and (ii) IMS-04 v0.3 is signed.** His signature supersedes the three signed statements. | 31 Oct 2026 (*proposed*) |
+| **Health and Safety Officer** | Run the first quarterly consultation meeting — the whole non-managerial workforce, the four apprentices by name, Steve present — on the draft policy statement; record it on FRM-08 (first record of the mechanism). | 31 Oct 2026 |
+| Health and Safety Officer | First live toolbox talk on FRM-06 with the "what the team raised" question asked and answered; then weekly on every active site; weekly FRM-08 review from the first talk. | from go-live; first by 31 Oct 2026 |
+| Health and Safety Officer | First monthly report of open consultation items to Steve (IMS-05 ¶38(d)). | month ending 30 Nov 2026 |
+| Later chat (POL-16 v1.3, POL-05 v1.2, POL-08 v1.2) | After Steve signs IMS-05: replace each Part 1 with a pointer to IMS-05 ¶22–¶28 and name mould and damp remediation (D11); amend in place by PR; Steve signs. | 30 days after signature |
+| Later chat (IMS-00 v0.2) | Move Annex B rows 5.1, 5.2, 5.4 to IMS-05 and update Part 10 (c), (d) — **only when IMS-05 is issued**. | on issue of IMS-05 |
+| Later chat | F58: make `SIG_LABELS` skip header rows (row 0 of a non-label table) in `render_docx.py`, with a test. | with the next renderer change |
+| Later chat | F54: `_widths()` minimum width for the first text column of six-column tables (IMS-00 ¶19, IMS-05 ¶38). | with the next renderer change |
+
+**Completion note.** The Employer's three policy statements, read end to end, now have one successor that carries
+every commitment they make, adds climate and culture, and asserts nothing no record supports — and it takes effect
+only when Steve signs. Clause 5.4, until today a sentence in POL-05, has a mechanism a firm this size can run weekly,
+with two forms behind it and the apprentices named as the people to ask first; its first record is to be the
+workforce's own say on the policy. Validated, rendered, every number checked, four pages read as images, 25 tests
+green. Nothing signed, committed, sent or merged; the §2l commit task closed by PR #15; one new decision (D26) and two
+new findings (F57, F58).
+
+---
+
+## 2n. The project's sources reduced to three, 7 October 2026 (same chat as §2m, at Gary's direction)
+
+**Trigger.** Gary: every new chat was being sent to the TeraBox restore and reconciling four or five locations. **His
+decision, 7 Oct 2026: three sources only** — `~/Documents/SESC/ISO/` on the MacBook (the clone and its reference
+material), GitHub `GaryHill0985/QMS`, and the Google Drive for the Workspace record capture only. The shared ISO folder
+on the Drive is not to be used unless he asks in the chat. Everything else — TeraBox, the TeraBox restore, Dropbox, the
+MSI — is removed from the project's instructions.
+
+**What was found.** `find ~/Documents/SESC/ISO -maxdepth 3` (Gary, 7 Oct 2026) returned **only `CLAUDE ISO/`**. None of
+the material `CLAUDE.md` §11 depends on — standards, signed policies, BRAND-SPEC, Architecture Plan, insurance records —
+was in the ISO folder. It was all in the TeraBox restore, which also holds **a stale, `.git`-less copy of this
+repository** at `TeraBox Restore/SESC/SESC/ISO/CLAUDE ISO/`, the POW, ITC and Pow Property trees (§7.2-forbidden
+references), and the whole JOSCAR working estate. That mix is why chats kept being sent there. Gary's listing of the four
+relevant folders was read in full and the copy list was drawn from it, file by file.
+
+**What changes.**
+
+| Change | Where | Status |
+|---|---|---|
+| **`copy-iso-reference.zsh`** copies, never moves, into `~/Documents/SESC/ISO/`: `Reference/Standards/` (BS 99001 PDF and text, CIOB Code, ISO 45001:2018, ISO 14001:2015, ISO 9001:2015); `Reference/CertiKit/` (six demo files and the 27001 v13-1 folder); `Reference/Architecture/` (the Plan); `Reference/Design/` (BRAND-SPEC, INTERIOR-SPEC, master logo); `Reference/Decisions/` (the consistency findings and completion note, the C2–C8 decisions, Section workflow method, signature verification, the PI, accident book and guarantees/training findings, and `JOSCAR Master Register.md`); `Signed/` (the 21 signed PDFs, flattened); `Insurance/` (all nine). `cp -n` never overwrites; every file is checked with `cmp`, the 27001 folder with `diff -rq`; it prints copied / differ / missing counts and the signed count (expect 21). Tested against a mock tree and run twice: idempotent. **Not copied, deliberately:** `PROJECT-INSTRUCTIONS.md`, `README (1).md` and `SESC Document Design Spec.md` (old instruction files — the cause of this finding), `sesc_cover.py` (already ported), the JOSCAR-only reference notes, the Armed Forces Covenant files, the stale `CLAUDE ISO` copy, `CLAUDE CODE OUTPUT`, `_Claude Project setup`, and everything POW, ITC and Pow Property. | Gary runs it | **Not yet run** |
+| **`CLAUDE.md` §2, §9.4 and §11 rewritten** to the three sources: §2 reads `~/Documents/SESC/ISO/` and forbids any other source by name; §9.4 points the traps at `Reference/Decisions/` and records the fifth; §11 states the three sources, the Project-copy rule (the MacBook copy governs), and a location table under `~/Documents/SESC/ISO/`. **The "reusable structure from prior builds" row (POW, Pow Property, ITC) is removed**: none is a source any more, and §3 already forbids their content. A separate commit from workstream 3 (§7.8). | `CLAUDE.md` | Drafted |
+| **Claude Project** — section 3 of the instructions replaced (text given to Gary in this chat); `SESC-Business-System-Project-Handover-v1.0.md` removed from Project knowledge as superseded; the standards, CIOB Code, BRAND-SPEC, INTERIOR-SPEC, Architecture Plan and the 17 August decision records kept as read-only copies. `Section workflow method.md` kept only if it will not be edited. | claude.ai Project settings | **Gary** |
+
+**The other folder under `~/Documents/SESC/`.** Gary's listing of `~/Documents/SESC` (7 Oct 2026) shows one folder beside
+`ISO/`: `SESC Solutions Limited/`, the twenty numbered folders plus `To be Allocated` — the local copy of James Milligan's
+Dropbox template set read at §2h. **It is not a source.** `CLAUDE.md` §2 and §11 name it, so that no chat treats a folder
+one level from the clone as part of the system. The §2h tasks that read it as structure (legal register, procedure layout)
+stand, but are done only when Gary asks in the chat.
+
+**Left as written, deliberately.** The historical sections of this register (§2 to §2m) record the TeraBox paths as
+they were at the time; they are history and are not rewritten (amend, never regenerate). The `standards/*.yaml`
+provenance notes ("read from … held at `Desktop\SESC\ISO\`") and `build/render_docx.py`'s note that it was ported from
+files in the TeraBox restore say where something came from, and stay. `portal/actions.yaml` D10 (the untracked planning
+files, which exist only in the restore) stays open as it was.
+
+**The three signed statements read for IMS-05, by SHA-256** (Drive "(signed)" copies, downloaded 7 Oct 2026). After the
+copy, run `shasum -a 256 ~/Documents/SESC/ISO/Signed/SESC-POL-0[58]*.pdf ~/Documents/SESC/ISO/Signed/SESC-POL-16*.pdf`
+and compare:
+
+| Document | Bytes | SHA-256 |
+|---|---|---|
+| SESC-POL-05 v1.1 | 812,667 | `5fcf4ef7f18d26d0b914b6ed81f3c9e66ad379e2dda9d593fe0ccab8e025bc95` |
+| SESC-POL-08 v1.1 | 708,485 | `6bd7b16142213bd29f295d1bd907435907c776662442d6daf7cca2347c7d85e0` |
+| SESC-POL-16 v1.2 | 731,315 | `19d14aae3cf82dfb8442212630d97bf7190d51029d973372a3c17e1b797786de` |
+
+**Tasks by owner, from this section:**
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | Run `copy-iso-reference.zsh` **before** applying the patches; expect `0 differ`, `0 missing`, signed count 21. Any `MISSING` or `DIFFERS` line: stop and bring it to the next chat. | before the commit |
+| Gary | Run the SHA-256 check above. | before merge |
+| Gary | Replace section 3 of the Claude Project instructions and remove the Handover file from Project knowledge. | now |
+| Gary | Decide, separately, whether the TeraBox restore stays on the Mac. Nothing in the project depends on it once the copy is verified. **Its copy of `CLAUDE ISO` must never be opened as if it were the repository.** | your call |
+| Later chat | Bring REG-02, REG-03, REG-04, REC-01…04 and TPL-01…04 into `Signed/` when a workstream needs them; they were not in `Branded/Signed/`. | when needed |
 
 ---
 
@@ -892,6 +1048,7 @@ three ways and read as images. Nothing signed, committed, sent or merged. F53 cl
 | **D22** | **Stage 1 by end of October 2026** | **Steve** | **NEW 6 Oct 2026, agreed at the meeting (Gary).** Replaces Phase 4's Stage 1 window. Stage 2 still waits on records (§1.1). §2i.2, F50. |
 | **D24** | **The COTO Log: SESC's version is REG-01 + REG-05 + REG-06, plus a new opportunity register and a generated workbook view** | **Gary** | **NEW, CLOSED 6 Oct 2026 — Gary's decision (§2k).** No COTO log is built from the template. SESC's context data stays as YAML registers in the repository (one master). Two additions: **`SESC-REG-08` Opportunity Register** (scored, with pursuit plan, owner and status, separate from risks — 9001:2026-ready), and **a generated read-only workbook** in the template's tab layout for James and the certification body, written by a build script from the registers so it can never drift from them. Workstream 2b, next chat. Risks 27001 tab not carried (D1).<br><br>**7 Oct 2026, workstream 2b: BUILT — see §2l.** `SESC-REG-08` taken and drafted as v0.1 (ten rows, all from REG-06, scores proposed); `build/export_coto.py` writes the workbook with REG-01 as a pointer. With Gary to commit; Steve confirms the bands and his six rows on approval. |
 | **D25** | **The H&S Policy Manual: SESC-POL-05 is SESC's version; no new manual** | **Gary** | **NEW, CLOSED 6 Oct 2026 — Gary's decision (§2k).** James is sent the signed POL-05 v1.1 with the comparison note. Four candidate gaps (housekeeping, DSE, young persons, electricity at work) and two to-confirms go to **POL-05 v1.2 after a full read of all 32 pages** — they are candidates, not findings, until then. Any change is an amendment in place by PR, signed by Steve. |
+| **D26** | **An elected representative of employee safety?** | **Steve** | **NEW 7 Oct 2026 (§2m).** No workers' representative has been elected or appointed. IMS-05 Part 5 designs clause 5.4 as **direct consultation of all non-managerial workers**, which the Health and Safety (Consultation with Employees) Regulations 1996 allow, and which is POL-05 O7 ¶15's position today. ISO 45001 5.2 and 5.4 refer to workers' representatives *where they exist*. Options: (a) stay with direct consultation; (b) invite the workforce to elect a representative of employee safety under the 1996 Regulations, who then attends the monthly review and is named on FRM-08, with direct consultation of everyone continuing alongside. **Not assumed either way; IMS-05 is reviewed on the decision (its `review_trigger`).** |
 | **D23** | **Site inspections in iAuditor (SafetyCulture)?** | **Gary, then Steve (spend)** | **NEW 6 Oct 2026.** James recommends iAuditor for Craig's site visits. SESC already has `SESC-FRM-07` Site Inspection for Workspace, with the Platform to follow (D15, D20). Using iAuditor as well would make a **third** place records live. Options: (a) iAuditor for site inspections, its template built field for field from FRM-07 so records export and migrate without re-keying; (b) stay with Workspace FRM-07 now and the Platform later. **Before choosing, read from SafetyCulture's own documentation: cost per user, export format, data location, and whether records are append-only.** A subscription is Steve's spend. |
 
 ---
@@ -955,6 +1112,9 @@ three ways and read as images. Nothing signed, committed, sent or merged. F53 cl
 | **F54** | **Six-column tables wrap single words in narrow columns** — *Manage-ment* in IMS-00 ¶19, *CLAUS-E* in the Annex B header. Cosmetic; a `_widths()` minimum-width rule would fix it. Do not shorten the words to suit the renderer. | Low | Later chat |
 | **F55** | **`SESC-REG-05` v0.2 holds 44 requirements, not 43.** This register's §2 row and the REG-05 file both say 43; the F16 restoration added the first-aid needs assessment requirement at IP-06 and the count was not updated. Found by `export_coto.py --check` on 7 Oct 2026. Correct at REG-05 v0.3. | Low | Later chat |
 | **F56** | **A file written through the device bridge did not change, and reported that it had.** On 7 Oct 2026 a corrected `build/export_coto.py` was written over the first version; the bridge reported *written*, but the file on disk kept the old content (confirmed by `md5sum` and `grep`). Writing the file under a new staged name landed it. §7.7 applies in a new form: **after any write through the bridge, check the file on disk, not the tool's reply.** | Low | Recorded; rule at §7.9 |
+| **F57** | **The push of branch `workstream-2b-reg08-coto` (PR #15) failed repeatedly with GitHub "Internal Server Error"**, reported by Gary on 7 Oct 2026. An empty test commit failed the same way; the push then succeeded, unchanged, on a later retry. **Transient; no cause established.** Rule: on a GitHub 500, retry before diagnosing the clone, the key or the ruleset. | Low | Recorded |
+| **F58** | **`render_docx.py`'s signature guard fires on a table HEADER whose first cell begins "signed".** `SIG_LABELS = ("signature", "signed")` is matched against row 0 of a non-label table too, so IMS-05's ¶29 header *Signed statement* was refused as a filled signature row on a draft. Worked round by renaming the header; the guard should skip header rows. | Low | Later chat, with a test |
+| **F59** | **The reference material the project's rules depend on was not in `~/Documents/SESC/ISO/`.** The folder held only the clone; the standards, signed policies, BRAND-SPEC, the Architecture Plan and the insurance records were all in the TeraBox restore, beside a stale `.git`-less copy of the repository and the POW/ITC trees. `CLAUDE.md` §11 pointed every chat into that mix, which is why each new chat was sent back to TeraBox. **Fixed in §2n:** copy-and-verify into `~/Documents/SESC/ISO/`, and §2, §9.4 and §11 rewritten to three sources. Closes when the copy has run clean and the PR is merged. | Medium | Gary |
 | **F51** | **Craig Bartle's NEBOSH qualification is not on the record.** Gary believes Craig holds a current NEBOSH qualification (6 Oct 2026). No certificate has been read on this project; the only NEBOSH qualification recorded is James Milligan's NGC. **Read Craig's certificate (award, grade, date) before any document names it.** NEBOSH certificates do not expire, so whether it is current means whether his CPD and role-relevant training are current. Craig is already named across the signed documents as Quality Representative, H&S Officer, Environmental Manager and regulation 7 competent person; **he reviews and is named, but only Steve signs** (D12, CLAUDE.md §2). His certificate is personal data: it is held in Workspace under POL-14, never in git. | Medium | Craig → Gary |
 
 ---
@@ -972,7 +1132,7 @@ three ways and read as images. Nothing signed, committed, sent or merged. F53 cl
 | ~~2~~ | **DONE 24 Sep 2026 (§2g).** **Port `policy_editor.py` to `build/render_docx.py`** and render `SESC-IMS-04` to a branded PDF, then **read the cover and a body page as images**. | Renderer parity is the Phase 1 gate. Four known traps live in `Reference\Section workflow method.md` §5. | 1 session |
 | **2a** | **DONE 6 Oct 2026 (§2j) — `SESC-IMS-00` Integrated Management System Manual, draft v0.1** (D21). With Gary to commit; to James for review; Steve signs after IMS-04. | James asked for the manual first (§2i); it is also what a Stage 1 assessor opens first. | Done |
 | **2b** | **DONE 7 Oct 2026 (§2l) — `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`**, the generated *SESC COTO Log* workbook from REG-05, REG-06, REG-08 (REG-01 as a pointer until migrated). With Gary to commit; Steve confirms bands and rows on approval. | James and PJR will expect a COTO log to look like a workbook; the registers already hold the content. Separating opportunities from risks is 9001:2026-ready. | 1 session |
-| 3 | **`SESC-IMS-05` Leadership**, including the integrated IMS policy that supersedes the three separate policy statements, and the 45001 clause 5.4 worker consultation mechanism. **Now next: IMS-00 Part 10 (c) and (d) point at it.** | 5.4 is the clause 45001 auditors test hardest and it is entirely absent. | 1 session |
+| 3 | **DRAFTED 7 Oct 2026 (§2m) — `SESC-IMS-05` Leadership, draft v0.1**, with the integrated policy statement (supersedes the three signed statements **on Steve's signature only**) and the 45001 5.4 mechanism, with new `SESC-FRM-08`. With Gary to commit; the workforce consultation on the statement (FRM-08) and D26 before Steve signs, after IMS-04. | 5.4 is the clause 45001 auditors test hardest; it now has a mechanism and no records. | Done, awaiting records and Steve |
 | 4 | **The environmental aspects and impacts register, built from SESC's own activities.** | **The defining ISO 14001 document and the highest-priority gap in the system.** The one held belongs to a landscaping firm. Blocked on buying 14001:2026 (D6). | 1–2 sessions |
 | 5 | **The compliance obligations register**, replacing the 2020 register with dead drive links. | 14001 6.1.3 and 45001 6.1.3 are both dual maintain-AND-retain. | 1 session |
 | 6 | **The four core procedures** — document control (7.5), internal audit (9.2), management review (9.3), nonconformity and corrective action (10.2). | The procedures the certification body asks for first, and which no SESC document currently provides. | 2 sessions |
@@ -1007,6 +1167,7 @@ three ways and read as images. Nothing signed, committed, sent or merged. F53 cl
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.18 | 7 October 2026 | Claude, for G A Hill | **Also §2n (same chat, at Gary's direction): the project's sources reduced to three — `~/Documents/SESC/ISO/`, GitHub `QMS`, and the Drive for record capture only. The reference material was found NOT to be in `~/Documents/SESC/ISO/` (only the clone was); a copy-and-verify script brings it across from the TeraBox restore (`Reference/`, `Signed/`, `Insurance/`), and `CLAUDE.md` §2, §9.4 and §11 are rewritten to the new layout as a separate commit. New F59. The POW/ITC 'reusable structure' row is removed from §11.** **Workstream 3: `SESC-IMS-05` Leadership, draft v0.1, and `SESC-FRM-08` Worker Consultation Record, draft v0.1.** New §2m. IMS-05 and FRM-08 taken from `CLAUDE.md` §5 (next free IMS-06, FRM-09). The integrated policy statement carries every commitment of POL-16, POL-05 and POL-08 Part 1 (all three read in full, from the Drive signed copies — TeraBox not reachable), CLI-00 and an ethics/culture statement, and supersedes nothing until Steve signs. The 5.4 mechanism: direct consultation of all non-managerial workers including the four apprentices, five parts, FRM-06 + FRM-08, no record yet; the elected-representative question is **new D26** (Steve). Claims 5.1, 5.2, 5.4; not 5.3, not 6.2. Validated (0 errors, 16 files), rendered to 19 pages, all 81 labels checked, four pages read as images, 25/25 tests. **PR #15 (`93dbe9f`) confirmed merged; the §2l commit task closed. New F57** (transient GitHub 500 on push) **and F58** (signature guard matches a table header). G6, G16, §6 row 3 and the Part 10 (c)/(d) task rows updated; IMS-00 untouched. **Nothing signed, committed, sent or merged.** |
 | 1.17 | 7 October 2026 | Claude, for G A Hill | **Workstream 2b (D24): `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`.** New §2l. REG-08 reference taken from `CLAUDE.md` §5 (next free register now REG-09). Ten rows seeded one for one from REG-06's opportunity fields, scored 1–5 × 1–5, every score and plan marked proposed; claims 6.1.1 only. `export_coto.py` writes the six-tab *SESC COTO Log* workbook (REG-01 as pointer, no 27001 tab) to the gitignored `out/`; validated (0 errors), exported, counted three ways (44 / 30 / 10) and read as images. **F53 closed by PR #14 (`965535b`).** New F55 (REG-05 holds 44 requirements, not 43) and F56 (a bridge write that did not land); new rule §7.9. D24 and §6 row 2b updated. **Task 5 (§2l.1): IMS-00 Part 10 (a)–(w) reconciled — ten items had no owner task in whole or in part and are added (c, d, h, j, k, l, q, s, t, u); `portal/actions.yaml` resynced from v1.4 to v1.17 (81 actions, new G10–G17); `portal/config.yaml` corrected and F39 closed; portal rebuilt.** **Nothing signed, committed, sent or merged.** |
 | 1.16 | 6 October 2026 | Claude, for G A Hill | **Review of James Milligan's H&S Policy Manual and COTO Log templates** (§2k, same chat as §2j, analysis only). Both found to duplicate documents SESC already holds. **New D24** (COTO: registers stay the master; add REG-08 Opportunity Register and a generated workbook view — workstream 2b) and **D25** (POL-05 is SESC's H&S manual; four candidate gaps to v1.2 after a full read). Comparison note for James written to `Claude outputs/`. §6 row 2b added. **Nothing built, uploaded, signed, committed or merged.** |
 | 1.15 | 6 October 2026 | Claude, for G A Hill | **Workstream: `SESC-IMS-00` IMS Manual, draft v0.1** (D21 confirmed and taken). New §2j. `system/0-manual.md`: 68 paragraphs, clauses 4–10 in the template's heading order, pointers only, Part 10 inventory of 23 absent records (a)–(w), Annex B document map. Claims 4.4 and 7.5.1 only. Renderer `IMS-00` labels fixed with two new tests (F52 closed); 22/22 pass. `CLAUDE.md` §5 names IMS-00. Validated (0 errors), rendered to 20 pages, all 68 numbers checked, six pages read as images, approval block empty. New F53 (uncommitted register in the working tree at start) and F54 (six-column table wraps). §6 row 2a added. **Nothing signed, committed, uploaded or merged.** |

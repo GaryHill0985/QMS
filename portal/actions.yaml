@@ -808,8 +808,13 @@ actions:
     severity: critical
     detail: >
       Requires a mechanism AND records of it operating, with non-managerial
-      workers. SESC-FRM-06 (draft) is the first intended record; the mechanism
-      itself goes in SESC-IMS-05. IMS-00 Part 10 (d).
+      workers. 7 Oct 2026: the mechanism is DRAFTED at SESC-IMS-05 Part 5 (v0.1)
+      — direct consultation of all non-managerial workers including the four
+      apprentices; SESC-FRM-06 and the new SESC-FRM-08 are its records. NO
+      RECORD OF IT OPERATING EXISTS. First records due: the consultation of the
+      workforce on the draft policy statement (FRM-08) and the first live
+      toolbox talk (FRM-06), both by 31 Oct 2026. Elected representative: D26,
+      Managing Director. IMS-00 Part 10 (d); register §2m.
     internal: false
 
   - ref: G7
@@ -923,9 +928,12 @@ actions:
     status: open
     severity: high
     detail: >
-      The three signed policy statements stand. The integrated statement and the
-      5.4 mechanism go in IMS-05, the next spine document (workstream 3). IMS-00
-      Part 10 (c), proposed; Managing Director to sign.
+      7 Oct 2026: SESC-IMS-05 Leadership DRAFTED as v0.1 (system/5-leadership.md)
+      with the integrated policy statement at Part 3 and the 5.4 mechanism at
+      Part 5. Not signed; the three signed statements remain in force. Next: the
+      workforce consultation on the draft statement (FRM-08), then the Managing
+      Director's signature after IMS-04's. IMS-00 Part 10 (c), proposed; register
+      §2m.
     internal: false
 
   - ref: G17

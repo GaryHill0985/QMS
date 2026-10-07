@@ -319,6 +319,34 @@ class TestFixture(unittest.TestCase):
         self.assertEqual(fonts.get(R.qn("w:ascii")), "Arial")
 
 
+class TestIMS05(unittest.TestCase):
+    """Renders the real SESC-IMS-05 once (workstream 3): every printed label equals
+    the source, and the draft's signature block renders empty."""
+
+    @classmethod
+    def setUpClass(cls):
+        cls.src = ROOT / "system" / "5-leadership.md"
+        cls.tmp = tempfile.mkdtemp()
+        cls.pdf_ok = bool(R.soffice()) and bool(shutil.which("pdftotext"))
+        cls.res = R.render(cls.src, cls.tmp, pdf=cls.pdf_ok)
+
+    @classmethod
+    def tearDownClass(cls):
+        shutil.rmtree(cls.tmp, ignore_errors=True)
+
+    def test_docx_numbers_equal_source(self):
+        self.assertEqual(docx_numbers(self.res["docx"]), source_numbers(self.src))
+
+    def test_pdf_numbers_equal_source(self):
+        if not self.pdf_ok:
+            self.skipTest("LibreOffice or pdftotext not installed — PDF numbering NOT checked")
+        self.assertEqual(pdf_numbers(self.res["pdf"]), source_numbers(self.src))
+
+    def test_cover_note_is_clause_5(self):
+        self.assertEqual(R.cover_note(R.read_source(self.src)[0]),
+                         "CLAUSE 5  //  ISO 9001  ·  ISO 14001  ·  ISO 45001")
+
+
 class TestIMS00Labels(unittest.TestCase):
     """SESC-IMS-00 is the manual (D21). Its header and cover note must not read
     'Clause 0'. The clause chapters 04-10 are unchanged."""

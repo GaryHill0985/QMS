@@ -4,7 +4,7 @@
 
 This folder builds the Google Forms that start the operating-history clock (blocker **B3**).
 It is build tooling, not a controlled document. The controlled documents are the schemas in
-`forms/SESC-FRM-01…07` and the site sheet `documents/SESC-WI-01-how-to-log-a-record.md`.
+`forms/SESC-FRM-01…08` and the site sheet `documents/SESC-WI-01-how-to-log-a-record.md`.
 
 | File | What it is |
 |---|---|
@@ -29,6 +29,7 @@ that is spending, and it is Steve's decision.
 | FRM-05 Nonconformity and corrective action | Quality Representative | domain sign-in | 9001 10.2.1, 10.2.2 · 14001 10.2 · 45001 10.2 |
 | FRM-06 Toolbox talk | Supervisor delivering it | domain sign-in | 9001 7.3 · 14001 7.3 · 45001 5.4, 7.3, 7.4.2 |
 | FRM-07 Site inspection | Health and Safety Officer, supervisors | domain sign-in | 9001 / 14001 / 45001 9.1.1 |
+| FRM-08 Worker consultation | Health and Safety Officer; the Managing Director at the quarterly meeting | domain sign-in | 45001 5.4 — one record per consultation event or answer; added 7 Oct 2026 (SESC-IMS-05 ¶44) |
 
 14001 clause numbers come from the `verified: false` map. **Do not quote them to anyone.**
 

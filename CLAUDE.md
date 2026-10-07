@@ -25,7 +25,9 @@ regulation 7 competent person appointments.
 
 **May, without asking:**
 
-- Read anything in this repository, in the TeraBox restore (`~/Documents/TeraBox Restore/SESC/SESC/`), on TeraBox and on the Drive.
+- Read anything in this repository and in `~/Documents/SESC/ISO/` (§11). Read the Google Drive only for the
+  Workspace record capture (§8 and `build/workspace_forms/`); **do not read, search or write the shared ISO
+  folder on the Drive unless Gary asks for it in the chat.**
 - Draft new documents, registers, procedures and forms **as a pull request**.
 - Build clause maps, gap reports, audit packs and checklists.
 - Correct a demonstrable factual error in a **draft**, recording the correction in the register.
@@ -36,10 +38,13 @@ regulation 7 competent person appointments.
 - Change an **issued** document without an explicit instruction naming the document and version.
 - **Merge to `main`.** Every change is reviewed by a named human. An unreviewed AI commit to a
   controlled document is a finding waiting to happen.
-- Move, rename or delete anything in the TeraBox restore (`~/Documents/TeraBox Restore/SESC/SESC/`) or on the Drive. The
-  13 August 2026 Drive rename incident is the reason. This repository is a **new location**, not a
-  reorganisation. **Never write IMS work into the TeraBox restore:** it has no `.git`, may be stale,
-  and is read-only reference.
+- Move, rename or delete anything in `~/Documents/SESC/ISO/` outside the clone, or on the Drive. The
+  13 August 2026 Drive rename incident is the reason. The reference folders beside the clone are
+  **read-only reference**; IMS work is written only into the clone.
+- **Use any source other than the three at §11.** Not TeraBox, not the TeraBox restore
+  (`~/Documents/TeraBox Restore/`, which also holds a stale, `.git`-less copy of this repository),
+  not Dropbox or its local copy at `~/Documents/SESC/SESC Solutions Limited/` (James Milligan's template set,
+  register §2h), not the retired MSI. If something is found only there, say so and ask; do not use it.
 - State a certification, qualification or device capability from memory. Read it off the issuing
   body's own documentation.
 - Claim ISO certification of any kind, BS 99001, NFRC membership, OFTEC or RECC currency, or
@@ -110,9 +115,10 @@ written this way and consistency is auditable.
   (toolbox talk), `SESC-FRM-07` (site inspection) and `SESC-WI-01` (how to log a record on site)
   were taken on 24 September 2026 for the Workspace record capture (workstream 1a). **`SESC-IMS-00`
   (the IMS Manual) was taken on 6 October 2026 under D21. `SESC-REG-08` (the Opportunity Register)
-  was taken on 7 October 2026 under D24.** All are DRAFTS:
-  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-09` · `SESC-FRM-08` · `SESC-REC-05` ·
-  `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-05`.
+  was taken on 7 October 2026 under D24. `SESC-IMS-05` (Leadership) and `SESC-FRM-08` (Worker
+  Consultation Record) were taken on 7 October 2026 for workstream 3 (register §2m).** All are DRAFTS:
+  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-09` · `SESC-FRM-09` · `SESC-REC-05` ·
+  `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-06`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**
 - Everything downstream is generated from front matter — the page-1 control table, headers,
@@ -193,9 +199,10 @@ and subcontractor organisations, categories and criteria; aggregate metrics and 
 3. Work it end to end: draft → render → **verify** → write back.
 4. **Verification discipline: a script exiting cleanly is not verification.** Render to PDF and
    read a body page *and* the branded cover **as images**. Four known traps live in
-   `QinetiQ/JOSCAR/Reference/Section workflow method.md` (in the TeraBox restore, §11) §5 — the Branded TOC field, the signature table
-   not being table 1, header text hidden in tables and textboxes, and `set_cell()` style in an
-   empty cell.
+   `~/Documents/SESC/ISO/Reference/Decisions/Section workflow method.md` §5 — the Branded TOC field, the signature
+   table not being table 1, header text hidden in tables and textboxes, and `set_cell()` style in an
+   empty cell. A fifth, paragraph renumbering after a table, is recorded at register §2g.1 and is
+   enforced by `build/test_render_docx.py`.
 5. Before finishing, update the register row, add findings, add tasks by owner, and write a
    completion note. **In the same turn.**
 
@@ -230,28 +237,39 @@ As at 18 August 2026:
 
 ## 11. Where things live
 
-**None of these files is in this repository, and several of the rules above tell you to use them.
-Without this section a chat cannot find the document it is being told to obey.**
+**Three sources, and only three** (Gary's decision, 7 October 2026; register F59):
 
-**From 24 September 2026 the working machine is the MacBook; the MSI Windows laptop is retired from
-this project.** The `Desktop\SESC\...` paths used until then are read as the same folders inside the
-**TeraBox restore at `~/Documents/TeraBox Restore/SESC/SESC/`**, which is read-only reference (§2). Paths below are macOS paths.
+1. **`~/Documents/SESC/ISO/` on the MacBook.** The clone at `CLAUDE ISO/` is the master copy of the
+   system. Beside it, read-only: `Reference/`, `Signed/` and `Insurance/`, copied on 7 October 2026
+   from the TeraBox restore and checked byte for byte against the originals.
+2. **GitHub, `GaryHill0985/QMS`.** `main` is the only branch that matters; a merged branch is finished.
+3. **Google Drive**, for the Workspace record capture only (§8). The shared ISO folder on the Drive is
+   not a source unless Gary asks for it in the chat.
+
+**Nothing else is a source** — not TeraBox or the TeraBox restore, not Dropbox, not the MSI, and not
+`~/Documents/SESC/SESC Solutions Limited/`, the local copy of James Milligan's Dropbox template set (§2h), which sits
+beside the ISO folder. Work that §2h queued against it (the legal register structure, the procedure layout) is done
+only when Gary asks for it in the chat. The
+claude.ai Project holds read-only copies of some reference files (the standards, the CIOB Code,
+`BRAND-SPEC.md`, `INTERIOR-SPEC.md`, the Architecture Plan, the 17 August decision records); **where a
+Project copy and the `~/Documents/SESC/ISO/` copy differ, the MacBook copy governs.** A chat that cannot
+see the MacBook reads the repository from GitHub and returns its changes as patches for Gary to apply.
+
 Give Gary **macOS Terminal (zsh)** commands, quote every path (`CLAUDE ISO` contains a space), and put
 any interactive command — a passphrase prompt, a first SSH connection — in a block of its own.
 
-| Thing | Location |
+| Thing | Location, under `~/Documents/SESC/ISO/` |
 |---|---|
-| **Architecture and build plan — AUTHORITATIVE for the repo design at §4–§9, and NOT to be re-derived** | `~/Documents/TeraBox Restore/SESC/SESC/ISO/SESC-IMS-Architecture-and-Build-Plan-v1.0.html` |
-| **`BRAND-SPEC.md` and `INTERIOR-SPEC.md`** — authoritative for colour, logo, cover geometry and interior page design, cited at §4 above | `~/Documents/TeraBox Restore/SESC/SESC/DOCUMENT DESIGN INSTRUCTIONS CLAUDE/` |
-| **The twenty-one signed documents**, to be migrated into `documents/` | `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/Documents/` — **filed by JOSCAR questionnaire section. Do not carry that taxonomy forward.** On 18 August 2026 POL-01…04 were recorded as sitting inside `2.7 Environment & Sustainability\2.2 Human Resources\`, a filing defect; **in the TeraBox restore they sit in `Documents/2.2 Human Resources/`** (checked 24 Sep 2026). Confirm which is current before migrating them. |
-| **The renderer to port** to `build/render_docx.py`, including **`patch_branded_cover()`** | `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/Toolkit/policy_editor.py` |
-| **The four rendering traps**, §5 — the Branded TOC field, the signature table not being table 1, header text hidden in tables and textboxes, `set_cell()` style in an empty cell | `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/Reference/Section workflow method.md` |
-| **The contradiction log** — known cross-document conflicts, do not rediscover them | In `~/Documents/TeraBox Restore/SESC/SESC/QinetiQ/JOSCAR/`: `JOSCAR Master Register.md` §5 · `Reference/Cross-document consistency findings v1.0 - 17 Aug 2026.md` · `Reference/Gary decisions on C2-C8 - 17 Aug 2026.md` |
-| **The pre-written gap plan** | POL-05 §A31 · POL-13 §21 · POL-16 Q24 · POL-17 §13 · POL-18 §8 |
-| **Standard texts held** | `~/Documents/TeraBox Restore/SESC/SESC/ISO/` — 9001:2015 (**licensed to Unitspark Ltd, single user — clause numbering may be used, clause TEXT may not be reproduced**), 14001:**2015, superseded**, 45001:2018, **BS 99001:2022**. **No 14001:2026 and no 27001 in any form.** |
-| **CertiKit demo toolkits** | `~/Documents/TeraBox Restore/SESC/SESC/ISO/` — 9001 v3, 14001 v3 (**built for the 2026 edition**), 45001 v1-3, 27001 v13-1, 22301 v6-3, 20000 v10-1, **Cyber Essentials v7**. Every 27001 reference this project holds comes from the v13-1 guide, not from the standard. |
-| **Reusable structure from prior builds — TeraBox, cloud only, no local sync folder** | `POW Environmental Services\Procedures and Registers\` · `Pow Property Developments\...\Forms, registers\{Forms,Policy,Procedures,Registers}` · `ITC CERTIFIED\...\0. Context and Governance\`. **Structure only, never content — see §3.** |
-| **This repository** | `github.com/GaryHill0985/QMS`, and the working clone is **`~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** (from 24 Sep 2026; previously `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI) |
+| **This repository** — the master | `CLAUDE ISO/` = `github.com/GaryHill0985/QMS` (the MacBook clone from 24 Sep 2026) |
+| **Architecture and build plan — AUTHORITATIVE for the repo design at §4–§9, and NOT to be re-derived** | `Reference/Architecture/SESC-IMS-Architecture-and-Build-Plan-v1.0.html` |
+| **`BRAND-SPEC.md` and `INTERIOR-SPEC.md`** — authoritative for colour, logo, cover geometry and interior page design, cited at §4 | `Reference/Design/`, with `sesc-logo-master.jpg`. The logo and background files the renderer uses are in the repository at `build/assets/`. |
+| **The twenty-one signed documents** (POL-01…19, CRP-01, REG-01), to be migrated into `documents/` | `Signed/` — flattened; the JOSCAR section folders are not carried forward. REG-02, REG-03, REG-04, REC-01…04 and TPL-01…04 were not copied (they were not in `Branded/Signed/`); bring them in when they are needed. |
+| **Insurance records** cited by SESC-IMS-04 (PI schedule and Statement of Fact, the EL/PL broker letters, the Pangea letter) | `Insurance/`. **Never in git.** |
+| **The rendering traps**, §5 | `Reference/Decisions/Section workflow method.md`; the fifth at register §2g.1. The renderer port is done: `build/render_docx.py`. |
+| **The contradiction log** — known cross-document conflicts, do not rediscover them | `Reference/Decisions/`: `JOSCAR Master Register.md` §5 · `Cross-document consistency findings v1.0 - 17 Aug 2026.md` · `Gary decisions on C2-C8 - 17 Aug 2026.md`, with the 17–18 August findings notes on signatures, the PI renewal, the accident book and the guarantees and training register |
+| **The pre-written gap plan** | POL-05 §A31 · POL-13 §21 · POL-16 Q24 · POL-17 §13 · POL-18 §8 (in `Signed/`) |
+| **Standard texts held** | `Reference/Standards/` — 9001:2015 (**licensed to Unitspark Ltd, single user — clause numbering may be used, clause TEXT may not be reproduced**), 14001:**2015, withdrawn**, 45001:2018, **BS 99001:2022**, the CIOB Code of Quality Management. **No 14001:2026 and no 27001 in any form.** |
+| **CertiKit demo toolkits** | `Reference/CertiKit/` — 9001 v3, 14001 v3 (**built for the 2026 edition**), 45001 v1-3, 27001 v13-1, 22301 v6-3, 20000 v10-1, **Cyber Essentials v7**. Every 27001 reference this project holds comes from the v13-1 guide, not from the standard. |
 
 ---
 
