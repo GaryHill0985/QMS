@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.17, 7 October 2026
+source_register: SESC-IMS-Master-Register.md v1.20, 12 October 2026 (G5 updated; otherwise as resynced to v1.17)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -796,7 +796,14 @@ actions:
     due: 2026-11-30
     status: open
     severity: high
-    detail: 14001 6.1.3 and 45001 6.1.3 are both dual maintain-AND-retain. IMS-00 Part 10 (g); workstream 5.
+    detail: >
+      14001 6.1.3 and 45001 6.1.3 are both dual maintain-AND-retain. IMS-00 Part 10 (g);
+      workstream 5. 12 Oct 2026: the register is DRAFTED as SESC-REG-09 v0.1 (79 rows, every
+      instrument read on its issuing body; POL-19 Annex A re-evaluated; the 2020 register not
+      found in the three sources and nothing carried from it). What remains open is the
+      RETAINED half of the clause: the first documented evaluation of compliance, due
+      30 November 2026, and the row-level records marked not yet held. Status stays open
+      until that evaluation record exists.
     internal: false
 
   - ref: G6
