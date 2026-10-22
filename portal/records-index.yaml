@@ -44,3 +44,25 @@ records:
     date: 2026-08-17
     clauses: {}
     note: Clause map pending — as SESC-REC-01.
+
+  - ref: SESC-REC-05
+    title: Waste carrier public-register check — CBDU663802 and CBDL569181, 22 October 2026
+    date: 2026-10-22
+    clauses: {}
+    note: >
+      Evidence for SESC-REG-09 CO-43 and for SESC-POL-08 paragraph 34(a)'s annual
+      check. Deliberately mapped to no clause: one registration checked on one
+      day is not an evaluation of compliance under REG-09's method, so it does
+      not evidence 14001 or 45001 9.1.2; the first evaluation record will
+      (SESC-REC-06, due 30 November 2026). Content, recorded verbatim from
+      https://environment.data.gov.uk/public-register/waste-carriers-brokers/
+      on 22 October 2026 by Claude at the Chief Operating Officer's direction:
+      CBDU663802 — "SESC SOLUTIONS LTD", company 07606236, "Carrier Dealer -
+      Upper Tier", applicant type Company, registration date 01/10/2026,
+      expiry date 01/10/2029, address "S E S C SOLUTIONS LTD., MELBURY BUSINESS
+      PARK, WEST MELBURY, SHAFTESBURY, SP7 0AF"; no status field is shown.
+      CBDL569181 — "sesc solutions", "Carrier, Broker, Dealer - Lower Tier",
+      applicant type Company, registration date 05/02/2025, no expiry shown,
+      address "S E S C SOLUTIONS LTD, UNIT 9, MELBURY BUSINESS PARK, WEST
+      MELBURY, SHAFTESBURY, SP7 0AF". No personal data. Reference taken from
+      CLAUDE.md 5 on 22 October 2026.

@@ -1,0 +1,2095 @@
+id: SESC-REG-09
+title: Compliance Obligations Register — legal requirements and other requirements applying to the Employer's activities, with the evaluation of compliance
+version: "0.2"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-10-12
+revised: 2026-10-22
+next_review: 2027-10-12
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso14001: ["6.1.3", "9.1.2"]
+  iso45001: ["6.1.3", "9.1.2"]
+parent_document: SESC-IMS-04
+registers_cited: [SESC-REG-01, SESC-REG-02, SESC-REG-03, SESC-REG-04, SESC-REG-05, SESC-REG-06, SESC-REG-07]
+review_trigger:
+  - A change in law, scheme rule, customer requirement or the scope of the Employer's work (SESC-IMS-04 paragraph 14)
+  - Part 2 of S.I. 2026/873 coming into force (waste transporting becomes a permitted activity in England — CO-44)
+  - ISO 14001:2026 being bought and read (every ISO 14001 clause reference here is unverified until then)
+  - The first documented evaluation of compliance (due 30 November 2026)
+  - Signature of SESC-POL-19 v1.2, which is to point its Annex A at this register
+personal_data: false
+
+# SESC-REG-09 Compliance Obligations Register.
+#
+# Reference taken from CLAUDE.md 5 on 12 October 2026 (Master Register 6 item 5; SESC-IMS-00 Part 10
+# (g); portal/actions.yaml G5).
+#
+# Why it exists. ISO 14001 clause 6.1.3 and ISO 45001 clause 6.1.3 require the Employer to determine
+# and have access to the legal requirements and other requirements that apply to its environmental
+# aspects and its OH&S hazards, to determine how they apply, and to keep documented information of
+# them; clause 9.1.2 of both requires a periodic, documented evaluation of compliance. ISO 45001 6.1.3
+# is a dual maintain-AND-retain clause. ISO 14001 is read here from standards/iso14001-2026.yaml,
+# which is marked verified: false throughout: the 2026 edition has not been read by anyone on this
+# project, and these clause numbers are not to be quoted to a customer or an auditor until it has.
+#
+# What it replaces. The Employer's earlier legal register is dated 2020 and carried links to a Z:\
+# network drive that no longer exists (CLAUDE.md 10). SESC-POL-19 v1.1 paragraph 86 already states
+# that any such register "is superseded by Annex A and must be withdrawn from use". The 2020
+# register was looked for on 12 October 2026 in the three sources this project uses (the repository,
+# ~/Documents/SESC/ISO/ and the Drive record-capture folder) and WAS NOT FOUND in any of them. Nothing
+# is carried from it. SESC-POL-19 Annex A (signed 16 August 2026, 30 rows, product and installation
+# law) is the only issued legal register the Employer holds today; every one of its rows has been
+# re-evaluated against the Employer's activities and appears here with its POL-19 citation. On the
+# Managing Director's approval this register becomes the Employer's single compliance obligations
+# register for all three standards; SESC-POL-19 Annex A is then amended, at POL-19's next revision,
+# to point here rather than to carry its own table. Until that signature POL-19 Annex A remains the
+# issued document and this register is a draft.
+#
+# What it claims. ISO 14001 6.1.3 and ISO 45001 6.1.3, as the determination of legal and other
+# requirements, maintained here. ISO 14001 9.1.2 and ISO 45001 9.1.2 are claimed ONLY because this
+# register carries a documented evaluation method (evaluation_method below); NO EVALUATION OF
+# COMPLIANCE HAS YET BEEN CARRIED OUT, every row reads last_evaluation: none yet, and the first is
+# due 30 November 2026 (SESC-IMS-00 Part 10 (g)). Nothing is claimed from ISO 9001: this register
+# does not address a 9001 clause. 9001 clause 9.1.2 is customer satisfaction, which is SESC-IMS-00
+# Part 10 (t).
+#
+# What each row holds. The source and its exact title as the issuing body publishes it, read on
+# 12 October 2026 from legislation.gov.uk, gov.uk, hse.gov.uk, ico.org.uk or the scheme's own site
+# (source_url); who imposes it; the activities, trades and site types it applies to — roofing,
+# building fabric, mechanical, electrical, renewables, and mould and damp remediation, which is in
+# scope as remediation only (D11); fire doors are not a trade of the Employer (D11); what it requires
+# of the Employer; the arrangement that meets it, cited to the signed document and paragraph; the
+# evidence that the Employer complies, each record marked held, not yet held (with a date) or nil
+# return; the SESC-REG-05 interested-party requirement it belongs to; the SESC-REG-02 scheduled check
+# where one exists; the owner (a role); the review frequency; and the date of the last evaluation of
+# compliance, which for every row is none yet.
+#
+# Registration, licence, scheme and certificate numbers are stated here ONLY as the signed documents
+# record them (SESC-POL-05 Annex C and SESC-POL-16 Annex C, verified against the certificates by
+# G A Hill on 16 August 2026; SESC-POL-19 Annex A). The certificates themselves, and SESC-REG-04
+# Licence and Accreditation Register, are not among the three sources this project reads (Master
+# Register 2n: REG-02, REG-03, REG-04 were not copied into Signed/), so no number here has been
+# read off an issuing body's document in this workstream, and none has been checked against a
+# public register. Where a signed document records a position as NOT VERIFIED, so does this register.
+#
+# Structure. The column set and the idea of typing each row by topic were taken from the legal
+# register template in folder "14. Legal and Regulatory Requirements" of the shared ISO folder on
+# the Google Drive (James Milligan's template set), read once, read-only, on 12 October 2026 for
+# that purpose and nothing else. NOT ONE ROW OF IT WAS COPIED. Every obligation below was determined
+# from the Employer's own signed documents and SESC-REG-05, and re-evaluated against what the
+# Employer actually does. Nothing here carries a POW, ITC, LARC, HCPL or Unitspark reference.
+#
+# Dates. Where a signed document already gives the date by which an absent record is created, that
+# date is carried here even where it has passed; a passed date is recorded as overdue, not re-dated.
+# Dates this register proposes for the first time are marked proposed, for the owner to confirm.
+# Headcount, turnover and the professional indemnity limit are stated nowhere in this register.
+
+design_rules:
+  - >
+    ONE ROW PER OBLIGATION. A row names the instrument exactly as its issuing body does, says what
+    it requires of the Employer in operational terms, and points at the signed paragraph that meets
+    it. A row with no arrangement says so. A row with no evidence says so and gives a date.
+  - >
+    NOTHING IS CARRIED FROM ANOTHER ORGANISATION'S REGISTER. The 2020 register was not found; James
+    Milligan's template supplied column headings and a topic list only; SESC-POL-19 Annex A, the
+    Employer's own signed table, was re-evaluated row by row.
+  - >
+    NO REGISTRATION, LICENCE, MEMBERSHIP OR CERTIFICATION IS STATED AS HELD WITHOUT A DATED DOCUMENT
+    BEHIND IT. Where the only document is a signed policy's annex, the row says "as recorded at" and
+    names the annex. OFTEC (expired 14 April 2026), RECC (expired 15 November 2024) and NFRC (never
+    a member) are not obligations the Employer subscribes to and are recorded only at the foot.
+  - >
+    SCHEDULED CHECKS LIVE IN SESC-REG-02 (portal/obligations.yaml). A row points at the OB reference;
+    it never restates the schedule. Interested-party requirements live in SESC-REG-05; a row points
+    at the IP reference; it never restates what REG-05 holds.
+  - >
+    EVALUATION IS A RECORD, NOT A COLUMN. The evaluation method below produces a dated record per
+    cycle; last_evaluation moves from "none yet" only when that record exists.
+
+evaluation_method:
+  clause: ISO 14001 9.1.2 (unverified edition) and ISO 45001 9.1.2
+  frequency: >
+    At least annually, in the quarter before the management review, and within one month of any
+    change in law, scheme rule, customer requirement or scope that adds or alters a row. The first
+    evaluation is due 30 November 2026 (SESC-IMS-00 Part 10 (g)).
+  who: >
+    The Contracts Manager, in the appointments the rows name (Environmental Manager for environmental
+    rows, Health and Safety Officer for OH&S rows), with the retained external health and safety
+    adviser reviewing the OH&S rows and the appointed competent adviser reviewing the environmental
+    rows (SESC-POL-08 paragraphs 18 and 22; SESC-POL-05 Annex C). The Accounts Manager evaluates the
+    data-protection and employment rows. The Managing Director receives the result at the management
+    review.
+  how: >
+    For every row, in order: (1) confirm the source is still current on the issuing body's site and
+    record the date checked; (2) confirm the row still applies to the Employer's activities as
+    SESC-IMS-04 paragraph 14 states them; (3) read the arrangement paragraph cited and confirm it
+    still describes what is done; (4) look for the evidence record named — a record that exists is
+    marked held with its date, one that does not is marked not yet held with a date and an owner;
+    (5) give the row one of four results: compliant (evidence held and current); compliant,
+    evidence not yet held (the arrangement operates but the record does not exist — not to be
+    reported to anyone as compliant); not compliant (a requirement unmet, with the nonconformity
+    raised on SESC-FRM-05); not applicable (with the reason, re-tested each cycle for the threshold
+    rows). A row may not be marked compliant on the strength of a policy sentence.
+  record: >
+    One dated evaluation record per cycle, listing every row, its result, the evidence seen and the
+    actions raised; retained five years (SESC-POL-08 Annex B, compliance evaluation). Held in the
+    repository as a controlled record once SESC-REC-05 is taken for it; until then as a dated note in
+    Claude outputs/ is NOT sufficient — the record does not exist until it is controlled.
+  outputs: >
+    Nonconformities to the corrective action log (SESC-FRM-05); changes to rows by a new version of
+    this register; a summary to the management review (ISO 14001 and ISO 45001 clause 9.3).
+  first_evaluation_due: 2026-11-30
+  evaluations_carried_out: none
+
+clause_notes:
+  iso45001_6_1_3: >
+    Dual maintain-and-retain. The maintained documented information is this register. The retained
+    documented information is the evaluation record; none exists. The determination is therefore
+    done and the retention is not, and the gap report treats the clause as red until the first
+    evaluation record exists.
+  iso14001_6_1_3: >
+    Read from the unverified 2026 map (standards/iso14001-2026.yaml). Claimed as determined and
+    maintained; not to be quoted to a customer or an auditor until ISO 14001:2026 has been read.
+  iso14001_9_1_2_and_iso45001_9_1_2: >
+    Claimed only because the evaluation method above is documented. NO EVALUATION OF COMPLIANCE HAS
+    BEEN CARRIED OUT UNDER ANY SYSTEM. First due 30 November 2026. Until the record exists, the gap
+    report treats both clauses as red.
+  iso9001: Nothing claimed. This register does not address an ISO 9001 clause.
+
+status_vocabulary:
+  evidence_status: [held, not yet held, nil return, not verified]
+  position: [applies, applies — conditional, below threshold — tested annually, nil position]
+
+owners:
+  note: Owners are roles. The Contracts Manager holds the Environmental Manager, Health and Safety Officer and Quality Representative appointments (SESC-IMS-04 paragraph 11). The Accounts Manager is the Data Protection Lead (SESC-POL-14 paragraph 7).
+
+obligations:
+
+  # ===================================================================================
+  # PART A — OCCUPATIONAL HEALTH AND SAFETY (ISO 45001 6.1.3)
+  # ===================================================================================
+
+  - ref: CO-01
+    topic: Health and safety — general duties
+    source: Health and Safety at Work etc. Act 1974 (1974 c. 37), sections 2, 3 and 7; section 2(3) written policy
+    source_url: https://www.legislation.gov.uk/ukpga/1974/37
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade; every site; Unit 19
+    requires: >
+      Ensure, so far as is reasonably practicable, the health, safety and welfare of employees (s.2) and
+      of others affected by the undertaking (s.3); prepare, revise and bring to employees' attention a
+      written health and safety policy and the organisation and arrangements for carrying it out (s.2(3)).
+    arrangement: SESC-POL-05 v1.1 Part 1 paragraphs 1–6 (the s.2(3) statement) and Part 3; SESC-POL-19 v1.1 Annex A row 1
+    evidence:
+      - record: SESC-POL-05 v1.1, signed 16 August 2026 (Signed/)
+        status: held
+      - record: Policy displayed at the registered office and issued at induction (POL-05 paragraph 6) — induction records
+        status: not yet held
+        due: 2026-08-31
+        note: POL-05 paragraph 172(a) — no induction record of any kind existed at issue; recording was to commence 31 August 2026; overdue
+    reg05: IP-06 (compliance with the Act and the regulations under it)
+    reg02: OB-A08 (annual review of POL-05)
+    owner: Health and Safety Officer
+    review: Annual; on change in law or scope
+    last_evaluation: none yet
+
+  - ref: CO-02
+    topic: Risk assessment
+    source: The Management of Health and Safety at Work Regulations 1999 (S.I. 1999/3242), regulation 3
+    source_url: https://www.legislation.gov.uk/uksi/1999/3242
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade; every site; Unit 19
+    requires: Suitable and sufficient risk assessment of risks to employees and others, significant findings recorded, reviewed when no longer valid.
+    arrangement: SESC-POL-05 v1.1 A1 paragraphs 16–20 (generic library plus project RAMS; reviewed annually and on change)
+    evidence:
+      - record: Generic and project risk assessment library and project RAMS packs, including SESC-CPP-001 and SESC-RAMS-001 (POL-05 paragraph 171(a))
+        status: held
+        note: Stated as held at POL-05 paragraph 171(a); the RAMS library is not in the three sources and was not read in this workstream
+    reg05: IP-01; IP-06
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-03
+    topic: Competent person for health and safety
+    source: The Management of Health and Safety at Work Regulations 1999 (S.I. 1999/3242), regulation 7, including 7(8)
+    source_url: https://www.legislation.gov.uk/uksi/1999/3242
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: The Employer as a whole
+    requires: Appoint one or more competent persons to assist with health and safety; prefer a competent employee to an external person (reg 7(8)).
+    arrangement: SESC-POL-05 v1.1 O6 paragraphs 13–14 and A20 paragraph 117; Approval block and Annex C (Contracts Manager appointed under reg 7(8); retained external adviser)
+    evidence:
+      - record: Appointment recorded at POL-05 Annex C, with the qualifications listed there, verified 16 August 2026
+        status: held
+        note: The certificates are personal data and sit outside git (CLAUDE.md 8); Master Register F51 records that Craig Bartle's NEBOSH certificate has not been read on this project
+      - record: Current engagement letter for the retained external adviser (POL-05 Annex C)
+        status: not yet held
+        due: 2026-08-31
+        note: Overdue against POL-05 Annex C
+    reg05: IP-05; IP-06
+    reg02: none
+    owner: Managing Director
+    review: Annual (POL-05 paragraph 117) and on any change of role
+    last_evaluation: none yet
+
+  - ref: CO-04
+    topic: Health surveillance
+    source: The Management of Health and Safety at Work Regulations 1999 regulation 6; The Control of Substances Hazardous to Health Regulations 2002 (S.I. 2002/2677) regulation 11; The Control of Noise at Work Regulations 2005 (S.I. 2005/1643) regulation 9; The Control of Vibration at Work Regulations 2005 (S.I. 2005/1093) regulation 7
+    source_url: https://www.legislation.gov.uk/uksi/2002/2677
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Roofing, building fabric, mechanical, electrical, mould and damp remediation — any worker exposed to dust, biocides, noise or vibration
+    requires: Health surveillance appropriate to the risks identified, with health records kept (40 years under COSHH regulation 11).
+    arrangement: SESC-POL-05 v1.1 A22 paragraphs 123–129
+    evidence:
+      - record: Occupational health provider appointed and named at POL-05 Annex C; health surveillance register opened
+        status: not yet held
+        due: 2026-09-30
+        note: POL-05 paragraphs 125, 127 and 172(d) — no provider appointed and no surveillance of any kind carried out; overdue. Records are personal data and never enter git
+    reg05: IP-01 (health surveillance where the work requires it)
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-05
+    topic: Young persons and apprentices
+    source: The Management of Health and Safety at Work Regulations 1999 (S.I. 1999/3242), regulation 19
+    source_url: https://www.legislation.gov.uk/uksi/1999/3242
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: The four apprentices (SESC-IMS-05 Part 5) and any worker under 18; every trade
+    requires: Protect young persons from risks arising from their inexperience, lack of awareness and immaturity; assess those risks specifically before they start.
+    arrangement: SESC-POL-10 v1.1 paragraph 10(e) (no person under 16; 16–17 year olds subject to a specific risk assessment). SESC-POL-05 does not address young persons (read in full 12 October 2026; Master Register 2k lists it as a candidate for POL-05 v1.2).
+    evidence:
+      - record: Specific risk assessment for each young person, and the apprentices' supervision arrangements recorded
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. Whether any apprentice is under 18 is not recorded in the three sources
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual and on each new starter under 18
+    last_evaluation: none yet
+
+  - ref: CO-06
+    topic: Consultation and participation of workers
+    source: The Health and Safety (Consultation with Employees) Regulations 1996 (S.I. 1996/1513), regulations 3 and 4
+    source_url: https://www.legislation.gov.uk/uksi/1996/1513
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: All employees & subcontractors; every site
+    requires: Consult employees in good time on matters affecting their health and safety, directly or through elected representatives of employee safety.
+    arrangement: SESC-POL-05 v1.1 O7 paragraph 15 (direct consultation); SESC-IMS-05 v0.1 Part 5 (the ISO 45001 5.4 mechanism — DRAFT); SESC-FRM-06 and SESC-FRM-08 (drafts). Whether a representative is offered is decision D26, the Managing Director's.
+    evidence:
+      - record: Toolbox talk records (FRM-06) and worker consultation records (FRM-08)
+        status: not yet held
+        due: 2026-10-31
+        note: No completed consultation record exists (POL-05 paragraph 172(a); SESC-IMS-05 Part 6). First intended record is the workforce consultation on the draft policy statement
+    reg05: IP-01 (consultation and participation — the highest-risk gap in the 45001 set)
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual; on D26
+    last_evaluation: none yet
+
+  - ref: CO-07
+    topic: Construction work — CDM
+    source: The Construction (Design and Management) Regulations 2015 (S.I. 2015/51), regulations 6, 13, 14, 15 and Schedule 2
+    source_url: https://www.legislation.gov.uk/uksi/2015/51
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade on every site — as contractor, and as principal contractor where the only contractor or where appointed
+    requires: Plan, manage and monitor own work; competent, supervised and informed workers; construction phase plan where the only contractor; principal contractor duties where appointed; Schedule 2 welfare; copy of the client's F10 notification.
+    arrangement: SESC-POL-05 v1.1 A26 paragraphs 148–155 and A6 paragraph 38; SESC-POL-19 v1.1 Annex A row 2, section 19 (sub-contracted design) and paragraph 89
+    evidence:
+      - record: Construction phase plan SESC-CPP-001 and RAMS SESC-RAMS-001, Boscombe Down (POL-05 paragraph 171(a))
+        status: held
+        note: Stated as held at POL-05 paragraph 171(a); not in the three sources
+      - record: Health and safety file information issued at handover (POL-05 paragraph 154; POL-19 paragraph 83) — per project
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed — no project handover record is in the system
+    reg05: IP-04 (compliance with the principal contractor's construction phase plan); IP-06
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual; each project at readiness review
+    last_evaluation: none yet
+
+  - ref: CO-08
+    topic: Work at height
+    source: The Work at Height Regulations 2005 (S.I. 2005/735), including regulation 12 (inspection) and Schedule 7
+    source_url: https://www.legislation.gov.uk/uksi/2005/735
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Roofing, building fabric, renewables (roof-mounted PV), mechanical and electrical at height; every site
+    requires: Avoid, prevent, mitigate falls in that order; inspect working platforms before use and within seven days; inspect harnesses and anchors; keep inspection reports.
+    arrangement: SESC-POL-05 v1.1 A18 paragraphs 104–108 and A9 paragraph 54; fall protection and rescue plan in every method statement (paragraph 105)
+    evidence:
+      - record: Seven-day scaffold, tower and edge-protection inspection records kept on site (POL-05 paragraph 107); harness inspection records (Annex B)
+        status: not yet held
+        due: 2026-08-31
+        note: No inspection record is in the system; the Equipment Register that lists harnesses was due 31 August 2026 (paragraph 55) — overdue
+    reg05: IP-01; REG-01 risk D1
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-09
+    topic: Lifting equipment
+    source: The Lifting Operations and Lifting Equipment Regulations 1998 (S.I. 1998/2307), regulation 9
+    source_url: https://www.legislation.gov.uk/uksi/1998/2307
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Lifting accessories, MEWPs, hoists and any equipment lifting persons or loads; every trade
+    requires: Thorough examination by a competent person at six months (persons, accessories) or twelve months (other), or per a written scheme; reports retained.
+    arrangement: SESC-POL-05 v1.1 A9 paragraphs 52–57 (Equipment Register reviewed monthly from month ending 30 September 2026)
+    evidence:
+      - record: Equipment Register with every item in a current examination cycle
+        status: not yet held
+        due: 2026-08-31
+        note: POL-05 paragraphs 55 and 172(h) — the most recent report of thorough examination held is dated 29 March 2023; overdue
+    reg05: IP-01 (no LOLER report since 29 March 2023)
+    reg02: none
+    owner: Health and Safety Officer
+    review: Monthly register review; annual evaluation
+    last_evaluation: none yet
+
+  - ref: CO-10
+    topic: Work equipment, including portable electrical appliances
+    source: The Provision and Use of Work Equipment Regulations 1998 (S.I. 1998/2306), regulations 5 and 6
+    source_url: https://www.legislation.gov.uk/uksi/1998/2306
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: All plant, tools and portable electrical equipment; every trade; Unit 19
+    requires: Maintain work equipment in an efficient state and good repair; inspect where safety depends on installation or deterioration; keep results.
+    arrangement: SESC-POL-05 v1.1 A9 paragraph 53 and A11 paragraphs 63–67 (planned maintenance; portable appliance testing at paragraph 65(c))
+    evidence:
+      - record: Portable appliance test records
+        status: not yet held
+        due: 2026-08-31
+        note: POL-05 paragraphs 65(c) and 172(b) — none exists; also a CONDITION PRECEDENT of the Employer's insurance (CO-82; Master Register F4); overdue
+      - record: Calibration certificates for portable electrical test instruments — most recent dated 26 April 2024 against a twelve-month interval (POL-05 paragraph 171(f); POL-16 Q24 paragraphs 72–73)
+        status: not verified
+        note: Verification of every instrument's calibration status was due 31 August 2026 (POL-16 paragraph 73); SESC-IMS-00 Part 10 (k)
+    reg05: IP-01; IP-10 (conditions precedent)
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-11
+    topic: Manual handling
+    source: The Manual Handling Operations Regulations 1992 (S.I. 1992/2793), regulation 4
+    source_url: https://www.legislation.gov.uk/uksi/1992/2793
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade; every site
+    requires: Avoid hazardous manual handling so far as reasonably practicable; otherwise assess, reduce and inform.
+    arrangement: SESC-POL-05 v1.1 A10 paragraphs 58–62
+    evidence:
+      - record: Generic manual handling risk assessment and Boscombe RAMS MS-06 (POL-05 Annex A 2.6.4.11)
+        status: held
+        note: Stated as held in POL-05; not in the three sources
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-12
+    topic: Hazardous substances, including legionella
+    source: The Control of Substances Hazardous to Health Regulations 2002 (S.I. 2002/2677), regulation 6; HSE Approved Code of Practice L8 (fourth edition, 2013) for legionella
+    source_url: https://www.legislation.gov.uk/uksi/2002/2677
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade — sealants, solvents, bitumen, cement, biocides and mould-remediation chemicals, dusts, refrigerants; water systems the Employer installs (POL-19 Annex B H11)
+    requires: Assess before work liable to expose anyone; prevent or control exposure; safety data sheets available; records of significant findings.
+    arrangement: SESC-POL-05 v1.1 A13 paragraphs 74–81 (project COSHH register; no dry cutting; face-fit to INDG479); SESC-POL-19 v1.1 section 12 paragraphs 60–64 and Annex A row 21; SESC-POL-08 v1.1 paragraph 46(c)
+    evidence:
+      - record: Project COSHH registers with current safety data sheets
+        status: not yet held
+        due: 2026-08-31
+        note: POL-05 paragraphs 76 and 172(g) — the legacy register of forty-five assessments belonged to another organisation's fabrication workshop and is withdrawn; project registers were to open 31 August 2026; overdue
+      - record: Face-fit test records for every RPE wearer
+        status: not yet held
+        due: 2026-09-30
+        note: POL-05 paragraph 79 and 172(e); overdue
+    reg05: IP-01; IP-06
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual; on each new substance
+    last_evaluation: none yet
+
+  - ref: CO-13
+    topic: Asbestos
+    source: The Control of Asbestos Regulations 2012 (S.I. 2012/632), regulations 4, 10, 22 and 24
+    source_url: https://www.legislation.gov.uk/uksi/2012/632
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade on fabric built or refurbished before 2000; asbestos-containing waste
+    requires: Obtain the dutyholder's register and survey before disturbing fabric (reg 4 information); asbestos awareness training for all liable to be exposed (reg 10); medical surveillance only for licensable or notifiable non-licensed work (reg 22); asbestos waste sealed, labelled and consigned (reg 24, with CO-45).
+    arrangement: SESC-POL-05 v1.1 A19 paragraphs 109–113 and paragraph 130(a) (no licensed work; no licence held or sought); SESC-POL-19 v1.1 Annex A row 22 and paragraph 63; SESC-POL-08 v1.1 paragraphs 34(d) and 46(e)
+    evidence:
+      - record: Asbestos awareness certificates for every site operative (Training Matrix — Workspace, personal data)
+        status: not verified
+        note: POL-05 paragraph 173(a) — one certificate lapsed, renewal due 31 August 2026 (overdue); the Training Matrix is not in the three sources
+      - record: Written asbestos survey confirmation before starting on pre-2000 fabric, recorded on the readiness review (SESC-REG-01 D2 action, target September 2026)
+        status: not yet held
+        due: 2026-09-30
+        note: Overdue against REG-01 D2
+    reg05: IP-01; IP-11; REG-01 risk D2
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-14
+    topic: Noise
+    source: The Control of Noise at Work Regulations 2005 (S.I. 2005/1643), regulations 4–10
+    source_url: https://www.legislation.gov.uk/uksi/2005/1643
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Roofing, building fabric, mechanical, electrical — disc cutters, drills, breakers; every site
+    requires: Assess exposure against the action values; reduce at source; hearing protection; health surveillance where there is a risk; information and training.
+    arrangement: SESC-POL-05 v1.1 A16 paragraphs 93–99
+    evidence:
+      - record: Noise assessment covering the Employer's own activities
+        status: not yet held
+        due: 2026-10-31
+        note: POL-05 paragraphs 94 and 172(f) — none exists
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Every two years (POL-05 paragraph 95); annual evaluation
+    last_evaluation: none yet
+
+  - ref: CO-15
+    topic: Hand-arm vibration
+    source: The Control of Vibration at Work Regulations 2005 (S.I. 2005/1093), regulations 4–8
+    source_url: https://www.legislation.gov.uk/uksi/2005/1093
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade using powered hand tools; every site
+    requires: Assess exposure against 2.5 m/s² A(8) action and 5.0 m/s² A(8) limit; reduce; health surveillance at the action value; training.
+    arrangement: SESC-POL-05 v1.1 A17 paragraphs 100–103 (trigger-time table in the RAMS)
+    evidence:
+      - record: Trigger-time tables in project RAMS; HAVS health surveillance (CO-04)
+        status: not yet held
+        due: 2026-09-30
+        note: No RAMS is in the system; surveillance depends on the provider at CO-04; overdue
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-16
+    topic: Personal protective equipment
+    source: The Personal Protective Equipment at Work Regulations 1992 (S.I. 1992/2966), as amended by The Personal Protective Equipment at Work (Amendment) Regulations 2022 (S.I. 2022/8)
+    source_url: https://www.legislation.gov.uk/uksi/1992/2966
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every worker, including limb (b) workers since 6 April 2022; every trade
+    requires: Provide suitable PPE free of charge where risks are not adequately controlled otherwise; maintain, store, train, and ensure use.
+    arrangement: SESC-POL-05 v1.1 A15 paragraphs 86–92 (PPE Register signed by the recipient, paragraph 90)
+    evidence:
+      - record: PPE Register (POL-05 paragraph 90; Annex B)
+        status: not verified
+        note: POL-05 asserts the register in the present tense and does not list it as absent; it is not in the three sources and was not seen in this workstream
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-17
+    topic: Dangerous substances and explosive atmospheres; hot works
+    source: The Dangerous Substances and Explosive Atmospheres Regulations 2002 (S.I. 2002/2776), regulations 5–9
+    source_url: https://www.legislation.gov.uk/uksi/2002/2776
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Roofing (bitumen boilers, LPG torches), mechanical (fuels, flammable gas), building fabric (solvents); every site
+    requires: Assess before work starts; eliminate or reduce; zone where an explosive atmosphere may occur; emergency arrangements.
+    arrangement: SESC-POL-05 v1.1 A21 paragraphs 119–122 (DSEAR assessment within the project RAMS; hot works permit with 60-minute fire watch)
+    evidence:
+      - record: DSEAR assessment within project RAMS; hot works permits (POL-05 Annex A 2.6.4.22)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed — no RAMS or permit is in the system
+    reg05: IP-01; IP-11
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-18
+    topic: Reporting of injuries, diseases and dangerous occurrences
+    source: The Reporting of Injuries, Diseases and Dangerous Occurrences Regulations 2013 (S.I. 2013/1471), regulations 4–9 and 12; HSE online reporting at hse.gov.uk/riddor/reporting/
+    source_url: https://www.legislation.gov.uk/uksi/2013/1471
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade; every site; Unit 19
+    requires: Report deaths, specified injuries, non-worker hospital cases and dangerous occurrences without delay and within 10 days; over-seven-day incapacitation within 15 days; occupational diseases on diagnosis; keep records three years.
+    arrangement: SESC-POL-05 v1.1 A24 paragraphs 134–135 and paragraph 8(e)
+    evidence:
+      - record: SESC-REG-03 Accident, Incident and RIDDOR Register, opened 17 August 2026 (REG-05 IP-06)
+        status: held
+        note: REG-03 is issued but is not in Signed/ (Master Register 2n) and was not read in this workstream
+      - record: RIDDOR reports made
+        status: nil return
+        note: POL-05 Annex A 2.6.5 and 2.6.28 — nil return against the HSE public register; no report has been stated as made
+    reg05: IP-06 (RIDDOR reports within the timescales)
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-19
+    topic: Accident book
+    source: The Social Security (Claims and Payments) Regulations 1979 (S.I. 1979/628), regulation 25 and Schedule 4
+    source_url: https://www.legislation.gov.uk/uksi/1979/628
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: The Employer, where ten or more are normally employed at the same premises; every site in practice (POL-05 paragraph 133)
+    requires: Keep readily accessible an approved means of recording accidents with the Schedule 4 particulars; investigate; keep each record three years.
+    arrangement: SESC-POL-05 v1.1 A24 paragraphs 132–133 (BI 510 book at the registered office and every site; register opened 31 August 2026)
+    evidence:
+      - record: Accident book in use at the registered office and every site; completed entries held under UK GDPR in a tear-out or electronic format (REG-05 IP-06 note)
+        status: not yet held
+        due: 2026-08-31
+        note: POL-05 paragraphs 133 and 172(i) — no accident book, completed record or investigation report existed at issue; SESC-REG-01 D4 — "no accident book is held"; overdue. The ten-or-more test turns on headcount, which this register does not state; POL-05 keeps the book regardless
+    reg05: IP-06 (an accident book)
+    reg02: none
+    owner: Accounts Manager (holds the book, POL-05 paragraph 12); Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-20
+    topic: First aid
+    source: The Health and Safety (First-Aid) Regulations 1981 (S.I. 1981/917), regulations 3 and 4
+    source_url: https://www.legislation.gov.uk/uksi/1981/917
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every site; Unit 19; lone and mobile workers
+    requires: Adequate first-aid equipment, facilities and trained first-aiders, based on an assessment of needs; inform employees of the arrangements.
+    arrangement: SESC-POL-05 v1.1 A25 paragraphs 139–147 and paragraph 31 (at least one EFAW holder on every site)
+    evidence:
+      - record: Site-scoped, signed first-aid needs assessment
+        status: not yet held
+        due: 2026-08-31
+        note: POL-05 paragraphs 139 and 172(o) — the one held is dated 4 January 2023, unsigned, office and stores only; overdue. REG-05 IP-06
+      - record: EFAW certificates (Training Matrix — Workspace)
+        status: not verified
+        note: POL-05 paragraph 173(c) — one certificate issued in an incorrect name; corrected certificate due 30 September 2026
+    reg05: IP-06 (first-aid needs assessment)
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-21
+    topic: Health and safety law poster
+    source: The Health and Safety Information for Employees Regulations 1989 (S.I. 1989/682), regulation 4
+    source_url: https://www.legislation.gov.uk/uksi/1989/682
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Unit 19; site cabins where provided
+    requires: Display the approved poster in a readable condition at an accessible place, or give each employee the approved leaflet.
+    arrangement: SESC-POL-05 v1.1 A3 paragraph 24 ("the statutory Health and Safety Law poster")
+    evidence:
+      - record: Dated photograph or inspection note confirming the poster at Unit 19 (and leaflets to mobile workers)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. REG-05 IP-06 records the poster as displayed on the strength of POL-05 only
+    reg05: IP-06 (law poster displayed)
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-22
+    topic: Electricity at work
+    source: The Electricity at Work Regulations 1989 (S.I. 1989/635), regulations 3, 4 and 16
+    source_url: https://www.legislation.gov.uk/uksi/1989/635
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Electrical trade; renewables (PV DC, battery storage); every trade using site electrics
+    requires: Systems constructed and maintained to prevent danger; work on or near them carried out safely; only persons with the technical knowledge and experience, or under supervision.
+    arrangement: SESC-POL-19 v1.1 Annex A row 13 and section 22 paragraphs 100–101 (BS 7671; safe isolation; no live working except under POL-05); SESC-POL-05 v1.1 A11 paragraph 64 (110 V site equipment). SESC-POL-05 does not cite these Regulations by name (Master Register 2k candidate "electricity at work" for POL-05 v1.2).
+    evidence:
+      - record: NICEIC Approved Contractor registration 612325000, as recorded at SESC-POL-05 Annex C and SESC-POL-16 Annex C (CO-80)
+        status: not verified
+        note: Certificate not read in this workstream
+      - record: Safe isolation procedure and proving of test instruments (POL-19 paragraph 101) — competence records
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; role-based competence register is SESC-IMS-00 Part 10 (l)
+    reg05: IP-09
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-23
+    topic: Gas work — statutory registration
+    source: The Gas Safety (Installation and Use) Regulations 1998 (S.I. 1998/2451), regulation 3; the Gas Safe Register as the HSE-approved class of persons (gov.uk "Registration to carry out gas work")
+    source_url: https://www.legislation.gov.uk/uksi/1998/2451
+    source_checked: 2026-10-12
+    imposed_by: legislation (registration operated by the Gas Safe Register on behalf of HSE)
+    position: applies
+    applies_to: Mechanical trade — gas appliances, flues, pipework; Building Regulations Part J work
+    requires: No work on a gas fitting except by a competent person who is a member of an HSE-approved class (a Gas Safe registered business, renewed annually, engineers holding current ACS assessments); installations left safe; unsafe situations acted on.
+    arrangement: SESC-POL-19 v1.1 Annex A rows 9 and 15, paragraphs 34(d) and 95; SESC-POL-15 v1.2 section 9.2(a); SESC-POL-05 v1.1 paragraph 134(g)
+    evidence:
+      - record: Gas Safe registration 921327, valid to 21 April 2027, as recorded at SESC-POL-05 Annex C and SESC-POL-16 Annex C
+        status: not verified
+        note: Certificate not read in this workstream; not checked against the Gas Safe Register. Rests on one or two named individuals (SESC-REG-01 C4)
+      - record: ACS assessments of each engineer (Training Matrix — Workspace, personal data)
+        status: not verified
+    reg05: IP-09 (registration maintained; notification and certification of notifiable work)
+    reg02: none
+    owner: Contracts Manager
+    review: Annual; three months before each expiry (SESC-POL-15 paragraph 73)
+    last_evaluation: none yet
+
+  - ref: CO-24
+    topic: Fire safety — the Employer's premises
+    source: The Regulatory Reform (Fire Safety) Order 2005 (S.I. 2005/1541), articles 3 and 9
+    source_url: https://www.legislation.gov.uk/uksi/2005/1541
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Unit 19 Melbury Business Park (the Employer as responsible person); project fire risk on site is CO-17 and the RAMS
+    requires: Make, record and review a suitable and sufficient fire risk assessment of the premises; fire precautions, emergency routes, detection and alarm, information and training.
+    arrangement: NONE for the premises. SESC-POL-05 v1.1 paragraphs 119 and 142 cover fire risk per project through the RAMS; no signed document addresses Unit 19 (Master Register F49)
+    evidence:
+      - record: Fire risk assessment for Unit 19 and the premises emergency plan derived from it
+        status: not yet held
+        due: 2026-11-30
+        note: SESC-IMS-00 Part 10 (e), proposed. Confirmed absent by Gary on 6 October 2026. James Milligan's walk-round items FS-01 to FS-14 are at Master Register 2i.3; every item that costs money is the Managing Director's
+    reg05: IP-05; IP-11
+    reg02: none
+    owner: Managing Director, with the Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-25
+    topic: Workplace welfare — the Employer's premises
+    source: The Workplace (Health, Safety and Welfare) Regulations 1992 (S.I. 1992/3004), regulations 4–25
+    source_url: https://www.legislation.gov.uk/uksi/1992/3004
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Unit 19 (office and stores); construction sites are CO-07 Schedule 2
+    requires: Maintain the workplace; temperature, lighting, cleanliness; sanitary and washing facilities, drinking water, rest facilities.
+    arrangement: NONE named. SESC-POL-05 v1.1 does not cite these Regulations (read in full 12 October 2026); A6 welfare paragraphs 38–42 address sites. Master Register 2i.3 FS-09 (sanitary bin) is a welfare item
+    evidence:
+      - record: Premises inspection record covering welfare (the monthly composite-panel self-inspection at CO-82 could carry it)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-26
+    topic: Confined spaces
+    source: The Confined Spaces Regulations 1997 (S.I. 1997/1713), regulations 4 and 5
+    source_url: https://www.legislation.gov.uk/uksi/1997/1713
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — conditional
+    applies_to: Loft voids, plant rooms, tanks, ducts and under-floor voids where a specified risk exists; mechanical, electrical, mould and damp remediation
+    requires: Avoid entry where reasonably practicable; otherwise a safe system of work and emergency arrangements before entry.
+    arrangement: SESC-POL-05 v1.1 paragraph 17 (confined spaces in the generic risk assessment library) and paragraph 121(d). The Regulations are not cited by name in any signed document
+    evidence:
+      - record: Generic confined-space risk assessment (POL-05 paragraph 171(a))
+        status: held
+        note: Stated as held; not in the three sources
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-27
+    topic: Lead
+    source: The Control of Lead at Work Regulations 2002 (S.I. 2002/2676), regulations 5, 6 and 10
+    source_url: https://www.legislation.gov.uk/uksi/2002/2676
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — conditional
+    applies_to: Roofing and building fabric where lead flashing, sheet or lead paint is disturbed; plumbing on old pipework
+    requires: Assess before work liable to expose; prevent or control; medical surveillance where exposure is significant.
+    arrangement: SESC-POL-05 v1.1 A23 paragraph 130(b) (no significant exposure; dry sanding, burning off and blasting of lead paint prohibited); SESC-POL-08 v1.1 paragraph 45(d); SESC-POL-19 Annex B H15
+    evidence:
+      - record: Lead exposure assessment where lead is disturbed (per RAMS)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; no record exists in the system
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-28
+    topic: Ionising radiation
+    source: The Ionising Radiations Regulations 2017 (S.I. 2017/1075)
+    source_url: https://www.legislation.gov.uk/uksi/2017/1075
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: nil position
+    applies_to: Not engaged — the Employer uses no radioactive source or radiation generator (SESC-POL-05 paragraph 130(c)); MOD site local rules apply where a site holds sources
+    requires: Notification, registration or consent before work with ionising radiation; whether handling of ionisation smoke detectors is excluded under Schedule 1 was not read in this workstream.
+    arrangement: SESC-POL-05 v1.1 A23 paragraphs 130(c) and 131 (written confirmation from the site authority before mobilising on such a site)
+    evidence:
+      - record: Nil position stated in the signed POL-05
+        status: nil return
+    reg05: IP-03
+    reg02: none
+    owner: Health and Safety Officer
+    review: Before tendering for any work that may engage it (POL-05 paragraph 131); annual
+    last_evaluation: none yet
+
+  - ref: CO-29
+    topic: Employers' liability insurance
+    source: Employers' Liability (Compulsory Insurance) Act 1969 (1969 c. 57), sections 1 and 4; The Employers' Liability (Compulsory Insurance) Regulations 1998 (S.I. 1998/2573), regulations 3–5
+    source_url: https://www.legislation.gov.uk/ukpga/1969/57
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: The Employer as a whole; display at every place of business
+    requires: Insure against liability to employees with an authorised insurer, minimum £5,000,000 per occurrence; retain each certificate 40 years; display copies where employees work.
+    arrangement: SESC-POL-05 v1.1 Annex C (employers' liability — Iprism Underwriting, 26 July 2026 to 25 July 2027); SESC-IMS-04 v0.3 Part 8(m) and (r); Master Register F30, F32
+    evidence:
+      - record: Employers' liability certificate 2026–27
+        status: not verified
+        note: POL-05 Annex C records it as NOT VERIFIED — statutory certificate not held, with the schedule and the broker letter of 6 August 2026 giving different policy numbers. A file "SESC Solutions Ltd - Employers Liability - certificate and broker confirmation 2026-27.pdf" is present in ~/Documents/SESC/ISO/Insurance/ (listed 12 October 2026, not read in this workstream — Accounts Manager task, SESC-IMS-04 Part 8(m), 31 October 2026). Never in git
+      - record: Certificate displayed at Unit 19
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-10
+    reg02: none
+    owner: Accounts Manager
+    review: Annual, at renewal
+    last_evaluation: none yet
+
+  - ref: CO-30
+    topic: Display screen equipment
+    source: The Health and Safety (Display Screen Equipment) Regulations 1992 (S.I. 1992/2792), regulations 2, 5 and 6
+    source_url: https://www.legislation.gov.uk/uksi/1992/2792
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Office staff at Unit 19 who are users
+    requires: Analyse workstations; reduce risks; eye tests on request; training.
+    arrangement: NONE. Not addressed in any signed document (SESC-POL-05 read in full; Master Register 2k lists DSE as a candidate for POL-05 v1.2)
+    evidence:
+      - record: Workstation assessments for office users
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-01
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-31
+    topic: Safety signs
+    source: The Health and Safety (Safety Signs and Signals) Regulations 1996 (S.I. 1996/341), regulations 4 and 5
+    source_url: https://www.legislation.gov.uk/uksi/1996/341
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every site set-up; Unit 19
+    requires: Provide and maintain safety signs where the risk assessment shows other means are insufficient; train on their meaning.
+    arrangement: SESC-POL-05 v1.1 A3 paragraph 24 (site notices) is the nearest statement; the Regulations are not cited by name in any signed document
+    evidence:
+      - record: Site set-up signage checked on the weekly site inspection (SESC-FRM-07, draft)
+        status: not yet held
+        due: 2026-10-31
+        note: FRM-07 is not live; first inspection record follows record capture go-live
+    reg05: IP-11
+    reg02: none
+    owner: Health and Safety Officer
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-32
+    topic: Pressure systems
+    source: The Pressure Systems Safety Regulations 2000 (S.I. 2000/128), regulations 5, 8 and 9
+    source_url: https://www.legislation.gov.uk/uksi/2000/128
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — conditional
+    applies_to: Mechanical trade — unvented hot water, compressors and any installed pressure system with a relevant fluid; the user's written scheme is the customer's, the installer's duty is information and safe operating limits
+    requires: Written information and marking from designers and suppliers; the user holds a written scheme of examination before operation.
+    arrangement: SESC-POL-19 v1.1 Annex A row 17 (safe operating limits and examination requirements stated in the operating and maintenance manual) and Annex A row 8 (G3-qualified operatives)
+    evidence:
+      - record: O&M manual entries stating safe operating limits and examination requirements — per project
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; no handover record is in the system
+    reg05: IP-02
+    reg02: none
+    owner: Contracts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-33
+    topic: Working time
+    source: The Working Time Regulations 1998 (S.I. 1998/1833), regulations 4, 9–13
+    source_url: https://www.legislation.gov.uk/uksi/1998/1833
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: All workers; fatigue on site is an OH&S hazard
+    requires: 48-hour average limit unless opted out in writing; rest breaks and daily and weekly rest; paid annual leave; records kept two years.
+    arrangement: SESC-POL-10 v1.1 paragraph 10(d)
+    evidence:
+      - record: Written opt-outs and working-time records (Workspace — personal data)
+        status: not verified
+        note: Not in the three sources; not seen in this workstream
+    reg05: IP-01
+    reg02: none
+    owner: Accounts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-34
+    topic: Driving for work
+    source: Road Traffic Act 1988 (1988 c. 52), sections 87 and 143 (cause or permit)
+    source_url: https://www.legislation.gov.uk/ukpga/1988/52
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every employee or subcontractor driving on the Employer's business; the fleet
+    requires: Not cause or permit driving without a licence for the class, or without insurance; drivers' hours and load security (SESC-POL-01 paragraph 43).
+    arrangement: SESC-POL-05 v1.1 A12 paragraphs 68–73 (DVLA checks at recruitment and six-monthly; Driver Register); SESC-POL-01 v1.0 paragraph 43
+    evidence:
+      - record: Driver Register and six-monthly DVLA check cycle (Workspace — personal data)
+        status: not yet held
+        due: 2026-08-31
+        note: POL-05 paragraphs 69 and 172(m) — two individual checks in March 2026, no register or cycle; overdue
+      - record: Fleet motor insurance policy
+        status: not verified
+        note: Named as a dependency at SESC-POL-15 section 13; not read in this workstream
+    reg05: IP-01; IP-11
+    reg02: none
+    owner: Accounts Manager
+    review: Six-monthly checks; annual evaluation
+    last_evaluation: none yet
+
+  - ref: CO-35
+    topic: Building Regulations and competent person self-certification
+    source: The Building Regulations 2010 (S.I. 2010/2214), regulations 12 and 20, Schedule 1 Parts B, F, G, J, L and P, Schedule 3
+    source_url: https://www.legislation.gov.uk/uksi/2010/2214
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Mechanical (Parts G, J, L), electrical (Part P), renewables (Part L, Schedule 3 paragraph 15), building fabric and roofing (Parts B and L; Schedule 3 paragraph 16 replacement roof coverings), ventilation in mould and damp remediation (Part F)
+    requires: Building work to comply with Schedule 1; notify building control or self-certify through a registered competent person scheme, giving the occupier a certificate and the authority notice within 30 days.
+    arrangement: SESC-POL-19 v1.1 Annex A rows 4–9; SESC-POL-16 v1.2 paragraphs 2(b) and 38; SESC-POL-15 v1.2 section 9.2(b)
+    evidence:
+      - record: Competent person scheme notifications and certificates issued per job (NICEIC, Gas Safe, MCS)
+        status: not yet held
+        due: 2026-11-30
+        note: "Proposed; stated as issued (POL-19 paragraph 35) but no job record is in the system. Replacement roof coverings: the Employer is not registered with a Schedule 3 paragraph 16 scheme (NFRC is not a membership) — roof replacements therefore go through building control notification; the arrangement for that is not stated in any signed document"
+    reg05: IP-02; IP-09
+    reg02: none
+    owner: Contracts Manager
+    review: Annual; on each Approved Document change (S.I. 2026/335 and 2026/60 Part L effects pending)
+    last_evaluation: none yet
+
+  - ref: CO-36
+    topic: Building safety — competence and contractor duties
+    source: Building Safety Act 2022 (2022 c. 30), Part 3; The Building Regulations 2010 Part 2A, regulations 11F, 11J and 11L (inserted by The Building Regulations etc. (Amendment) (England) Regulations 2023, S.I. 2023/911)
+    source_url: https://www.legislation.gov.uk/uksi/2010/2214/part/2A
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade carrying out building work in England; the Employer does not act as principal designer or principal contractor for a higher-risk building (POL-19 Annex A row 3)
+    requires: Organisational capability and individual competence (11F); plan, manage and monitor, co-operate (11J); contractor duties — not start unless the client knows its duties, ensure compliance, supervise, provide information (11L).
+    arrangement: SESC-POL-19 v1.1 Annex A row 3; SESC-POL-05 v1.1 A4 (training and competence); SESC-POL-16 v1.2 Q4
+    evidence:
+      - record: Role-based competence register (SESC-IMS-00 Part 10 (l))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed at IMS-00 Part 10 (l); the Training Matrix held 22 expired qualifications against 20 current at 16 August 2026 (POL-05 paragraph 171(b))
+    reg05: IP-02
+    reg02: none
+    owner: Contracts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-37
+    topic: Construction products
+    source: The Construction Products Regulations 2013 (S.I. 2013/1387) and Regulation (EU) No 305/2011 (GB version), Articles 4–7 and 14
+    source_url: https://www.legislation.gov.uk/eur/2011/305/contents
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — as a distributor-type duty only
+    applies_to: Every trade installing construction products covered by a designated standard; the Employer manufactures and imports nothing (POL-19 paragraph 8)
+    requires: Products covered by a designated standard to carry the manufacturer's Declaration of Performance and marking; the person making them available checks the marking and documents (Article 14).
+    arrangement: SESC-POL-19 v1.1 sections 4–6 paragraphs 28–39 and Annex A rows 10–11 (verify the DoP and marking on receipt, pass to the customer, issue no declaration in the Employer's own name)
+    evidence:
+      - record: Declarations of Performance filed against each project and issued in the O&M manual (POL-19 paragraph 32)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; no project file is in the system
+    reg05: IP-02
+    reg02: none
+    owner: Contracts Manager
+    review: Annual; construction products reform under the Building Safety Act to be watched
+    last_evaluation: none yet
+
+  - ref: CO-38
+    topic: Product conformity regimes — electrical, pressure, machinery, RoHS, general product safety
+    source: The Electrical Equipment (Safety) Regulations 2016 (S.I. 2016/1101); The Pressure Equipment (Safety) Regulations 2016 (S.I. 2016/1105); The Supply of Machinery (Safety) Regulations 2008 (S.I. 2008/1597 — substantial amendment by S.I. 2026/867 pending); The Restriction of the Use of Certain Hazardous Substances in Electrical and Electronic Equipment Regulations 2012 (S.I. 2012/3032); The General Product Safety Regulations 2005 (S.I. 2005/1803)
+    source_url: https://www.legislation.gov.uk/uksi/2016/1101/contents
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — as a distributor-type duty only
+    applies_to: Every trade installing equipment bought from UK wholesalers; the Employer places nothing on the market (POL-19 paragraph 8). Under GPSR 2005 regulation 2 an installer whose activity affects a consumer product's safety properties falls within "producer"
+    requires: Supply only marked, documented, conforming products; act with due care; keep traceability; co-operate on recalls; hold no RoHS exemption and issue no declaration of the Employer's own.
+    arrangement: SESC-POL-19 v1.1 Annex A rows 12, 16, 18, 19 and 27; sections 4, 5, 6, 11 and 13 (paragraphs 28–39, 55–59, 65–66); SESC-POL-17 v1.1 (quarantine of unmarked product)
+    evidence:
+      - record: Declarations of conformity and incorporation checked and filed per project (POL-19 paragraph 30)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+      - record: Alert register (POL-19 paragraph 58)
+        status: not yet held
+        due: 2026-08-31
+        note: Opened on 31 August 2026 per POL-19; not in the system; overdue as a system record
+    reg05: IP-02
+    reg02: none
+    owner: Contracts Manager
+    review: Annual; re-check the 2008 Regulations once S.I. 2026/867 is applied
+    last_evaluation: none yet
+
+  - ref: CO-39
+    topic: Security of consumer connectable products
+    source: Product Security and Telecommunications Infrastructure Act 2022 (2022 c. 46), Part 1, sections 7, 21, 54 and 55(5); The Product Security and Telecommunications Infrastructure (Security Requirements for Relevant Connectable Products) Regulations 2023 (S.I. 2023/1007)
+    source_url: https://www.legislation.gov.uk/ukpga/2022/46/section/55
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Renewables, mechanical and electrical — inverters, battery systems, heat pump and heating controllers, building and lighting controls, detection and alarm equipment installed in consumers' homes (POL-19 paragraph 17). Section 55(5) treats installation under a works contract as a supply, so the Employer is a DISTRIBUTOR for Part 1
+    requires: Not supply a relevant connectable product without the manufacturer's statement of compliance; not supply where the manufacturer has a compliance failure; take action on notified failures.
+    arrangement: SESC-POL-19 v1.1 section 15 paragraphs 72–79 and Annex A row 28. POL-19 describes the requirements but does not name the Act; this register does
+    evidence:
+      - record: Manufacturer's security information and statement of compliance recorded and handed to the customer per job (POL-19 paragraph 74)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-02
+    reg02: none
+    owner: Contracts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-40
+    topic: Water fittings
+    source: The Water Supply (Water Fittings) Regulations 1999 (S.I. 1999/1148), regulations 4 and 5
+    source_url: https://www.legislation.gov.uk/uksi/1999/1148/regulation/5
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Mechanical trade — cylinders, booster pumps, non-domestic pipework alterations, backflow protection
+    requires: Fittings of appropriate quality installed to prevent contamination, waste and misuse; prior notice to the water undertaker for the regulation 5 operations unless an approved contractor exemption applies.
+    arrangement: SESC-POL-19 v1.1 Annex A row 26; SESC-POL-08 v1.1 paragraph 45(b) (approved fittings; backflow; disinfection certificate to the customer)
+    evidence:
+      - record: Regulation 5 notifications and consents, and disinfection certificates, per job
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; whether the Employer holds approved-contractor status under a water industry scheme is not recorded in any signed document and is not claimed
+    reg05: IP-02
+    reg02: none
+    owner: Contracts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-41
+    topic: Fluorinated greenhouse gases
+    source: The Fluorinated Greenhouse Gases Regulations 2015 (S.I. 2015/310), regulation 18; Regulation (EU) No 517/2014 (GB version), Articles 4, 10 and 11(5); gov.uk "Certification for companies working on equipment containing F gas"
+    source_url: https://www.legislation.gov.uk/eur/2014/517/article/10
+    source_checked: 2026-10-12
+    imposed_by: legislation (certification by an approved body — Refcom, Quidos F-Gas Register)
+    position: applies
+    applies_to: Renewables and mechanical — air source heat pumps and air-conditioning with a field-made refrigerant connection; recovery on decommissioning. Article 4(2) names stationary refrigeration, air-conditioning and heat pumps
+    requires: Company certification and certified personnel for installation, servicing, leak checking, recovery and decommissioning; recovery, never release; records; non-hermetic equipment supplied only against evidence of certified installation (Article 11(5)); employer ensures each individual holds the qualification (regulation 18).
+    arrangement: SESC-POL-08 v1.1 paragraphs 30(g), 41(f) and 48(c); SESC-POL-19 v1.1 Annex A row 23, paragraphs 70(c) and 95
+    evidence:
+      - record: Company certification Quidos FGAS3016462 (to 15 July 2027) and Refcom REF1021835 (to 9 July 2027), as recorded at SESC-POL-05 Annex C and SESC-POL-16 Annex C
+        status: not verified
+        note: Certificates not read in this workstream; not checked on the Refcom or F-Gas Register directories
+      - record: F-gas handling records per job (POL-08 paragraph 30(g))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; POL-08 Annex B lists no F-gas record
+    reg05: IP-09
+    reg02: none
+    owner: Environmental Manager
+    review: Annual; three months before each expiry
+    last_evaluation: none yet
+
+  # ===================================================================================
+  # PART B — ENVIRONMENT (ISO 14001 6.1.3 — unverified edition)
+  # ===================================================================================
+
+  - ref: CO-42
+    topic: Waste — duty of care, classification and transfer
+    source: Environmental Protection Act 1990 (1990 c. 43), sections 33 and 34; The Waste (England and Wales) Regulations 2011 (S.I. 2011/988), regulation 12 (waste hierarchy); the List of Wastes as applied through The Hazardous Waste (England and Wales) Regulations 2005 (the List of Wastes (England) Regulations 2005 were revoked 1 July 2015)
+    source_url: https://www.legislation.gov.uk/ukpga/1990/43/section/34
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade; every site; Unit 19 — all construction waste the Employer produces, carries or arranges removal of
+    requires: Prevent escape; transfer only to an authorised person with a written description (transfer note, retained two years); apply the waste hierarchy; classify with the correct six-digit code; no unauthorised deposit.
+    arrangement: SESC-POL-08 v1.1 E6 paragraphs 31–35 (hierarchy; classification; transfer notes; Waste Register); SESC-POL-19 v1.1 Annex A row 25; SESC-POL-12 v1.1 paragraph 6 (flow-down)
+    evidence:
+      - record: Waste transfer notes for every non-hazardous movement (POL-08 paragraph 34(c))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. POL-08 asserts the notes in the present tense; none is in the system
+      - record: Waste Register recording every movement (POL-08 paragraph 35)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. POL-08 asserts the register; REG-05 IP-07 records that no populated waste register exists; SESC-REG-07 lists it among the eight registers POL-08 asserts that do not exist
+    reg05: IP-07 (duty of care; EWC classification; transfer and consignment notes)
+    reg02: none
+    owner: Environmental Manager
+    review: Annual; quarterly waste reporting (POL-08 paragraph 35)
+    last_evaluation: none yet
+
+  - ref: CO-43
+    topic: Waste carrier registration — and its replacement by permitting from 2027
+    source: Control of Pollution (Amendment) Act 1989 (1989 c. 14), section 1; The Waste (England and Wales) Regulations 2011 (S.I. 2011/988), Part 8 regulations 25–31 and regulation 24(5)(e); gov.uk "Register as a waste carrier, broker or dealer"; The Environmental Permitting (Waste Controlling or Transporting) and Relevant Functions of Primary Authorities (Amendment) (England) Regulations 2026 (S.I. 2026/873)
+    source_url: https://www.legislation.gov.uk/uksi/2011/988/regulation/24
+    source_checked: 2026-10-12
+    imposed_by: legislation; regulator — Environment Agency
+    position: applies
+    applies_to: The Employer's vans carrying construction waste from every site; brokering or dealing where removal is arranged for a customer
+    requires: >
+      Today — be a registered carrier under the 1989 Act. Regulation 24(5)(e) excludes from the own-waste
+      ("specified person", lower tier) category "a carrier which only transports waste produced by the
+      carrier itself, except where it is construction or demolition waste", and defines construction to
+      include "improvement, repair and alteration": the Employer carries construction waste, so it needs
+      the full (upper tier) registration, renewed every three years (gov.uk: £130.25), with changes
+      notified within 28 days. From Part 2 of S.I. 2026/873 (made 22 July 2026 per its introductory
+      text; Part 2 in force at the end of twelve months beginning with that day — July 2027; the printed
+      date is to be confirmed) — waste transporting in England becomes a regulated facility under the
+      Environmental Permitting Regulations 2016 requiring an environmental permit or registration of an
+      exempt activity; the 1989 Act ceases to apply in England; existing registrations transition under
+      regulation 28. The gov.uk service page read on 12 October 2026 does not yet mention the change.
+    arrangement: SESC-POL-08 v1.1 paragraph 34(a) (registration asserted, no number or tier; checked annually against the public register; changes notified within 28 days); SESC-POL-19 v1.1 Annex A row 25 (CBDL569181 — superseded, see evidence; to be corrected to CBDU663802 at POL-19 v1.2)
+    evidence:
+      - record: Waste carrier registration CBDU663802, upper tier — SESC SOLUTIONS LTD, company 07606236, "Carrier Dealer - Upper Tier", registered 01/10/2026, expiry 01/10/2029
+        status: held
+        note: >
+          Registration reported received by the Chief Operating Officer on 22 October 2026 and confirmed the same
+          day on the Environment Agency public register (the record below). Upper tier is the tier this row
+          requires. The registration is carrier and dealer only, not broker: if removal of waste is ever arranged
+          on a customer's behalf, brokering is not covered and the registration must be varied first (Environmental
+          Manager to confirm whether that activity occurs). The registered address on the public register reads
+          "MELBURY BUSINESS PARK, WEST MELBURY, SHAFTESBURY, SP7 0AF" with no unit number; the Employer's documents
+          say Unit 19. To be checked against the lease and corrected with the Environment Agency if wrong (changes
+          are notifiable within 28 days). The certificate itself is not yet filed in the three sources — see
+          not_yet_held below
+      - record: Public register check, dated — SESC-REC-05, 22 October 2026 (environment.data.gov.uk register of waste carriers, brokers and dealers)
+        status: held
+        note: >
+          Query of https://environment.data.gov.uk/public-register/waste-carriers-brokers/registration/CBDU663802
+          on 22 October 2026, made by Claude at the Chief Operating Officer's direction, fields recorded verbatim in
+          portal/records-index.yaml SESC-REC-05. The same query of CBDL569181 (the number at POL-19 Annex A row 25)
+          found it still listed as "sesc solutions", "Carrier, Broker, Dealer - Lower Tier", registered 05/02/2025,
+          address "UNIT 9, MELBURY BUSINESS PARK" — a lower-tier registration, which was never sufficient for
+          construction waste (regulation 24(5)(e)), now superseded by CBDU663802. Whether the Environment Agency
+          has cancelled it is not shown on the register. POL-08 paragraph 34(a) requires this check annually; the
+          next is due 22 October 2027 unless the S.I. 2026/873 transition overtakes it
+      - record: Copy of the CBDU663802 registration certificate filed in ~/Documents/SESC/ISO/Signed/ alongside the SESC-REG-04 certificate set, and indexed in SESC-REG-04
+        status: not yet held
+        due: 2026-10-31
+        owner: Chief Operating Officer
+      - record: Confirmation from the Environment Agency that CBDL569181 is cancelled or superseded, so that only one registration for the Employer appears on the public register
+        status: not yet held
+        due: 2026-11-30
+        owner: Environmental Manager
+      - record: Transition plan for S.I. 2026/873 (permit or exempt-activity registration in place before Part 2 commences)
+        status: not yet held
+        due: 2027-03-31
+        note: Proposed. A new obligation, not addressed in any signed document
+    reg05: IP-07 (registration at the correct tier)
+    reg02: none
+    owner: Environmental Manager
+    review: Annual; and before July 2027
+    last_evaluation: none yet
+
+  - ref: CO-44
+    topic: Hazardous waste
+    source: The Hazardous Waste (England and Wales) Regulations 2005 (S.I. 2005/894), Part 6 regulations 35–37 and 45; premises notification (Part 5) omitted from 1 April 2016 by S.I. 2016/336
+    source_url: https://www.legislation.gov.uk/uksi/2005/894
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Every trade — asbestos-containing material, fluorescent tubes, batteries, waste oils, solvent and sealant residues, refrigerants, POPs waste (CO-53)
+    requires: Consignment note for every movement; consignee returns; records retained three years; prompt delivery. No premises registration since 1 April 2016.
+    arrangement: SESC-POL-08 v1.1 paragraph 34(d) and Annex B; SESC-POL-19 v1.1 paragraphs 63–64. POL-08 paragraph 34(d) says "Where required, the premises are registered as a hazardous waste producer" — the requirement was removed in 2016; the sentence is stale and is to be corrected at POL-08 v1.2
+    evidence:
+      - record: Consignment notes and consignee returns (POL-08 paragraph 34(d))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; asserted by POL-08, none in the system
+    reg05: IP-07
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-45
+    topic: Waste electrical and electronic equipment
+    source: The Waste Electrical and Electronic Equipment Regulations 2013 (S.I. 2013/3113), regulations 47 and 48
+    source_url: https://www.legislation.gov.uk/uksi/2013/3113
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Electrical, mechanical and renewables — removed boilers, heat pumps, luminaires, lamps, inverters, batteries
+    requires: Route WEEE to an authorised treatment facility or approved exporter; optimise reuse and recycling; keep transfer evidence. Producer obligations do not apply (nothing placed on the market).
+    arrangement: SESC-POL-08 v1.1 paragraphs 12 and 49(c); SESC-POL-19 v1.1 Annex A row 24 and Annex C; SESC-POL-13 v1.5 paragraph 39(f) (IT equipment)
+    evidence:
+      - record: Transfer notes to licensed WEEE routes (within CO-42)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-07
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-46
+    topic: Environmental permitting — discharges and regulated facilities
+    source: The Environmental Permitting (England and Wales) Regulations 2016 (S.I. 2016/1154), regulations 12 and 38; Water Resources Act 1991 (1991 c. 57) section 161A (works notices — section 85 was repealed in 2010)
+    source_url: https://www.legislation.gov.uk/uksi/2016/1154/regulation/12
+    source_checked: 2026-10-12
+    imposed_by: legislation; regulator — Environment Agency
+    position: nil position — no permit held and no discharge made; the pollution offence applies to every site
+    applies_to: Every site near a drain or watercourse; Unit 19 yard; receiving facilities the Employer uses
+    requires: No water discharge or groundwater activity without a permit; no operation of a regulated facility without a permit or exemption; verify the permits of facilities receiving the Employer's waste.
+    arrangement: SESC-POL-08 v1.1 paragraphs 43 and 83 (no permit, no consent, no discharge — nil position), 30(b), 36–38 (drain protection, spill response, Environment Agency hotline 0800 80 70 60), 34(b) (facility permits verified against the public register and re-verified annually)
+    evidence:
+      - record: Nil position stated in the signed POL-08
+        status: nil return
+      - record: Copies of receiving facilities' permits or exemptions, re-verified annually (POL-08 paragraph 34(b))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; POL-08 asserts this; none in the system
+      - record: Spill kit monthly checks and annual emergency exercise (POL-08 paragraph 38)
+        status: not yet held
+        due: 2027-01-31
+        note: SESC-IMS-00 Part 10 (s), proposed
+    reg05: IP-07; IP-11
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-47
+    topic: Oil storage
+    source: The Control of Pollution (Oil Storage) (England) Regulations 2001 (S.I. 2001/2954), regulations 2, 3 and 5
+    source_url: https://www.legislation.gov.uk/uksi/2001/2954
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — conditional (containers over 200 litres, and mobile bowsers)
+    applies_to: Unit 19 yard and any site fuel store; roofing (bitumen plant fuel), mechanical (oil)
+    requires: Containers of sufficient strength; secondary containment of 110% of the largest container; impermeable bund; drip trays.
+    arrangement: SESC-POL-08 v1.1 paragraphs 30(a) and 43 (bunded storage, 110% containment, drip trays)
+    evidence:
+      - record: Inventory of oil and fuel containers over 200 litres, with bund inspection record
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. Whether any container over 200 litres exists at Unit 19 or on site is not recorded in the three sources; the position cannot be marked nil until it is
+    reg05: IP-07; IP-11
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-48
+    topic: Trade effluent
+    source: Water Industry Act 1991 (1991 c. 56), section 118
+    source_url: https://www.legislation.gov.uk/ukpga/1991/56/section/118
+    source_checked: 2026-10-12
+    imposed_by: legislation; water undertaker
+    position: nil position — no consent held; applies on any yard washdown or system-water discharge to foul sewer
+    applies_to: Unit 19 yard; mechanical (system water with inhibitor, biocide or glycol); mould and damp remediation wash water
+    requires: Discharge trade effluent to a public sewer only with the undertaker's consent.
+    arrangement: SESC-POL-08 v1.1 paragraphs 80(f) and 83(c) (written consent of the undertaker obtained by the Environmental Manager before any such discharge; otherwise removal by licensed carrier)
+    evidence:
+      - record: Nil position — no trade effluent consent held (POL-08)
+        status: nil return
+    reg05: IP-07
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-49
+    topic: Air, smoke, dust and noise nuisance
+    source: Clean Air Act 1993 (1993 c. 11), section 2; Environmental Protection Act 1990 (1990 c. 43), Part III section 79; Control of Pollution Act 1974 (1974 c. 40), sections 60 and 61
+    source_url: https://www.legislation.gov.uk/ukpga/1974/40/section/60
+    source_checked: 2026-10-12
+    imposed_by: legislation; local authority
+    position: applies
+    applies_to: Every site — cutting, breaking, plant, deliveries; Unit 19
+    requires: No dark smoke or burning of waste on site; dust, fumes and noise not to amount to a statutory nuisance; comply with any section 60 notice; section 61 prior consent available.
+    arrangement: SESC-POL-08 v1.1 paragraphs 30(c)–(e), 41–42 and 45(f) (no burning; water suppression or Class M/H extraction; permitted hours agreed with the client or local authority; neighbour notice); SESC-POL-09 v1.0 paragraph 22
+    evidence:
+      - record: Permitted-hours agreements and neighbour notices per project; complaints record (POL-09 paragraph 22(g))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. No section 61 consent has been applied for and none is recorded as needed
+    reg05: IP-11 (dust, noise, vibration and run-off controlled)
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-50
+    topic: Wild birds and invasive species
+    source: Wildlife and Countryside Act 1981 (1981 c. 69), sections 1 and 14 and Schedule 9
+    source_url: https://www.legislation.gov.uk/ukpga/1981/69/section/1
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: Roofing, building fabric, renewables — roofs, soffits, fascias, lofts, chimneys, external fabric; soil and plant material moved from sites
+    requires: Not kill, injure or take wild birds, nor damage or destroy a nest in use; not cause Schedule 9 plants to grow in the wild (due-diligence defence).
+    arrangement: SESC-POL-08 v1.1 E13 paragraphs 69(a)–(b), 70 and 77 (pre-work check recorded in the RAMS; nesting season March to August; invasive species left undisturbed and reported)
+    evidence:
+      - record: Pre-work protected-species check recorded in each RAMS (POL-08 paragraph 69(a))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; no RAMS is in the system
+    reg05: IP-11 (protected species not to be disturbed)
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-51
+    topic: Bats and other European protected species
+    source: The Conservation of Habitats and Species Regulations 2017 (S.I. 2017/1012), regulations 42 and 43 and Schedule 2 (which lists horseshoe and typical bats)
+    source_url: https://www.legislation.gov.uk/uksi/2017/1012/regulation/43
+    source_checked: 2026-10-12
+    imposed_by: legislation; licences from Natural England
+    position: applies
+    applies_to: Roofing, building fabric, renewables, mould and damp remediation in lofts and voids
+    requires: Not deliberately capture, injure, kill or disturb; not damage or destroy a breeding site or resting place (not qualified by "deliberately"); work only under a licence where a roost is affected.
+    arrangement: SESC-POL-08 v1.1 paragraphs 30(f) and 69(c) (stop work; licensed ecologist; Natural England licence before resuming)
+    evidence:
+      - record: Pre-work check and any stop-work record in the RAMS; ecologist's advice and licence where obtained
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-11
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-52
+    topic: Chemicals — UK REACH
+    source: Regulation (EC) No 1907/2006 (UK REACH, GB version), Article 33; The REACH Enforcement Regulations 2008 (S.I. 2008/2852)
+    source_url: https://www.legislation.gov.uk/eur/2006/1907/article/33
+    source_checked: 2026-10-12
+    imposed_by: legislation; HSE maintains the Candidate List
+    position: applies — as a downstream user and, where articles are supplied onward, as a supplier
+    applies_to: Every trade — sealants, adhesives, solvents, fluxes, heat-transfer fluids; articles installed and handed over
+    requires: Pass on information on substances of very high concern above 0.1% w/w in articles supplied; answer a consumer's request within 45 days; use substances only for identified uses with safety data sheets.
+    arrangement: SESC-POL-05 v1.1 A14 paragraphs 82–85; SESC-POL-08 v1.1 paragraphs 46(a)–(f); SESC-POL-16 v1.2 Q18 paragraphs 58–59; SESC-POL-19 v1.1 Annex A row 20 (which cites "Sections 12 and section 18 of SESC-POL-16" — an ambiguous cross-reference to be corrected at POL-19 v1.2). POL-05 Annex A 2.6.4.15 cites "Legal Register entry H024" — a reference into the superseded 2020 register; this row replaces it
+    evidence:
+      - record: Safety data sheets and Candidate List checks in the project COSHH register (CO-12)
+        status: not yet held
+        due: 2026-08-31
+        note: Overdue with CO-12
+      - record: Dated Candidate List check at each annual review (POL-08 paragraph 46(f))
+        status: not yet held
+        due: 2027-08-14
+        note: POL-08 paragraph 46(f) states the List "was last expanded on 15 June 2026, when fifteen substances were added" — not verified on the HSE site in this workstream
+    reg05: IP-02; IP-06
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-53
+    topic: Persistent organic pollutants in waste
+    source: Regulation (EU) 2019/1021 (GB version), Article 7; The Persistent Organic Pollutants (Amendment) Regulations 2025 (S.I. 2025/296), (No. 2) (S.I. 2025/297) and (No. 3) (S.I. 2025/605)
+    source_url: https://www.legislation.gov.uk/eur/2019/1021/article/7
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — conditional
+    applies_to: Building fabric and mould and damp remediation strip-outs (old insulation, upholstered items), electrical (pre-1980s luminaire capacitors, WEEE plastics), sealants
+    requires: Avoid contaminating waste with Annex IV substances; dispose of POPs waste so the POP is destroyed, never recycled; records.
+    arrangement: SESC-POL-08 v1.1 paragraphs 49(a)–(f) (segregation; consignment to a permitted facility for destruction; stop-and-ask briefing). POL-08 paragraph 49(a) describes the 2025 amendment; three 2025 instruments exist, which POL-08 names as one
+    evidence:
+      - record: Consignment notes and consignee returns for POPs waste with the destruction route recorded (POL-08 paragraph 49(d))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-07
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-54
+    topic: Packaging producer responsibility — threshold test
+    source: The Producer Responsibility Obligations (Packaging and Packaging Waste) Regulations 2024 (S.I. 2024/1332), regulations 23 and 24
+    source_url: https://www.legislation.gov.uk/uksi/2024/1332/regulation/24
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: below threshold — tested annually
+    applies_to: The Employer as a whole
+    requires: "Registration, data reporting and fees for producers above the thresholds — large: turnover over £2,000,000 and over 50 tonnes of packaging; small: over £1,000,000 and over 25 tonnes. Below both tests, no obligation."
+    arrangement: NONE. SESC-POL-08 v1.1 paragraph 16 lists "Packaging Waste Regulations" without a year or a position
+    evidence:
+      - record: Annual dated test of the turnover and tonnage thresholds
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. The tonnage test is almost certainly not met; it has not been evaluated, and turnover is stated nowhere in this register
+    reg05: IP-07
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-55
+    topic: Energy and carbon reporting — threshold tests
+    source: The Companies (Directors' Report) and Limited Liability Partnerships (Energy and Carbon Report) Regulations 2018 (S.I. 2018/1155) — Schedule 7 Part 7A to S.I. 2008/410, paragraph 20B; The Energy Savings Opportunity Scheme Regulations 2014 (S.I. 2014/1643), Schedule 1 paragraphs 1 and 1A
+    source_url: https://www.legislation.gov.uk/uksi/2014/1643/schedule/1
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: below threshold — tested annually
+    applies_to: The Employer as a whole
+    requires: SECR energy and carbon reporting in the directors' report unless two of three tests are met (the Part 7A page shows £36m turnover, £18m balance sheet, 250 employees; Companies Act section 465 now reads £54m/£27m/250 — the page may lag) or UK energy use is 40,000 kWh or less; ESOS for large undertakings (250 employees, or turnover over £44m and balance sheet over £38m).
+    arrangement: SESC-POL-09 v1.0 paragraph 28 ("We are below every statutory threshold for both" — no statute named); SESC-CRP-01 v1.0 paragraph 19 states Scope 1 and 2 "have been reported in accordance with SECR requirements" while Scope 2 is marked to be completed
+    evidence:
+      - record: Annual dated test against the thresholds, resting on filed statutory accounts
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. No statutory accounts have been filed since the year ended 31 March 2022 (CO-62), so neither test can yet be evidenced; headcount and turnover are stated nowhere in this register
+    reg05: IP-02 (Carbon Reduction Plan); IP-15
+    reg02: none
+    owner: Managing Director
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-56
+    topic: Timber — traceability
+    source: Regulation (EU) No 995/2010 (GB version), Articles 4 and 5; The Timber and Timber Products (Placing on the Market) Regulations 2013 (S.I. 2013/233)
+    source_url: https://www.legislation.gov.uk/eur/2010/995/article/5
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — as a trader, not an operator
+    applies_to: Roofing and building fabric timber bought from UK merchants; the Employer imports no timber
+    requires: As a trader, identify the supplier of timber and, where applicable, the customer, and keep that information five years (Article 5). Operator due diligence (Article 4) falls on the first placer on the GB market.
+    arrangement: SESC-POL-08 v1.1 paragraphs 54 and 75 (FSC or PEFC chain-of-custody evidence from suppliers, retained — Annex B five years); SESC-POL-09 v1.0 paragraph 16(b); SESC-POL-12 v1.1 paragraph 6
+    evidence:
+      - record: Supplier chain-of-custody evidence retained per purchase (POL-08 Annex B)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; asserted by POL-08, none in the system. POL-09 paragraph 12 says timber "is FSC or PEFC certified" — no record supports the present tense
+    reg05: IP-12
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-57
+    topic: Biodiversity net gain
+    source: Environment Act 2021 (2021 c. 30), Schedule 14 (section 90A and Schedule 7A, Town and Country Planning Act 1990)
+    source_url: https://www.legislation.gov.uk/ukpga/2021/30/schedule/14
+    source_checked: 2026-10-12
+    imposed_by: legislation; planning authority
+    position: applies — conditional (only where the Employer is the planning applicant, or is passed habitat-management duties under a client's biodiversity gain plan)
+    applies_to: Renewables (ground-mounted PV needing planning permission); otherwise the client's duty
+    requires: Development not to begin until a biodiversity gain plan is approved; at least 10% gain.
+    arrangement: SESC-POL-08 v1.1 paragraph 78 (works to the client's biodiversity gain plan where the development is subject to it)
+    evidence:
+      - record: Nil position — no project yet recorded where the Employer is the applicant
+        status: nil return
+        note: Nothing in the three sources records such a project; re-tested each cycle
+    reg05: IP-11
+    reg02: none
+    owner: Environmental Manager
+    review: Annual; each project at readiness review
+    last_evaluation: none yet
+
+  - ref: CO-58
+    topic: Ozone-depleting substances — legacy equipment
+    source: The Ozone-Depleting Substances Regulations 2015 (S.I. 2015/168), enforcing Regulation (EC) No 1005/2009
+    source_url: https://www.legislation.gov.uk/uksi/2015/168
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies — conditional (only when recovering, servicing or decommissioning pre-2004 R22 or similar equipment, or ODS-containing foam)
+    applies_to: Mechanical and renewables decommissioning of legacy air-conditioning; building fabric strip-out of old foam insulation
+    requires: Only qualified persons; recovery for destruction; no venting.
+    arrangement: NONE named. SESC-POL-08 v1.1 does not address ozone-depleting substances; its refrigerant paragraphs (30(g), 41(f)) cover F-gas only
+    evidence:
+      - record: Position statement on legacy ODS equipment, and recovery records where it is met
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-09
+    reg02: none
+    owner: Environmental Manager
+    review: Annual
+    last_evaluation: none yet
+
+  # ===================================================================================
+  # PART C — DATA PROTECTION, EMPLOYMENT, CORPORATE AND BUSINESS CONDUCT
+  # Legal requirements the signed policies commit the Employer to. They are recorded so that the
+  # register is the one place every obligation lives; they are not OH&S or environmental
+  # obligations and no clause beyond those in the front matter is claimed for them.
+  # ===================================================================================
+
+  - ref: CO-59
+    topic: Data protection
+    source: Regulation (EU) 2016/679 (United Kingdom General Data Protection Regulation), Articles 5, 28, 30 and 33; Data Protection Act 2018 (2018 c. 12), including section 170
+    source_url: https://www.legislation.gov.uk/eur/2016/679/contents
+    source_checked: 2026-10-12
+    imposed_by: legislation; regulator — Information Commissioner's Office
+    position: applies
+    applies_to: The Employer as controller — personnel, health, DBS and vetting, customer, CCTV and telematics data
+    requires: Lawful, documented processing; record of processing activities (Article 30 — the fewer-than-250 exemption does not apply because the processing is not occasional and includes special category data); processor contracts (Article 28); breach notification within 72 hours (Article 33).
+    arrangement: SESC-POL-14 v1.3 paragraphs 9–41 and Annexes A–E; SESC-POL-13 v1.5 Annex D; SESC-POL-01 v1.0 paragraphs 31–32
+    evidence:
+      - record: Record of processing activities complete and verified (POL-14 Annex A — four rows marked "No records exist"; intro reads "Complete and verify every row before this policy is issued")
+        status: not yet held
+        due: 2026-10-31
+        note: SESC-REG-01 G2 action, October 2026; REG-05 IP-08
+      - record: Staff, customer and applicant privacy notices issued
+        status: not yet held
+        due: 2026-10-31
+        note: POL-14 paragraphs 14(a)–(c) — 30 September 2026 (staff, applicants; overdue) and 31 October 2026 (customers)
+      - record: Written processor contracts with the Article 28 terms (POL-14 paragraph 29)
+        status: not yet held
+        due: 2026-10-31
+    reg05: IP-08 (UK GDPR compliance; a customer's express audit right)
+    reg02: OB-E02 (any security or data protection incident)
+    owner: Accounts Manager (Data Protection Lead)
+    review: Annual (POL-14 paragraph 41)
+    last_evaluation: none yet
+
+  - ref: CO-60
+    topic: Data protection fee
+    source: The Data Protection (Charges and Information) Regulations 2018 (S.I. 2018/480), regulation 3 and the Schedule (as amended by S.I. 2025/63 from 17 February 2025); ICO public register at ico.org.uk/ESDWebPages/Search
+    source_url: https://www.legislation.gov.uk/uksi/2018/480/regulation/3
+    source_checked: 2026-10-12
+    imposed_by: legislation; regulator — Information Commissioner's Office
+    position: applies
+    applies_to: The Employer as controller
+    requires: Pay the annual fee and appear on the register unless every processing purpose is exempt (the Employer's CCTV, telematics and customer processing take it outside the exemption — POL-14 paragraph 5). Tier 1 £52 where turnover is £632,000 or less OR staff are 10 or fewer; tier 2 £78 where turnover is £36m or less or staff 250 or fewer; tier 3 £3,763.
+    arrangement: SESC-POL-14 v1.3 paragraph 5 ("The Employer's registration position is being confirmed with the Information Commissioner's Office … Until that row is completed, this document does not assert that a registration is in place"); Approval block rows for the registration reference and renewal date are blank
+    evidence:
+      - record: Dated query of the ICO public register (the absence recorded at Master Register F7 and REG-05 IP-08 is UNVERIFIED — the register has not been queried)
+        status: not yet held
+        due: 2026-10-31
+        note: Was due 30 September 2026 (REG-05 IP-08); overdue. Not queried in this workstream
+      - record: Fee paid and registration reference recorded in the POL-14 Approval block
+        status: not yet held
+        due: 2026-10-31
+        note: The tier turns on turnover, which this register does not state; the Managing Director decides the spend
+    reg05: IP-08 (data protection fee paid and registration held)
+    reg02: none
+    owner: Accounts Manager (Data Protection Lead); Managing Director for the fee
+    review: Annual, at renewal
+    last_evaluation: none yet
+
+  - ref: CO-61
+    topic: Employment — written particulars, pay, working time, right to work
+    source: Employment Rights Act 1996 (1996 c. 18), section 1; National Minimum Wage Act 1998 (1998 c. 39) and The National Minimum Wage Regulations 2015 (S.I. 2015/621) — rates from 1 April 2026 per gov.uk £12.71 (21+), £10.85 (18–20), £8.00 (under 18 and apprentice); Immigration, Asylum and Nationality Act 2006 (2006 c. 13), sections 15–25 (statutory excuse)
+    source_url: https://www.gov.uk/national-minimum-wage-rates
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: All employees; subcontractors for right-to-work and flow-down
+    requires: Written statement of particulars by the first day; pay at or above the statutory rates; right-to-work check before the start date with the dated copy retained (statutory excuse); working time at CO-33.
+    arrangement: SESC-POL-10 v1.1 paragraphs 10(b), 10(c), 10(h), 11–12 (the Real Living Wage commitment and the rate-check record at 12(d)); SESC-POL-13 v1.5 B5(b); SESC-POL-14 Annex A (right-to-work retention)
+    evidence:
+      - record: Right-to-work register reconciled to payroll and the subcontractor list (POL-10); written particulars on each personnel file — Workspace, personal data
+        status: not verified
+        note: Not in the three sources; not seen in this workstream
+      - record: Real Living Wage rate-check record with date and name (POL-10 paragraph 12(d))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. SESC-REG-01 F1 and REG-05 IP-01 record that four people were paid below the rate stated to a Government customer; Gary confirmed on 17 August 2026 that everyone other than four named apprentices is now above the rate
+    reg05: IP-01 (pay at or above the Real Living Wage where committed); IP-12
+    reg02: none
+    owner: Accounts Manager
+    review: Annual, and at each April uprating
+    last_evaluation: none yet
+
+  - ref: CO-62
+    topic: Company accounts
+    source: Companies Act 2006 (2006 c. 46), sections 441, 442 and 453
+    source_url: https://www.legislation.gov.uk/ukpga/2006/46/section/441
+    source_checked: 2026-10-12
+    imposed_by: legislation; Companies House
+    position: applies
+    applies_to: The Employer as a private company — nine months after each accounting reference date
+    requires: Deliver accounts and reports for each financial year to the registrar within the period allowed; civil penalties for late filing.
+    arrangement: NONE in a signed policy. SESC-REG-01 v1.0 E2 and SESC-REG-05 IP-15 record the position
+    evidence:
+      - record: Filed accounts for the years ended 31 March 2023, 2024 and 2025
+        status: not yet held
+        due: 2026-11-30
+        note: SESC-REG-01 E2 — none filed since the year ended 31 March 2022; the action is the Managing Director's with a November 2026 target. Every threshold test in this register (CO-54, CO-55, CO-60) rests on the figures these accounts will give
+    reg05: IP-15 (statutory accounts filed)
+    reg02: none
+    owner: Managing Director
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-63
+    topic: Construction Industry Scheme and automatic enrolment
+    source: Finance Act 2004 (2004 c. 12), Part 3 Chapter 3, sections 61, 69 and 70; Pensions Act 2008 (2008 c. 30), section 3
+    source_url: https://www.legislation.gov.uk/ukpga/2004/12/part/3/chapter/3
+    source_checked: 2026-10-12
+    imposed_by: legislation; HMRC; The Pensions Regulator
+    position: applies
+    applies_to: Payments to subcontractors (CIS); all jobholders (auto-enrolment)
+    requires: Verify each subcontractor with HMRC, deduct at the set rate, make monthly returns and payment statements; enrol eligible jobholders in a qualifying pension scheme.
+    arrangement: NONE in any signed document. Neither the Scheme nor automatic enrolment is named in the twenty-one signed documents (read in full 12 October 2026)
+    evidence:
+      - record: CIS monthly returns and verification records; pension scheme declaration of compliance
+        status: not verified
+        note: Payroll and HMRC records are the Accounts Manager's and are not in the three sources; not seen in this workstream
+    reg05: IP-15; IP-12
+    reg02: none
+    owner: Accounts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-64
+    topic: Equality, including the duty to prevent sexual harassment
+    source: Equality Act 2010 (2010 c. 15), including section 40A (in force 26 October 2024; the Employment Rights Act 2025 section 20 insertion of "all" is prospective and uncommenced)
+    source_url: https://www.legislation.gov.uk/ukpga/2010/15/section/40A
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: All employees & subcontractors, applicants, customers and visitors; every site
+    requires: No discrimination, harassment or victimisation; reasonable adjustments; take reasonable steps to prevent sexual harassment, including by third parties.
+    arrangement: "SESC-POL-11 v1.1 paragraphs 13–17 (the written sexual harassment risk assessment at 17(a): \"Not having carried out this risk assessment is, by itself, a failure of the duty\"), 27, 32; SESC-POL-07 v1.1 paragraph 16(f); SESC-POL-12 v1.1 paragraphs 8 and 14"
+    evidence:
+      - record: Written sexual harassment risk assessment, reviewed annually (POL-11 paragraph 17(a))
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed — POL-11 gives no date; no record is in the system
+      - record: EDI Action Plan and Board annual review (POL-11 paragraphs 21 and 37)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+    reg05: IP-01
+    reg02: OB-A09 (annual policy review)
+    owner: Accounts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-65
+    topic: Modern slavery
+    source: Modern Slavery Act 2015 (2015 c. 30), section 54; The Modern Slavery Act 2015 (Transparency in Supply Chains) Regulations 2015 (S.I. 2015/1833), regulation 2 (£36,000,000)
+    source_url: https://www.legislation.gov.uk/ukpga/2015/30/section/54
+    source_checked: 2026-10-12
+    imposed_by: legislation; customer flow-down (QinetiQ Supplier Code of Conduct; SNG)
+    position: below threshold — statement published voluntarily; re-tested annually
+    applies_to: The Employer and its supply chain
+    requires: Section 54 statement only at or above £36m turnover; the Employer commits to a voluntary annual statement, GLAA licence checks on labour providers and supply-chain due diligence.
+    arrangement: SESC-POL-10 v1.1 paragraphs 5, 15–21 and 31; SESC-POL-12 v1.1 paragraph 7
+    evidence:
+      - record: Published Modern Slavery Statement, reviewed annually (POL-10 paragraph 5)
+        status: not verified
+        note: Not in the three sources; whether a statement is on the website was not checked in this workstream
+      - record: Supply chain modern slavery risk assessment with revision date; GLAA register checks recorded (POL-10 paragraphs 18 and 21)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; no record in the system
+    reg05: IP-12; IP-03
+    reg02: OB-A09
+    owner: Contracts Manager (supply chain); Accounts Manager (people)
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-66
+    topic: Bribery
+    source: Bribery Act 2010 (2010 c. 23), section 7 (failure to prevent) and section 9 guidance
+    source_url: https://www.legislation.gov.uk/ukpga/2010/23/section/7
+    source_checked: 2026-10-12
+    imposed_by: legislation; customer flow-down (QinetiQ Supplier Code of Conduct)
+    position: applies
+    applies_to: All Staff; suppliers and subcontractors; public sector and defence tendering
+    requires: Adequate procedures designed to prevent bribery by associated persons — the section 7(2) defence.
+    arrangement: SESC-POL-01 v1.0 paragraphs 20–23 (the Code, POL-02 and POL-03 "form part of the procedures maintained by the Employer for the purposes of section 7"); SESC-POL-02 v1.0 (Register of Interests); SESC-POL-12 v1.1 paragraph 9
+    evidence:
+      - record: Register of Interests with entries; Annual Declaration of Interests returns; signed Code acknowledgements (POL-02 Annex B; POL-01 Annex A)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. The consistency findings of 17 August 2026 record POL-02 Annex B as 8/8 empty; nothing in the system shows a completed declaration
+    reg05: IP-03; IP-12
+    reg02: OB-A09
+    owner: Accounts Manager (Declarations Officer)
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-67
+    topic: Competition
+    source: Competition Act 1998 (1998 c. 41), Chapter I and Chapter II prohibitions; Enterprise Act 2002 (2002 c. 40), section 188 (cartel offence)
+    source_url: https://www.legislation.gov.uk/ukpga/2002/40/section/188
+    source_checked: 2026-10-12
+    imposed_by: legislation; Competition and Markets Authority
+    position: applies
+    applies_to: Estimating, tendering, procurement and framework work
+    requires: No price fixing, bid rigging, market sharing or exchange of tender information; independent pricing demonstrable.
+    arrangement: SESC-POL-04 v1.0 paragraphs 9–35 (Certificate of Bona Fide Tendering on every public sector, defence or framework tender; briefing on appointment and annually; annual Managing Director review)
+    evidence:
+      - record: Certificates of Bona Fide Tendering on tender files; briefing attendance; annual review note (POL-04 paragraphs 26, 28, 30)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; POL-04 gives no commencement date and no record is in the system
+    reg05: IP-02
+    reg02: OB-A09
+    owner: Managing Director
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-68
+    topic: Financial sanctions
+    source: Sanctions and Anti-Money Laundering Act 2018 (2018 c. 13); The Russia (Sanctions) (EU Exit) Regulations 2019 (S.I. 2019/855) — the asset-freeze and trade prohibitions bind every UK person; the regulation 70 reporting duty on "relevant firms" (regulation 71) does not include a building contractor
+    source_url: https://www.legislation.gov.uk/uksi/2019/855/regulation/71
+    source_checked: 2026-10-12
+    imposed_by: legislation; Office of Financial Sanctions Implementation
+    position: applies
+    applies_to: Every customer, supplier and subcontractor relationship
+    requires: Not deal with designated persons' funds or breach trade prohibitions; the Employer commits to screening every counterparty (POL-18) although it is not a "relevant firm" with a statutory reporting duty. The Employer does not export and holds no export licence (POL-18 paragraph 34).
+    arrangement: SESC-POL-18 v1.1 paragraphs 12–30 and 38
+    evidence:
+      - record: Screening Record (POL-18 Annex A) with the first full re-screen of live counterparties; sanctions risk assessment (Annex B); alert subscription; training record
+        status: not yet held
+        due: 2026-09-30
+        note: POL-18 paragraph 38 — screening record opened empty on 12 August 2026; re-screen, risk assessment and training due 30 September 2026; alert subscription 31 August 2026; all overdue; nothing in the system
+    reg05: IP-03; IP-12
+    reg02: OB-A09
+    owner: Managing Director; Accounts Manager screens
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-69
+    topic: Protected disclosures (whistleblowing)
+    source: Employment Rights Act 1996 (1996 c. 18), Part IVA sections 43A–43L (inserted by the Public Interest Disclosure Act 1998, 1998 c. 23)
+    source_url: https://www.legislation.gov.uk/ukpga/1996/18/part/IVA
+    source_checked: 2026-10-12
+    imposed_by: legislation
+    position: applies
+    applies_to: All workers, including subcontractors' workers using the Speak Up route
+    requires: Workers who make a qualifying disclosure are protected from detriment; the Employer's route must accept and not penalise them.
+    arrangement: SESC-POL-03 Whistleblowing (Speak Up) Policy v1.1 — CANNOT BE CITED TO A PARAGRAPH. The file named SESC-POL-03 in ~/Documents/SESC/ISO/Signed/ contains the Employee Code of Business Conduct (SESC-POL-01 v1.0), not the Whistleblowing Policy (Master Register F60). Second-hand references only — SESC-POL-01 v1.0 paragraphs 20 and 47(d); SESC-POL-04 v1.0 paragraph 31 (Protect, 020 3117 2520); SESC-POL-11 v1.1 paragraph 31(i); SESC-POL-12 v1.1 paragraphs 11 and 15
+    evidence:
+      - record: The signed SESC-POL-03 v1.1 PDF, in Signed/
+        status: not yet held
+        due: 2026-10-31
+        note: Proposed; see Master Register F60. Until it is found, no row of this register relies on POL-03
+      - record: Speak Up register with entries, or a true nil return recorded
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. The consistency findings of 17 August 2026 record the Speak Up register as 5/5 empty
+    reg05: IP-01; IP-05
+    reg02: OB-A09
+    owner: Managing Director; the independent professional adviser for matters involving him
+    review: Annual
+    last_evaluation: none yet
+
+  # ===================================================================================
+  # PART D — OTHER REQUIREMENTS: CUSTOMER SITE RULES, CONTRACTS, SCHEMES AND PREQUALIFICATION
+  # ===================================================================================
+
+  - ref: CO-70
+    topic: Ministry of Defence establishments — site rules and personnel security
+    source: >-
+              "Management of health and safety in defence: arrangements (JSP 375 volume 1)", Chapter 34 "4Cs system: management of visiting workers and contractors" (gov.uk, 3 September 2025); JSP 375 volume 3 safety rule books (electrical, mechanical, petroleum, confined space, height, gas); UK Government Baseline Personnel Security Standard, version 7.0, June 2024; the site authority's instructions at Boscombe Down; QinetiQ Supplier Code of Conduct 2026
+    source_url: https://www.gov.uk/government/publications/management-of-health-and-safety-in-defence-chapter-34-4cs-system-management-of-visiting-workers-and-contractors-jsp-375-volume-1
+    source_checked: 2026-10-12
+    imposed_by: customer (Ministry of Defence, QinetiQ, the site authority); contract
+    position: applies
+    applies_to: Every trade on a defence establishment, including Boscombe Down
+    requires: Comply in full with site rules and the site authority's instructions; vetting and clearance before mobilisation; pass, escort, photography and device restrictions; OFFICIAL-SENSITIVE handling; the customer's supplier code of conduct.
+    arrangement: SESC-POL-05 v1.1 A29 paragraphs 163–165 and paragraphs 42, 122, 130(c), 146; SESC-POL-13 v1.5 Annex L and B5(h); SESC-POL-01 v1.0 paragraphs 13, 32–34; SESC-POL-10 v1.1 paragraph 20; SESC-POL-12 v1.1 paragraph 3; SESC-CPP-001 (REG-05 IP-03)
+    evidence:
+      - record: SESC-CPP-001 Boscombe Down construction phase plan; SESC-RAMS-001 (REG-05 IP-03)
+        status: held
+        note: Stated as held; not in the three sources
+      - record: Vetting and clearance records before mobilisation (Workspace — personal data)
+        status: not yet held
+        due: 2026-10-31
+        note: SESC-REG-01 H2 and D4, REG-05 IP-03 — no DBS check completed for anyone; action October 2026
+      - record: The JSP 375 volume 1 chapter 34 and volume 3 rule books held as documents of external origin
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; no signed document names JSP 375
+    reg05: IP-03 (compliance in full with site rules; security clearance and vetting)
+    reg02: OB-E04 (induction and briefing before a first Government-site visit)
+    owner: Contracts Manager
+    review: Annual; each mobilisation
+    last_evaluation: none yet
+
+  - ref: CO-71
+    topic: Defence cyber security — DEFCON 658 and the Cyber Security Model
+    source: DEFCON 658 (contract condition); gov.uk "Cyber Security Model" (version 4 live; Supplier Assurance Questionnaire annually through the Supplier Cyber Protection Service); Cyber Essentials (NCSC scheme delivered by IASME, certificates valid twelve months)
+    source_url: https://www.gov.uk/guidance/cyber-security-model
+    source_checked: 2026-10-12
+    imposed_by: contract (Ministry of Defence, QinetiQ)
+    position: applies — where a contract incorporates DEFCON 658
+    applies_to: Any MOD-identifiable information; flow-down to subcontractors
+    requires: Meet the cyber risk profile set in the contract; complete the Supplier Assurance Questionnaire annually; report incidents within the contract timescale; flow down; Cyber Essentials where the contract requires it.
+    arrangement: SESC-POL-13 v1.5 paragraphs 44(g) and 61–65, Annex D7(e) and I4(b) (no certification held; Cyber Essentials is objective 1, 31 July 2027)
+    evidence:
+      - record: Cyber Essentials certificate in the Employer's name
+        status: not yet held
+        due: 2027-07-31
+        note: POL-13 objective 1; never applied for (REG-01 C3); the fee is the Managing Director's spend
+      - record: Supplier Assurance Questionnaire submitted
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; whether any current contract incorporates DEFCON 658 is not recorded in the three sources
+    reg05: IP-03 (Cyber Essentials — DEFCON 658 and the Cyber Security Model)
+    reg02: OB-A11 (annual Cyber Essentials gap analysis)
+    owner: Managing Director
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-72
+    topic: Social housing customer — Sovereign Network Group
+    source: >-
+              "SNG Contractors Code Of Conduct" (IMS-SS-016) and "The Way We Work Standard – Trades and Contractors" (IMS-SS-006), published at sng.org.uk/working-with-us/suppliers-and-procurement (titles and location recorded 12 October 2026; the documents were not read); the contract and site rules for each job; the data-protection assurance given in February 2026 with an express audit right (REG-05 IP-08; SESC-REG-01 G2)
+    source_url: https://www.sng.org.uk/working-with-us/suppliers-and-procurement
+    source_checked: 2026-10-12
+    imposed_by: customer; contract
+    position: applies
+    applies_to: Every trade on Sovereign properties — occupied homes; mould and damp remediation in particular
+    requires: Comply with the customer's contractor code and working standard; work in occupied homes to the customer's rules (DBS where the setting requires, POL-13 B5(g)); make good the data-protection assurance given.
+    arrangement: SESC-POL-16 v1.2 Q2 (contract review); SESC-POL-05 v1.1 A29; SESC-POL-09 v1.0 paragraph 22(f) (safeguarding checks); SESC-POL-14 v1.3 and SESC-POL-13 v1.5 (the data-protection assurance). No signed document names SNG's code or standard
+    evidence:
+      - record: SNG's two documents held as documents of external origin, with the contract review record showing their requirements accepted
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed
+      - record: Record of processing activities, privacy notice and breach procedure complete, so the February 2026 assurance is true (REG-01 G2)
+        status: not yet held
+        due: 2026-10-31
+    reg05: IP-02; IP-08
+    reg02: none
+    owner: Contracts Manager
+    review: Annual; at each contract review
+    last_evaluation: none yet
+
+  - ref: CO-73
+    topic: Principal contractors' site rules and prequalification — SSIP, CHAS, Constructionline
+    source: The principal contractor's construction phase plan and site rules for each job (CDM 2015 regulation 15); SSIP Deem to Satisfy via the SSIP Portal; CHAS Elite (Common Assessment Standard, assessed annually); Constructionline Gold (Common Assessment Standard; annual payment)
+    source_url: https://www.ssipportal.org.uk/
+    source_checked: 2026-10-12
+    imposed_by: customer; scheme
+    position: applies
+    applies_to: Every trade working under a principal contractor; tendering to main contractors
+    requires: Comply with the principal contractor's plan and directions; keep the prequalification registrations current with time-critical documents updated.
+    arrangement: SESC-POL-05 v1.1 A26 paragraph 155 and A20 paragraphs 114–116 (renewals three months before expiry); SESC-POL-15 v1.2 paragraphs 72–74
+    evidence:
+      - record: SSIP registration 1242304 (certificate SP420015526, to 30 June 2027); CHAS Elite membership 163381 (to 30 June 2027); Constructionline Gold 1242304 (renewal being confirmed) — as recorded at SESC-POL-05 Annex C and SESC-POL-16 Annex C
+        status: not verified
+        note: Certificates not read in this workstream. SESC-REG-01 C1 — two copies of the CHAS record give different membership positions; POL-16 Annex C quotes the same number 1242304 for SSIP and Constructionline. SESC-REG-04 is not in Signed/
+    reg05: IP-04 (SSIP or Common Assessment Standard maintained; compliance with the principal contractor's plan)
+    reg02: none
+    owner: Contracts Manager
+    review: Annual; monthly schedule review (POL-15 paragraph 73)
+    last_evaluation: none yet
+
+  - ref: CO-74
+    topic: JOSCAR supplier registration
+    source: JOSCAR (Joint Supply Chain Accreditation Register), Hellios Information Ltd — annual renewal by confirming details and resubmitting the questionnaire; Stage 2 validation; expiry risk if the deadline is missed (hellios.com "JOSCAR Renewal Overview")
+    source_url: https://hellios.com/joscar-renewal-overview-support
+    source_checked: 2026-10-12
+    imposed_by: scheme; customer (QinetiQ uses JOSCAR for supplier assurance)
+    position: applies
+    applies_to: The Employer as registered supplier 10101706 (Master Register 2d)
+    requires: Renew annually; answer only with statements a document supports (SESC-REG-01 C5, A3); accept the QinetiQ Supplier Code of Conduct.
+    arrangement: SESC-POL-14 v1.3 paragraphs 24–25 (JOSCAR as a standing disclosure); SESC-REG-01 v1.0 A3 and C5; the register at Master Register 2d (fully approved; certificate dated 1 September 2027)
+    evidence:
+      - record: JOSCAR certificate and badge files
+        status: not verified
+        note: Held in the TeraBox JOSCAR folder (Master Register 2d), which is not a source; not copied into Signed/; not read in this workstream
+    reg05: IP-02 (accurate answers at prequalification); IP-03
+    reg02: none
+    owner: Chief Operating Officer
+    review: Annual, before the renewal date
+    last_evaluation: none yet
+
+  - ref: CO-75
+    topic: MCS — renewable technology installations
+    source: MCS Service Company Ltd — "The MCS Contractor Standard" (MCS 001), "The Solar PV Installation Standard" (MIS 3002), "The Heat Pump Design Standard" (MIS 3005-D:2025), "Installer Operating Requirements"; MCS requires membership of a CTSI-approved consumer code, naming RECC and HIES; MCS Find an Installer checker
+    source_url: https://mcscertified.com/standards-tools-library/
+    source_checked: 2026-10-12
+    imposed_by: scheme (and the Building Regulations Schedule 3 paragraph 15 route — CO-35)
+    position: applies
+    applies_to: Renewables — solar PV and air source heat pumps; the D8 design carve-out (heat loss, emitter and heat pump sizing; MCS solar PV design)
+    requires: Certification by an MCS-approved body with site-based assessment; a nominated technical person signing off every installation; listed products; a quality management system; consumer code membership; each installation registered.
+    arrangement: SESC-POL-19 v1.1 Annex A row 29, paragraphs 34(c)–(d) and 95; SESC-POL-16 v1.2 paragraph 38; SESC-POL-15 v1.2 section 9.2(c)
+    evidence:
+      - record: MCS certification NIC600672 (solar PV and air source heat pump), as recorded at SESC-POL-05 Annex C and SESC-POL-16 Annex C
+        status: not verified
+        note: Certificate not read; not checked on the MCS installer checker. Rests on one nominated technical person (SESC-REG-01 C4)
+      - record: Consumer code membership (RECC or HIES)
+        status: not verified
+        note: SESC-POL-16 Annex C records RECC membership 00076352 as EXPIRED 15 November 2024 and not claimed. MCS requires a consumer code; whether the Employer holds HIES or another CTSI-approved code is recorded nowhere in the three sources — Master Register F61
+      - record: MCS installation certificates per job
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; none in the system
+    reg05: IP-09
+    reg02: none
+    owner: Contracts Manager
+    review: Annual; at each MCS surveillance
+    last_evaluation: none yet
+
+  - ref: CO-76
+    topic: NICEIC Approved Contractor and Part P competent person scheme
+    source: "Certsure LLP (NICEIC) — Approved Contractor scheme requirements: Principal Duty Holder and Qualified Supervisor(s), surveillance assessment every twelve months, current edition of BS 7671 (BS 7671:2018 with Amendment 4:2026 now on sale at the IET), public liability of at least £2m; gov.uk lists Certsure as an authorised competent person scheme for Part P"
+    source_url: https://www.niceic.com/join-us/approved-contractor
+    source_checked: 2026-10-12
+    imposed_by: scheme; legislation (CO-35 self-certification route)
+    position: applies
+    applies_to: Electrical trade; renewables electrical work
+    requires: Maintain the registration, the qualified supervisor, the current BS 7671 and test instrument records; certify and notify Part P work; annual assessment.
+    arrangement: SESC-POL-19 v1.1 Annex A rows 6 and 14, paragraphs 94(b) and 95; SESC-POL-16 v1.2 paragraphs 36 and 38 and Annex D (calibration)
+    evidence:
+      - record: NICEIC registration 612325000 (no printed expiry), as recorded at SESC-POL-05 Annex C and SESC-POL-16 Annex C
+        status: not verified
+        note: Certificate not read; rests on one qualifying supervisor (SESC-REG-01 C4)
+      - record: Current BS 7671:2018+A4:2026 held; test instrument calibration current (CO-10)
+        status: not verified
+        note: Which amendment the Employer holds is not recorded; calibration verification was due 31 August 2026 (POL-16 paragraph 73)
+    reg05: IP-09
+    reg02: none
+    owner: Contracts Manager
+    review: Annual, at the NICEIC assessment
+    last_evaluation: none yet
+
+  - ref: CO-77
+    topic: PAS 2030 / PAS 2035 retrofit and TrustMark
+    source: BSI PAS 2030:2023 "Installation of energy efficiency measures in existing dwellings. Specification" and PAS 2035:2023 "Retrofitting dwellings for improved energy efficiency. Specification and guidance"; certification through a PAS 2031 certification body; TrustMark lodgement of every measure within 30 days of handover
+    source_url: https://knowledge.bsigroup.com/categories/energy-efficiency-retrofit
+    source_checked: 2026-10-12
+    imposed_by: scheme
+    position: applies
+    applies_to: Renewables and building fabric energy-efficiency measures in existing dwellings
+    requires: Install to the validated PAS 2035 design; declaration of conformity; certification body surveillance; TrustMark registration and lodgement.
+    arrangement: SESC-POL-19 v1.1 Annex A row 30; SESC-POL-16 v1.2 Annex C
+    evidence:
+      - record: PAS 2030 registration NICI63181, as recorded at SESC-POL-05 Annex C and SESC-POL-16 Annex C
+        status: not verified
+        note: Expiry illegible on the copy held; replacement requested (SESC-REG-01 C1, action September 2026 — overdue)
+      - record: TrustMark registration and lodgement records
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed. No signed document names TrustMark; whether the Employer is TrustMark-registered is not recorded
+    reg05: IP-09
+    reg02: none
+    owner: Contracts Manager
+    review: Annual
+    last_evaluation: none yet
+
+  - ref: CO-78
+    topic: Insurance — conditions precedent and business description
+    source: The Employer's liability policies (Iprism Underwriting, 26 July 2026 to 25 July 2027) and professional indemnity policy (Markel AHG015566, 2026–27) — contract terms
+    source_url: none — contract documents in ~/Documents/SESC/ISO/Insurance/ (never in git)
+    source_checked: 2026-10-12
+    imposed_by: contract (insurer)
+    position: applies
+    applies_to: Unit 19 (composite panel premises); every site (portable appliance testing); roofing by directly employed labour; mould and damp remediation and ventilation specification (PI)
+    requires: Meet the conditions precedent — portable appliance testing and the written monthly self-inspection programme for composite panel premises; keep the declared business description and Statement of Fact true to the work carried out.
+    arrangement: SESC-POL-05 v1.1 paragraph 65(c) and 172(b)–(c); SESC-IMS-04 v0.3 paragraphs 16(a) and 58(d), Part 8(m), (r), (u); SESC-REG-01 v1.0 B1 and B2; Master Register F4, F29–F32
+    evidence:
+      - record: Portable appliance test records (CO-10)
+        status: not yet held
+        due: 2026-08-31
+        note: Overdue; Master Register F4
+      - record: Written monthly self-inspection programme for composite panel premises
+        status: not yet held
+        due: 2026-09-30
+        note: POL-05 paragraph 172(c) — no arrangement section exists for it in POL-05 Part 3; overdue
+      - record: Written confirmation that the liability policies respond to mould and damp remediation and roofing by directly employed labour, and that PI covers ventilation specification
+        status: not yet held
+        due: 2026-10-31
+        note: SESC-IMS-04 Part 8(r) and (u); the Managing Director's — a statement to an insurer
+    reg05: IP-10 (conditions precedent; business description; accurate declarations)
+    reg02: none
+    owner: Managing Director; Health and Safety Officer for the two conditions precedent
+    review: Annual, at renewal
+    last_evaluation: none yet
+
+  - ref: CO-79
+    topic: Customers' contract terms — guarantees, design and insurance limits
+    source: Each customer's contract, framework or main contractor terms, reviewed under SESC-POL-16 Q2
+    source_url: none — contract documents
+    source_checked: 2026-10-12
+    imposed_by: contract
+    position: applies
+    applies_to: Every job; the D8 design carve-out; the ten-year transferable guarantee against twelve-month terms of business (SESC-REG-01 B3)
+    requires: Accept only terms the Employer can carry; record every departure; reconcile the guarantee and the terms of business before any further guarantee is issued.
+    arrangement: SESC-POL-16 v1.2 Q2 paragraphs 12–15 and Q16 paragraph 54; SESC-POL-19 v1.1 section 19 paragraph 90; SESC-IMS-04 v0.3 paragraph 58
+    evidence:
+      - record: Contract review records retained with each project file (POL-16 paragraph 15)
+        status: not yet held
+        due: 2026-11-30
+        note: Proposed; none in the system
+      - record: Guarantee and terms of business reconciled (SESC-REG-01 B3, October 2026)
+        status: not yet held
+        due: 2026-10-31
+    reg05: IP-04 (terms accepted that the Employer can actually carry); IP-02
+    reg02: none
+    owner: Managing Director
+    review: Annual; each contract review
+    last_evaluation: none yet
+
+considered_and_not_carried:
+  - item: OFTEC registration C503088
+    position: Expired 14 April 2026; oil-fired work not offered; not claimed (SESC-POL-16 Annex C; SESC-IMS-00 paragraph 64). Not an obligation the Employer subscribes to. The OFTEC logo is to come off the website (REG-05 IP-09).
+  - item: RECC membership 00076352
+    position: Expired 15 November 2024; not claimed. See CO-75 — MCS requires a consumer code, which makes the lapse a live question (F61).
+  - item: National Federation of Roofing Contractors
+    position: Never a membership; must not be claimed (SESC-POL-05 Annex C). Noted at CO-35 because NFRC is a Schedule 3 paragraph 16 scheme operator for replacement roof coverings.
+  - item: The List of Wastes (England) Regulations 2005
+    position: Revoked 1 July 2015; POL-08 paragraph 16 still names them. Classification continues through the List of Wastes as applied by the Hazardous Waste Regulations (CO-42). Correct POL-08 at v1.2.
+  - item: Hazardous waste producer premises registration
+    position: Requirement removed 1 April 2016; POL-08 paragraph 34(d) still contemplates it (CO-44). Correct POL-08 at v1.2.
+  - item: Energy Performance of Buildings (England and Wales) Regulations 2012
+    position: Named at POL-08 paragraph 16. The duties fall on sellers, landlords and assessors, not on an installing contractor; not carried as an obligation of the Employer.
+  - item: Streamlined Energy and Carbon Reporting and ESOS
+    position: Carried at CO-55 as threshold tests only.
+  - item: ISO/IEC 27001, Cyber Essentials Plus, BS 99001
+    position: Not held, not claimed, not required by any instrument in this register (CLAUDE.md 6; SESC-POL-13 paragraph 62).
+  - item: Water abstraction (Water Resources Act 1991 Part II)
+    position: Nil — no abstraction (SESC-POL-08 paragraph 82).
+  - item: Marine licensing
+    position: Nil — no marine work (SESC-POL-08 paragraph 84; SESC-POL-19 paragraph 98).
+
+records:
+  held:
+    - The twenty-one signed documents in ~/Documents/SESC/ISO/Signed/ (POL-01, 02, 04 to 19, CRP-01, REG-01; the file named POL-03 holds POL-01 — F60), read in full on 12 October 2026
+    - SESC-REG-05 v0.2, SESC-REG-06 v0.1, SESC-REG-07 v0.1 (registers/), SESC-REG-02 as data (portal/obligations.yaml)
+    - SESC-IMS-04 v0.3, SESC-IMS-00 v0.1, SESC-IMS-05 v0.1 (drafts, system/)
+    - This register, draft v0.1, 12 October 2026
+  not_yet_held:
+    - record: The first documented evaluation of compliance against this register (ISO 14001 9.1.2; ISO 45001 9.1.2)
+      due: 2026-11-30
+      owner: Contracts Manager, as Environmental Manager and Health and Safety Officer
+      note: No evaluation of compliance has been carried out under any system. SESC-IMS-00 Part 10 (g)
+    - record: SESC-REC-06 (the next free REC reference — SESC-REC-05 was taken on 22 October 2026 for the CO-43 public-register check) taken for the evaluation record, so it is a controlled record
+      due: 2026-11-30
+      owner: Chief Operating Officer
+    - record: The 2020 legal register, or confirmation that it is withdrawn and destroyed
+      due: 2026-10-31
+      owner: Chief Operating Officer
+      note: Not found in the three sources on 12 October 2026; SESC-POL-19 paragraph 86 withdraws it. If a copy exists elsewhere it is to be marked superseded, not used
+    - record: The waste carrier registration certificate and its tier (CO-43) — tier confirmed upper on the public register 22 October 2026 (CBDU663802, SESC-REC-05); the certificate copy itself is still to be filed in Signed/ and indexed in SESC-REG-04
+      due: 2026-10-31
+      owner: Chief Operating Officer
+    - record: A dated query of the ICO public register (CO-60)
+      due: 2026-10-31
+      owner: Accounts Manager
+    - record: SESC-REG-04 Licence and Accreditation Register, and the certificates it indexes, brought into the three sources (Master Register 2n task) so that CO-23, CO-41, CO-73, CO-75, CO-76 and CO-77 can be marked held or not
+      due: 2026-10-31
+      owner: Chief Operating Officer
+    - record: The signed SESC-POL-03 v1.1 (CO-69; F60)
+      due: 2026-10-31
+      owner: Chief Operating Officer
+    - record: Fire risk assessment for Unit 19 (CO-24)
+      due: 2026-11-30
+      owner: Managing Director, with the Health and Safety Officer
+    - record: Every row-level record marked "not yet held" above, each with its own date and owner
+      due: as each row states
+      owner: as each row states
+    - record: SESC-POL-19 v1.2 with Annex A pointing to this register; SESC-POL-08 v1.2 with its legal register paragraphs 15–19 pointing here and the two stale statements corrected; SESC-POL-05 v1.2 with Annex A 2.6.4.15 pointing here instead of "Legal Register entry H024"
+      due: 2027-02-28
+      owner: Chief Operating Officer to draft; Managing Director to sign
+      note: Proposed. Issued documents are amended only on the Managing Director's instruction naming the document and version
+    - record: Confirmation of the printed commencement dates of S.I. 2026/873 and the Employer's transition route (CO-43)
+      due: 2027-03-31
+      owner: Environmental Manager
+
+source_counts:
+  rows: 79
+  from_sesc_pol_19_annex_a: 30 rows re-evaluated — every Annex A row maps to a CO row (rows 1→CO-01, 2→CO-07, 3→CO-36, 4–9→CO-35, 10→CO-37, 11/12/16/18/19/27→CO-38, 13→CO-22, 14→CO-76, 15→CO-23, 17→CO-32, 20→CO-52, 21→CO-12, 22→CO-13, 23→CO-41, 24→CO-45, 25→CO-42/CO-43, 26→CO-40, 28→CO-39, 29→CO-75, 30→CO-77)
+  from_sesc_pol_08_paragraph_16_minimum_list: 19 instruments named — carried at CO-41 to CO-53 and CO-56; the List of Wastes Regulations 2005 and the Energy Performance of Buildings Regulations are at considered_and_not_carried
+  from_sesc_reg_05_legal_rows: every requirement typed "legal" in SESC-REG-05 v0.2 has a CO row (IP-01, IP-06, IP-07, IP-08, IP-09, IP-15)
+  instruments_verified_on_the_issuing_body: 79 of 79 rows carry a source_url read on 12 October 2026; the gov.uk waste carrier guidance page could not be fetched and the own-waste point rests on S.I. 2011/988 regulation 24(5)(e) instead
+  rows_with_an_arrangement_cited_to_a_signed_paragraph: 71
+  rows_with_no_arrangement_in_any_signed_document: 8 — CO-24, CO-25, CO-30, CO-54, CO-58, CO-62, CO-63, and CO-69 (whose document could not be read)
+  rows_marked_last_evaluation_none_yet: 79 of 79 (CO-43's evidence was updated on 22 October 2026; that is a record of one registration being checked, not an evaluation of compliance under the method above, and last_evaluation stays none yet)
+
+revision_history:
+  - version: "0.2"
+    date: 2026-10-22
+    author: G A Hill (drafted by Claude)
+    change: >
+      CO-43 evidence amended: waste carrier registration CBDU663802 (upper tier, carrier and dealer,
+      01/10/2026 to 01/10/2029) received and confirmed on the Environment Agency public register on
+      22 October 2026 (SESC-REC-05); CBDL569181 found still listed at lower tier and recorded as
+      superseded; two new not-yet-held records (certificate copy filed and indexed in REG-04; EA
+      confirmation that CBDL569181 is cancelled); broker scope and registered-address points noted
+      for the Environmental Manager. Master Register F8 closed; Part 10 (r) met. No other row changed;
+      no evaluation of compliance carried out.
+  - version: "0.1"
+    date: 2026-10-12
+    author: G A Hill (drafted by Claude)
+    change: >
+      Created under Master Register 6 item 5 (workstream 5). Reference SESC-REG-09 taken from
+      CLAUDE.md 5 the same day. 79 obligations in four parts, every instrument read on its issuing
+      body's site on 12 October 2026; SESC-POL-19 Annex A re-evaluated row by row; the 2020 register
+      not found and nothing carried from it; James Milligan's Drive template read for its column
+      headings and topic typing only. Evaluation method documented; no evaluation carried out;
+      first due 30 November 2026.
