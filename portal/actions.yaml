@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.20, 12 October 2026 (G5 updated; otherwise as resynced to v1.17)
+source_register: SESC-IMS-Master-Register.md v1.21, 22 October 2026 (F8 closed, F65 and F66 added; G5 updated 12 Oct; otherwise as resynced to v1.17)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -374,13 +374,50 @@ actions:
     title: Waste carrier registration tier not confirmed
     owner: Environmental Manager
     due: 2026-10-31
-    status: open
+    status: closed
     severity: medium
     detail: >
       CBDL569181 appears only at POL-19 Annex A. Construction and demolition
       waste is excluded from the own-waste exemption, so UPPER TIER is required
       even carrying only the Employer's own waste. Overdue against 30 September
-      2026; IMS-00 Part 10 (r).
+      2026; IMS-00 Part 10 (r). CLOSED 22 Oct 2026: new registration CBDU663802,
+      "Carrier Dealer - Upper Tier", 01/10/2026 to 01/10/2029, confirmed on the
+      Environment Agency public register (REG-09 CO-43; SESC-REC-05). The
+      follow-ups are F65 and F66.
+    internal: false
+
+  - ref: F65
+    kind: finding
+    title: Superseded lower-tier registration CBDL569181 still on the public register; certificate not yet filed
+    owner: Environmental Manager
+    due: 2026-11-30
+    status: open
+    severity: low
+    detail: >
+      On 22 Oct 2026 the public register still lists CBDL569181 ("sesc
+      solutions", lower tier, 05/02/2025, "UNIT 9") alongside CBDU663802. Ask
+      the Environment Agency to cancel it, and check the registered address of
+      CBDU663802 (no unit number shown; the Employer's documents say Unit 19)
+      against the lease, correcting the EA entry within 28 days if wrong. The
+      COO files a copy of the CBDU663802 certificate in Signed/ and indexes it
+      in REG-04 by 31 Oct 2026. REG-09 CO-43.
+    internal: false
+
+  - ref: F66
+    kind: finding
+    title: Registration is carrier and dealer only — brokering not covered
+    owner: Environmental Manager
+    due: 2026-11-30
+    status: open
+    severity: low
+    detail: >
+      CBDU663802 is registered as "Carrier Dealer", not carrier, broker and
+      dealer. REG-09 CO-43 says the obligation applies to "brokering or dealing
+      where removal is arranged for a customer". Confirm whether the Employer
+      ever arranges removal of waste on a customer's behalf; if it does, the
+      registration must be varied to add broker before that activity continues.
+      POL-19 Annex A row 25 and POL-08 paragraph 34(a) carry the number and
+      tier at their v1.2.
     internal: false
 
   - ref: F9

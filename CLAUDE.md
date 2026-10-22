@@ -117,8 +117,9 @@ written this way and consistency is auditable.
   (the IMS Manual) was taken on 6 October 2026 under D21. `SESC-REG-08` (the Opportunity Register)
   was taken on 7 October 2026 under D24. `SESC-IMS-05` (Leadership) and `SESC-FRM-08` (Worker
   Consultation Record) were taken on 7 October 2026 for workstream 3 (register §2m). `SESC-REG-09`
-  (Compliance Obligations Register) was taken on 12 October 2026 for workstream 5 (register §2o).** All are DRAFTS:
-  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-10` · `SESC-FRM-09` · `SESC-REC-05` ·
+  (Compliance Obligations Register) was taken on 12 October 2026 for workstream 5 (register §2o).
+  `SESC-REC-05` (waste carrier public-register check) was taken on 22 October 2026 (register §2p).** All are DRAFTS:
+  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-10` · `SESC-FRM-09` · `SESC-REC-06` ·
   `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-06`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**
