@@ -118,9 +118,13 @@ written this way and consistency is auditable.
   was taken on 7 October 2026 under D24. `SESC-IMS-05` (Leadership) and `SESC-FRM-08` (Worker
   Consultation Record) were taken on 7 October 2026 for workstream 3 (register §2m). `SESC-REG-09`
   (Compliance Obligations Register) was taken on 12 October 2026 for workstream 5 (register §2o).
-  `SESC-REC-05` (waste carrier public-register check) was taken on 22 October 2026 (register §2p).** All are DRAFTS:
-  `SESC-POL-20` · `SESC-PRO-01` · `SESC-WI-02` · `SESC-REG-10` · `SESC-FRM-09` · `SESC-REC-06` ·
-  `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-06`.
+  `SESC-REC-05` (waste carrier public-register check) was taken on 22 October 2026 (register §2p).
+  `SESC-PRO-01` (Control of Documented Information), `SESC-PRO-02` (Internal Audit), `SESC-PRO-03`
+  (Management Review), `SESC-PRO-04` (Nonconformity and Corrective Action), `SESC-REG-10`
+  (Environmental Aspects and Impacts Register) and `SESC-IMS-06` (Planning) were taken on
+  26 October 2026 for workstreams 6 and 4 and the clause 6 chapter (register §2q, D27).** All are DRAFTS:
+  `SESC-POL-20` · `SESC-PRO-05` · `SESC-WI-02` · `SESC-REG-11` · `SESC-FRM-09` · `SESC-REC-06` ·
+  `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-07`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**
 - Everything downstream is generated from front matter — the page-1 control table, headers,

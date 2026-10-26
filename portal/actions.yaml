@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.21, 22 October 2026 (F8 closed, F65 and F66 added; G5 updated 12 Oct; otherwise as resynced to v1.17)
+source_register: SESC-IMS-Master-Register.md v1.22, 26 October 2026 (D27 added; B4 re-worded; G1–G4, G9, G10 updated to drafted; F67–F70 added; otherwise as at v1.21)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -79,7 +79,25 @@ actions:
       and must not be quoted to a customer or an auditor. The Employer decided on
       24 September 2026 to buy its own copies, 14001:2026 first; not yet bought.
       PJR's UKAS schedule lists 14001:2015 only (F48), so the edition to certify
-      to is itself open.
+      to is itself open. 26 Oct 2026, D27: no longer a blocker on drafting — the
+      EMS documents are drafted to the structure held, each with a review
+      trigger for the purchase. Remains a blocker on quoting any 14001 clause
+      number to PJR or a customer, and on the certified edition.
+    internal: false
+
+  - ref: D27
+    kind: decision
+    title: EMS documents drafted before ISO 14001:2026 is bought
+    owner: Chief Operating Officer
+    status: closed
+    severity: medium
+    detail: >
+      CLOSED 26 Oct 2026, Gary's decision (register 2q.1). Buying the standard
+      is not a prerequisite for Stage 1, for applying to PJR or for drafting.
+      SESC-REG-10, SESC-IMS-06 and SESC-PRO-01 to 04 are drafted to the clause
+      structure held, written 2026-ready, each with "ISO 14001:2026 being bought
+      and read" as a review trigger. CLAUDE.md 6, the no-quoting rule, D6 and
+      PJR's answer on the edition (F48) are unchanged.
     internal: false
 
   - ref: B5
@@ -418,6 +436,69 @@ actions:
       registration must be varied to add broker before that activity continues.
       POL-19 Annex A row 25 and POL-08 paragraph 34(a) carry the number and
       tier at their v1.2.
+    internal: false
+
+  - ref: F67
+    kind: finding
+    title: Every signed commitment date for the audit, review, log and record items has passed
+    owner: Managing Director
+    due: 2026-11-30
+    status: open
+    severity: high
+    detail: >
+      Corrective action log and monthly report (31 Aug / 30 Sep 2026), management
+      review (30 Sep), internal audit (31 Oct), induction and toolbox records,
+      PAT, face-fit, health surveillance provider, noise assessment, approved
+      contractor register, calibration verification, Driver Register, COSHH
+      registers, first aid needs assessment — all committed in POL-05, POL-08 and
+      POL-16 for 31 Aug to 31 Oct 2026 and none met. PRO-01 to 04 and IMS-06
+      record each as overdue with a proposed new date. The Managing Director
+      confirms, re-dates once with the reason minuted, or closes each at the
+      first management review (PRO-03 14(f); IMS-06 OB-S3). Register 2q.3.
+    internal: false
+
+  - ref: F68
+    kind: finding
+    title: Three policies each describe their own audit, review and corrective action log
+    owner: Chief Operating Officer
+    due: 2027-01-31
+    status: open
+    severity: medium
+    detail: >
+      POL-16 Q14/Q20/Q23, POL-05 A8 and POL-08 E10/E11/E17 each describe a
+      separate annual audit, review and log. PRO-02, PRO-03 and PRO-04 consolidate
+      them on approval. Until POL-05 v1.2, POL-08 v1.2 and POL-16 v1.3 point at
+      the procedures, the system carries two descriptions of one arrangement.
+      Queue with F63.
+    internal: false
+
+  - ref: F69
+    kind: finding
+    title: The quality objectives have no numbers anywhere in the three sources
+    owner: Managing Director
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      POL-16 67 names eight measures and 74(e) says objectives are set for the
+      year from 1 September 2026; IMS-00 33 and IMS-05 8 repeat it. No document
+      states a target or baseline for any measure and none has been taken.
+      IMS-06 16 records this and 18 proposes numbers. Soften IMS-00 and IMS-05
+      at their next versions.
+    internal: false
+
+  - ref: F70
+    kind: finding
+    title: Mould and damp remediation products, wastes and quantities are recorded nowhere
+    owner: Environmental Manager
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      SESC-REG-10 EA-22 is drafted from the nature of the work as IMS-04
+      describes it and is the first row for the Environmental Manager to confirm
+      or rewrite. The project COSHH register that would hold the products was
+      committed for 31 August 2026 and does not exist.
     internal: false
 
   - ref: F9
@@ -791,6 +872,7 @@ actions:
       Under any system, for any period. Clause 9.2 for all three standards.
       IMS-00 Part 10 (u): programme due 31 October 2026, first audit 30 November
       2026 (proposed); auditor to be appointed by the Managing Director (D3).
+      26 Oct 2026: SESC-PRO-02 Internal Audit drafted v0.1 with the first-cycle programme IA-01 to IA-06 (proposed). Not closed — no audit has been carried out.
     internal: false
 
   - ref: G2
@@ -800,7 +882,9 @@ actions:
     due: 2026-10-31
     status: open
     severity: critical
-    detail: Clause 9.3 for all three standards. Overdue against 30 September 2026; IMS-00 Part 10 (h), 31 October 2026 proposed.
+    detail: >
+      Clause 9.3 for all three standards. Overdue against 30 September 2026; IMS-00 Part 10 (h), 31 October 2026 proposed.
+      26 Oct 2026: SESC-PRO-03 Management Review drafted v0.1; first review proposed for November 2026, date for the Managing Director to fix. Not closed — no minutes exist.
     internal: false
 
   - ref: G3
@@ -810,7 +894,9 @@ actions:
     due: 2026-10-09
     status: open
     severity: high
-    detail: Clause 10.2. Opens with SESC-FRM-05 at record capture go-live. IMS-00 Part 10 (i).
+    detail: >
+      Clause 10.2. Opens with SESC-FRM-05 at record capture go-live. IMS-00 Part 10 (i).
+      26 Oct 2026: SESC-PRO-04 Nonconformity and Corrective Action drafted v0.1 on SESC-FRM-05. Not closed — no record exists.
     internal: false
 
   - ref: G4
@@ -824,6 +910,7 @@ actions:
       THE DEFINING ISO 14001 DOCUMENT AND THE HIGHEST-PRIORITY GAP IN THE SYSTEM.
       The one held belongs to a landscaping firm. Blocked on buying 14001:2026
       (B4). IMS-00 Part 10 (f); workstream 4.
+      26 Oct 2026: SESC-REG-10 drafted v0.1 under D27 — 28 aspects from SESC's own activities, 24 proposed significant, every score proposed. No longer blocked on buying 14001:2026. Not closed until the Environmental Manager confirms the scores and the Managing Director approves.
     internal: false
 
   - ref: G5
@@ -891,6 +978,7 @@ actions:
       Document control (7.5), internal audit (9.2), management review (9.3) and
       nonconformity and corrective action (10.2). IMS-00 Part 10 (o), 30
       November 2026 proposed; workstream 6.
+      26 Oct 2026: all four drafted v0.1 — SESC-PRO-01 to SESC-PRO-04 (register 2q). Not closed until approved and rendered.
     internal: false
 
   - ref: G10
@@ -905,6 +993,7 @@ actions:
       and OH&S objectives are not set and no plan to achieve all three sets
       exists. Clause 6.2. Overdue against 30 September 2026; IMS-00 Part 10 (j),
       31 October 2026 proposed. Not previously in the register's task tables.
+      26 Oct 2026: SESC-IMS-06 Planning drafted v0.1 with nineteen proposed objectives (OB-Q1 to OB-S3). Not closed — none is set until the Managing Director signs.
     internal: false
 
   - ref: G11
