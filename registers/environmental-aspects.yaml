@@ -1,0 +1,957 @@
+id: SESC-REG-10
+title: Environmental Aspects and Impacts Register — the environmental aspects of the Employer's own activities, products and services, their impacts, their significance and the controls that apply
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-10-26
+revised: 2026-10-26
+next_review: 2027-10-26
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso14001: ["6.1.2"]
+parent_document: SESC-IMS-06
+registers_cited: [SESC-REG-01, SESC-REG-02, SESC-REG-05, SESC-REG-06, SESC-REG-08, SESC-REG-09]
+review_trigger:
+  - ISO 14001:2026 being bought and read — the significance method and every clause reference here are then re-read against the 2026 text (D27)
+  - A new type of work, a new substance or process, or a new kind of location (SESC-POL-08 paragraph 13)
+  - Any environmental incident or near miss (SESC-POL-08 paragraph 13)
+  - A change to the scope statement at SESC-IMS-04 paragraph 14
+  - The first environmental data set at SESC-POL-08 E15 — scores are then re-tested against measured quantities
+  - The Environmental Manager's confirmation or revision of the proposed scores (every score below is proposed)
+personal_data: false
+
+# SESC-REG-10 Environmental Aspects and Impacts Register.
+#
+# Reference taken from CLAUDE.md 5 on 26 October 2026 (Master Register 6 item 4; SESC-IMS-00
+# Part 10 (f); CLAUDE.md 10). THE DEFINING ISO 14001 DOCUMENT AND, UNTIL THIS DRAFT, THE
+# HIGHEST-PRIORITY GAP IN THE SYSTEM.
+#
+# Why it exists. ISO 14001 clause 6.1.2 requires the Employer to determine the environmental
+# aspects of its activities, products and services that it can control and those it can
+# influence, and their associated environmental impacts, considering a life cycle perspective;
+# to take into account change, and abnormal conditions and reasonably foreseeable emergency
+# situations; to determine, by established criteria, which aspects are significant; to
+# communicate the significant aspects; and to maintain documented information of the aspects
+# and impacts, the criteria, and the significant aspects. ISO 14001 is read here from
+# standards/iso14001-2026.yaml, which is marked verified: false throughout: the 2026 edition
+# has not been read by anyone on this project. Under D27 (26 October 2026) this register is
+# drafted to the clause structure held, written 2026-ready, and is re-read against the 2026
+# text when the standard is bought. Nothing here is to be quoted to a customer or an auditor as
+# a 2026 clause requirement until then.
+#
+# What it replaces. Nothing of the Employer's own. The register previously held belonged to a
+# landscaping firm — it named an unconnected individual, badgers and herbicides — and was
+# withdrawn under SESC-POL-08 paragraph 14: "Any aspects register that does not describe the
+# work SESC actually carries out must not be used. The register is rebuilt from our own
+# activities and is owned by the Environmental Manager." This is that rebuild. NOT ONE ROW of
+# the withdrawn register, or of any template, was read for content; the aspects below are the
+# ones SESC-POL-08 paragraph 12 names as "what we actually do", the emergencies SESC-POL-08
+# paragraph 37 names as reasonably foreseeable, and the activities in the scope statement at
+# SESC-IMS-04 paragraph 14, organised by activity and by life cycle stage.
+#
+# What it claims. ISO 14001 6.1.2 only, as documented information maintained. It does not claim
+# 6.1.3 (SESC-REG-09), 6.1.4 or 6.2 (SESC-IMS-06), 8.1 operational control (the controls are
+# CITED here to SESC-POL-08 and the RAMS; the register does not itself control anything), or
+# 9.1 (no aspect has been measured). Nothing is claimed from ISO 9001 or ISO 45001: an aspect is
+# not a hazard, and OH&S hazards are identified under SESC-POL-05 A1 and the job RAMS.
+#
+# What each row holds. The activity and the life cycle stage; the aspect (what the activity does
+# that interacts with the environment) and the impact (the change to the environment that
+# results); the condition under which it arises — normal, abnormal or emergency; whether the
+# Employer controls it or can only influence it; the proposed significance scores and result;
+# the control that applies, cited to the signed paragraph or the RAMS; the compliance
+# obligation topic in SESC-REG-09; the interested party in SESC-REG-05; the objective area in
+# SESC-IMS-06 where one is proposed; and the evidence that the control operates, each record
+# marked held or not yet held with a date. EVERY SCORE IS PROPOSED. The Environmental Manager
+# confirms or revises each score, and the Managing Director approves the result, before any
+# aspect is communicated as significant.
+#
+# What is NOT here. No quantity — litres of fuel, tonnes of waste, kWh — is stated, because the
+# environmental data set at SESC-POL-08 E15 does not yet exist (SESC-IMS-04 Part 8 (j); the
+# Scope 1 figures in SESC-CRP-01 are the exception and are cited where relevant). Scores are
+# therefore judgements on the nature and scale of the Employer's work as the signed documents
+# describe it, not on measured data, and the first data set is a review trigger. Headcount,
+# turnover and the professional indemnity limit are stated nowhere in this register.
+
+design_rules:
+  - >
+    ONE ROW PER ASPECT, UNDER THE ACTIVITY THAT PRODUCES IT. An aspect that arises in several
+    activities is one row with every activity listed, so that a control applies once.
+  - >
+    EVERY ROW IS SESC'S OWN. The activities are those at SESC-IMS-04 paragraph 14; the aspects
+    those SESC-POL-08 paragraphs 12 and 37 name; nothing is carried from a template or from the
+    withdrawn register. A row that would describe work the Employer does not do is not here.
+  - >
+    SIGNIFICANCE IS DECIDED BY THE CRITERIA BELOW, NOT BY WHO WROTE THE ROW. The criteria are
+    documented so that a second person reaches the same answer from the same facts.
+  - >
+    A CONTROL IS CITED, NEVER RESTATED. The row points at the SESC-POL-08 paragraph, the RAMS
+    section or the SESC-POL-05 arrangement that is the control. Where no control exists, the row
+    says "none documented" and raises the gap.
+  - >
+    EVIDENCE IS A RECORD, NOT A SENTENCE. A row may not show a control as operating on the
+    strength of a policy paragraph. Where the record does not exist the row says so with a date.
+  - >
+    LIFE CYCLE PERSPECTIVE. Each row names the stage: procurement (what is bought and from where),
+    delivery (the Employer's own work on site and at Unit 19), use (the installed system in the
+    customer's hands over its life), end of life (removal and disposal). The Employer controls
+    delivery; it influences procurement, use and end of life through specification and advice.
+
+significance_method:
+  clause: ISO 14001 6.1.2 (unverified edition)
+  who: >
+    Scored by the Environmental Manager, reviewed with the appointed competent adviser, approved
+    by the Managing Director. The scores in this draft are PROPOSED by the author from the signed
+    documents and await that confirmation.
+  severity: >
+    1 — negligible: no measurable change to the environment; 2 — minor: localised, short-lived,
+    recoverable without intervention; 3 — moderate: localised harm needing clean-up or
+    remediation, or a measurable contribution to a cumulative impact (fuel, waste, energy);
+    4 — major: harm to a sensitive receptor (a chalk stream, an aquifer, a protected species, a
+    neighbour's health), regulatory action likely, or a large cumulative contribution; 5 — severe:
+    irreversible or widespread harm, prosecution likely.
+  likelihood: >
+    For NORMAL conditions, frequency: 1 — rare, less than yearly; 2 — occasional, a few times a
+    year; 3 — regular, monthly on some jobs; 4 — frequent, weekly or on most jobs; 5 — continuous,
+    every job every day. For ABNORMAL and EMERGENCY conditions, probability of occurrence in a
+    year given the controls in place: 1 — remote; 2 — unlikely; 3 — possible; 4 — likely;
+    5 — almost certain.
+  score: severity multiplied by likelihood, 1 to 25.
+  significant_if: >
+    Any of — (a) score of 10 or more; (b) a legal requirement in SESC-REG-09 attaches directly to
+    the aspect (duty of care, F-Gas, hazardous waste, protected species, oil storage, statutory
+    nuisance); (c) an emergency condition with potential to reach a drain, watercourse, aquifer or
+    protected species, whatever the score; (d) a relevant interested party in SESC-REG-05 has
+    stated a requirement about it (a customer's or Government establishment's environmental
+    conditions; the Carbon Reduction Plan commitment). A row meeting (b), (c) or (d) is significant
+    at any score, and the reason is recorded.
+  not_significant: >
+    A row scoring below 10 that meets none of (b) to (d). It stays on the register, is reviewed
+    annually, and is not communicated as significant.
+  communication: >
+    Significant aspects are communicated to every person working for the Employer at induction
+    and by toolbox talk (SESC-POL-08 paragraph 88) and are carried into every job's RAMS
+    environmental section (SESC-POL-08 paragraph 29(a)). No communication has yet taken place
+    under this register.
+  review: >
+    Annually; on every trigger above; and the scores re-tested against measured quantities when
+    the environmental data set exists.
+
+status_vocabulary:
+  condition: [normal, abnormal, emergency]
+  control_or_influence: [control, influence]
+  life_cycle_stage: [procurement, delivery, use, end of life]
+  result: [significant, not significant]
+  evidence_status: [held, not yet held, nil return]
+
+owners:
+  note: >
+    Owners are roles. The Contracts Manager holds the Environmental Manager appointment
+    (SESC-POL-08 O2; SESC-IMS-04 paragraph 11). Site Supervisors apply the controls at the
+    workface (SESC-POL-08 O3). The Managing Director approves the register and sets the
+    environmental objectives (SESC-POL-08 O1).
+
+aspects:
+
+  # ===================================================================================
+  # A — VEHICLES, PLANT AND TRAVEL (every trade; every site)
+  # ===================================================================================
+
+  - ref: EA-01
+    activity: Driving to and between sites, deliveries and collections; running of the fleet
+    life_cycle_stage: delivery
+    aspect: Consumption of diesel and petrol; exhaust emissions (CO2, NOx, particulates)
+    impact: Contribution to climate change; local air quality
+    condition: normal
+    control_or_influence: control
+    severity: 3
+    likelihood: 5
+    score: 15
+    result: significant
+    significance_reason: Score 10 or more; SESC-CRP-01 commitment (interested party requirement); climate change determined relevant at SESC-REG-06 CLI-00
+    controls: SESC-POL-08 paragraphs 66(a)–(c) (telematics, route planning, fuel and mileage monitoring); SESC-POL-05 paragraph 72 (journey planning); SESC-POL-08 paragraph 41(d) (no idling); SESC-CRP-01
+    reg09_topic: Climate Change Act / PPN 006 Carbon Reduction Plan (contractual, Government customers)
+    reg05: Customers and Government establishments with net-zero requirements; the regulator
+    objective_area: SESC-IMS-06 — fuel and Scope 1 emissions reduction aligned to SESC-CRP-01
+    evidence:
+      - record: SESC-CRP-01 v1.0 measured Scope 1 fuel data, 2023 baseline and 2025 reporting year
+        status: held
+      - record: Telematics reports and fuel card data for the current year, consolidated in the E15 data set
+        status: not yet held
+        due: 2026-12-31
+        note: SESC-POL-08 paragraph 87 — collected monthly, consolidated annually; no data set exists (SESC-IMS-04 Part 8 (j))
+    owner: Environmental Manager
+
+  - ref: EA-02
+    activity: Running generators, compressors, breakers and other fuelled plant on site
+    life_cycle_stage: delivery
+    aspect: Fuel consumption and exhaust emissions; noise
+    impact: Climate change; local air quality; nuisance to neighbours and occupants
+    condition: normal
+    control_or_influence: control
+    severity: 2
+    likelihood: 3
+    score: 6
+    result: significant
+    significance_reason: Legal requirement attaches — statutory nuisance (Environmental Protection Act 1990 Part III) and Control of Pollution Act 1974 s.60/61 for construction noise
+    controls: SESC-POL-08 paragraph 30(d) (quieter plant, permitted hours, switch-off, neighbour notice); paragraph 41(d); SESC-POL-05 A16 (noise at work — the OH&S side)
+    reg09_topic: Statutory nuisance; construction noise
+    reg05: Neighbours; building occupants; local authority
+    objective_area: none proposed
+    evidence:
+      - record: Permitted-hours agreement with the customer or local authority where plant is used, recorded in the RAMS
+        status: not yet held
+        due: 2026-12-31
+        note: Checked at IA-03 (SESC-PRO-02 Annex A)
+    owner: Environmental Manager
+
+  - ref: EA-03
+    activity: Refuelling plant and vehicles; carrying fuel and oil in vehicles
+    life_cycle_stage: delivery
+    aspect: Spillage of fuel, oil or hydraulic fluid to ground or drain
+    impact: Contamination of soil, surface water, groundwater — the operating area is on and near chalk aquifers and chalk streams (SESC-POL-08 paragraphs 45(a), 79)
+    condition: emergency
+    control_or_influence: control
+    severity: 4
+    likelihood: 2
+    score: 8
+    result: significant
+    significance_reason: Emergency with potential to reach a drain, watercourse or aquifer; Control of Pollution (Oil Storage) (England) Regulations 2001 and Water Resources Act 1991 attach
+    controls: SESC-POL-08 paragraphs 30(a) (bunded storage, drip tray, absorbents), 38(a)–(e) (spill kits in every vehicle, response sequence, EA hotline), 44 (soil)
+    reg09_topic: Oil storage; water pollution; environmental permitting
+    reg05: Environment Agency; water undertaker; customers
+    objective_area: SESC-IMS-06 — zero environmental incidents; spill-kit check compliance
+    evidence:
+      - record: Monthly spill-kit check records for every vehicle and workplace (SESC-POL-08 paragraph 38(a))
+        status: not yet held
+        due: 2026-11-30
+        note: No spill-kit check record of any kind is held; none is claimed
+      - record: Record of an annual spill response exercise (SESC-POL-08 paragraph 38(f))
+        status: not yet held
+        due: 2027-01-31
+        note: SESC-IMS-00 Part 10 (s)
+    owner: Environmental Manager
+
+  # ===================================================================================
+  # B — UNIT 19, MELBURY BUSINESS PARK (office and stores)
+  # ===================================================================================
+
+  - ref: EA-04
+    activity: Heating, lighting and powering the office and stores
+    life_cycle_stage: delivery
+    aspect: Consumption of electricity and gas
+    impact: Climate change (Scope 2 and Scope 1); resource depletion
+    condition: normal
+    control_or_influence: control
+    severity: 2
+    likelihood: 5
+    score: 10
+    result: significant
+    significance_reason: Score 10 or more; SESC-CRP-01 commitment
+    controls: SESC-POL-08 paragraph 66(h) (LED lighting, controls, switch-off routines); paragraph 81 (leaks); SESC-CRP-01
+    reg09_topic: Carbon Reduction Plan (contractual); Energy Performance of Buildings Regulations (so far as they affect the unit)
+    reg05: Landlord; Government customers (PPN 006)
+    objective_area: SESC-IMS-06 — obtain the Unit 19 energy data and set a Scope 2 baseline
+    evidence:
+      - record: Electricity and gas consumption for Unit 19 in kWh, from bills or meter readings (SESC-POL-08 paragraph 85)
+        status: not yet held
+        due: 2026-12-31
+        note: SESC-IMS-04 Part 8 (j) — Scope 2 data for Unit 19 is not held; SESC-IMS-05 paragraph 24 commits to obtaining it
+    owner: Environmental Manager
+
+  - ref: EA-05
+    activity: Storing materials, fuels, gas cylinders, sealants, adhesives and chemicals at Unit 19
+    life_cycle_stage: delivery
+    aspect: Leak or spill from stored substances; fire involving stored flammables
+    impact: Soil and water contamination; air pollution and contaminated fire-water run-off
+    condition: emergency
+    control_or_influence: control
+    severity: 4
+    likelihood: 2
+    score: 8
+    result: significant
+    significance_reason: Emergency with pollution potential; DSEAR and oil storage requirements attach; the premises fire risk assessment does not exist (SESC-IMS-00 Part 10 (e))
+    controls: SESC-POL-08 paragraph 30(a); SESC-POL-16 paragraph 29(d) (hazardous substances stored to the SDS, segregated, bunded); SESC-POL-05 A21 paragraph 121(b), (c) (external store; LPG never inside); SESC-POL-05 A25 emergency plan
+    reg09_topic: DSEAR; oil storage; Regulatory Reform (Fire Safety) Order 2005
+    reg05: Landlord; neighbouring units; Dorset & Wiltshire Fire and Rescue
+    objective_area: none proposed — governed by the fire risk assessment action (Master Register FS-01 to FS-14)
+    evidence:
+      - record: Premises fire risk assessment for Unit 19
+        status: not yet held
+        due: 2026-11-30
+        note: SESC-IMS-00 Part 10 (e); fourteen walk-round items FS-01 to FS-14 open in the Master Register
+      - record: Stores inspection record covering bunding, segregation and SDS availability (SESC-POL-16 paragraph 30, quarterly stores check)
+        status: not yet held
+        due: 2026-12-31
+    owner: Environmental Manager
+
+  - ref: EA-06
+    activity: Office activities — printing, IT, consumables, welfare
+    life_cycle_stage: delivery
+    aspect: Paper and consumables use; office waste; WEEE from IT
+    impact: Resource use; landfill; hazardous WEEE if mis-disposed
+    condition: normal
+    control_or_influence: control
+    severity: 1
+    likelihood: 5
+    score: 5
+    result: not significant
+    significance_reason: Below 10; WEEE duty of care is covered at EA-20
+    controls: SESC-POL-08 paragraph 66(i) (digital timesheets, quotations, RAMS and job records); paragraph 33 (segregation)
+    reg09_topic: Waste duty of care (via EA-20)
+    reg05: —
+    objective_area: none
+    evidence:
+      - record: None required beyond the waste records at EA-20
+        status: nil return
+    owner: Environmental Manager
+
+  # ===================================================================================
+  # C — ROOFING AND BUILDING FABRIC
+  # ===================================================================================
+
+  - ref: EA-07
+    activity: Roof, soffit, fascia, chimney, loft and external fabric work
+    life_cycle_stage: delivery
+    aspect: Disturbance of nesting birds, bats and roosts in the building fabric
+    impact: Harm to protected species and loss of roosting and nesting habitat
+    condition: normal
+    control_or_influence: control
+    severity: 4
+    likelihood: 3
+    score: 12
+    result: significant
+    significance_reason: Score 10 or more; Wildlife and Countryside Act 1981 and Conservation of Habitats and Species Regulations 2017 attach directly
+    controls: SESC-POL-08 paragraphs 30(f), 69(a)–(c), (f), 70, 76 (pre-work check recorded in the RAMS; defer for active nests; stop and licensed ecologist for bats; enhancement where agreed; awareness instruction)
+    reg09_topic: Protected species — wild birds; bats
+    reg05: Natural England; customers; neighbours
+    objective_area: none proposed — a standing control
+    evidence:
+      - record: Protected species check recorded in the RAMS for every roof and fabric job (SESC-POL-08 paragraph 69(a))
+        status: not yet held
+        due: 2026-11-30
+        note: The RAMS library exists (SESC-POL-05 paragraph 171(a)); whether each project RAMS carries the recorded check is tested at IA-03
+      - record: Toolbox talk on protected species delivered and recorded on SESC-FRM-06
+        status: not yet held
+        due: 2026-12-31
+        note: No toolbox talk record of any kind exists (SESC-POL-05 paragraph 172(a))
+    owner: Environmental Manager
+
+  - ref: EA-08
+    activity: Cutting, drilling, grinding, chasing and sweeping — tiles, slate, masonry, concrete, fibre cement, timber, plasterboard, insulation
+    life_cycle_stage: delivery
+    aspect: Dust and airborne particulates including respirable crystalline silica leaving the working area
+    impact: Local air quality; nuisance and health effect on neighbours and building occupants; deposition on land and water
+    condition: normal
+    control_or_influence: control
+    severity: 3
+    likelihood: 5
+    score: 15
+    result: significant
+    significance_reason: Score 10 or more; statutory nuisance attaches; the OH&S side is a principal risk at SESC-POL-05 paragraph 2
+    controls: SESC-POL-08 paragraphs 30(c), 41(a), (b), 42 (on-tool suppression or Class M/H extraction, no dry cutting or dry sweeping, screening, damping down, agreed controls on Government establishments); SESC-POL-05 paragraphs 77, 78
+    reg09_topic: Statutory nuisance; Clean Air Act 1993; COSHH (OH&S side)
+    reg05: Neighbours; building occupants; site authority
+    objective_area: none proposed — a standing control
+    evidence:
+      - record: Weekly site inspection records showing dust control checked (SESC-POL-08 paragraph 29(e); SESC-FRM-07)
+        status: not yet held
+        due: 2026-11-30
+        note: SESC-FRM-07 is a draft; record capture not live
+    owner: Environmental Manager
+
+  - ref: EA-09
+    activity: Torch-on roofing, hot bitumen, soldering of lead and copper, welding and cutting
+    life_cycle_stage: delivery
+    aspect: Fume and combustion emissions; fire and contaminated fire-water run-off
+    impact: Air pollution; fire damage; soil and water contamination from fire-fighting
+    condition: abnormal
+    control_or_influence: control
+    severity: 4
+    likelihood: 2
+    score: 8
+    result: significant
+    significance_reason: Emergency potential with pollution reach; DSEAR attaches; hot works permit is a condition of most customers' site rules (interested party)
+    controls: SESC-POL-05 A21 paragraphs 121(a), (f) (eliminate hot works where cold-applied will do; hot works permit, fire watch 60 minutes); SESC-POL-08 paragraph 29(d), 37, 41; SESC-POL-08 paragraph 45(d) (lead)
+    reg09_topic: DSEAR; Regulatory Reform (Fire Safety) Order 2005 on customer premises; Control of Lead at Work Regulations 2002 (OH&S side)
+    reg05: Customers and insurers (hot works conditions); building occupants
+    objective_area: none proposed
+    evidence:
+      - record: Completed hot works permits retained with the job file
+        status: not yet held
+        due: 2026-11-30
+        note: Whether permits are completed and retained is tested at IA-03; none is claimed here
+    owner: Environmental Manager
+
+  - ref: EA-10
+    activity: Use and disposal of lead in flashings, soakers and traditional detailing
+    life_cycle_stage: delivery
+    aspect: Lead carbonate run-off from unpatinated lead; lead offcuts and swarf left on roofs and in gutters
+    impact: Toxicity to aquatic life and wildlife; soil contamination
+    condition: normal
+    control_or_influence: control
+    severity: 3
+    likelihood: 3
+    score: 9
+    result: significant
+    significance_reason: Hazardous waste and water pollution requirements attach; chalk stream sensitivity (SESC-POL-08 paragraph 45(a))
+    controls: SESC-POL-08 paragraph 45(d) (patination; offcuts collected, never left); paragraph 33 (metals segregated for recycling); SESC-POL-05 A23 paragraph 130(b)
+    reg09_topic: Hazardous waste; water pollution
+    reg05: Environment Agency; customers
+    objective_area: none proposed
+    evidence:
+      - record: Waste transfer notes showing lead scrap to a registered metals recycler
+        status: not yet held
+        due: 2026-12-31
+        note: Part of the Waste Register at EA-19
+    owner: Environmental Manager
+
+  - ref: EA-11
+    activity: Specifying and purchasing roofing membranes, insulation, timber, metals, sealants, adhesives and fixings
+    life_cycle_stage: procurement
+    aspect: Embodied carbon and resource use in materials bought; legality and sustainability of timber; packaging
+    impact: Climate change; deforestation and habitat loss in producing regions; waste
+    condition: normal
+    control_or_influence: influence
+    severity: 3
+    likelihood: 5
+    score: 15
+    result: significant
+    significance_reason: Score 10 or more; UK Timber Regulation attaches; customer and Government net-zero requirements (interested party)
+    controls: SESC-POL-08 paragraphs 53, 54, 75 (lower embodied carbon and recycled content where they meet the requirement; EPDs; FSC/PEFC chain of custody retained; take-back schemes); SESC-POL-12 Supplier Code of Conduct; SESC-POL-16 Q6 criterion (f)
+    reg09_topic: UK Timber Regulation; Packaging Waste Regulations (as a producer threshold test)
+    reg05: Customers; Government establishments (JOSCAR Zero); suppliers
+    objective_area: SESC-IMS-06 — supply chain environmental due diligence completed for current suppliers
+    evidence:
+      - record: FSC or PEFC chain-of-custody evidence retained for timber purchases (SESC-POL-08 paragraph 54)
+        status: not yet held
+        due: 2026-12-31
+        note: No chain-of-custody evidence is held in the system; none is claimed
+      - record: Approved supplier and subcontractor register with environmental assessment (SESC-POL-08 paragraph 52)
+        status: not yet held
+        due: 2026-11-30
+        note: SESC-IMS-00 Part 10 (q) — register does not exist
+    owner: Contracts Manager
+
+  # ===================================================================================
+  # D — MECHANICAL: HEATING, PLUMBING, GAS, REFRIGERATION AND F-GAS
+  # ===================================================================================
+
+  - ref: EA-12
+    activity: Working on heat pumps, air conditioning and refrigeration systems containing fluorinated greenhouse gases
+    life_cycle_stage: delivery
+    aspect: Release of refrigerant gas during installation, service, leak, decommissioning or damage
+    impact: Climate change — the largest direct climate control the Employer operates (SESC-IMS-05 paragraph 24); ozone depletion for legacy gases
+    condition: abnormal
+    control_or_influence: control
+    severity: 4
+    likelihood: 2
+    score: 8
+    result: significant
+    significance_reason: Fluorinated Greenhouse Gases Regulations 2015 attach directly; emergency potential; SESC-CRP-01 commitment
+    controls: SESC-POL-08 paragraphs 30(g), 41(f) (F-Gas certified personnel only; recovery into cylinders; never vented); paragraph 48(c) (PFAS — recovered, never vented); F-Gas company certification FGAS3016462 and REF1021835 as recorded at SESC-POL-05 Annex C
+    reg09_topic: F-Gas Regulations — company and personnel certification; leak checking; record keeping
+    reg05: Environment Agency (F-Gas enforcement); Quidos / Refcom; customers
+    objective_area: SESC-IMS-06 — zero refrigerant releases; F-Gas records complete for every job
+    evidence:
+      - record: F-Gas company certificates FGAS3016462 (valid to 15 July 2027) and REF1021835 (valid to 9 July 2027)
+        status: held
+        note: As recorded at SESC-POL-05 Annex C, verified against the certificates by G A Hill on 16 August 2026; not re-read in this workstream
+      - record: F-Gas leak check and recovery records per system worked on
+        status: not yet held
+        due: 2026-12-31
+        note: Held per job if at all; not in the system; tested at IA-03
+    owner: Environmental Manager
+
+  - ref: EA-13
+    activity: Draining, flushing, pressure-testing and chemically treating heating and cooling systems; wash-out of plant and tools
+    life_cycle_stage: delivery
+    aspect: Discharge of system water containing inhibitor, biocide or glycol, cement washings or wash-out to drain, ground or watercourse
+    impact: Water pollution; toxicity to aquatic life in chalk streams; harm to the sewer and treatment works
+    condition: abnormal
+    control_or_influence: control
+    severity: 4
+    likelihood: 3
+    score: 12
+    result: significant
+    significance_reason: Score 10 or more; Water Industry Act 1991 (trade effluent consent), Water Resources Act 1991 and Environmental Permitting attach
+    controls: SESC-POL-08 paragraphs 30(b), 43, 80(a)–(c), (f), 83(a)–(d) (nothing but clean rainwater to a surface water drain; contained wash-out; system water removed by licensed carrier or to foul only with written agreement and consent; water undertaker consent obtained by the Environmental Manager)
+    reg09_topic: Water pollution; trade effluent; environmental permitting
+    reg05: Water undertaker; Environment Agency; building owner
+    objective_area: SESC-IMS-06 — zero environmental incidents
+    evidence:
+      - record: Waste transfer notes or written discharge agreements for system water removed
+        status: not yet held
+        due: 2026-12-31
+        note: Tested at IA-03
+    owner: Environmental Manager
+
+  - ref: EA-14
+    activity: Gas and oil-fired appliance work (gas under Gas Safe registration 921327; oil-fired work is not offered while OFTEC registration is lapsed)
+    life_cycle_stage: use
+    aspect: Combustion efficiency and emissions of installed appliances over their life; gas escape
+    impact: Climate change and local air quality over the appliance life; fire or explosion risk from escape
+    condition: normal
+    control_or_influence: influence
+    severity: 3
+    likelihood: 4
+    score: 12
+    result: significant
+    significance_reason: Score 10 or more; Gas Safety (Installation and Use) Regulations 1998 attach; Building Regulations Part L (efficiency) attach to the specification
+    controls: SESC-POL-16 paragraphs 38 (commissioning and certification as the trade requires); SESC-POL-19 (conformity of what is installed); Gas Safe registration as recorded at SESC-POL-16 Annex C; design carve-out at SESC-IMS-04 paragraph 58 for heat pump sizing
+    reg09_topic: Gas Safety (Installation and Use) Regulations 1998; Building Regulations Part L
+    reg05: Gas Safe Register; customers; occupants
+    objective_area: SESC-IMS-06 — the heat pump and energy-efficiency work the Employer delivers reduces customers' emissions by more than its own operations emit (SESC-IMS-05 paragraph 24)
+    evidence:
+      - record: Commissioning records and Gas Safe notifications per job
+        status: held
+        note: Held per job under SESC-POL-16 Q11; not indexed in the system; the claim is that such records exist for gas work, not that they are complete for every job — tested at IA-03
+    owner: Contracts Manager
+
+  # ===================================================================================
+  # E — ELECTRICAL
+  # ===================================================================================
+
+  - ref: EA-15
+    activity: Electrical installation, rewiring, lighting replacement, distribution board work
+    life_cycle_stage: end of life
+    aspect: Generation of WEEE — luminaires, lamps and fluorescent tubes, control gear, cable, boards; older fittings may contain PCBs or brominated flame retardants (POPs)
+    impact: Hazardous waste; mercury and POPs release if mis-disposed; resource loss if not recycled
+    condition: normal
+    control_or_influence: control
+    severity: 3
+    likelihood: 4
+    score: 12
+    result: significant
+    significance_reason: Score 10 or more; WEEE Regulations 2013, Hazardous Waste Regulations 2005 and the POPs regime attach directly
+    controls: SESC-POL-08 paragraphs 33, 34(c), (d) (classification, EWC coding, segregation, consignment notes); paragraph 49(c)–(e) (POPs — presume, segregate, consign for destruction, "stop-and-ask items, not skip items")
+    reg09_topic: WEEE; hazardous waste; POPs (Regulation (EU) 2019/1021 as assimilated)
+    reg05: Environment Agency; customers; waste contractors
+    objective_area: SESC-IMS-06 — Waste Register opened and recycling rate reported
+    evidence:
+      - record: Hazardous waste consignment notes for WEEE and POPs waste
+        status: not yet held
+        due: 2026-12-31
+        note: Part of the Waste Register at EA-19
+    owner: Environmental Manager
+
+  - ref: EA-16
+    activity: Specifying lighting, controls and electrical equipment for customers
+    life_cycle_stage: use
+    aspect: Energy consumption of installed equipment over its life
+    impact: Climate change (customers' Scope 2) — a positive aspect where efficient equipment is specified
+    condition: normal
+    control_or_influence: influence
+    severity: 2
+    likelihood: 4
+    score: 8
+    result: not significant
+    significance_reason: Below 10; no direct legal requirement on the Employer beyond Building Regulations compliance of the installation; recorded for the life cycle perspective
+    controls: SESC-POL-16 paragraph 61(a) (product selection); SESC-POL-19
+    reg09_topic: Building Regulations Part L
+    reg05: Customers
+    objective_area: none
+    evidence:
+      - record: None required
+        status: nil return
+    owner: Contracts Manager
+
+  # ===================================================================================
+  # F — RENEWABLES: SOLAR PV, HEAT PUMPS, BATTERY STORAGE (MCS NIC600672; PAS 2030)
+  # ===================================================================================
+
+  - ref: EA-17
+    activity: Designing and installing solar PV, air source heat pumps and energy-efficiency measures
+    life_cycle_stage: use
+    aspect: Renewable generation and reduced fossil fuel use in customers' buildings over the system life
+    impact: Reduction of customers' greenhouse gas emissions — the largest single positive environmental contribution the business makes (SESC-POL-08 paragraph 66(j); SESC-IMS-05 paragraph 24)
+    condition: normal
+    control_or_influence: influence
+    severity: 4
+    likelihood: 4
+    score: 16
+    result: significant
+    significance_reason: Score 10 or more (a beneficial aspect, scored on the scale of the benefit); MCS scheme requirements and the design carve-out at SESC-IMS-04 paragraph 58 attach
+    controls: MCS certification NIC600672 and PAS 2030 NICI63181 as recorded at SESC-POL-16 Annex C; SESC-IMS-04 Part 7 (design responsibility for heat loss, emitter and heat pump sizing, MCS solar PV); SESC-POL-16 Q4, Q11
+    reg09_topic: MCS scheme requirements; Building Regulations; Planning (permitted development for PV)
+    reg05: MCS; customers; Ofgem (where export tariffs apply)
+    objective_area: SESC-IMS-06 — installed renewable capacity and heat pump installations reported as a measure of positive contribution
+    evidence:
+      - record: MCS commissioning records and certificates per installation
+        status: held
+        note: Held per job under the MCS scheme; not indexed in the system; a legible PAS 2030 certificate is being obtained (SESC-POL-16 Annex C) — the registration is stated as recorded there and not re-read in this workstream
+    owner: Contracts Manager
+
+  - ref: EA-18
+    activity: Installing, handling and eventually removing lithium battery storage and PV modules
+    life_cycle_stage: end of life
+    aspect: Lithium cells and PV module waste; fire risk from damaged cells
+    impact: Hazardous waste; fire and toxic combustion products; resource loss
+    condition: abnormal
+    control_or_influence: control
+    severity: 4
+    likelihood: 2
+    score: 8
+    result: significant
+    significance_reason: Hazardous waste and WEEE requirements attach; emergency potential (battery fire); Batteries Regulations producer-take-back routes apply through the manufacturer
+    controls: SESC-POL-08 paragraph 46(e) (lithium cells named as a substance of concern); paragraph 34 (duty of care); SESC-POL-05 A21 paragraph 120 (hydrogen from battery charging); manufacturer take-back under SESC-POL-08 paragraph 66(f)
+    reg09_topic: WEEE; hazardous waste; Batteries and Accumulators Regulations
+    reg05: Manufacturers (take-back); Environment Agency; customers
+    objective_area: none proposed
+    evidence:
+      - record: Manufacturer take-back or consignment route recorded for any battery or module removed
+        status: not yet held
+        due: 2027-03-31
+        note: No removal has been recorded under the system; nil activity to date is not claimed either — tested at IA-03
+    owner: Environmental Manager
+
+  # ===================================================================================
+  # G — WASTE, DUTY OF CARE AND STRIP-OUT (every trade)
+  # ===================================================================================
+
+  - ref: EA-19
+    activity: Generation, storage, carriage and transfer of construction and demolition waste from every job — metals, timber, plasterboard, inert, plastics and packaging, insulation, cardboard, mixed
+    life_cycle_stage: end of life
+    aspect: Waste arising; waste carried in the Employer's own vans; transfer to carriers and facilities
+    impact: Landfill; resource loss; fly-tipping and escape if duty of care fails; plasterboard sulphate release if mixed with biodegradable waste
+    condition: normal
+    control_or_influence: control
+    severity: 3
+    likelihood: 5
+    score: 15
+    result: significant
+    significance_reason: Score 10 or more; Environmental Protection Act 1990 s.34 duty of care, Waste (England and Wales) Regulations 2011 reg. 12 hierarchy and carrier registration, List of Wastes Regulations 2005 attach directly (SESC-REG-09 CO-43 and the waste rows)
+    controls: SESC-POL-08 paragraphs 31–35 (hierarchy; prevention at ordering; classification and EWC coding; segregation; carrier registration CBDU663802 upper tier, 01/10/2026–01/10/2029, checked on the public register 22 October 2026 — SESC-REC-05; carrier and facility verification; transfer notes; Waste Register); SESC-POL-19 Annex A row 25 (to be amended to CBDU663802 at v1.2)
+    reg09_topic: Waste duty of care; carrier, broker and dealer registration (CO-43); hazardous waste; List of Wastes
+    reg05: Environment Agency; waste contractors and facilities; customers (site waste management plan requirements); principal contractors
+    objective_area: SESC-IMS-06 — Waste Register opened; recovery rate obtained from contractors and reported quarterly (SESC-POL-08 paragraph 35)
+    evidence:
+      - record: Waste carrier registration CBDU663802, upper tier, public-register check
+        status: held
+        note: SESC-REC-05, 22 October 2026; the certificate copy is to be filed in Signed/ by 31 October 2026 (Master Register 2p)
+      - record: Waste transfer notes for every movement; the Waste Register (SESC-POL-08 paragraph 35)
+        status: not yet held
+        due: 2026-12-31
+        note: No Waste Register exists in the system; transfer notes may exist per job and are not indexed; nothing is claimed
+      - record: Carrier and facility registrations and permits verified against the EA public register, re-verified annually (SESC-POL-08 paragraph 34(b))
+        status: not yet held
+        due: 2026-12-31
+      - record: Site waste management plan for every project of significant scale (SESC-POL-08 paragraph 29(b))
+        status: not yet held
+        due: 2026-12-31
+        note: Tested at IA-03
+    owner: Environmental Manager
+
+  - ref: EA-20
+    activity: Strip-out and removal of existing materials — old insulation, luminaires, cable, sealants, mastics, asbestos-containing materials, fluorescent tubes, batteries, waste oils, sealant and adhesive residues
+    life_cycle_stage: end of life
+    aspect: Generation of hazardous waste and POPs waste; disturbance of asbestos
+    impact: Release of persistent pollutants and asbestos fibre; prosecution risk — "the most likely way for a refurbishment contractor to commit an environmental offence without noticing" (SESC-POL-08 paragraph 49(b))
+    condition: normal
+    control_or_influence: control
+    severity: 4
+    likelihood: 3
+    score: 12
+    result: significant
+    significance_reason: Score 10 or more; Hazardous Waste Regulations 2005, POPs regime and Control of Asbestos Regulations 2012 attach directly
+    controls: SESC-POL-08 paragraphs 34(d) (consignment notes; hazardous waste producer registration where required), 49(d), (e) (presume POPs where age unknown; segregate; consign for destruction; briefing); SESC-POL-05 A19 paragraphs 110–113 (asbestos survey before work; stop-work rule; licensed contractor)
+    reg09_topic: Hazardous waste; POPs; Control of Asbestos Regulations 2012 (waste provisions)
+    reg05: Environment Agency; HSE (asbestos); customers and dutyholders; licensed asbestos contractors
+    objective_area: none proposed — a standing control
+    evidence:
+      - record: Hazardous waste consignment notes and consignee returns, retained three years
+        status: not yet held
+        due: 2026-12-31
+      - record: Record of the age and specification of materials to be removed, asked of the client before strip-out (SESC-POL-08 paragraph 49(d))
+        status: not yet held
+        due: 2026-12-31
+        note: Tested at IA-03
+      - record: Asbestos awareness training current for every site operative (SESC-POL-05 paragraph 111)
+        status: not yet held
+        due: 2026-10-31
+        note: One certificate had lapsed at POL-05's issue, renewal committed by 31 August 2026; individual training records are personal data and are held in Workspace, never here; the register holds only the requirement and the date
+    owner: Environmental Manager
+
+  - ref: EA-21
+    activity: Storing and moving waste and materials on site; skips and containers
+    life_cycle_stage: delivery
+    aspect: Wind-blown litter, polystyrene beads, insulation dust, membrane offcuts, banding and packaging escaping from site
+    impact: Marine and freshwater litter and microplastics (the operating area drains to Poole Harbour, Christchurch Harbour and the Solent — SESC-POL-08 paragraph 84); harm to wildlife and livestock
+    condition: abnormal
+    control_or_influence: control
+    severity: 3
+    likelihood: 3
+    score: 9
+    result: significant
+    significance_reason: Duty of care — waste must not escape (EPA 1990 s.34) — attaches directly
+    controls: SESC-POL-08 paragraphs 45(f), 84(a)–(d) (polystyrene cut in shelter; beads vacuumed; offcuts containerised and covered; skips sheeted or netted before moving)
+    reg09_topic: Waste duty of care (escape)
+    reg05: Neighbours; Environment Agency; marine conservation sites downstream
+    objective_area: none proposed
+    evidence:
+      - record: Weekly site inspection records showing waste storage and covering checked (SESC-FRM-07)
+        status: not yet held
+        due: 2026-11-30
+    owner: Environmental Manager
+
+  # ===================================================================================
+  # H — MOULD AND DAMP REMEDIATION (in scope as remediation only — D11)
+  # ===================================================================================
+
+  - ref: EA-22
+    activity: Mould and damp remediation in occupied dwellings — removal of affected finishes, application of treatments, specification and fitting of ventilation
+    life_cycle_stage: delivery
+    aspect: Use of fungicidal washes, biocidal paints and sealants; removal of contaminated plaster, board and insulation; mould spore release during removal
+    impact: Discharge of biocides to foul drain; hazardous waste; indoor air quality and occupant exposure during the work
+    condition: normal
+    control_or_influence: control
+    severity: 3
+    likelihood: 4
+    score: 12
+    result: significant
+    significance_reason: Score 10 or more; COSHH, Biocidal Products Regulation (use in accordance with authorisation) and waste duty of care attach; customer (social landlord) requirements under Awaab's Law (interested party)
+    controls: SESC-POL-08 paragraph 46(c) (COSHH register; SDS; substitution where a less hazardous product meets the requirement); paragraph 45(e) (no pesticides, herbicides or moss-killing biocides are used — fungicidal washes for remediation are a distinct, controlled use and the Environmental Manager confirms this at review); paragraphs 33, 34 (waste); SESC-POL-05 A13; the D17 ventilation specification carve-out at SESC-IMS-04 paragraph 58
+    reg09_topic: COSHH; Biocidal Products Regulation (GB BPR); waste duty of care; Social Housing (Regulation) Act 2023 / Awaab's Law (customer requirement)
+    reg05: Sovereign Housing and other social landlords; occupants; HSE
+    objective_area: none proposed in v0.1 — the trade is new to the system and its aspects are confirmed by the Environmental Manager from the products actually used
+    evidence:
+      - record: Project COSHH register listing every remediation product with its SDS (SESC-POL-05 paragraph 76)
+        status: not yet held
+        due: 2026-11-30
+        note: Project COSHH registers were committed to open 31 August 2026 — overdue
+    note: >
+      The products, quantities and waste streams of this trade have not been recorded anywhere
+      in the system. This row is drafted from the nature of the work as SESC-IMS-04 describes it
+      and is the first row the Environmental Manager should confirm or rewrite.
+    owner: Environmental Manager
+
+  - ref: EA-23
+    activity: Specifying ventilation (extractor fans, PIV units) as part of mould and damp remediation
+    life_cycle_stage: use
+    aspect: Energy consumption of installed ventilation over its life; reduced condensation and mould recurrence
+    impact: Climate change (small); improved indoor environment and reduced repeat remediation (beneficial)
+    condition: normal
+    control_or_influence: influence
+    severity: 1
+    likelihood: 4
+    score: 4
+    result: not significant
+    significance_reason: Below 10; Building Regulations Part F attaches to the specification but the environmental impact is small; recorded for the life cycle perspective
+    controls: SESC-IMS-04 paragraph 58 (ventilation specification within the design carve-out — professional indemnity position at Part 8(u) not yet confirmed); Building Regulations Part F
+    reg09_topic: Building Regulations Part F
+    reg05: Social landlords; occupants
+    objective_area: none
+    evidence:
+      - record: None required beyond the design records under SESC-POL-16 Annex B
+        status: nil return
+    owner: Contracts Manager
+
+  # ===================================================================================
+  # I — SITE SET-UP, WELFARE, WATER AND GROUND (every trade)
+  # ===================================================================================
+
+  - ref: EA-24
+    activity: Water use for welfare, dust suppression, mixing, cleaning and pressure testing
+    life_cycle_stage: delivery
+    aspect: Consumption of mains water
+    impact: Resource use in a water-stressed chalk catchment
+    condition: normal
+    control_or_influence: control
+    severity: 2
+    likelihood: 5
+    score: 10
+    result: significant
+    significance_reason: Score 10 or more (frequency); no abstraction and no permit — all mains (SESC-POL-08 paragraph 82)
+    controls: SESC-POL-08 paragraphs 81, 82 (leaks repaired; trigger controls; minimum volume; re-use of test water)
+    reg09_topic: None directly — Water Industry Act 1991 (supply by agreement)
+    reg05: Water undertaker; customers (use of their supply by agreement)
+    objective_area: none proposed in v0.1 — set once the data set gives a baseline
+    evidence:
+      - record: Water consumption at Unit 19 in cubic metres (SESC-POL-08 paragraph 85)
+        status: not yet held
+        due: 2026-12-31
+    owner: Environmental Manager
+
+  - ref: EA-25
+    activity: Site set-up — compounds, welfare units, material stacks, vehicle parking, temporary access
+    life_cycle_stage: delivery
+    aspect: Ground disturbance, soil compaction and sealing; damage to vegetation, trees and hedgerows; spread of invasive species on boots, tyres and tracks
+    impact: Habitat degradation; loss of drainage and carbon storage; spread of Schedule 9 species
+    condition: normal
+    control_or_influence: control
+    severity: 3
+    likelihood: 2
+    score: 6
+    result: not significant
+    significance_reason: Below 10 — almost all work is within the footprint of an existing building (SESC-POL-08 paragraph 68); Wildlife and Countryside Act s.14 attaches only where invasive species are present, which the row controls
+    controls: SESC-POL-08 paragraphs 72, 74, 77 (existing hardstanding; trackway and mats; TPO and hedgerow consents confirmed; invasive species checked, reported and left undisturbed; cleaning between sites)
+    reg09_topic: Wildlife and Countryside Act 1981 s.14 (invasive species); Town and Country Planning (TPOs)
+    reg05: Customers; local planning authority
+    objective_area: none
+    evidence:
+      - record: Site set-up arrangements and any consents recorded in the construction phase plan or RAMS
+        status: held
+        note: SESC-CPP-001 (Boscombe Down) exists per SESC-POL-05 paragraph 171(a); whether it records these points has not been read in this workstream and is not claimed
+    owner: Environmental Manager
+
+  - ref: EA-26
+    activity: Work on potable water systems and in food preparation areas
+    life_cycle_stage: use
+    aspect: Contamination of drinking water or food-contact surfaces by materials, flux, dust or backflow
+    impact: Pollution of food resources and drinking water (SESC-POL-08 paragraph 45(b), (c))
+    condition: abnormal
+    control_or_influence: control
+    severity: 4
+    likelihood: 2
+    score: 8
+    result: significant
+    significance_reason: Water Supply (Water Fittings) Regulations 1999 attach directly; interested party (occupants, customers) requirement
+    controls: SESC-POL-08 paragraph 45(b), (c) (approved fittings; backflow prevention; no lead solder; flush and disinfect with certificate; food areas cleared, screened and handed back clean)
+    reg09_topic: Water Supply (Water Fittings) Regulations 1999
+    reg05: Water undertaker; occupants; customers
+    objective_area: none proposed
+    evidence:
+      - record: Flushing and disinfection certificates issued to the customer per job (SESC-POL-08 paragraph 45(b))
+        status: not yet held
+        due: 2026-12-31
+        note: Held per job if at all; tested at IA-03
+    owner: Contracts Manager
+
+  # ===================================================================================
+  # J — EMERGENCY CONDITIONS NOT ALREADY ROWED (SESC-POL-08 paragraph 37)
+  # ===================================================================================
+
+  - ref: EA-27
+    activity: Any site — flood or storm event during the works
+    life_cycle_stage: delivery
+    aspect: Displacement of stored materials, waste, fuels and chemicals by flood or wind; heat stress on roofs (climate change — SESC-REG-06 CLI-00)
+    impact: Pollution and litter; programme disruption; worker health
+    condition: emergency
+    control_or_influence: control
+    severity: 3
+    likelihood: 3
+    score: 9
+    result: significant
+    significance_reason: Emergency with pollution reach; climate change determined relevant — "flooding, heat stress" (CLAUDE.md 12.7); SESC-POL-08 paragraph 26 risk (extreme weather affecting roof work)
+    controls: SESC-POL-08 paragraph 37 (foreseeable emergency named), paragraph 84(c), (d) (materials containerised, covered, sheeted); SESC-POL-05 paragraph 108 (weather assessed before roof work); SESC-IMS-05 paragraph 24 (plan work for the weather and heat); SESC-REG-01 (business risk)
+    reg09_topic: Waste duty of care (escape); Workplace (Health, Safety and Welfare) and CDM welfare (OH&S side)
+    reg05: Customers; Environment Agency; neighbours
+    objective_area: none proposed
+    evidence:
+      - record: Project emergency plan addressing flood and storm, briefed at induction (SESC-POL-05 paragraph 142)
+        status: not yet held
+        due: 2026-12-31
+        note: Emergency plans exist per project under the RAMS if at all; whether they address weather is tested at IA-03
+    owner: Environmental Manager
+
+  - ref: EA-28
+    activity: Any site — fire
+    life_cycle_stage: delivery
+    aspect: Combustion products from building materials, insulation, plastics and stored substances; contaminated fire-water run-off
+    impact: Air pollution including dioxins; soil and water contamination
+    condition: emergency
+    control_or_influence: control
+    severity: 5
+    likelihood: 1
+    score: 5
+    result: significant
+    significance_reason: Emergency with pollution reach; fire safety law attaches on customer premises and at Unit 19 (EA-05)
+    controls: SESC-POL-05 A21 paragraph 121(f) (hot works permit, fire watch), A25 paragraph 142 (emergency plan); SESC-POL-08 paragraphs 37, 44 (fire-water run-off as a soil pollution route), 41(e), 49(f) (no burning of waste, ever)
+    reg09_topic: Regulatory Reform (Fire Safety) Order 2005; DSEAR
+    reg05: Fire and rescue service; customers; insurers
+    objective_area: none proposed
+    evidence:
+      - record: Project emergency plan addressing fire, and the premises fire risk assessment for Unit 19
+        status: not yet held
+        due: 2026-11-30
+        note: As EA-05 and SESC-IMS-00 Part 10 (e)
+    owner: Health and Safety Officer
+
+significant_aspects_summary:
+  note: >
+    The rows below meet the significance criteria on the PROPOSED scores. This list is what is
+    communicated under the significance method once the Environmental Manager has confirmed the
+    scores and the Managing Director has approved the register. Until then it is a proposal and is
+    communicated to nobody as the Employer's determination.
+  significant:
+    - EA-01 fuel use and exhaust emissions from the fleet
+    - EA-02 fuelled plant emissions and noise
+    - EA-03 fuel and oil spillage
+    - EA-04 energy use at Unit 19
+    - EA-05 stored substances at Unit 19 — leak, spill, fire
+    - EA-07 protected species in the building fabric
+    - EA-08 dust and respirable crystalline silica
+    - EA-09 hot works — fume and fire
+    - EA-10 lead run-off and offcuts
+    - EA-11 embodied carbon and timber legality in materials bought
+    - EA-12 refrigerant release
+    - EA-13 discharge of system water and wash-out
+    - EA-14 installed appliance efficiency and gas escape
+    - EA-15 WEEE and POPs from electrical work
+    - EA-17 renewable generation and emissions avoided (beneficial)
+    - EA-18 battery and module waste; battery fire
+    - EA-19 construction waste and the duty of care
+    - EA-20 hazardous, POPs and asbestos waste from strip-out
+    - EA-21 escape of litter and plastics from site
+    - EA-22 mould and damp remediation products and waste
+    - EA-24 mains water consumption
+    - EA-26 potable water and food area contamination
+    - EA-27 flood and storm
+    - EA-28 fire
+  not_significant:
+    - EA-06 office consumables
+    - EA-16 energy use of specified electrical equipment
+    - EA-23 energy use of specified ventilation
+    - EA-25 site set-up ground effects
+
+clause_notes:
+  iso14001_6_1_2: >
+    Claimed as documented information maintained: the aspects and impacts, the criteria, and the
+    significant aspects are all here. Read from the unverified 2026 map; the determination is to
+    be re-read against the 2026 text when the standard is bought (D27). Every score is proposed and
+    unconfirmed; the Employer's determination of significance exists only when the Environmental
+    Manager has confirmed the scores and the Managing Director has approved this register. Until
+    then the gap report may show the artefact as present and the determination as not yet made.
+  not_claimed: >
+    6.1.3 (SESC-REG-09); 6.1.4 and 6.2 (SESC-IMS-06); 7.4 communication (none has happened); 8.1
+    operational control (the controls are SESC-POL-08's and the RAMS's, cited not restated); 8.2
+    emergency preparedness (SESC-POL-08 E7 and SESC-POL-05 A25); 9.1 (nothing measured). Nothing
+    from ISO 9001 or ISO 45001.
+
+records:
+  held:
+    - SESC-CRP-01 v1.0 Scope 1 fuel data (EA-01)
+    - F-Gas company certificates as recorded at SESC-POL-05 Annex C (EA-12)
+    - SESC-REC-05 waste carrier public-register check, 22 October 2026 (EA-19)
+    - Per-job commissioning records for gas and MCS work exist under the schemes but are not indexed in the system (EA-14, EA-17) — their existence for some jobs is held; their completeness for every job is not claimed
+  not_yet_held:
+    - The Environmental Manager's confirmation of every score — due 2026-11-30 (proposed)
+    - The Managing Director's approval of this register — due 2026-11-30 (proposed)
+    - Communication of the significant aspects at induction and by toolbox talk, recorded on SESC-FRM-03 and SESC-FRM-06 — within one month of approval
+    - The environmental data set at SESC-POL-08 E15 (fuel, electricity, gas, water, waste by stream, hazardous waste) — due 2026-12-31; scores re-tested against it
+    - The Waste Register and transfer and consignment notes indexed — due 2026-12-31
+    - Monthly spill-kit check records — due 2026-11-30
+    - Weekly site inspection records (SESC-FRM-07) showing the environmental checks — from record capture go-live
+    - Project COSHH registers — committed 31 August 2026, overdue
+    - Chain-of-custody evidence for timber — due 2026-12-31
+    - Premises fire risk assessment for Unit 19 — due 2026-11-30 (SESC-IMS-00 Part 10 (e))
+    - ISO 14001:2026, bought and read — not held (D27)
+
+revision_history:
+  - version: "0.1"
+    date: 2026-10-26
+    author: G A Hill (drafted by Claude)
+    change: >
+      First draft, as workstream 4 of the Master Register (6 item 4) and SESC-IMS-00 Part 10 (f),
+      under decision D27 of 26 October 2026 that the register is drafted to the clause structure
+      held, written 2026-ready, without waiting for the purchase of ISO 14001:2026. Twenty-eight
+      aspects across ten activity groups, every one taken from the Employer's own activities as
+      SESC-IMS-04 paragraph 14 and SESC-POL-08 paragraphs 12 and 37 describe them, with a life
+      cycle stage, a condition, a documented significance method and proposed scores. Twenty-four
+      proposed significant, four not. Every control cited to a signed paragraph; every evidence
+      record marked held or not yet held with a date. Written after reading every page of
+      SESC-POL-08 v1.1, SESC-POL-05 v1.1 and SESC-POL-16 v1.2. No row, score or control was
+      taken from the withdrawn landscaping register, from any template or from any other
+      organisation's document. Not approved; no score confirmed; nothing communicated.
