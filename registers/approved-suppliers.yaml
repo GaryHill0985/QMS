@@ -1,0 +1,239 @@
+id: SESC-REG-11
+title: Approved Supplier and Contractor Register — the organisations the Employer has evaluated and approved to supply it, what each is approved for, the evidence verified and when each is re-evaluated
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-10-26
+revised: 2026-10-26
+next_review: 2027-10-26
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso9001:  ["8.4.1"]
+  iso45001: ["8.1.4.2"]
+parent_document: SESC-PRO-05
+registers_cited: [SESC-REG-01, SESC-REG-05, SESC-REG-09, SESC-REG-10, SESC-REG-12]
+review_trigger:
+  - The first SESC-FRM-04 evaluation — the first row is entered and the empty-register statements below are removed
+  - A supplier nonconformity graded major under SESC-PRO-04, or any incident involving a supplier (row suspended; re-evaluation)
+  - A change of ownership, name or bank details of any supplier (re-evaluation and sanctions re-screen, SESC-POL-18 paragraph 13)
+  - The annual review of the register at SESC-PRO-05 paragraph 38
+  - A change to the higher-risk product categories at SESC-POL-17 paragraph 20 or the higher-risk goods at SESC-POL-10 paragraph 19
+  - The record capture section of the SESC Platform replacing the Workspace stopgap (D20)
+personal_data: false
+
+# SESC-REG-11 Approved Supplier and Contractor Register.
+#
+# Reference taken from CLAUDE.md 5 on 26 October 2026 (Master Register 6 item 6b; SESC-IMS-00
+# Part 10 (q); SESC-REG-05 IP-12; action G13). Operated by SESC-PRO-05 Purchasing and Control
+# of Suppliers and Subcontractors, which is where the procedure is; this file is the register.
+#
+# Why it exists. ISO 9001 clause 8.4.1 requires criteria for the evaluation, selection,
+# monitoring of performance and re-evaluation of external providers, and retained documented
+# information of those activities and of any actions arising. ISO 45001 clause 8.1.4.2 requires
+# OH&S criteria in the selection of contractors. SESC-FRM-04 is the evaluation record for one
+# supplier on one date; this register is the index of every supplier that has one, and is what
+# lets anyone check, before an order is raised or a subcontractor mobilises, whether the
+# organisation is approved, for what, on what evidence, and until when.
+#
+# What it replaces. Four lists, each described in a signed policy and each empty: the Approved
+# Contractor Register (SESC-POL-05 paragraph 159; SESC-POL-08 paragraph 52; SESC-POL-10
+# paragraph 16), the list of approved and preferred suppliers (SESC-POL-16 paragraph 23), the
+# Supplier Authorisation Record (SESC-POL-17 Annex B) and the approved supplier list (SESC-POL-19
+# section 19 Stage 2). On approval of SESC-PRO-05 this register is every one of them; the names
+# are recorded as aliases below. The questionnaire previously in use was another organisation's
+# document (SESC-REG-05 IP-12) and nothing from it, or from any template, is here.
+#
+# THIS REGISTER IS ISSUED EMPTY. No supplier or subcontractor has been evaluated under the
+# Employer's own arrangements on any date (SESC-POL-05 paragraph 172(n); SESC-POL-17 paragraph
+# 63(a); SESC-REG-05 IP-12). The Employer buys from merchants and manufacturers and engages
+# subcontractors today, and fifteen subcontractors have full insurance records on file
+# (SESC-REG-05 IP-12, 17 August 2026); none of them is on this register, because holding a
+# certificate is not an evaluation. A supplier is entered here only from a dated SESC-FRM-04
+# with an outcome of approved or approved with conditions. Until the first row exists, the rule
+# at SESC-POL-17 paragraph 63(a) operates: approved sources are a TYPE of source — the
+# manufacturer, a distributor it authorises, or an established merchant holding a trade account
+# in the Employer's name — not a check against this list.
+#
+# What it claims. ISO 9001 8.4.1 and ISO 45001 8.1.4.2, as the retained documented information
+# of the evaluations, and only once a row exists: an empty register evidences nothing, and the
+# gap report is right to show 8.4 red until the first SESC-FRM-04 is indexed. It does not claim
+# 8.4.2 or 8.4.3 (SESC-PRO-05), 8.1 of ISO 14001 (SESC-PRO-05 and SESC-POL-08 E8), or 8.1.4.1
+# or 8.1.4.3 of ISO 45001 (SESC-PRO-05).
+#
+# What each row holds, when there is one. The organisation (by registered name and company
+# number, or by an ST-nn reference for a sole trader); the category of what it supplies; the
+# criticality grade from SESC-PRO-05 paragraph 16; the source category from SESC-POL-17 Annex B
+# where it supplies product; what it is approved to supply; the SESC-FRM-04 reference and date
+# that produced the outcome; the outcome; the evidence verified, each with the issuing body or
+# public register it was verified on, the date, and the expiry; the sanctions screening
+# reference; whether SESC-POL-12 has been acknowledged; any condition; the re-evaluation due
+# date; the status; and the history of suspensions and removals with reasons.
+#
+# What is NOT here. No evaluation detail, no insurance certificate, no questionnaire, no
+# correspondence: those are the records behind the row and are held in the records store with
+# the SESC-FRM-04. No personal data: a sole trader is an individual and is entered under an
+# ST-nn reference and a trading description only, with the identity held in the records store
+# under SESC-POL-14 (CLAUDE.md 8). No supplier's price, turnover or contract value. No
+# statement that any supplier is approved, because none is.
+
+aliases:
+  - Approved Contractor Register (SESC-POL-05 paragraph 159 and Annex B; SESC-POL-08 paragraph 52 and Annex B; SESC-POL-10 paragraphs 16, 21 and 24)
+  - List of approved and preferred suppliers; approved supplier list (SESC-POL-16 paragraphs 7, 23 and Annex B; SESC-POL-19 section 19 Stage 2)
+  - Supplier Authorisation Record (SESC-POL-17 paragraphs 9, 19(a), 48(b), 59 and Annex B)
+  - Approved Supplier Register (SESC-FRM-04 feeds_register — "DOES NOT YET EXIST", now this file)
+
+design_rules:
+  - >
+    ONE ROW PER ORGANISATION. An organisation approved for more than one category has one row
+    listing every category, with the grade set by the highest-criticality category it supplies.
+  - >
+    NO ROW WITHOUT AN EVALUATION. Every row cites the SESC-FRM-04 that produced it, by reference
+    and date. A supplier that has been used is not thereby approved; a supplier that has been
+    evaluated and approved is.
+  - >
+    EVIDENCE IS VERIFIED, DATED AND EXPIRING. Every registration, certificate, permit, licence
+    and insurance relied on is recorded with where it was verified (the issuing body or the public
+    register), the date of verification, and the expiry. "Seen" is not "verified".
+  - >
+    A GRADE SETS THE CONTROL. The criticality grade is one of the three at SESC-PRO-05
+    paragraph 16 and decides the depth of evaluation, the controls on the work and the
+    re-evaluation interval. A customer's requirement may raise a grade, never lower it.
+  - >
+    SUSPENSION AND REMOVAL ARE RECORDED, NEVER DELETED. A removed supplier's row stays, marked
+    removed, with the reason and date, so that the history is auditable and the organisation is
+    not re-entered without a new evaluation and the Managing Director's approval.
+  - >
+    NO PERSONAL DATA. Organisations only. A sole trader is referenced, not named.
+
+categories:
+  note: The SESC-FRM-04 `category` options, unchanged, so that the form and the register agree.
+  values:
+    - Labour-only subcontractor
+    - Bona fide subcontractor
+    - Materials
+    - Plant hire
+    - Waste carrier
+    - Professional services
+    - Software and IT
+  add_when_defined:
+    - Sub-contracted designer — treated as Professional services with the SESC-POL-19 section 19 criteria until SESC-FRM-04 carries its own option (raised as a task in the Master Register)
+
+criticality:
+  source: SESC-PRO-05 paragraph 16
+  values: [critical, significant, routine]
+  reevaluation_interval_months: {critical: 24, significant: 24, routine: 12}
+  note: >
+    Critical and significant suppliers are re-evaluated on SESC-FRM-04 every two years and
+    immediately after any incident or major nonconformity (SESC-POL-08 paragraph 51(f);
+    SESC-POL-10 paragraph 21; SESC-POL-12 paragraph 17). A routine supplier's row is reviewed at
+    the annual review of the register and re-evaluated only on failure.
+
+source_category:
+  source: SESC-POL-17 Annex B
+  values: [OEM, franchised distributor, merchant, independent]
+  note: >
+    Recorded for every supplier of product. "Independent" is permitted only with the Managing
+    Director's written approval under SESC-POL-17 paragraph 19(b), with the reason recorded on
+    the row.
+
+evidence_types:
+  note: What a row may record as verified, and where each is verified.
+  values:
+    - {type: Employers' liability insurance, verified_on: the certificate — insurer, policy number, period, limit}
+    - {type: Public liability insurance, verified_on: the certificate — insurer, policy number, period, limit}
+    - {type: Professional indemnity insurance, verified_on: the certificate — limit, each-and-every or aggregate, costs inclusive or exclusive, discipline, retroactive date (SESC-POL-19 section 19 Stage 3)}
+    - {type: SSIP or Common Assessment Standard, verified_on: the scheme's public register}
+    - {type: Trade registration — NICEIC, Gas Safe, MCS, PAS 2030, F-Gas, verified_on: the scheme's public register}
+    - {type: Waste carrier, broker or dealer registration — tier recorded, verified_on: the Environment Agency public register}
+    - {type: Environmental permit or exemption of the receiving facility, verified_on: the Environment Agency public register}
+    - {type: ISO certification, verified_on: the certification body's register and the body's UKAS accreditation (CLAUDE.md 12.5); an ISO/IEC 27001:2013 certificate is recorded as no certificate (CLAUDE.md 12.4)}
+    - {type: GLAA licence for a labour provider, verified_on: the GLAA public register}
+    - {type: Manufacturer authorisation of a distributor, verified_on: the manufacturer's letter, certificate of appointment or published list (SESC-POL-17 Annex B)}
+    - {type: Trade account in the Employer's name, verified_on: the account confirmation}
+    - {type: Timber chain of custody — FSC or PEFC, verified_on: the certificate and the scheme's database}
+    - {type: Supplier Code of Conduct acknowledgement, verified_on: the signed SESC-POL-12 section 9}
+    - {type: Sanctions screening, verified_on: SESC-POL-18 Annex A Screening Record reference}
+    - {type: Article 28 data processing contract, verified_on: the signed contract (SESC-POL-14 paragraph 22)}
+    - {type: Carbon Reduction Plan or dated statement, verified_on: the document (SESC-POL-12 paragraph 16)}
+
+status_vocabulary:
+  outcome: [approved, approved with conditions, rejected, provisional — re-evaluate in 3 months]
+  status: [approved, suspended, removed]
+  evidence_status: [verified, seen — not verified, not seen, not applicable]
+
+row_schema:
+  ref: "SUP-nn (organisation) or ST-nn (sole trader — identity held in the records store, never here)"
+  organisation: registered name, or trading description for ST-nn
+  company_number: Companies House number, or "sole trader" for ST-nn
+  categories: one or more of the category values
+  source_category: one of OEM / franchised distributor / merchant / independent, where product is supplied
+  criticality: critical / significant / routine
+  approved_for: what the organisation is approved to supply or do, in the Employer's words
+  evaluation: {form: SESC-FRM-04, record_ref: "", date: ""}
+  outcome: one of the outcome values
+  evidence: list of {type, verified_on, date, expiry, status}
+  sanctions_screening: {record_ref: "", date: "", result: ""}
+  code_of_conduct: {acknowledged: "", date: ""}
+  conditions: text, or none
+  reevaluation_due: date
+  status: approved / suspended / removed
+  history: list of {date, event, reason}
+  owner: Contracts Manager
+
+suppliers: []
+# Empty by design. The first row is entered only from the first completed SESC-FRM-04.
+
+owners:
+  note: >
+    The Contracts Manager owns the register (SESC-POL-16 paragraph 7; SESC-POL-08 paragraph 52;
+    SESC-POL-17 paragraph 9) and carries out every evaluation. The Chief Operating Officer, as
+    document controller, enters each change in the repository on the Contracts Manager's
+    instruction and from the dated SESC-FRM-04 (SESC-PRO-05 paragraph 6). The Accounts Manager
+    records the sanctions screening. The Managing Director approves any independent source, any
+    returned or surplus goods purchase and any sub-contracted design appointment.
+
+clause_notes:
+  iso9001_8_4_1: >
+    Claimed as the retained documented information of the evaluation, selection, monitoring and
+    re-evaluation of external providers — once a row exists. At v0.1 the register holds no row,
+    evidences nothing and is correctly shown red in the gap report. The criteria are in
+    SESC-PRO-05 paragraph 14 and the signed paragraphs it cites, not here.
+  iso45001_8_1_4_2: >
+    Claimed as the record that OH&S criteria were applied in the selection of each contractor
+    — once a row exists, on the same terms.
+  not_claimed: >
+    9001 8.4.2 and 8.4.3 and 45001 8.1.4.1 and 8.1.4.3 are SESC-PRO-05's. 14001 8.1 is
+    SESC-PRO-05's and SESC-POL-08 E8's. 7.5.3 is SESC-PRO-01's.
+
+records:
+  held:
+    - Insurance records for fifteen subcontractors, held in full as documents at 17 August 2026 (SESC-REG-05 IP-12) — not evaluated, not verified against this register's evidence rules, not indexed
+    - SESC-REC-05, the public-register check of the Employer's own waste carrier registration, 22 October 2026 — the model for the carrier verification each waste-carrier row will record
+    - Purchase orders, delivery notes and invoices in the accounting records (SESC-POL-17 paragraph 62) — held, not indexed
+  not_yet_held:
+    - Any completed SESC-FRM-04 — committed 30 September 2026 (SESC-POL-05 paragraph 172(n); SESC-POL-17 paragraph 63(a)), overdue; due 2026-11-30 (proposed) for every current subcontractor and waste contractor (SESC-IMS-06 OB-E5)
+    - Any row in this register — due with the first SESC-FRM-04
+    - Any sanctions Screening Record entry indexed in the system — due 2026-11-30 (proposed); SESC-POL-18 paragraph 38(a) states screening operates from 12 August 2026, and this register records nothing until the Accounts Manager produces the record
+    - Any signed SESC-POL-12 acknowledgement — due with the first evaluation
+    - Any waste carrier and facility verification for a contractor used (SESC-POL-08 paragraph 34(b)) — due 2026-11-30 (proposed)
+    - The Managing Director's approval of this register and of SESC-PRO-05 — due 2026-11-30 (proposed)
+    - The pointers from SESC-POL-05, 08, 10, 16, 17 and 19 to this register — at the next revision of each
+    - A sub-contracted designer option on SESC-FRM-04 — with SESC-FRM-04 v0.3
+
+revision_history:
+  - version: "0.1"
+    date: 2026-10-26
+    author: G A Hill (drafted by Claude)
+    change: >
+      First draft, as Batch B of the Master Register (6 item 6b), SESC-IMS-00 Part 10 (q) and
+      action G13, alongside SESC-PRO-05. One register in place of the four lists the signed
+      policies describe, each recorded as an alias. Issued EMPTY: no supplier or subcontractor
+      has been evaluated under the Employer's own arrangements on any date, and no row is entered
+      without a dated SESC-FRM-04. Categories carried unchanged from SESC-FRM-04; criticality
+      grades from SESC-PRO-05 paragraph 16; source categories from SESC-POL-17 Annex B; evidence
+      types with where each is verified. Written after reading every page of the nine signed
+      policies SESC-PRO-05 consolidates. Nothing taken from the questionnaire previously in use,
+      which was another organisation's document, or from any template. Not approved; no
+      supplier approved.

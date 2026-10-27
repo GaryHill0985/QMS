@@ -1,0 +1,611 @@
+id: SESC-REG-12
+title: Competence Requirements Register — the qualification, card, registration, assessment, briefing or demonstrated ability each role must hold before a person in that role is given the work, with the source that requires it, the evidence that shows it and the interval at which it is renewed
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-10-26
+revised: 2026-10-26
+next_review: 2027-10-26
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso9001:  ["7.2"]
+  iso14001: ["7.2"]
+  iso45001: ["7.2"]
+parent_document: SESC-PRO-06
+registers_cited: [SESC-REG-09, SESC-REG-10, SESC-REG-11]
+review_trigger:
+  - A change to the roles at SESC-IMS-04 paragraph 11 or the trades at SESC-IMS-04 paragraph 14
+  - A change to any scheme requirement at SESC-POL-16 Annex C or SESC-POL-05 Annex C, or to the Employer's registrations
+  - An investigation under SESC-PRO-04 paragraph 14 that finds competence, training or supervision contributed
+  - Each renewal interval marked "to be read from the awarding body" being read and entered
+  - The requirements for mould and damp remediation being stated (CR-35)
+  - ISO 14001:2026 being bought and read
+personal_data: false
+
+# SESC-REG-12 Competence Requirements Register.
+#
+# Reference taken from CLAUDE.md 5 on 26 October 2026 (Master Register 6 item 6b; SESC-IMS-00
+# Part 10 (l); action G12). Operated by SESC-PRO-06 Training, Competence and Awareness.
+#
+# Why it exists. Clause 7.2 is the same sentence in all three standards: determine the
+# competence needed, ensure the person has it, take action where they do not, and retain the
+# evidence. SESC-IMS-00 paragraph 36 says the role-based competence REQUIREMENTS will be held in
+# the repository as a register once written; this is that register. The requirements are the
+# Employer's, may live in git, and name no person. The EVIDENCE that a named person holds a
+# requirement is personal data and lives in the Training Matrix and on SESC-FRM-03 in the
+# records store under SESC-POL-14 (CLAUDE.md 8; SESC-FRM-03 design_note). Nothing here says who
+# holds what.
+#
+# Where every row comes from. A requirement is here only because a signed SESC document, a
+# scheme standard the Employer is registered to, or a legal instrument in SESC-REG-09 requires
+# it, and the row cites which. NO QUALIFICATION, INTERVAL OR SCHEME RULE IS STATED FROM MEMORY
+# (CLAUDE.md 2). Where a signed document states a renewal interval (manual handling three years;
+# the annual refreshers) the row carries it; where it does not, the row says "to be read from
+# the awarding body" and the Health and Safety Officer enters the interval from that body's own
+# documentation, with the date read, before the row is relied on for a renewal date. A row that
+# names a certificate, registration number or expiry does so only as SESC-POL-05 Annex C or
+# SESC-POL-16 Annex C records it, verified against the certificate on 16 August 2026 — nothing
+# has been re-verified in this draft.
+#
+# What it does NOT say. It does not say that any person holds any requirement, how many do, or
+# how many have lapsed, beyond the one signed count: at 16 August 2026 the Training Matrix
+# recorded twenty-two expired qualifications against twenty current (SESC-POL-05 paragraph
+# 171(b)). The Training Matrix was not read in this workstream. The requirements for mould and
+# damp remediation are not stated anywhere in the signed estate and the row says so. Activities
+# in the generic risk assessment library for which no signed document states a competence
+# requirement are listed at the end as gaps, not invented.
+#
+# What it claims. 7.2 of all three standards, as the maintained statement of the competence
+# determined — the first of the clause's four requirements. The other three (ensure, act,
+# retain) are SESC-PRO-06's and the Training Matrix's, and the retained evidence does not yet
+# exist in any indexed form. 7.3 is SESC-PRO-06's.
+
+design_rules:
+  - >
+    ONE ROW PER REQUIREMENT, listing every role it applies to. A role's full requirement set is
+    every row that names it.
+  - >
+    EVERY ROW CITES ITS SOURCE — the signed paragraph, the scheme standard or the SESC-REG-09
+    obligation. No source, no row.
+  - >
+    INTERVALS ARE READ, NOT REMEMBERED. "To be read from the awarding body" is an honest entry;
+    a number nobody read is not.
+  - >
+    NO NAMES, NO COUNTS beyond what a signed document states. The holders are on the Training
+    Matrix in the records store.
+  - >
+    THE EVIDENCE COLUMN SAYS WHAT SHOWS THE REQUIREMENT IS MET, and SESC-FRM-03's
+    competence_demonstrated vocabulary says how well: certificate verified with the issuing body;
+    certificate held, not verified; observed on site; knowledge check passed; attendance only.
+
+roles:
+  note: The roles at SESC-IMS-04 paragraph 11 and the trades at SESC-IMS-04 paragraph 14, plus the functions the signed policies name.
+  values:
+    - managing_director
+    - chief_operating_officer
+    - contracts_manager            # Quality Representative; Health and Safety Officer; Environmental Manager; regulation 7 competent person
+    - accounts_manager             # Data Protection Lead; right-to-work and labour standards; sanctions screening
+    - site_supervisor
+    - operative_all_site           # every site operative in every trade
+    - operative_roofing_fabric
+    - operative_electrical
+    - operative_gas_mechanical
+    - operative_renewables         # solar PV; heat pumps; battery storage
+    - operative_mould_damp         # mould and damp remediation (D11)
+    - driver                       # anyone driving a company vehicle or a private vehicle for work
+    - apprentice
+    - subcontractor_person         # any subcontractor's person attending the Employer's sites
+    - purchaser_receiver           # anyone who orders, receives, handles or installs materiel
+    - rpe_wearer
+    - first_aider
+    - face_fit_tester
+    - internal_auditor
+    - everyone                     # all Staff, including all employees & subcontractors
+
+evidence_vocabulary:
+  source: SESC-FRM-03 competence_demonstrated
+  values: [certificate held and verified with the issuing body, certificate held — not verified, observed on site, knowledge check passed, attendance only]
+
+interval_vocabulary:
+  values:
+    - once, on engagement
+    - per project or site
+    - at least monthly
+    - at least quarterly
+    - at least annually
+    - at least every three years
+    - six-monthly
+    - at the awarding body's interval — to be read from the awarding body
+    - on the event
+
+requirements:
+
+  # ===================================================================================
+  # A — EVERYONE
+  # ===================================================================================
+
+  - ref: CR-01
+    requirement: Documented induction before starting work, signed by the individual and countersigned by the inductor, covering the content at SESC-PRO-06 paragraph 13
+    roles: [everyone, subcontractor_person]
+    source: SESC-POL-05 paragraph 28; SESC-POL-19 paragraph 26(a); SESC-POL-17 paragraph 55; SESC-POL-18 paragraph 24; SESC-POL-10 paragraph 14(a); SESC-POL-14 paragraph 37; SESC-POL-08 paragraph 88; SESC-IMS-05 paragraph 31
+    evidence: Signed induction sheet on the personnel file; SESC-FRM-03 entry of type Induction
+    interval: once, on engagement; the site-specific part per project or site
+    verified_by: Contracts Manager or the inducting Site Supervisor
+    status: requirement documented; no signed induction record exists for any date (SESC-POL-05 paragraph 172(a))
+
+  - ref: CR-02
+    requirement: Toolbox talk attendance — the monthly programme, the weekly site talk, and the talk after any relevant incident, change in law or lesson learned
+    roles: [everyone, subcontractor_person]
+    source: SESC-POL-05 paragraphs 24 to 26; SESC-IMS-05 paragraph 38(a); SESC-POL-08 paragraph 88
+    evidence: SESC-FRM-06 signed attendance with content
+    interval: at least monthly, and weekly on every active site
+    verified_by: Health and Safety Officer
+    status: requirement documented; no attendance record exists for any date or subject (SESC-POL-05 paragraph 172(a))
+
+  - ref: CR-03
+    requirement: Counterfeit materiel awareness — what it is, the approved-sources rule, what to look for on packaging, markings and documentation, the duty to stop and report
+    roles: [everyone, purchaser_receiver]
+    source: SESC-POL-17 paragraph 55 (induction; annual recorded toolbox talk for all who order, receive, handle or install)
+    evidence: SESC-FRM-03 or SESC-FRM-06 signed; Training Matrix row for counterfeit materiel
+    interval: once at induction, then at least annually
+    verified_by: Contracts Manager
+    status: requirement documented; no training delivered to anyone and no Training Matrix row (SESC-POL-17 paragraph 63(d), (e)); committed 30 September 2026 — overdue
+
+  - ref: CR-04
+    requirement: Counterfeit materiel — in-depth annual training on supplier approval, traceability, verification, quarantine and reporting, flow-down, and the returned and surplus goods rule
+    roles: [contracts_manager, purchaser_receiver, managing_director]
+    source: SESC-POL-17 paragraph 55 (Contracts Manager and anyone who raises purchase orders; Managing Director with the external reporting obligations and reserved decisions)
+    evidence: SESC-FRM-03 signed
+    interval: at least annually
+    verified_by: Contracts Manager; Managing Director for his own
+    status: requirement documented; not delivered (SESC-POL-17 paragraph 63(d))
+
+  - ref: CR-05
+    requirement: Product safety process — install only approved products; check conformity marking and documentation before fixing; follow the manufacturer's instructions; the Hazard Log hazards for the work; how to raise a concern; the stop-work authority
+    roles: [everyone, subcontractor_person]
+    source: SESC-POL-19 paragraph 26(a) (induction, within the first week and before working unsupervised), 26(b) (annual toolbox talk), 26(c) (on the event); paragraph 27 (Training Matrix row)
+    evidence: SESC-FRM-03 or SESC-FRM-06 signed; Training Matrix row for product safety
+    interval: once at induction, then at least annually, and on the event
+    verified_by: Contracts Manager
+    status: requirement documented; the row and the records were to exist from 31 August 2026 (SESC-POL-19 paragraph 27) — not indexed in the system
+
+  - ref: CR-06
+    requirement: Financial sanctions — what they are, that a breach is a criminal offence, the red flags, the duty to stop and escalate to the Managing Director
+    roles: [everyone]
+    source: SESC-POL-18 paragraph 24 (induction; annual recorded briefing)
+    evidence: SESC-FRM-03 signed; Training Matrix sanctions line
+    interval: once at induction, then at least annually
+    verified_by: Accounts Manager; Managing Director
+    status: requirement documented; no sanctions training delivered before 12 August 2026 and the first recorded briefing was due by 30 September 2026 (SESC-POL-18 paragraph 38(c)) — not indexed in the system
+
+  - ref: CR-07
+    requirement: Financial sanctions — in-depth annual training on screening, the lists, name and beneficial-owner searching, recording at Annex A, possible-match handling and payment-change fraud
+    roles: [accounts_manager, purchaser_receiver, managing_director, contracts_manager]
+    source: SESC-POL-18 paragraph 24 (Accounts Manager and anyone who opens an account, raises an order or releases a payment; Managing Director and Contracts Manager with risk assessment, root cause analysis, licensing and reporting)
+    evidence: SESC-FRM-03 signed
+    interval: at least annually
+    verified_by: Managing Director
+    status: requirement documented; not delivered (SESC-POL-18 paragraph 38(c))
+
+  - ref: CR-08
+    requirement: Modern slavery — the indicators of exploitation and what to do; the reporting routes including the Modern Slavery Helpline
+    roles: [everyone]
+    source: SESC-POL-10 paragraph 14(a) (induction for all; annual toolbox talk)
+    evidence: SESC-FRM-03 or SESC-FRM-06 signed; Training Matrix
+    interval: once at induction, then at least annually
+    verified_by: Accounts Manager
+    status: requirement documented; the standing target at SESC-POL-10 paragraph 21 is 100 per cent of Staff with labour-engagement or supervisory responsibility trained annually — no record indexed
+
+  - ref: CR-09
+    requirement: Modern slavery — awareness training for everyone with responsibility for engaging labour and every supervisor
+    roles: [contracts_manager, accounts_manager, site_supervisor, managing_director]
+    source: SESC-POL-10 paragraph 14(a), paragraph 21 (target)
+    evidence: SESC-FRM-03 signed; Training Matrix
+    interval: at least annually
+    verified_by: Accounts Manager
+    status: requirement documented; no record indexed
+
+  - ref: CR-10
+    requirement: Data protection awareness — the principles, recognising a rights request, reporting a breach; the staff privacy notice issued
+    roles: [everyone]
+    source: SESC-POL-14 paragraph 37 (on appointment and at least annually); paragraph 38 (Training Matrix row)
+    evidence: SESC-FRM-03 signed; Training Matrix data protection row
+    interval: once on appointment, then at least annually
+    verified_by: Accounts Manager as Data Protection Lead
+    status: requirement documented; the Training Matrix has no data protection row and no briefing is recorded (SESC-POL-14 paragraph 38); committed 30 September 2026 — overdue. Until the entries exist, no completed data protection training is claimed to anyone
+
+  - ref: CR-11
+    requirement: Drug and Alcohol Policy issued and understood; for managers and supervisors, guidance on recognising possible impairment, raising a concern proportionately and the steps before a test
+    roles: [everyone, site_supervisor, contracts_manager]
+    source: SESC-POL-06 paragraph 32
+    evidence: SESC-FRM-03 (policy issue at induction; supervisor guidance)
+    interval: once at induction and on each re-issue
+    verified_by: Health and Safety Officer
+    status: requirement documented; no record indexed
+
+  - ref: CR-12
+    requirement: Environmental awareness — waste and duty of care, spill response, dust and noise, protected species, energy and fuel efficiency; the significant aspects at SESC-REG-10 once confirmed; old insulation, old light fittings and old cable as stop-and-ask items
+    roles: [everyone, subcontractor_person]
+    source: SESC-POL-08 paragraphs 29(c), 49(e), 70, 88; SESC-REG-10 significance_method communication
+    evidence: SESC-FRM-03 (induction) and SESC-FRM-06
+    interval: once at induction, then by toolbox talk on the SESC-POL-05 paragraph 26 programme
+    verified_by: Environmental Manager
+    status: requirement documented; no record indexed; the significant aspects are not yet confirmed and have not been communicated (SESC-REG-10)
+
+  - ref: CR-13
+    requirement: The authority and the duty to stop work that cannot be carried out safely, and the Speak Up route, known to every person
+    roles: [everyone, subcontractor_person]
+    source: SESC-IMS-04 paragraph 13; SESC-POL-05 paragraph 4; SESC-POL-19 paragraphs 49 to 53; SESC-POL-03; SESC-POL-12 paragraphs 5(d), 11, 15
+    evidence: Induction record (CR-01); SESC-FRM-06
+    interval: once at induction; reinforced at every talk
+    verified_by: Site Supervisor
+    status: requirement documented; no record indexed
+
+  # ===================================================================================
+  # B — SITE OPERATIVES, ALL TRADES
+  # ===================================================================================
+
+  - ref: CR-14
+    requirement: A valid CSCS or equivalent card for site access
+    roles: [operative_all_site, site_supervisor, apprentice, subcontractor_person]
+    source: SESC-POL-05 paragraph 31
+    evidence: Card seen and verified with the scheme; Training Matrix entry with expiry
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Health and Safety Officer at engagement; Contracts Manager before allocation
+    status: requirement documented; holders on the Training Matrix, not read; interval not entered
+
+  - ref: CR-15
+    requirement: Asbestos awareness (Category A) under regulation 10 of the Control of Asbestos Regulations 2012 — awareness only; it does not permit work on asbestos-containing materials
+    roles: [operative_all_site, site_supervisor, apprentice, subcontractor_person]
+    source: SESC-POL-05 paragraphs 31, 111, 130(a); SESC-REG-09 CO-13
+    evidence: Certificate verified with the issuing body; Training Matrix entry with expiry
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Health and Safety Officer
+    status: requirement documented; at 16 August 2026 one person's certificate had lapsed and that person does not attend a building constructed or refurbished before 2000 until it is renewed, committed by 31 August 2026 (SESC-POL-05 paragraph 173(a)) — position not known to this register
+
+  - ref: CR-16
+    requirement: Harness and work-at-height training with rescue awareness
+    roles: [operative_roofing_fabric, operative_renewables, operative_all_site]
+    source: SESC-POL-05 paragraph 31 ("for roof workers"); paragraph 105 (rescue plan briefed before work starts)
+    evidence: Certificate verified; Training Matrix entry
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Health and Safety Officer
+    status: requirement documented; holders not read
+
+  - ref: CR-17
+    requirement: Abrasive wheels
+    roles: [operative_all_site]
+    source: SESC-POL-05 paragraph 31
+    evidence: Certificate verified; Training Matrix entry
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Health and Safety Officer
+    status: requirement documented; applies to anyone using abrasive wheels and disc cutters; holders not read
+
+  - ref: CR-18
+    requirement: Manual handling
+    roles: [operative_all_site, apprentice]
+    source: SESC-POL-05 paragraphs 31, 62
+    evidence: Certificate or recorded training; Training Matrix entry
+    interval: at least every three years (SESC-POL-05 paragraph 62)
+    verified_by: Health and Safety Officer
+    status: requirement documented; holders not read
+
+  - ref: CR-19
+    requirement: PPE and RPE use — correct use, limitations, inspection, storage and cleaning of every item issued
+    roles: [operative_all_site, apprentice, subcontractor_person]
+    source: SESC-POL-05 paragraphs 31, 90
+    evidence: PPE Register signed at issue; SESC-FRM-03 or induction record
+    interval: at issue of each item, and at induction
+    verified_by: Health and Safety Officer
+    status: requirement documented; the PPE Register is not indexed in the system
+
+  - ref: CR-20
+    requirement: Fire awareness
+    roles: [operative_all_site, apprentice]
+    source: SESC-POL-05 paragraph 31
+    evidence: Certificate or recorded training; Training Matrix entry
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Health and Safety Officer
+    status: requirement documented; holders not read
+
+  - ref: CR-21
+    requirement: Emergency First Aid at Work or First Aid at Work — at least one current holder present on every site, and a kit in every vehicle
+    roles: [first_aider]
+    source: SESC-POL-05 paragraphs 31, 140, 145; SESC-REG-09 CO-20
+    evidence: Certificate verified with the awarding body; Training Matrix entry with expiry; the first aid needs assessment stating the number required
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Health and Safety Officer
+    status: requirement documented; one certificate was issued by the provider in an incorrect name and is not offered as evidence until corrected (SESC-POL-05 paragraph 173(c), committed 30 September 2026 — position not known); the needs assessment that sets the number is itself overdue (SESC-POL-05 paragraph 172(o))
+
+  - ref: CR-22
+    requirement: Face-fit test to HSE guidance INDG479 before first use of RPE and on any change of facepiece; clean-shaven at the seal
+    roles: [rpe_wearer]
+    source: SESC-POL-05 paragraph 79
+    evidence: Face-fit test record — held in the records store, never in the repository (CLAUDE.md 8)
+    interval: once per facepiece, and on change
+    verified_by: Face-fit tester
+    status: requirement documented; no face-fit record exists for any wearer; testing of all current wearers was committed by 30 September 2026 (SESC-POL-05 paragraph 172(e)) — overdue; SESC-IMS-06 OB-H6 proposes 31 December 2026
+
+  - ref: CR-23
+    requirement: Face-fit tester — in-house trained
+    roles: [face_fit_tester]
+    source: SESC-POL-05 paragraph 79 — "The Employer holds an in-house trained face-fit tester, qualified to 25 January 2027"
+    evidence: The tester's certificate; Training Matrix entry
+    interval: at the awarding body's interval — to be read from the awarding body; the signed document records qualification to 25 January 2027
+    verified_by: Health and Safety Officer
+    status: requirement documented and a holder recorded in the signed document; the certificate was not read in this workstream
+
+  - ref: CR-24
+    requirement: Noise — information, instruction and training on noise, the risk of hearing loss and tinnitus, the correct use of protectors and the duty to report hearing difficulties
+    roles: [operative_all_site]
+    source: SESC-POL-05 paragraph 99 (at induction and by toolbox talk); SESC-REG-09 CO-14
+    evidence: Induction record; SESC-FRM-06
+    interval: once at induction; reinforced by toolbox talk
+    verified_by: Health and Safety Officer
+    status: requirement documented; no noise assessment for the Employer's activities exists (SESC-POL-05 paragraph 172(f))
+
+  - ref: CR-25
+    requirement: Hand-arm vibration — trigger-time limits for the tools in use, in the RAMS and displayed at the workface; symptoms to report
+    roles: [operative_all_site]
+    source: SESC-POL-05 paragraphs 101 to 103; SESC-REG-09 CO-15
+    evidence: RAMS briefing and acceptance register; SESC-FRM-06
+    interval: per project or site
+    verified_by: Site Supervisor
+    status: requirement documented; no record indexed
+
+  - ref: CR-26
+    requirement: LPG handling and hot works — specific instruction; the hot works permit and the fire watch
+    roles: [operative_roofing_fabric, operative_gas_mechanical]
+    source: SESC-POL-05 paragraphs 121(f), 122
+    evidence: SESC-FRM-03 or SESC-FRM-06; hot works permits
+    interval: not stated in the signed document — to be set by the Health and Safety Officer with its source
+    verified_by: Health and Safety Officer
+    status: requirement documented; no record indexed
+
+  - ref: CR-27
+    requirement: RAMS briefed and accepted before work starts on every project, and re-briefed on every revision
+    roles: [operative_all_site, apprentice, subcontractor_person]
+    source: SESC-POL-05 paragraphs 10(a), 22, 23; SESC-POL-08 paragraph 29(a)
+    evidence: Signed acceptance register in the site pack
+    interval: per project or site, and on every revision
+    verified_by: Site Supervisor
+    status: requirement documented; acceptance registers exist in project RAMS packs (SESC-POL-05 paragraph 171(a)) — not indexed in the system
+
+  # ===================================================================================
+  # C — SITE SUPERVISORS AND DRIVERS
+  # ===================================================================================
+
+  - ref: CR-28
+    requirement: SSSTS or SMSTS certificate appropriate to the work
+    roles: [site_supervisor]
+    source: SESC-POL-05 paragraphs 10, 31; SESC-IMS-04 paragraph 11
+    evidence: Certificate verified with the awarding body; Training Matrix entry with expiry
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Health and Safety Officer
+    status: requirement documented; holders not read
+
+  - ref: CR-29
+    requirement: A full and current driving licence for the category of vehicle driven, and insurance for business use; DVLA online licence check with consent at recruitment and at least every six months, recorded in the Driver Register; immediate notification of any endorsement, disqualification or medical condition affecting fitness to drive
+    roles: [driver]
+    source: SESC-POL-05 paragraphs 68, 69; SESC-REG-09 CO-34
+    evidence: Driver Register — personal data, records store; DVLA check record
+    interval: six-monthly
+    verified_by: Accounts Manager
+    status: requirement documented; two individual DVLA checks were made in March 2026; the Driver Register and the six-monthly cycle were to open on 31 August 2026 (SESC-POL-05 paragraph 172(m)) — not indexed in the system
+
+  # ===================================================================================
+  # D — TRADE REGISTRATIONS AND THE PEOPLE WHO WORK UNDER THEM
+  # ===================================================================================
+
+  - ref: CR-30
+    requirement: Gas work only by engineers holding current ACS assessments, under the Employer's Gas Safe registration
+    roles: [operative_gas_mechanical]
+    source: SESC-POL-16 paragraph 22 and Annex C (Gas Safe 921327, valid to 21 April 2027); SESC-POL-05 Annex C (verified G A Hill 16 August 2026); SESC-POL-19 paragraph 95 and Annex A; SESC-REG-09 CO-23
+    evidence: Gas Safe register entry for the engineer; ACS certificates; Training Matrix entry with expiry
+    interval: at the awarding body's interval — to be read from Gas Safe and the ACS scheme
+    verified_by: Contracts Manager, on the Gas Safe public register
+    status: requirement documented; the Employer's registration verified against the certificate 16 August 2026; individual engineers' assessments not read
+
+  - ref: CR-31
+    requirement: Electrical work to BS 7671 under the Employer's NICEIC Approved Contractor registration, under the supervision of the qualifying supervisor; safe isolation — isolate, secure, prove dead with an approved voltage indicator proved before and after use
+    roles: [operative_electrical]
+    source: SESC-POL-16 paragraph 22 and Annex C (NICEIC 612325000); SESC-POL-05 Annex C (verified G A Hill 16 August 2026); SESC-POL-19 paragraphs 34(d), 94(b), 95, 101(b) and Annex A; SESC-REG-09 CO-22, CO-76
+    evidence: The scheme's requirements for the qualifying supervisor and for electricians working under the registration — to be read from Certsure's scheme documents; Training Matrix entry
+    interval: at the awarding body's interval — to be read from the scheme; NICEIC annual assessment as independent oversight
+    verified_by: Contracts Manager; the qualifying supervisor
+    status: requirement documented; the Employer's registration verified 16 August 2026; who the qualifying supervisor is, and the qualifications of the electricians, not read
+
+  - ref: CR-32
+    requirement: Work on equipment containing fluorinated greenhouse gases only by F-Gas certificated engineers under the Employer's company certification; recovery, never venting
+    roles: [operative_gas_mechanical, operative_renewables]
+    source: SESC-POL-08 paragraphs 30(g), 41(f); SESC-POL-19 paragraphs 70(c), 95 and Annex A; SESC-POL-05 Annex C (Quidos FGAS3016462 to 15 July 2027; Refcom REF1021835 to 9 July 2027; verified G A Hill 16 August 2026); SESC-REG-09 CO-41
+    evidence: Individual F-Gas certificate; Training Matrix entry
+    interval: to be read from the certification body
+    verified_by: Contracts Manager
+    status: requirement documented; company certification verified 16 August 2026; individual certificates not read
+
+  - ref: CR-33
+    requirement: Renewable installations designed, installed and commissioned to the MCS scheme standards by MCS-registered installers, with the MCS nominated technical person
+    roles: [operative_renewables]
+    source: SESC-POL-16 paragraph 22 and Annex C (MCS NIC600672, solar PV and air source heat pump); SESC-POL-05 Annex C (verified G A Hill 16 August 2026); SESC-POL-19 paragraphs 34(d), 95 and Annex A; SESC-REG-09 CO-75
+    evidence: The scheme's competence requirements for the nominated technical person and installers — to be read from the MCS standards cited at SESC-REG-09 CO-75; Training Matrix entry
+    interval: to be read from the scheme
+    verified_by: Contracts Manager
+    status: requirement documented; the Employer's certification verified 16 August 2026; who the nominated technical person is, not read
+
+  - ref: CR-34
+    requirement: Energy efficiency measures installed to PAS 2030 and the PAS 2035 framework under the Employer's registration
+    roles: [operative_renewables, operative_roofing_fabric]
+    source: SESC-POL-16 Annex C (PAS 2030 NICI63181 — expiry illegible on the copy held, replacement requested); SESC-POL-19 Annex A; SESC-REG-09 CO-77
+    evidence: The scheme's competence requirements — to be read from BSI PAS 2030:2023 and the certification body; Training Matrix entry
+    interval: to be read from the scheme
+    verified_by: Contracts Manager
+    status: requirement documented; the registration's expiry is not legible on the certificate held (SESC-POL-16 Annex C; SESC-REG-01 risk C1)
+
+  - ref: CR-35
+    requirement: Mould and damp remediation — the competence the trade needs
+    roles: [operative_mould_damp]
+    source: NONE. No signed document, scheme standard or product list states what competence mould and damp remediation requires. The trade is in the certification scope as remediation only (SESC-IMS-04 paragraph 16, decision D11); its products and wastes are recorded nowhere (Master Register F70); its only design element, ventilation specification, is at SESC-IMS-04 paragraph 58(d)
+    evidence: Not determinable until the requirement is stated
+    interval: not determinable
+    verified_by: Contracts Manager, to state the requirement from the methods and products actually used, with the source for each
+    status: GAP — requirement not documented; due 30 November 2026 (proposed); no person is to be allocated mould and damp work on the strength of this register until the row is completed
+
+  - ref: CR-36
+    requirement: Unvented hot water systems installed by G3-qualified operatives
+    roles: [operative_gas_mechanical]
+    source: SESC-POL-19 Annex A (Building Regulations Part G) and Annex D (Pressure systems and unvented hot water — "Qualified operative verification"); SESC-REG-09 CO-35
+    evidence: G3 certificate verified; Training Matrix entry
+    interval: at the awarding body's interval — to be read from the awarding body
+    verified_by: Contracts Manager
+    status: requirement documented; holders not read
+
+  - ref: CR-37
+    requirement: Manufacturer product training where the manufacturer requires it as a condition of warranty, of system certification or of using its system
+    roles: [operative_all_site, operative_renewables, operative_gas_mechanical, operative_electrical, operative_roofing_fabric]
+    source: SESC-POL-19 paragraph 26(d); SESC-POL-17 paragraph 22(b), (c) (the manufacturer's own parts and ancillaries where certification or warranty depends on them)
+    evidence: Manufacturer's certificate or installer registration; Training Matrix entry
+    interval: to be read from the manufacturer
+    verified_by: Contracts Manager at technical submittal and readiness review
+    status: requirement documented per product; which products currently require it is not recorded
+
+  # ===================================================================================
+  # E — THE PEOPLE WHO OPERATE THE SYSTEM
+  # ===================================================================================
+
+  - ref: CR-38
+    requirement: Regulation 7 competent person (Management of Health and Safety at Work Regulations 1999) — the appointed internal competent person, with qualifications reviewed annually and on any change of role by the Managing Director
+    roles: [contracts_manager]
+    source: SESC-POL-05 paragraphs 13, 117 and Annex C — "IOSH Safety for Executives and Directors, certificate 980-HSQE034-2881; Health and Safety for Directors to 30 Nov 2029; NVQ Level 4 Construction Site Supervision; NVQ Level 7; Temporary Works Coordinator to 29 Feb 2028" (appointment and competence reviewed annually; next review August 2027; verified S A Coffen 16 August 2026); SESC-REG-09 CO-03
+    evidence: The certificates scheduled at SESC-POL-05 Annex C; the Managing Director's annual review recorded
+    interval: at least annually (the review); each certificate at its awarding body's interval
+    verified_by: Managing Director
+    status: requirement documented and the holder's qualifications recorded in the signed document as verified against the certificates on 16 August 2026; not re-verified here; the next annual review is August 2027
+
+  - ref: CR-39
+    requirement: Retained external health and safety adviser — a recognised occupational health and safety qualification and membership of IOSH or an equivalent body at an appropriate grade
+    roles: []   # not an Employer role; the requirement the Employer places on the adviser
+    source: SESC-POL-05 paragraph 117 and Annex C — "James Milligan. NEBOSH National General Certificate in Occupational Health and Safety, awarded 25 March 2019, master log 00429184/1075579; Tech IOSH" (verified G A Hill 16 August 2026); engagement letter to be obtained
+    evidence: The certificate and membership as scheduled at Annex C; the engagement letter
+    interval: at least annually at the review of SESC-POL-05 Annex C
+    verified_by: Chief Operating Officer
+    status: requirement documented and the adviser's qualification recorded in the signed document; the engagement letter is not held (SESC-POL-05 Annex C; SESC-PRO-05 Part 8(j)). The adviser's competence is his, not the Employer's, and no audit qualification is claimed (SESC-PRO-02 paragraph 7)
+
+  - ref: CR-40
+    requirement: Quality Representative, Environmental Manager and Data Protection Lead — training appropriate to the duties
+    roles: [contracts_manager, accounts_manager]
+    source: SESC-POL-08 paragraph 90 ("The Environmental Manager and any person with specific environmental duties receive training appropriate to those duties, recorded in the Training Matrix"); SESC-POL-16 paragraph 7; SESC-POL-14 paragraph 7. NO signed document specifies a qualification for the Quality Representative, the Environmental Manager or the Data Protection Lead
+    evidence: Training Matrix entries
+    interval: not specified
+    verified_by: Managing Director
+    status: requirement stated only as "appropriate to the duties"; no qualification is specified and none is claimed; what training has been received is not read
+
+  - ref: CR-41
+    requirement: Internal auditor — competence and independence under SESC-PRO-02
+    roles: [internal_auditor]
+    source: SESC-PRO-02 paragraph 7 (competence of auditors — no audit qualification claimed for either prospective auditor) and paragraph 8 (independence allocation); Master Register D3 (open)
+    evidence: As SESC-PRO-02 states once D3 is decided
+    interval: as SESC-PRO-02 states
+    verified_by: Managing Director (D3)
+    status: requirement not yet settled — D3 open; no audit qualification claimed for anyone
+
+  - ref: CR-42
+    requirement: Document controller — operates SESC-PRO-01, the repository's change process and the register entries under SESC-PRO-05 and SESC-PRO-06
+    roles: [chief_operating_officer]
+    source: SESC-PRO-01 paragraph 6; SESC-IMS-04 paragraph 11
+    evidence: The repository's signed-commit history (Master Register D4)
+    interval: not specified
+    verified_by: Managing Director
+    status: requirement documented in the draft procedures; no qualification specified or claimed
+
+  # ===================================================================================
+  # F — APPRENTICES AND SUBCONTRACTORS' PEOPLE
+  # ===================================================================================
+
+  - ref: CR-43
+    requirement: Apprentice — a specific risk assessment before starting; a named mentor; no work beyond physical or psychological capacity; restricted hours; closer supervision; competence at each stage of the programme recorded
+    roles: [apprentice]
+    source: SESC-POL-10 paragraphs 10(e), 26(a); SESC-REG-09 CO-05 (regulation 19); SESC-IMS-05 paragraph 43(d)
+    evidence: The young-worker risk assessment; the mentor named on the personnel file; Training Matrix entries
+    interval: once on engagement; the assessment reviewed when the work changes
+    verified_by: Health and Safety Officer
+    status: requirement documented; SESC-IMS-05 records four apprentices; whether each has a recorded risk assessment and named mentor is not known to this register
+
+  - ref: CR-44
+    requirement: Subcontractor's person — evidence of competence for the work provided before attending site, checked against the rows above for the role, and the Employer's induction attended
+    roles: [subcontractor_person]
+    source: SESC-POL-05 paragraph 160; SESC-POL-12 paragraph 5(b); SESC-PRO-05 paragraph 29
+    evidence: The subcontractor's certificates seen and the check recorded; SESC-FRM-03 induction entry
+    interval: per project or site
+    verified_by: Contracts Manager
+    status: requirement documented; no check is recorded in the system because no subcontractor has been evaluated (SESC-REG-11)
+
+not_stated:
+  note: >
+    Activities in the Employer's generic risk assessment library (SESC-POL-05 paragraph 17) and
+    arrangements (paragraphs 54, 64) for which NO signed document states a competence requirement.
+    Listed so that the gap is visible and the requirement is stated from the issuing body, not
+    invented here. Each is a candidate row once the Contracts Manager states the requirement with
+    its source.
+  activities:
+    - Mobile access towers (SESC-POL-05 paragraphs 17, 54)
+    - Mobile elevating work platforms and powered access (paragraphs 17, 54)
+    - Access scaffolding and its inspection (paragraphs 54, 107)
+    - Slinging of loads and lifting operations (paragraph 17; SESC-REG-09 CO-09)
+    - Confined spaces (paragraph 17; SESC-REG-09 CO-26)
+    - Work on or near lead — assessment under the Control of Lead at Work Regulations 2002 (paragraph 130(b); SESC-REG-09 CO-27)
+    - Portable appliance testing by a competent person (paragraph 65(c))
+    - Thorough examination and inspection of harnesses, lanyards and anchor devices by a competent person (paragraph 54)
+    - Temporary works — the Contracts Manager's Temporary Works Coordinator certificate is recorded at SESC-POL-05 Annex C (to 29 February 2028); no temporary works procedure or supervisor requirement is stated
+    - Mould and damp remediation (CR-35)
+    - Calibration verification and the use of test instruments at SESC-POL-16 Annex D
+    - Banksman and vehicle marshalling (paragraph 73)
+
+clause_notes:
+  iso9001_7_2: >
+    Claimed as the maintained determination of the competence needed, by role. The remaining
+    parts of the clause — ensuring the person has it, taking action, evaluating effectiveness and
+    retaining the evidence — are SESC-PRO-06's and the Training Matrix's, and no retained
+    evidence is yet indexed in the system. The gap report is right to show 7.2 red until an
+    SESC-FRM-03 record exists.
+  iso14001_7_2: >
+    As above, for the environmental requirements at CR-12, CR-32 and CR-40. Clause numbering
+    carried from the withdrawn 2015 edition and marked unverified (D27).
+  iso45001_7_2: >
+    As above, for the OH&S requirements, which are most of this register.
+  not_claimed: >
+    7.3 (SESC-PRO-06); 5.3 roles and responsibilities (SESC-IMS-04 paragraph 11 and SESC-IMS-05);
+    5.4 (SESC-IMS-05); 7.1.2 and 7.1.6 (SESC-IMS-00).
+
+records:
+  held:
+    - The Training Matrix, maintained by the Health and Safety Officer, in the records store — held; not read in this workstream; its only signed count is twenty current and twenty-two expired at 16 August 2026 (SESC-POL-05 paragraph 171(b))
+    - The accreditation, registration and competent-person certificates scheduled at SESC-POL-05 Annex C and SESC-POL-16 Annex C, each verified against the certificate held on 16 August 2026
+    - The project RAMS acceptance registers in the RAMS packs (SESC-POL-05 paragraph 171(a)) — held, not indexed
+  not_yet_held:
+    - Any SESC-FRM-03 record, induction record or SESC-FRM-06 record — due at record capture go-live, 2026-11-30 (proposed)
+    - Every renewal interval marked "to be read from the awarding body", read and entered with the date — due 2026-11-30 (proposed)
+    - The competence requirement for mould and damp remediation (CR-35) — due 2026-11-30 (proposed)
+    - The requirements for the activities at not_stated, each with its source — due 2026-12-31 (proposed)
+    - The Training Matrix rows for counterfeit materiel, product safety, sanctions and data protection (CR-03, CR-05, CR-06, CR-10) — committed 31 August to 30 September 2026, overdue
+    - The Managing Director's approval of this register and of SESC-PRO-06 — due 2026-11-30 (proposed)
+    - The D3 decision on the internal auditor (CR-41)
+
+revision_history:
+  - version: "0.1"
+    date: 2026-10-26
+    author: G A Hill (drafted by Claude)
+    change: >
+      First draft, as Batch B of the Master Register (6 item 6b), SESC-IMS-00 Part 10 (l) and
+      action G12, alongside SESC-PRO-06. Forty-four requirements by role, every one cited to the
+      signed paragraph, scheme or SESC-REG-09 obligation that requires it; no qualification,
+      interval or scheme rule stated from memory — intervals the signed documents do not state are
+      marked to be read from the awarding body. Names no person and states no count beyond the
+      one signed at SESC-POL-05 paragraph 171(b). Records as a gap that no document states the
+      competence mould and damp remediation needs (CR-35), and lists twelve activities in the
+      risk assessment library for which no competence requirement is stated. Written after
+      reading every page of the ten signed policies SESC-PRO-06 consolidates; the Training
+      Matrix was not read. Nothing taken from any template or any other organisation's document.
+      Not approved.
