@@ -122,8 +122,14 @@ written this way and consistency is auditable.
   `SESC-PRO-01` (Control of Documented Information), `SESC-PRO-02` (Internal Audit), `SESC-PRO-03`
   (Management Review), `SESC-PRO-04` (Nonconformity and Corrective Action), `SESC-REG-10`
   (Environmental Aspects and Impacts Register) and `SESC-IMS-06` (Planning) were taken on
-  26 October 2026 for workstreams 6 and 4 and the clause 6 chapter (register §2q, D27).** All are DRAFTS:
-  `SESC-POL-20` · `SESC-PRO-05` · `SESC-WI-02` · `SESC-REG-11` · `SESC-FRM-09` · `SESC-REC-06` ·
+  26 October 2026 for workstreams 6 and 4 and the clause 6 chapter (register §2q, D27). `SESC-PRO-05`
+  (Purchasing and Control of Suppliers and Subcontractors), `SESC-PRO-06` (Training, Competence and
+  Awareness), `SESC-PRO-07` (Incident, Near Miss and Hazard Reporting and Investigation), `SESC-REG-11`
+  (Approved Supplier and Contractor Register) and `SESC-REG-12` (Competence Requirements Register) were
+  taken on 26 October 2026 for Batch B, first session (register §2r). `SESC-POL-20` (Anti-Bribery and
+  Corruption Policy) was taken on 27 October 2026 — a signed v1.0 produced in a separate chat and filed in
+  `Signed/` (register §2s, F77 on its dates).** All are DRAFTS:
+  `SESC-POL-21` · `SESC-PRO-08` · `SESC-WI-02` · `SESC-REG-13` · `SESC-FRM-09` · `SESC-REC-06` ·
   `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-07`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**
@@ -268,8 +274,8 @@ any interactive command — a passphrase prompt, a first SSH connection — in a
 |---|---|
 | **This repository** — the master | `CLAUDE ISO/` = `github.com/GaryHill0985/QMS` (the MacBook clone from 24 Sep 2026) |
 | **Architecture and build plan — AUTHORITATIVE for the repo design at §4–§9, and NOT to be re-derived** | `Reference/Architecture/SESC-IMS-Architecture-and-Build-Plan-v1.0.html` |
-| **`BRAND-SPEC.md` and `INTERIOR-SPEC.md`** — authoritative for colour, logo, cover geometry and interior page design, cited at §4 | `Reference/Design/`, with `sesc-logo-master.jpg`. The logo and background files the renderer uses are in the repository at `build/assets/`. |
-| **The twenty-one signed documents** (POL-01…19, CRP-01, REG-01), to be migrated into `documents/` | `Signed/` — flattened; the JOSCAR section folders are not carried forward. REG-02, REG-03, REG-04, REC-01…04 and TPL-01…04 were not copied (they were not in `Branded/Signed/`); bring them in when they are needed. |
+| **`BRAND-SPEC.md` and `INTERIOR-SPEC.md`** — authoritative for colour, logo, cover geometry and interior page design, cited at §4 | `Reference/Design/`, with `sesc-logo-master.jpg` and, from 27 October 2026, `SESC Letterhead Template.docx` (not a controlled document; register §2s). The logo and background files the renderer uses are in the repository at `build/assets/`. |
+| **The twenty-two signed documents** (POL-01…20, CRP-01, REG-01 — POL-20 added 27 October 2026, register §2s), to be migrated into `documents/` | `Signed/` — flattened; the JOSCAR section folders are not carried forward. REG-02, REG-03, REG-04, REC-01…04 and TPL-01…04 were not copied (they were not in `Branded/Signed/`); bring them in when they are needed. |
 | **Insurance records** cited by SESC-IMS-04 (PI schedule and Statement of Fact, the EL/PL broker letters, the Pangea letter) | `Insurance/`. **Never in git.** |
 | **The rendering traps**, §5 | `Reference/Decisions/Section workflow method.md`; the fifth at register §2g.1. The renderer port is done: `build/render_docx.py`. |
 | **The contradiction log** — known cross-document conflicts, do not rediscover them | `Reference/Decisions/`: `JOSCAR Master Register.md` §5 · `Cross-document consistency findings v1.0 - 17 Aug 2026.md` · `Gary decisions on C2-C8 - 17 Aug 2026.md`, with the 17–18 August findings notes on signatures, the PI renewal, the accident book and the guarantees and training register |

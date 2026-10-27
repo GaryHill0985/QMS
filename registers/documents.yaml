@@ -326,6 +326,24 @@ documents:
     clause_map: pending
     audiences: [controller, approver, contributor, auditor]
 
+  - ref: SESC-POL-20
+    title: Anti-Bribery and Corruption Policy
+    version: "1.0"
+    state: signed
+    form: branded
+    issued: null
+    next_review: null
+    pages: 11
+    joscar: ["2.5"]
+    clause_map: pending
+    audiences: [controller, approver, contributor, auditor]
+    defect: >
+      Filed 27 Oct 2026 at Signed/ (register §2s). Issue date and next
+      review are both printed as 03 March 2027 and the signature is dated
+      03/03/2026, so neither date is carried here until Steve says which
+      is right (F77). Contents page has no page numbers (F78). Not
+      migrated; no clause claimed.
+
   - ref: SESC-CRP-01
     title: Carbon Reduction Plan (PPN 006 format)
     version: "1.0"
