@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.22, 26 October 2026 (D27 added; B4 re-worded; G1–G4, G9, G10 updated to drafted; F67–F70 added; otherwise as at v1.21)
+source_register: SESC-IMS-Master-Register.md v1.24, 27 October 2026 (POL-20 filed — F77–F79 added; otherwise as at v1.23)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -499,6 +499,138 @@ actions:
       describes it and is the first row for the Environmental Manager to confirm
       or rewrite. The project COSHH register that would hold the products was
       committed for 31 August 2026 and does not exist.
+    internal: false
+
+  - ref: F71
+    kind: finding
+    title: Six signed documents name the supplier list four different ways, and every one is empty
+    owner: Chief Operating Officer
+    due: 2027-08-31
+    status: open
+    severity: medium
+    detail: >
+      Approved Contractor Register (POL-05 ¶159, POL-08 ¶52, POL-10 ¶16); list
+      of approved and preferred suppliers (POL-16 ¶23); Supplier Authorisation
+      Record (POL-17 Annex B); approved supplier list (POL-19 §19). SESC-REG-11
+      is drafted as all four, with the names as aliases. Pointers at the next
+      revision of each policy, queued with F63 and F68.
+    internal: false
+
+  - ref: F72
+    kind: finding
+    title: SESC-FRM-02's RIDDOR note contradicts the signed policy on who makes the report
+    owner: Chief Operating Officer
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      The draft form says the Managing Director makes the RIDDOR report;
+      SESC-POL-05 ¶9(g) and ¶134 say the Health and Safety Officer makes it and
+      the Managing Director is notified (¶8(e)). The signed policy governs;
+      SESC-PRO-07 ¶16 follows it. The form also proposes retention to age 21
+      for an injured person under 18, which no signed document states. Both
+      corrected or confirmed at SESC-FRM-02 v0.3.
+    internal: false
+
+  - ref: F73
+    kind: finding
+    title: No signed document states the competence mould and damp remediation needs, and twelve risk-assessed activities have no stated competence requirement
+    owner: Contracts Manager
+    due: 2026-11-30
+    status: open
+    severity: high
+    detail: >
+      SESC-REG-12 CR-35 records the trade's requirement as a gap; the trade is
+      in the certification scope (D11). The not_stated list names mobile
+      towers, MEWPs, scaffolding, slinging, confined spaces, lead, PAT, harness
+      inspection, temporary works, calibration, banksman and mould and damp.
+      Each is stated from the issuing body, not invented.
+    internal: false
+
+  - ref: F74
+    kind: finding
+    title: The Approved Supplier Questionnaire three policies say a supplier completes is not held; SESC-FRM-04 has no sub-contracted designer category
+    owner: Contracts Manager
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      POL-08 ¶51(a), POL-10 ¶16 and POL-12 ¶17 describe a supplier-completed
+      questionnaire. None is in the three sources; the one previously used
+      was another organisation's (REG-05 IP-12). Decide whether a supplier
+      questionnaire is drafted as a form or SESC-FRM-04 is completed with the
+      supplier; add a sub-contracted designer option at SESC-FRM-04 v0.3.
+    internal: false
+
+  - ref: F75
+    kind: finding
+    title: No signed document states the renewal interval for most site qualifications
+    owner: Health and Safety Officer
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      CSCS, SSSTS/SMSTS, asbestos awareness, EFAW/FAW, abrasive wheels, fire
+      awareness, harness and the trade schemes: SESC-POL-05 ¶32 says "at the
+      interval specified by the awarding body" and states none. SESC-REG-12
+      marks each "to be read from the awarding body"; the Health and Safety
+      Officer enters each from the awarding body's documentation with the date
+      read. Nothing is stated from memory (CLAUDE.md §2).
+    internal: false
+
+  - ref: F76
+    kind: finding
+    title: Induction-record retention differs between signed documents
+    owner: Chief Operating Officer
+    due: 2027-08-31
+    status: open
+    severity: low
+    detail: >
+      SESC-POL-05 Annex B and SESC-POL-14 Annex C give engagement plus seven
+      years; SESC-POL-17 ¶59 gives six years after leaving and three years for
+      superseded Training Matrix versions. The longer applies (SESC-PRO-01 ¶36;
+      SESC-PRO-06 ¶26). Align at the next revision of POL-17.
+    internal: false
+
+  - ref: F77
+    kind: finding
+    title: SESC-POL-20 v1.0 is signed and its dates contradict one another
+    owner: Managing Director
+    due: 2026-11-30
+    status: open
+    severity: high
+    detail: >
+      Cover revision date and page-3 issue date both read 03 March 2027; next
+      review also reads 03 March 2027; the Approval block is signed 03/03/2026;
+      the file was produced 27 Oct 2026. Steve to say which date is right; the
+      correction is a v1.1 reissue on his instruction. Register §2s.
+    internal: false
+
+  - ref: F78
+    kind: finding
+    title: Export artefacts left in the signed SESC-POL-20 PDF
+    owner: Chief Operating Officer
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      The contents page has no page numbers and carries the instruction
+      "Page numbers update on refresh — select all and press F9"; the
+      registered-office line sits above the page-3 control table unstyled.
+      Take at v1.1 with F77. Register §2s.
+    internal: false
+
+  - ref: F79
+    kind: finding
+    title: SESC-POL-20 routes reports through POL-03, which is not held as signed text
+    owner: Chief Operating Officer
+    due: 2027-08-31
+    status: open
+    severity: low
+    detail: >
+      POL-20 ¶40(d) and ¶42 point at the Whistleblowing (Speak Up) Policy,
+      SESC-POL-03; the file of that name in Signed/ contains POL-01 (F60).
+      Closes with F60. Register §2s.
     internal: false
 
   - ref: F9
@@ -1017,6 +1149,11 @@ actions:
       Requirements exist in SESC-POL-05 and the scheme rules; no register in the
       repository. Role-based requirements may be in git; individual records may
       not. IMS-00 Part 10 (l), proposed. Not previously in the task tables.
+      26 Oct 2026: SESC-REG-12 Competence Requirements Register DRAFTED v0.1
+      (44 requirements by role, every one cited; intervals not in a signed
+      document marked to be read from the awarding body) with SESC-PRO-06.
+      Not closed: the requirements exist as a draft; no SESC-FRM-03 record and
+      no effectiveness evaluation exists; mould and damp competence unstated (F73).
     internal: false
 
   - ref: G13
@@ -1031,6 +1168,10 @@ actions:
       Fifteen subcontractors already have full insurance records. Overdue
       against 30 September 2026 (REG-05 IP-12); IMS-00 Part 10 (q), 30 November
       2026 proposed.
+      26 Oct 2026: SESC-REG-11 Approved Supplier and Contractor Register DRAFTED
+      v0.1, issued EMPTY, with SESC-PRO-05, replacing the four lists the signed
+      policies describe (F71). Not closed: no supplier has been evaluated; the
+      first row needs the first dated SESC-FRM-04.
     internal: false
 
   - ref: G14
