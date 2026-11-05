@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.27, 5 November 2026 (signature guard fixed — F58 and F82 closed, F85 added; otherwise as at v1.26)
+source_register: SESC-IMS-Master-Register.md v1.28, 5 November 2026 (signature guard fixed — F58 and F82 closed, F85 added; otherwise as at v1.27, PR #20 merged)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
