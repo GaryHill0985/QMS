@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.36 · 5 November 2026.**
+**The state of the CLAUDE ISO project. v1.37 · 5 November 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -25,7 +25,7 @@
 | **Why early** | Phase 0's gate was "JOSCAR submitted, nothing competes with it". All thirty JOSCAR sections read 100% on the evening of 17 August and the portal says *"You are now ready to submit your application."* Submission is held on three insurance attachments only, which is Gary's task and not a build task. Phase 0 is effectively clear. **Since then JOSCAR has been fully approved and Phase 0 is closed — see §2d.** |
 | **Certification route** | ISO 9001 + 14001 + 45001 as **one** integrated certification, 2027. ISO 27001 deferred to 2028+, Cyber Essentials taken now in its place. **Adopted. Not to be re-derived.** |
 | **Standards editions** | 9001:**2015** (written 2026-ready) · 14001:**2026** · 45001:**2018**. See `CLAUDE.md` §6. |
-| **Repository** | **`github.com/GaryHill0985/QMS`**, pushed 18 August 2026, commit `d3782f7`. The working clone was `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI; **from 24 September 2026 it is `~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** — see §2d. **From 4 November 2026 Gary works from the Windows PC clone at `C:\Users\Admin\Desktop\QMS`, with its own signing key from 5 November 2026 (§2t, D4); **from 5 November 2026 the PC clone is the master and the MacBook clone is retired (F84 closed, §2w).** PR #20, the fire door record pack, merged as `fc225da` on 5 November 2026 (§2t.5).** **PR #24, the F84 change (register v1.30 and `CLAUDE.md` §2, §9 and §11), merged as `b3f4894` on 5 November 2026 (§2w.7).** **PR #26, register v1.31 to v1.35 — §2x, the HANDOFF-FD-002 brief, the Platform clones and F86 to F88 — merged as `21d3ef3` on 5 November 2026 (§2x.7); the clone's `main` is at `21d3ef3`.** **D4 CLOSED.** |
+| **Repository** | **`github.com/GaryHill0985/QMS`**, pushed 18 August 2026, commit `d3782f7`. The working clone was `Desktop\SESC\ISO\CLAUDE ISO\` on the MSI; **from 24 September 2026 it is `~/Documents/SESC/ISO/CLAUDE ISO/` on the MacBook** — see §2d. **From 4 November 2026 Gary works from the Windows PC clone at `C:\Users\Admin\Desktop\QMS`, with its own signing key from 5 November 2026 (§2t, D4); **from 5 November 2026 the PC clone is the master and the MacBook clone is retired (F84 closed, §2w).** PR #20, the fire door record pack, merged as `fc225da` on 5 November 2026 (§2t.5).** **PR #24, the F84 change (register v1.30 and `CLAUDE.md` §2, §9 and §11), merged as `b3f4894` on 5 November 2026 (§2w.7).** **PR #26, register v1.31 to v1.35 — §2x, the HANDOFF-FD-002 brief, the Platform clones and F86 to F88 — merged as `21d3ef3` on 5 November 2026 (§2x.7).** **PR #27, register v1.36 (§2x.7), merged as `4e9bb15` on 5 November 2026 (§2y); the clone's `main` is at `4e9bb15`.** **D4 CLOSED.** |
 | **Master document count** | 22 signed (POL-01…20, CRP-01, REG-01 — **POL-20 Anti-Bribery and Corruption Policy v1.0 added 27 Oct 2026, §2s, with its dates in question at F77**) + REG-02, REG-03, REG-04 + REC-01…04 + TPL-01…04. |
 | **This repository holds** | 3 controlled source files, 134 clauses across 3 standards, CI passing. **From 24 Sep 2026: a branded renderer, `build/render_docx.py`, with its tests (§2g).** **From 6 Oct 2026: `SESC-IMS-00` IMS Manual, draft v0.1 (§2j).** **From 7 Oct 2026: `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`, the generated COTO Log workbook (§2l).** **From 7 Oct 2026, workstream 3: `SESC-IMS-05` Leadership, draft v0.1, with the integrated policy statement and the 45001 5.4 mechanism, and `SESC-FRM-08` Worker Consultation Record, draft v0.1 (§2m).** **From 7 Oct 2026 the project has three sources only: `~/Documents/SESC/ISO/`, GitHub `QMS`, and the Drive for record capture (§2n, `CLAUDE.md` §11).** **From 12 Oct 2026, workstream 5: `SESC-REG-09` Compliance Obligations Register, draft v0.1 — 79 obligations, every instrument read on its issuing body, with a documented evaluation method and no evaluation yet carried out (§2o).** **From 22 Oct 2026: REG-09 v0.2 and `SESC-REC-05`, the first record in `portal/records-index.yaml` since 17 August — the waste carrier public-register check (§2p).** **From 26 Oct 2026, workstreams 6, 4 and the clause 6 chapter in one chat (§2q): `SESC-PRO-01` Control of Documented Information, `SESC-PRO-02` Internal Audit with the first-cycle programme, `SESC-PRO-03` Management Review, `SESC-PRO-04` Nonconformity and Corrective Action, `SESC-REG-10` Environmental Aspects and Impacts Register (28 aspects, scores proposed) and `SESC-IMS-06` Planning with nineteen proposed objectives — all draft v0.1, under decision D27 that the EMS documents are drafted without waiting for ISO 14001:2026 to be bought.** **From 26 October 2026, Batch B first session (§2r): `SESC-PRO-05` Purchasing and Control of Suppliers and Subcontractors, `SESC-PRO-06` Training, Competence and Awareness, `SESC-PRO-07` Incident, Near Miss and Hazard Reporting and Investigation, `SESC-REG-11` Approved Supplier and Contractor Register (issued empty — one register in place of the four lists six signed policies describe) and `SESC-REG-12` Competence Requirements Register (44 requirements by role, no interval stated from memory) — all draft v0.1. 28 controlled files, 0 errors.** **From 4 November 2026 (§2t), the fire door record pack under decision D28, which reverses the fire door half of D11: `SESC-PRO-08` Fire Door Installation, `SESC-FRM-09` to `SESC-FRM-14`, `SESC-REG-13` Fire Door Asset and Install Register (issued empty), `SESC-WI-02`, `SESC-TPL-05`, `SESC-IMS-04` v0.4 and `SESC-REG-12` v0.2 — all draft; `build/render_form.py` and `build/export_fire_door_register.py`; the renderer, the portal builder and the tests made to run on Windows, which is the working machine from 4 November 2026 (F84). 38 controlled files, 0 errors; 25/25 renderer tests; every new document rendered to PDF and read as images.** **From 5 November 2026 (§2u): the renderer's signature guard fixed (F58 and F82 closed) and `SESC-PRO-06` rendered and read as images for the first time; 28/28 renderer tests. New F85: the fourteen numbered-paragraph tables in the seven §2q/§2r procedures print without their header row.** **From 5 November 2026 (§2v): F85 fixed in the renderer's parser — the fourteen numbered-paragraph tables in `SESC-PRO-01` to `SESC-PRO-07` render with their header rows; `SESC-PRO-06` and `SESC-PRO-01` rendered to PDF and read as images; 29/29 renderer tests. PR #22 merged.** |
 
@@ -1584,6 +1584,82 @@ v0.2 when Gary asks; Steve's items carried from §2t), and F86 and F87 open in �
 
 ---
 
+## 2y. Docker, Node and the Supabase CLI on the PC; Prompt 4.5 verified locally (Platform B15), 5 November 2026
+
+**Taken:** Gary's instruction in the chat — *"Install Docker Desktop & the Supabase CLI first"* — followed by a pasted
+verification brief for the Platform register's blocker B15: check that W1 Prompt 4.5 (the adoption sweep, recovered
+from the MacBook restore and merged to `GaryHill0985/PLATFORM` on 5 November 2026 as `48c9653`) applies and passes
+its tests on a **local** database, and whether it depended on any root-level file the restore did not carry. Platform
+work, recorded here because it was done on the working machine and changed its tooling, and because the two Platform
+repositories were read and one of them written — on Gary's instruction, as F87 requires. **No IMS document changed.
+Nothing hosted was touched: no `supabase link`, `db push`, `functions deploy` or Vercel command, no hosted key.**
+First, **PR #27** (`register-v1.36-pr26-merged` → `main`: §2x.7, register v1.36) was merged by Gary as **`4e9bb15`**
+at 13:34 UTC on 5 November 2026, CI `validate` and `render` passing, no review recorded on GitHub; the clone's `main`
+was fast-forwarded to it in this chat and the merged local branch deleted.
+
+### 2y.1 What was installed on the PC — state, not a decision
+
+| Item | State, 5 November 2026 |
+|---|---|
+| Docker Desktop | **4.98.0** via `winget` (engine 29.9.2, WSL 2 backend, no Windows containers). The installer enabled Virtual Machine Platform, Windows Subsystem for Linux and Hyper-V, all needing a restart; Gary restarted the PC once. WSL itself was still absent after the restart and was installed with `wsl --install --no-distribution` (WSL 3.0.3.0, kernel 6.18.54.1-1). Docker Desktop is set to start at sign-in and put a shortcut on the Desktop. |
+| Node.js | **26.13.0 LTS**, npm 11.20.0, via `winget`. Not in the brief, but `npm ci` needs it; the build repository's README requires Node 20 or later. |
+| Supabase CLI | **2.115.0 — not a global install.** `PLATFORM/package.json` pins `supabase` as a devDependency (`^2.115.0`, locked at 2.115.0) and its npm scripts run that copy, so `npm ci` is the install the project expects. The current release, v3.0.0 of 2 November 2026, is a major version and was deliberately not installed: verifying 4.5 with a different CLI from the one it was built with would have muddied any failure. The CLI is not on `winget`; its documented Windows route, Scoop, was blocked by the chat's permission classifier and not pursued. |
+| Python | Unchanged: 3.12.10, `python` resolving to it since F88 closed (§2x.6). |
+
+### 2y.2 The verification
+
+Both clones pulled fast-forward with nothing uncommitted: design `070e74c`, build `48c9653` (each the merge of that
+repository's PR #1, the recovery). The Platform register's state line read *"24 September 2026 · 210 decisions · 17
+blockers · 131 findings"*, as the brief expected. Every Prompt 4.5 file was read in full and everything it depends on
+was checked against the root files, **which have not changed since `d601baf`**. Two dependencies are unmet and are
+probable lost 4.5 changes, listed and not added: the Edge Function's six SMTP and recipient secrets (`SMTP_HOST`,
+`SMTP_PORT`, `SMTP_USER`, `SMTP_PASS`, `SMTP_FROM`, `ADOPTION_EMAIL_TO`) are not documented in `.env.example`, which
+documents every other variable; and the root `README.md` says four migrations, "true as of Prompt 4", where there are
+five. **All five migrations applied with no errors** on local PostgreSQL 17.6 (pg_cron 1.6.4, pg_net 0.20.4), three
+times over. `npm run test:db`, as the suite's README instructs: **58 of 58 numbered tests, 842 assertions, 842 passed,
+0 failed, "as pinned" — PASS**, matching the README's 58 / 842 on PostgreSQL 17. `npm run build` passed. One
+environment incident: the first `supabase start` applied every migration and then failed to bind the mail-catcher's
+host port 55324, *address already in use*; nothing held the port and the second start, unchanged, succeeded. The
+local `.env.local` the harness reads was written from `supabase status` (local stack values only), is gitignored and
+was not committed. `supabase stop` was run. **Hosted status was not checked**: a read-only dashboard checklist is in
+the run-log entry. **Prompt 4.5 is verified locally, not complete.**
+
+The run-log entry *"Prompt 4.5 — local verification (B15, 5 November 2026, Windows PC)"* was appended to
+`03-handoffs/W1-run-log.md` on branch `verify/w1-prompt-4.5-local` of `GaryHill0985/SESC-Platform-Design`, commit
+`6691171` (signed with the PC key, Verified on GitHub; the design clone's `tools/register_lint.py` passing: 210 · 17 ·
+131, 0 unmerged), pushed, and opened as draft **PR #2** there. **Gary reviewed and merged it as `0307eb1` at 15:20 UTC**;
+no review is recorded on GitHub, as with this repository's recent pull requests. The design clone's `main` is at
+`0307eb1`, clean, the branch deleted; the build clone's `main` stays at `48c9653` with nothing changed. The brief
+forbade issuing a Platform register number or editing the Platform register, and none was; this write-back was done
+after the brief completed, on Gary's instruction in the chat.
+
+### 2y.3 Findings
+
+None new for this register. F87 is unchanged: the two repositories were read and one written because Gary asked in
+the chat, and neither becomes a §11 source by this. Two facts belong in the Platform register, numbered there by
+Gary and not here: the two probable lost root-file changes above, and the hosted checklist. The full test output of
+the run exists only in the chat's scratchpad on the PC, which is not a source; the summary lines are in the run-log
+entry.
+
+### 2y.4 Records held, records not yet held
+
+| Record | Held | Expected |
+|---|---|---|
+| W1 run-log entry, Prompt 4.5 local verification | Yes — `SESC-Platform-Design` `main` at `0307eb1`, 5 Nov 2026 | — |
+| Hosted status of migration `20260918120000`, the `adoption-sweep` function, the two cron jobs and the two Vault secrets | **No** | Gary, read-only in the Supabase dashboard, against the checklist in the run-log entry |
+| Platform register entries for the B15 local verification and the two probable lost changes | **No** | Gary, in the Platform project, numbered from the register's current state line |
+| The B4 write-back (F86) | **No** — unchanged from §2x.4 | Gary to decide the route |
+
+### 2y.5 Tasks by owner
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | Check the hosted project against the run-log entry's checklist, read-only; record the result in the Platform register and close or keep B15. If the two Vault secrets are absent, the sweep has never run. | next Platform session |
+| **Gary** | Decide whether the two probable lost 4.5 root-file changes (the six function secrets in `.env.example`; the README's migration count) are re-made. A Platform build prompt, not an IMS chat. | next Platform session |
+| **Gary** | F86 and the §2x.5 tasks, unchanged. | as §2x.5 |
+
+---
+
 ## 3. Blockers — the four, restated with what has actually moved
 
 | # | Blocker | Position at 18 August 2026, updated 24 September 2026 |
@@ -1765,6 +1841,7 @@ v0.2 when Gary asks; Steve's items carried from §2t), and F86 and F87 open in �
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.37 | 5 November 2026 | Claude, for G A Hill | **PR #27 merged; Docker, Node and the Supabase CLI on the PC; Platform B15 verified locally.** Register v1.36 merged by Gary as `4e9bb15`; the clone's `main` fast-forwarded. New §2y: Docker Desktop 4.98.0, Node 26.13.0 and WSL installed on the PC at Gary's instruction, the Supabase CLI used as the build repository's pinned 2.115.0; W1 Prompt 4.5 applies (five migrations, PostgreSQL 17.6) and passes (58/58 tests, 842/842 assertions, build passing) on a local database; two probable lost root-file changes listed; hosted status not checked; the run-log entry merged on `SESC-Platform-Design` as `0307eb1` (its PR #2). No IMS document changed; no new finding; F87 unchanged. §1 Repository row; `portal/actions.yaml` source line. |
 | 1.36 | 5 November 2026 | Claude, for G A Hill | **PR #26 merged.** Register v1.31 to v1.35 (§2x, §2x.6, F86 to F88) merged into `main` by Gary as `21d3ef3`; no review recorded on GitHub, as with PRs #20 and #24; CI passing. New §2x.7; §1 Repository row. The clone's `main` fast-forwarded to `21d3ef3`; the merged local branches `fire-door-platform-brief` and `register-v1.31-pr24-merged` deleted; `Fire Door\` stays untracked (§2w.2). `portal/actions.yaml` (v1.36). No document content changed; no reference taken; nothing signed, sent or merged by Claude. Branch `register-v1.36-pr26-merged`. |
 | 1.35 | 5 November 2026 | Claude, for G A Hill | **PR #26 opened** from `fire-door-platform-brief` against `main`, at Gary's instruction, carrying the two v1.31 commits pushed after PR #25 merged (`360c0b2`, `43ccbae`) and v1.32 to v1.34 (`d4813d5`, `8ee345c`, `bdc5d4d`). CI: `validate` passing, `render` pending at the time of writing. Gary reviews and merges; nothing in it needs Steve. `portal/actions.yaml` (v1.35). Nothing else changed. |
 | 1.34 | 5 November 2026 | Claude, for G A Hill | **F88 closed.** Gary turned off the `python.exe` and `python3.exe` App execution aliases; the design clone's pre-commit hook re-tested, exit 0, lint passing. `python3` resolves to nothing on the PC, noted at §2x.6. §2x.3, §5, `portal/actions.yaml` (v1.34; F88 closed). Nothing else changed. Branch `fire-door-platform-brief`, on `8ee345c`. |
