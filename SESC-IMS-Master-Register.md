@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.31 · 5 November 2026.**
+**The state of the CLAUDE ISO project. v1.32 · 5 November 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -1479,6 +1479,65 @@ archived (recoverable from the app's Archived list) and the folders deleted. `.c
 
 ---
 
+## 2x. The fire door module brief for the SESC Platform; two Platform repositories read, 5 November 2026
+
+Gary asked whether the fire door install and sign-off forms (SESC-FRM-11 and SESC-FRM-12, with the rest of the
+§2t pack) could be turned into a working app, with forms for remedial work and planned inspection (PPM) as well.
+He then asked for two further GitHub repositories to be read — `GaryHill0985/SESC-Platform-Design` and
+`GaryHill0985/PLATFORM` — and said a *SESC Platform Build* project exists in Claude Desktop, which this chat cannot
+see. Both repositories were read on his instruction in the chat (`CLAUDE.md` §2 and §11: nothing beyond the three
+sources is read unless Gary asks for it; **neither is added to §11 by this section** — F87). **No controlled
+document changed; no reference taken; nothing signed, sent, issued or merged.**
+
+### 2x.1 What the two repositories hold, as read on 5 November 2026
+
+| Repository | Found |
+|---|---|
+| `PLATFORM` (the build) | Vite · React 19 · TypeScript · Tailwind 4 · Supabase. One hosted Supabase project (London, Postgres 17) and a Vercel deployment at `sesc-platform.vercel.app`. **Workstream 1 only — enquiry and accountability — and it is live: Kelly logged ENQ-0001 at 13:15 on 15 September 2026**; seven staff accounts; the hosted database holds real customer personal data. Four migrations, the first frozen; append-only activity by trigger; RLS on every table; 56 tests run as a real user. **Not built:** person, site, asset, job, record, attachment, signature, document mirror, Storage, any form engine, any field surface, offline. Last commit `d601baf`, 14 September 2026; the day-one note says Prompt 4.5 (auth SMTP) is owed and has not run. |
+| `SESC-Platform-Design` (the design) | Decision register v0.2, state line **15 September 2026 · 182 decisions · 14 blockers · 117 findings**, with a warning that a project-knowledge snapshot may be older than the repository. **W2 (data model and spine) is designed with a ten-prompt handoff and has not been run**; the build order says it precedes W3 onward. The designed `record` entity is polymorphic evidence over project / phase / job / site / asset / person, cites a `form_version` and a `document_version` mirrored from git (never a source), validates a jsonb payload against the form version, and generates `outcome` and `next_inspection_due`; `record_type.clauses` is the intended feed for this repository's gap report. W3 Asset, W7 forms engine, W8 photo/evidence and handover packs, W10 engineer app are prompts, not designs; W10 names Boscombe Down and makes offline mandatory. Open there and bearing here: **P20** (PWA or AppSheet), **P21** (Supabase Storage or Drive for photographs), **P23** (subcontractor logins). **Blocker B4, High: the live hosted application's five personal-data obligations were to be written back to this register before production and were not — F86.** Its §5 records, as at 15 September, that Steve had not been told the pilot held real personal data. |
+
+### 2x.2 What was drafted
+
+`Fire Door\HANDOFF-FD-002_Fire_Door_Platform_Module_Brief.md`, **untracked** beside HANDOFF-FD-001 (§2w.2
+decision 3). A brief for the Platform project, not a controlled document: the facts above, dated; **three options
+for the spine** — run W2 whole first; pull the W2 subset the doors need forward, built to W2's design column for
+column (**recommended**); a fire-door-only schema (recommended against: the second shape before the first); REG-13's
+thirty columns as the `asset` with its derived columns never typed; **eight record types** keyed to FRM-09 to FRM-14
+plus `fd_inspection` (PPM) and `fd_remedial`, which need **`SESC-FRM-15`, `SESC-FRM-16` and `SESC-PRO-08` v0.2 drafted
+in this repository first**, because the Platform mirrors controlled documents and never sources them; PRO-08's five
+hold points and the release rule as transitions the database refuses; computed pass/fail from the manufacturer's
+tolerance fields with no default; a fail superseded, never edited; nothing live until the PRO-08 version cited is
+signed; the FRM-14 person-data boundary question; the IMS seam as metadata only; nine decisions by owner; and the
+design-chat prompt to paste. **Phase 2 of HANDOFF-FD-001 is brought forward by Gary (5 November 2026) from "after
+the first job" to now; PRO-08 Part 7(n) still says "after the first handover" and is amended when v0.2 is drafted.**
+
+### 2x.3 Findings
+
+**F86** (High, Gary) — the Platform is live with customer personal data and this register does not know it.
+**F87** (Medium, Gary) — two repositories outside §11, and two designed seams to this repository that do not exist.
+Both in §5.
+
+### 2x.4 Records held, records not yet held
+
+| Record | Held | Expected |
+|---|---|---|
+| HANDOFF-FD-002, untracked in `Fire Door\` | Yes, 5 Nov 2026 | — |
+| Platform register entries for the fire door module (P, B, F numbers) | **No** | Gary, in the Platform project, numbered from the register's current state line |
+| `SESC-FRM-15`, `SESC-FRM-16`, `SESC-PRO-08` v0.2 | **No** | an IMS chat, when Gary asks; before the module's record types are built |
+| The B4 write-back: the Platform's five personal-data obligations in this register and the documents they touch (F86) | **No** | Gary to decide the route; an IMS chat to write it |
+
+### 2x.5 Tasks by owner
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | Read HANDOFF-FD-002; accept, change or reject §3's recommendation; paste its §10 prompt into the *SESC Platform Build* project. Check first which copy of the Platform register is current (repository or project knowledge). | next Platform session |
+| **Gary** | **F86:** decide how the live Platform and its five obligations (DPIA against POL-14, controller/processor decision, SESC-REC-01 entry, POL-15 restore evidence, POL-13 access review) are written back here, and confirm whether Steve has been told since 15 September. | before the next Platform build prompt |
+| **Gary** | Ask QinetiQ whether photography is permitted on site, and record the answer on the job. | before the first survey |
+| Later IMS chat | `SESC-FRM-15` Fire Door Inspection Record, `SESC-FRM-16` Fire Door Remedial Work Record, `SESC-PRO-08` v0.2 (Part 6 inspection and remedial work; Part 7(n) amended), `SESC-WI-02` v0.2, `CLAUDE.md` §5 next-free line. | when Gary asks |
+| **Steve** | Unchanged from §2t: D28, F83, BS 8214, the TPL-05 email, approval of the pack. **Nothing in the module goes live before these.** Any paid Supabase or Vercel tier for photograph storage is his. | before the first installation |
+
+---
+
 ## 3. Blockers — the four, restated with what has actually moved
 
 | # | Blocker | Position at 18 August 2026, updated 24 September 2026 |
@@ -1602,6 +1661,8 @@ archived (recoverable from the app's Archived list) and the folders deleted. `.c
 | **F83** | **The liability business description does not name fire door work**; written confirmation that EL, PL and PI respond is required before the first installation (IMS-04 v0.4 Part 8(w)). §2t.3. | **High** | Steve |
 | **F84** | **Two clones exist from 4 Nov 2026 — the MacBook's and the Windows PC's — and `CLAUDE.md` §11 names only the first; no signing key on the PC yet.** Gary's decision. §2t.3. **CLOSED 5 Nov 2026 (§2w):** the PC clone is the master, the MacBook clone retired, the reference set goes to `C:\Users\Admin\Documents\SESC\ISO\`, `Fire Door\` stays untracked in the clone; `CLAUDE.md` §2, §9 and §11 amended. | Medium | **Closed** |
 | **F85** | **Fourteen tables in the seven §2q/§2r procedures print without their header row** — the header sits on the numbered-paragraph line (`25. \| Record \| … \|`) and `parse_blocks()` reads it as paragraph text, so the first data row is styled as the header. Seen on PRO-06 p. 9. A renderer fix with a test, not a document edit. §2u.3. **CLOSED 5 Nov 2026 (§2v):** `parse_blocks()` fixed with a fixture test; PRO-06 and PRO-01 rendered and read as images; 29/29 tests. | Medium | **Closed** |
+| **F86** | **The SESC Platform is live with customer personal data since 15 September 2026, and this register does not know it.** The Platform's own register (B4, High) requires the hosted application's five obligations — a DPIA against POL-14, a controller/processor decision, an entry on SESC-REC-01, restore evidence for POL-15 and access review evidence for POL-13 — to be written back here before the enquiry module went to production. It was not. Kelly logged ENQ-0001 on 15 September 2026 and the hosted database has held real customer names, addresses, phone numbers and email addresses since. Nothing in SESC-IMS-04, SESC-REC-01 or the POL-13/14/15 records says so. The Platform register §5 also records, as at 15 September, that Steve had not been told; whether that has since happened is not known to this chat. §2x.1. | **High** | **Gary**; Steve to be told |
+| **F87** | **Two repositories exist that `CLAUDE.md` §11 does not name** — `GaryHill0985/SESC-Platform-Design` and `GaryHill0985/PLATFORM` — read on 5 November 2026 only because Gary asked in the chat. The Platform design intends two seams to this repository that do not exist on either side: `model/entities.yaml`, generated from migration state and consumed here for clause mapping, and `record_type.clauses` feeding the gap report. Whether either repository becomes a §11 source is Gary's decision; until then they are read only on his instruction. §2x.1. | Medium | Gary |
 
 ---
 
@@ -1614,7 +1675,7 @@ archived (recoverable from the app's Archived list) and the folders deleted. `.c
 | ~~1~~ | ~~Push to GitHub, protect `main`, require PR review, require signed commits~~ — **ALL DONE 18 Aug 2026.** See §2b. Remaining question is D12, whether Steve becomes a collaborator. | Everything now arrives as a pull request. | Done |
 | **1a** | **NEW 24 Sep 2026 — Google Workspace record capture** (D15): Forms for FRM-01…05 plus toolbox talk and site inspection, the Shared Drive, and a one-page "how to log it" for site. **Repository side DONE 24 Sep 2026 (§2e): FRM-06, FRM-07, WI-01 and the generator. Workspace side is Gary's: README §2–§7.** | **Starts the B3 clock. Nothing else moves the certification date as much.** | 1 session + Gary's build |
 | **1b** | **NEW 24 Sep 2026 — `SESC-IMS-04` v0.3.** **DRAFTED 24 Sep 2026 (§2f):** mould & damp named at ¶14, D8 + D17 carve-out at ¶58, fire doors removed. **With Steve for F29 (PI cover for ventilation), then signature.** | The scope statement is the first thing a certification body reads. | Done, awaiting Steve |
-| **1c** | **NEW 24 Sep 2026 (D20) — the record capture section of the SESC Platform**, brought forward from item 8: photos, tamper-evident append-only records, and an authenticated submitter, with field names aligned with `forms/SESC-FRM-01…07`. **A separate workstream. Its own chat.** | The Workspace forms cannot take photos, are not tamper-proof, and cannot prove who submitted an open form. | Platform sessions |
+| **1c** | **NEW 24 Sep 2026 (D20) — the record capture section of the SESC Platform**, brought forward from item 8: photos, tamper-evident append-only records, and an authenticated submitter, with field names aligned with `forms/SESC-FRM-01…07`. **A separate workstream. Its own chat.** **5 Nov 2026 (§2x):** the Platform's enquiry module is live since 15 Sep 2026 (F86); the record capture section is not built — it is W2 plus the first slice of W3/W7/W8/W10 on the Platform side, and HANDOFF-FD-002 scopes it for the fire door trade first. | The Workspace forms cannot take photos, are not tamper-proof, and cannot prove who submitted an open form. | Platform sessions |
 | ~~2~~ | **DONE 24 Sep 2026 (§2g).** **Port `policy_editor.py` to `build/render_docx.py`** and render `SESC-IMS-04` to a branded PDF, then **read the cover and a body page as images**. | Renderer parity is the Phase 1 gate. Four known traps live in `Reference\Section workflow method.md` §5. | 1 session |
 | **2a** | **DONE 6 Oct 2026 (§2j) — `SESC-IMS-00` Integrated Management System Manual, draft v0.1** (D21). With Gary to commit; to James for review; Steve signs after IMS-04. | James asked for the manual first (§2i); it is also what a Stage 1 assessor opens first. | Done |
 | **2b** | **DONE 7 Oct 2026 (§2l) — `SESC-REG-08` Opportunity Register, draft v0.1, and `build/export_coto.py`**, the generated *SESC COTO Log* workbook from REG-05, REG-06, REG-08 (REG-01 as a pointer until migrated). With Gary to commit; Steve confirms bands and rows on approval. | James and PJR will expect a COTO log to look like a workbook; the registers already hold the content. Separating opportunities from risks is 9001:2026-ready. | 1 session |
@@ -1625,7 +1686,7 @@ archived (recoverable from the app's Archived list) and the folders deleted. `.c
 | 6 | **DRAFTED 26 Oct 2026 (§2q) — `SESC-PRO-01` Control of Documented Information, `SESC-PRO-02` Internal Audit (with the first-cycle programme), `SESC-PRO-03` Management Review, `SESC-PRO-04` Nonconformity and Corrective Action, all draft v0.1.** With Gary to commit and render; the programme to the consultation meeting; Steve to approve. | The procedures the certification body asks for first, and which no SESC document provided. **Approval of a procedure closes no gap: the first audit report, the first minutes and the first log entry do** (G1–G3 stay open). | Done, awaiting render and Steve |
 | **6b** | **NEW 26 Oct 2026 — Batch B, the operational procedures** (Gary's instruction: everything relevant to SESC is drafted): communication (7.4); purchasing, approved suppliers and control of subcontractors with the Approved Supplier and Contractor List as a register (8.4; G13); training, competence and awareness with a competence matrix (7.2, 7.3; G12); incident, near miss and hazard reporting and investigation (consolidating POL-05 A24 with FRM-01/02); emergency preparedness and response (8.2, pointing at POL-15); management of change (45001 8.1.3); monitoring, measurement and performance evaluation including the compliance evaluation method (9.1); plant, equipment, calibration and PAT with the maintenance and calibration log (7.1.5; G11); driving and vehicles; customer satisfaction and complaints with a feedback form (9.1.2; G15); risk assessment and method statements, bringing the RAMS system into the IMS by reference. | What the business runs on day to day; the folders of James's set that SESC has no equivalent for. Rationalised to a 13-person contractor — Deliveries & Visitors, HO controls, Enforcement Bodies, First Aid, Resources & Recruitment and Other Requirements are **not** drafted as procedures (§2q). **First session DONE 26 Oct 2026 (§2r): PRO-05 + REG-11 (8.4; G13), PRO-06 + REG-12 (7.2, 7.3; G12), PRO-07 (incidents). Remaining: the operational control set (emergency, change, plant/calibration/PAT, driving, RAMS by reference) and the performance set (9.1, 9.1.2, 7.4).** | 1 of 3–4 sessions done |
 | **6c** | **NEW 26 Oct 2026 — Batch C**: `SESC-IMS-07` Support, `SESC-IMS-08` Operation, `SESC-IMS-09` Performance Evaluation, `SESC-IMS-10` Improvement; an anti-bribery and tax-evasion policy **only if POL-01 is read and found not to cover them**; a smoke- and vapour-free paragraph for POL-05/POL-06 at their next revision; a toolbox-talk topic list for FRM-06 in SESC's own titles (no HCPL text). | Completes the spine and the policy gaps James's set exposes. | 2 sessions |
-| **6d** | **NEW 4 Nov 2026 — the fire door record pack (Gary's handoff HANDOFF-FD-001). DRAFTED 4 Nov 2026 (§2t):** `SESC-PRO-08`, `SESC-FRM-09`…`14`, `SESC-REG-13`, `SESC-WI-02`, `SESC-TPL-05`, `SESC-IMS-04` v0.4 (D28), `SESC-REG-12` v0.2, two build scripts. With Gary to sign-commit and open the PR; **Steve for D28, F83, BS 8214, the TPL-05 email and approval.** Phase 2 (inspection and repair records; the Platform table) follows the first job. | A live instruction with three doors is the first operational-control record set in the system, and the first clause 8.5 claim. | Done, awaiting Steve |
+| **6d** | **NEW 4 Nov 2026 — the fire door record pack (Gary's handoff HANDOFF-FD-001). DRAFTED 4 Nov 2026 (§2t):** `SESC-PRO-08`, `SESC-FRM-09`…`14`, `SESC-REG-13`, `SESC-WI-02`, `SESC-TPL-05`, `SESC-IMS-04` v0.4 (D28), `SESC-REG-12` v0.2, two build scripts. With Gary to sign-commit and open the PR; **Steve for D28, F83, BS 8214, the TPL-05 email and approval.** Phase 2 (inspection and repair records; the Platform table) follows the first job. **5 Nov 2026: Phase 2 brought forward by Gary — HANDOFF-FD-002 drafted (§2x); FRM-15, FRM-16 and PRO-08 v0.2 queued for an IMS chat when he asks.** | A live instruction with three doors is the first operational-control record set in the system, and the first clause 8.5 claim. | Done, awaiting Steve |
 | 7 | **Migrate POL-16 into the repository end to end** as the reference implementation, then the remaining twenty. | Do one and verify it before bulk migration. | 1 + 2 sessions |
 | 8 | **The records layer** — form schemas, mobile capture, and records accumulating weekly **by someone other than Gary.** | This is the clock everything else waits on, and it is the real gate on Stage 2. **The Workspace stopgap is pulled forward to 1a (D15). The Platform's record capture section is pulled forward to 1c (D20).** What stays here is records accumulating weekly. | Phase 2 |
 
@@ -1657,6 +1718,7 @@ archived (recoverable from the app's Archived list) and the folders deleted. `.c
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.32 | 5 November 2026 | Claude, for G A Hill | **The fire door module brief for the SESC Platform; two Platform repositories read. New §2x.** Gary asked whether the fire door forms could become a working app with remedial and PPM forms, then asked for `GaryHill0985/SESC-Platform-Design` and `GaryHill0985/PLATFORM` to be read; both read on his instruction and found: the Platform's enquiry module live since 15 September 2026 with customer personal data, W2 designed and not built, no asset, record or photo anywhere. `Fire Door\HANDOFF-FD-002…md` drafted, untracked (§2w.2): the module as a slice of W3/W7/W8/W10 on the W2 subset, eight record types keyed to FRM-09…14 plus inspection and remedial, which need FRM-15, FRM-16 and PRO-08 v0.2 here first; the design-chat prompt to paste. **New F86 (High): the Platform's B4 write-back never happened and this register did not know the Platform is live. New F87: two repositories outside §11.** §5, §6 (1c, 6d), `portal/actions.yaml` (v1.32; F86, F87). No controlled document changed; no reference taken; nothing signed, sent, issued or merged. Branch `fire-door-platform-brief`. |
 | 1.31 | 5 November 2026 | Claude, for G A Hill | **PR #24 merged.** The F84 change (§2w: register v1.30 and the `CLAUDE.md` amendment) merged into `main` by Gary as `b3f4894`; no review recorded on GitHub, as with PR #20. New §2w.7; the merge task in §2w.6 marked done; §1 Repository row. The clone's `main` fast-forwarded to `b3f4894` and the merged branch `f84-pc-master` deleted; the two merged desktop worktrees (PR #22, PR #23) checked clean and cleared at Gary's instruction, and the two idle sessions holding their empty folders archived at Gary's instruction. No document content changed; nothing signed, sent or merged by Claude. |
 | 1.30 | 5 November 2026 | Claude, for G A Hill | **The Windows PC becomes the master; F84 closed. New §2w.** Gary's decisions in the chat: the PC clone `C:\Users\Admin\Desktop\QMS` is the master and the MacBook clone is retired; the reference set (`Reference\`, `Signed\`, `Insurance\`) goes to `C:\Users\Admin\Documents\SESC\ISO\`, to be copied from the MacBook (not yet present); `Fire Door\` stays untracked in the clone. `CLAUDE.md` §2, §9 and §11 amended to match (PowerShell, not zsh). `portal/actions.yaml` source line v1.29. Written while PR #23 (register v1.29, §2v) merged, so the change was rebased onto `main` at `0c57efd` in the next chat, its section renumbered §2w and this row made v1.30; `portal/actions.yaml` F84 closed. Nothing signed, sent or merged. Branch `f84-pc-master`. |
 | 1.29 | 5 November 2026 | Claude, for G A Hill | **F85 closed: the renderer's parser now reads a table whose header row sits on the numbered-paragraph line. New §2v.** `build/render_docx.py` `parse_blocks()`: a numbered line whose text begins with `\|` yields a bare numbered paragraph and an indented table with that line as its header row; a new `_table_rows()` shared with the ordinary table branch. One test added to `build/test_render_docx.py` (`test_table_header_on_numbered_line`), shown to fail on the old parser. All fourteen tables in `SESC-PRO-01` to `SESC-PRO-07` parse with their header; PRO-06 and PRO-01 rendered to DOCX and PDF and the affected pages read as images; DOCX numbering equals the source on both. `validate.py` 38 files, 0 errors; tests 29 run, OK, 2 skipped. §1 status row, §2u.3 F85, §2u.4 tasks (PR #22 recorded merged as `bfcef71`), §5 F85 and `portal/actions.yaml` (F85 closed; source v1.29) updated. **No document content changed; nothing signed, sent or merged.** Branch `claude/clever-bose-7889cc` cut from `main` at `bfcef71`. PR #23. |

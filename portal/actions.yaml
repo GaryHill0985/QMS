@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.31, 5 November 2026 (PR #24 merged — the F84 change is on main; otherwise as at v1.30)
+source_register: SESC-IMS-Master-Register.md v1.32, 5 November 2026 (new 2x, the fire door module brief; F86 and F87 added)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -714,6 +714,36 @@ actions:
       edited. Register §2v.
     internal: true
 
+
+  - ref: F86
+    kind: finding
+    title: The SESC Platform is live with customer personal data, and the register did not know
+    owner: Chief Operating Officer
+    status: open
+    severity: high
+    detail: >
+      Raised 5 Nov 2026 (register 2x). The Platform's own register, blocker B4,
+      requires the hosted enquiry application's five obligations - a DPIA
+      against POL-14, a controller/processor decision, an entry on SESC-REC-01,
+      restore evidence for POL-15 and access review evidence for POL-13 - to be
+      written back to this register before production. It was not. The module
+      has held real customer names, addresses, phone numbers and email
+      addresses since 15 September 2026. Nothing in IMS-04, REC-01 or the
+      POL-13/14/15 records says so. The Managing Director is to be told.
+
+  - ref: F87
+    kind: finding
+    title: Two Platform repositories outside CLAUDE.md 11, and two designed seams that do not exist
+    owner: Chief Operating Officer
+    status: open
+    severity: medium
+    detail: >
+      Raised 5 Nov 2026 (register 2x). GaryHill0985/SESC-Platform-Design and
+      GaryHill0985/PLATFORM are not named sources; read only on instruction.
+      The Platform design intends model/entities.yaml and record_type.clauses
+      to feed this repository's clause map and gap report; neither seam is
+      built on either side. Whether they become sources is the COO's decision.
+    internal: true
   - ref: F83
     kind: finding
     title: The liability business description does not name fire door work
