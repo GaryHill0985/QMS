@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.25, 4 November 2026 (fire door record pack — D28, F81–F83 added; otherwise as at v1.24)
+source_register: SESC-IMS-Master-Register.md v1.26, 5 November 2026 (fire door record pack committed and put up for review — F84 updated; otherwise as at v1.25)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -710,10 +710,10 @@ actions:
       From 4 Nov 2026 the working machine is a Windows PC with the repository
       cloned to C:\Users\Admin\Desktop\QMS from main at 36573a2. CLAUDE.md 11
       still names the MacBook clone as the master and gives zsh commands; 7.7
-      now has two clones to police. No signing key exists on the PC, so the
-      branch cannot be pushed as signed commits until one is generated and
-      added to GitHub (D4). Which clone is the master is Gary's decision.
-      Register §2t.3.
+      now has two clones to police. 5 Nov 2026: a signing key now exists on
+      the PC and is registered on GitHub (D4); the workstream commit 549931c
+      is signed, pushed and Verified. The key has no passphrase (F14). Which
+      clone is the master is Gary's decision. Register §2t.3 and §2t.5.
     internal: true
 
   - ref: F9
