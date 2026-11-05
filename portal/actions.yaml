@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.29, 5 November 2026 (F85 closed — numbered-line table headers render; otherwise as at v1.28, PR #22 merged)
+source_register: SESC-IMS-Master-Register.md v1.30, 5 November 2026 (Windows PC clone becomes the master — F84 closed; otherwise as at v1.29, PR #23 merged)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -735,10 +735,13 @@ actions:
     kind: finding
     title: Two clones of the repository exist and CLAUDE.md names only one
     owner: Chief Operating Officer
-    due: 2026-11-30
-    status: open
+    status: closed
     severity: medium
     detail: >
+      CLOSED 5 Nov 2026 (register §2w): the PC clone at C:\Users\Admin\Desktop\QMS
+      is the master and the MacBook clone is retired; the reference set goes
+      to C:\Users\Admin\Documents\SESC\ISO (to be copied from the MacBook);
+      Fire Door stays untracked in the clone; CLAUDE.md 2, 9 and 11 amended.
       From 4 Nov 2026 the working machine is a Windows PC with the repository
       cloned to C:\Users\Admin\Desktop\QMS from main at 36573a2. CLAUDE.md 11
       still names the MacBook clone as the master and gives zsh commands; 7.7
