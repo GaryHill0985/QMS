@@ -462,6 +462,16 @@ def _widths(rows, total, label_cols=()):
 SIG_LABELS = ("signature", "signed")
 
 
+def is_signature_label(text):
+    """True only for a genuine approval-block signature label: the whole first-column
+    cell, stripped of markdown, case and a trailing colon, is one of SIG_LABELS.
+    A prefix match is not enough (F58, F82): a table header *Signed statement* and a
+    records-table cell *Signed induction sheets; certificates and cards* both begin
+    with "signed" and neither is a signature row."""
+    t = strip_md(text).lower().rstrip(":").strip()
+    return t in SIG_LABELS
+
+
 def table(rows, indent=False, status="draft"):
     ncol = max(len(r) for r in rows)
     rows = [r + [""] * (ncol - len(r)) for r in rows]
@@ -479,7 +489,11 @@ def table(rows, indent=False, status="draft"):
         tr = el("w:tr")
         trpr = el("w:trPr")
         trpr.append(el("w:cantSplit"))
-        is_sig = strip_md(r[0]).lower().startswith(SIG_LABELS)
+        # The signature guard applies to the approval block only: a label/value table
+        # (empty header row) whose first-column label IS "Signature" or "Signed". A
+        # header row of a content table, or a body cell that merely begins with the
+        # word, is never a signature row (F58, F82).
+        is_sig = label_table and is_signature_label(r[0])
         if is_sig:
             trpr.append(el("w:trHeight", {"w:hRule": "atLeast", "w:val": 520}))
             if any(strip_md(c) for c in r[1:]) and status != "approved":
@@ -1169,8 +1183,10 @@ def find_signature_table(doc):
     """Trap 2. Never table 1: POL-10/11/12 carry a content table there."""
     for tb in doc.tables:
         for row in tb.rows:
-            first = row.cells[0].text.strip().lower()
-            if first.startswith(SIG_LABELS):
+            trpr = row._tr.find(qn("w:trPr"))
+            if trpr is not None and trpr.find(qn("w:tblHeader")) is not None:
+                continue                                   # a header row is never a label
+            if is_signature_label(row.cells[0].text):
                 return tb
     return None
 

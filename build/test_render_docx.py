@@ -283,6 +283,44 @@ class TestFixture(unittest.TestCase):
         with self.assertRaises(R.SignatureError):
             R.render(src, self.tmp)
 
+    # F58 / F82 — the guard is the approval block's, not every cell that begins "Signed".
+
+    def test_guard_refuses_filled_approval_signature_cell(self):
+        """A genuine signature cell in the approval block, filled on a draft, is still
+        refused — under either spelling of the label, with or without a colon."""
+        for label in ("**Signature**", "**Signed**", "**Signature:**", "signature"):
+            src = write_fixture(self.tmp, sig="S Coffen", status="draft")
+            src.write_text(src.read_text().replace("| **Signature** | S Coffen |",
+                                                   f"| {label} | S Coffen |"))
+            with self.assertRaises(R.SignatureError, msg=label):
+                R.render(src, self.tmp)
+
+    def test_guard_accepts_header_row_containing_signature(self):
+        """F58: a content table whose HEADER row begins "Signature" (or "Signed
+        statement") is not a signature row. It renders on a draft, and the approval
+        table is still the one find_signature_table() returns."""
+        src = write_fixture(self.tmp, status="draft")
+        src.write_text(src.read_text()
+                       .replace("| Column | Other |", "| Signature | Signed statement |")
+                       .replace("| a | b |", "| a | b |\n   | Signed statement | c |"))
+        res = R.render(src, self.tmp)
+        doc = Document(res["docx"])
+        tb = R.find_signature_table(doc)
+        self.assertIsNotNone(tb)
+        labels = [row.cells[0].text.strip() for row in tb.rows]
+        self.assertEqual(labels, ["Approved by", "Signature"])
+
+    def test_guard_accepts_body_cell_beginning_signed(self):
+        """F82: the SESC-PRO-06 Part 6 records-table cell. A body cell that merely
+        begins with the word "Signed" is an ordinary cell and the draft renders."""
+        cell = "Signed induction sheets; certificates and cards; scheme registrations of individuals"
+        src = write_fixture(self.tmp, status="draft")
+        src.write_text(src.read_text().replace("| a | b |", f"| {cell} | The evidence behind the matrix |"))
+        res = R.render(src, self.tmp)
+        body = xml_text(part_text(res["docx"], r"word/document\.xml$"))
+        self.assertIn("Signed induction sheets", body)
+        self.assertIsNotNone(R.find_signature_table(Document(res["docx"])))
+
     def test_typed_footer_must_match(self):
         src = write_fixture(self.tmp, footer="*SESC Solutions Ltd · SESC-PRO-99 v7.3 · Uncontrolled when printed*")
         with self.assertRaises(R.RenderError):

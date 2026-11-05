@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.27, 5 November 2026 (PR #20 merged as fc225da; otherwise as at v1.26)
+source_register: SESC-IMS-Master-Register.md v1.28, 5 November 2026 (signature guard fixed — F58 and F82 closed, F85 added; otherwise as at v1.27, PR #20 merged)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -666,20 +666,51 @@ actions:
       Windows. All three fixed; 25/25 renderer tests pass. Register §2t.
     internal: true
 
+  - ref: F58
+    kind: finding
+    title: The renderer's signature guard fires on a table header beginning "Signed"
+    owner: Chief Operating Officer
+    status: closed
+    severity: low
+    detail: >
+      CLOSED 5 Nov 2026. SIG_LABELS was a prefix match on every first-column
+      cell, so IMS-05's header "Signed statement" was refused as a filled
+      signature row on a draft (7 Oct 2026, worked round by renaming the
+      header). render_docx.py now matches only a whole "Signature" / "Signed"
+      label, and only in a label/value table; a header row is never a
+      signature row. Three tests. Register §2u.
+    internal: true
+
   - ref: F82
     kind: finding
     title: SESC-PRO-06 will not render — a Part 6 table cell trips the signature guard
+    owner: Chief Operating Officer
+    status: closed
+    severity: medium
+    detail: >
+      CLOSED 5 Nov 2026. The Part 6 records table at SESC-PRO-06 paragraph 25
+      has a first-column cell beginning "Signed induction sheets", which the
+      old SIG_LABELS prefix match treated as a signature row. The guard was
+      fixed in render_docx.py with tests (same change as F58); PRO-06 v0.1
+      rendered to 13 pages and read as images; the cell is unchanged.
+      Register §2u.
+    internal: true
+
+  - ref: F85
+    kind: finding
+    title: Fourteen tables in PRO-01 to PRO-07 print without their header row
     owner: Chief Operating Officer
     due: 2026-11-30
     status: open
     severity: medium
     detail: >
-      The Part 6 records table at SESC-PRO-06 paragraph 25 has a first-column
-      cell beginning "Signed induction sheets", which SIG_LABELS matches, so
-      render_docx.py refuses the draft (SignatureError). Same root cause as F58.
-      Fix F58 in the renderer (skip header rows and cells that are not a
-      signature row) or reword the cell at PRO-06 v0.2. Found 4 Nov 2026 when
-      PRO-06 was used to prove the renderer on Windows. Register §2t.
+      The seven procedures of register §2q and §2r open their tables on the
+      numbered-paragraph line ("25. | Record | What it is | ... |"), and
+      parse_blocks() in render_docx.py reads that line as paragraph text, so
+      the header prints as literal text and the first data row is styled as
+      the header. Seen on PRO-06 p. 9 on 5 Nov 2026. A renderer fix with a
+      test, not a document edit; before the queued §2q/§2r render pass.
+      Register §2u.
     internal: true
 
   - ref: F83
