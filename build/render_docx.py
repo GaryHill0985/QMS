@@ -144,6 +144,17 @@ def _indent(line):
     return len(line) - len(line.lstrip(" "))
 
 
+def _table_rows(raw):
+    """Pipe-delimited lines -> rows of cells; the |---| rule line is dropped."""
+    rows = []
+    for l in raw:
+        cells = [c.strip() for c in l.strip().strip("|").split("|")]
+        if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c) and any(cells):
+            continue
+        rows.append(cells)
+    return rows
+
+
 def parse_blocks(body):
     """Line-based parser for the house Markdown. Deliberately NOT a Markdown
     library: every Markdown list renderer re-numbers ordered lists (trap 5)."""
@@ -195,15 +206,19 @@ def parse_blocks(body):
             continue
         if s.startswith("|"):
             raw, i = gather(i, lambda l: l.strip().startswith("|"))
-            rows = []
-            for l in raw:
-                cells = [c.strip() for c in l.strip().strip("|").split("|")]
-                if all(re.fullmatch(r":?-{2,}:?", c) for c in cells if c) and any(cells):
-                    continue
-                rows.append(cells)
-            blocks.append({"t": "table", "rows": rows, "indent": in_num and ind >= 3})
+            blocks.append({"t": "table", "rows": _table_rows(raw), "indent": in_num and ind >= 3})
             continue
         m = _NUM.match(line) if ind == 0 else None
+        if m and m.group(2).lstrip().startswith("|"):
+            # F85: the table's header row sits on the numbered line — "25. | Record |
+            # What it is | ... |" with the |---| line and the body rows indented beneath.
+            # The number is a paragraph of its own (so it prints, and is checked against
+            # the source) and the whole table, header first, follows it indented.
+            raw, i = gather(i + 1, lambda l: l.strip().startswith("|"))
+            blocks.append({"t": "num", "n": int(m.group(1)), "text": ""})
+            blocks.append({"t": "table", "rows": _table_rows([m.group(2)] + raw), "indent": True})
+            in_num = True
+            continue
         if m:
             raw, i = gather(i + 1, lambda l: _indent(l) >= 2 and not _SUB.match(l.strip())
                             and not l.strip().startswith(("|", ">")))
