@@ -1,6 +1,6 @@
 # SESC-IMS-Master-Register
 
-**The state of the CLAUDE ISO project. v1.32 · 5 November 2026.**
+**The state of the CLAUDE ISO project. v1.33 · 5 November 2026.**
 
 > **This file did not exist until 18 August 2026**, although `SESC-IMS-Project-Instructions-v1.0.md`
 > required every chat to read and write it from 17 August. That is the gap this file closes.
@@ -1515,7 +1515,9 @@ the first job" to now; PRO-08 Part 7(n) still says "after the first handover" an
 
 **F86** (High, Gary) — the Platform is live with customer personal data and this register does not know it.
 **F87** (Medium, Gary) — two repositories outside §11, and two designed seams to this repository that do not exist.
-Both in §5.
+**F88** (Low, Gary) — on the PC `python` and `python3` are Microsoft Store stubs; the design clone's pre-commit hook blocks
+every commit until that is fixed (§2x.6).
+All three in §5.
 
 ### 2x.4 Records held, records not yet held
 
@@ -1535,6 +1537,27 @@ Both in §5.
 | **Gary** | Ask QinetiQ whether photography is permitted on site, and record the answer on the job. | before the first survey |
 | Later IMS chat | `SESC-FRM-15` Fire Door Inspection Record, `SESC-FRM-16` Fire Door Remedial Work Record, `SESC-PRO-08` v0.2 (Part 6 inspection and remedial work; Part 7(n) amended), `SESC-WI-02` v0.2, `CLAUDE.md` §5 next-free line. | when Gary asks |
 | **Steve** | Unchanged from §2t: D28, F83, BS 8214, the TPL-05 email, approval of the pack. **Nothing in the module goes live before these.** Any paid Supabase or Vercel tier for photograph storage is his. | before the first installation |
+
+### 2x.6 The two Platform clones put in place on the PC, 5 November 2026
+
+Later the same day Gary cloned both repositories to the PC under `C:\Users\Admin\Desktop\SESC Platform\` and pasted
+four commands: move `PLATFORM` inside the design clone at `04-build\PLATFORM\`, which is where the design repository's
+`README.md` and `CLAUDE.md` place it and which its `.gitignore` already ignores, and set `core.hooksPath` to `.githooks`
+in the design clone. He reported them done. **On inspection none had run** — `PLATFORM` was still beside
+`SESC-Platform-Design`, no `04-build\` existed, and `core.hooksPath` was unset in both clones. **Both were done in
+this chat** as a file move within the Platform folder, which is outside `C:\Users\Admin\Documents\SESC\ISO\` and so
+outside the `CLAUDE.md` §2 no-move rule, and verified. Recorded as state, not as a decision; neither repository
+becomes a §11 source by this (F87). A `project-knowledge\` folder sits beside the design clone and was not read.
+
+| Item | State, 5 November 2026 |
+|---|---|
+| Design clone | `C:\Users\Admin\Desktop\SESC Platform\SESC-Platform-Design\` — `main`, 45 commits, nothing uncommitted, nothing unpushed; `core.hooksPath = .githooks` from this chat. Its `tools/status.py` reports the Platform register at **v0.2 · 182 decisions · 14 blockers · 117 findings**, 17 open decisions, 0 unmerged entries files — unchanged from §2x.1. |
+| Build clone | `C:\Users\Admin\Desktop\SESC Platform\SESC-Platform-Design\04-build\PLATFORM\` — `main` at `d601baf`, nothing uncommitted, nothing unpushed. Ignored by the design clone's `.gitignore` (`04-build/`), so the design repository versions the design layer only. |
+| Python on the PC | Python 3.12.10 is installed (`%LocalAppData%\Programs\Python\Python312\`) and the `py` launcher runs it. **`python` and `python3` on PATH resolve first to the Microsoft Store stubs** in `%LocalAppData%\Microsoft\WindowsApps\`, which print *Python was not found* and exit non-zero. The design clone's pre-commit hook tries `python3`, then `python`, then `py`; it finds the stub first and **blocks every commit** (tested in this chat: exit 1). `py tools/register_lint.py` passes. The same stubs are why `python3 tools/status.py`, as the design `CLAUDE.md` §0 writes it, fails on this PC. **F88.** |
+
+| Owner | Task | By |
+|---|---|---|
+| **Gary** | **F88:** either turn off the two App execution aliases (Settings › Apps › Advanced app settings › App execution aliases: `python.exe` and `python3.exe` off), after which `python` resolves to 3.12 and the hook passes as written; or change the hook to try `py` first. Until one is done, commit in the design clone only after `py tools/register_lint.py` by hand, or with `--no-verify`. | before the next commit in the design clone |
 
 ---
 
@@ -1663,6 +1686,7 @@ Both in §5.
 | **F85** | **Fourteen tables in the seven §2q/§2r procedures print without their header row** — the header sits on the numbered-paragraph line (`25. \| Record \| … \|`) and `parse_blocks()` reads it as paragraph text, so the first data row is styled as the header. Seen on PRO-06 p. 9. A renderer fix with a test, not a document edit. §2u.3. **CLOSED 5 Nov 2026 (§2v):** `parse_blocks()` fixed with a fixture test; PRO-06 and PRO-01 rendered and read as images; 29/29 tests. | Medium | **Closed** |
 | **F86** | **The SESC Platform is live with customer personal data since 15 September 2026, and this register does not know it.** The Platform's own register (B4, High) requires the hosted application's five obligations — a DPIA against POL-14, a controller/processor decision, an entry on SESC-REC-01, restore evidence for POL-15 and access review evidence for POL-13 — to be written back here before the enquiry module went to production. It was not. Kelly logged ENQ-0001 on 15 September 2026 and the hosted database has held real customer names, addresses, phone numbers and email addresses since. Nothing in SESC-IMS-04, SESC-REC-01 or the POL-13/14/15 records says so. The Platform register §5 also records, as at 15 September, that Steve had not been told; whether that has since happened is not known to this chat. §2x.1. | **High** | **Gary**; Steve to be told |
 | **F87** | **Two repositories exist that `CLAUDE.md` §11 does not name** — `GaryHill0985/SESC-Platform-Design` and `GaryHill0985/PLATFORM` — read on 5 November 2026 only because Gary asked in the chat. The Platform design intends two seams to this repository that do not exist on either side: `model/entities.yaml`, generated from migration state and consumed here for clause mapping, and `record_type.clauses` feeding the gap report. Whether either repository becomes a §11 source is Gary's decision; until then they are read only on his instruction. §2x.1. | Medium | Gary |
+| **F88** | **On the PC, `python` and `python3` are Microsoft Store stubs that shadow the installed Python 3.12; only `py` runs it.** The `SESC-Platform-Design` pre-commit hook enabled on 5 November 2026 tries `python3` first and therefore blocks every commit in that clone (tested: exit 1, *Python was not found*); the lint itself passes under `py`. Any `python3 build/…` command from this repository's instructions run by hand on the PC fails the same way; CI is unaffected. The fix is Gary's: disable the two App execution aliases, or have the hook try `py` first. §2x.6. | Low | Gary |
 
 ---
 
@@ -1718,6 +1742,7 @@ Both in §5.
 
 | Version | Date | Author | Change |
 |---|---|---|---|
+| 1.33 | 5 November 2026 | Claude, for G A Hill | **The two Platform clones put in place on the PC. New §2x.6.** Gary's four commands (move `PLATFORM` into `SESC-Platform-Design\04-build\`; enable the design repository's pre-commit hook) had not run; both done in this chat and verified: both clones clean and pushed, hook path set, `tools/status.py` run (Platform register unchanged at v0.2 · 182 · 14 · 117). **New F88 (Low): the Windows Store `python`/`python3` stubs shadow Python 3.12 on the PC, so the hook blocks every commit in the design clone until Gary disables them or the hook prefers `py`.** §2x.3, §5, `portal/actions.yaml` (v1.33; F88). No controlled document changed; no reference taken; nothing signed, sent, issued or merged; nothing committed in either Platform clone. Branch `fire-door-platform-brief`. |
 | 1.32 | 5 November 2026 | Claude, for G A Hill | **The fire door module brief for the SESC Platform; two Platform repositories read. New §2x.** Gary asked whether the fire door forms could become a working app with remedial and PPM forms, then asked for `GaryHill0985/SESC-Platform-Design` and `GaryHill0985/PLATFORM` to be read; both read on his instruction and found: the Platform's enquiry module live since 15 September 2026 with customer personal data, W2 designed and not built, no asset, record or photo anywhere. `Fire Door\HANDOFF-FD-002…md` drafted, untracked (§2w.2): the module as a slice of W3/W7/W8/W10 on the W2 subset, eight record types keyed to FRM-09…14 plus inspection and remedial, which need FRM-15, FRM-16 and PRO-08 v0.2 here first; the design-chat prompt to paste. **New F86 (High): the Platform's B4 write-back never happened and this register did not know the Platform is live. New F87: two repositories outside §11.** §5, §6 (1c, 6d), `portal/actions.yaml` (v1.32; F86, F87). No controlled document changed; no reference taken; nothing signed, sent, issued or merged. Branch `fire-door-platform-brief`. |
 | 1.31 | 5 November 2026 | Claude, for G A Hill | **PR #24 merged.** The F84 change (§2w: register v1.30 and the `CLAUDE.md` amendment) merged into `main` by Gary as `b3f4894`; no review recorded on GitHub, as with PR #20. New §2w.7; the merge task in §2w.6 marked done; §1 Repository row. The clone's `main` fast-forwarded to `b3f4894` and the merged branch `f84-pc-master` deleted; the two merged desktop worktrees (PR #22, PR #23) checked clean and cleared at Gary's instruction, and the two idle sessions holding their empty folders archived at Gary's instruction. No document content changed; nothing signed, sent or merged by Claude. |
 | 1.30 | 5 November 2026 | Claude, for G A Hill | **The Windows PC becomes the master; F84 closed. New §2w.** Gary's decisions in the chat: the PC clone `C:\Users\Admin\Desktop\QMS` is the master and the MacBook clone is retired; the reference set (`Reference\`, `Signed\`, `Insurance\`) goes to `C:\Users\Admin\Documents\SESC\ISO\`, to be copied from the MacBook (not yet present); `Fire Door\` stays untracked in the clone. `CLAUDE.md` §2, §9 and §11 amended to match (PowerShell, not zsh). `portal/actions.yaml` source line v1.29. Written while PR #23 (register v1.29, §2v) merged, so the change was rebased onto `main` at `0c57efd` in the next chat, its section renumbered §2w and this row made v1.30; `portal/actions.yaml` F84 closed. Nothing signed, sent or merged. Branch `f84-pc-master`. |

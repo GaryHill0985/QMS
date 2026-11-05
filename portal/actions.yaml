@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.32, 5 November 2026 (new 2x, the fire door module brief; F86 and F87 added)
+source_register: SESC-IMS-Master-Register.md v1.33, 5 November 2026 (new 2x.6, the Platform clones on the PC; F88 added)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -743,6 +743,20 @@ actions:
       The Platform design intends model/entities.yaml and record_type.clauses
       to feed this repository's clause map and gap report; neither seam is
       built on either side. Whether they become sources is the COO's decision.
+    internal: true
+  - ref: F88
+    kind: finding
+    title: Windows Store python stubs shadow Python 3.12 on the PC; the Platform design pre-commit hook blocks every commit
+    owner: Chief Operating Officer
+    status: open
+    severity: low
+    detail: >
+      Raised 5 Nov 2026 (register 2x.6). python and python3 on the PC's PATH
+      resolve to the Microsoft Store stubs; only the py launcher runs the
+      installed Python 3.12. The SESC-Platform-Design pre-commit hook enabled
+      on 5 Nov tries python3 first and exits 1 on every commit. Fix: turn off
+      the two App execution aliases, or make the hook try py first. CI is
+      unaffected.
     internal: true
   - ref: F83
     kind: finding
