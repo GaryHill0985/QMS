@@ -30,6 +30,7 @@ that is spending, and it is Steve's decision.
 | FRM-06 Toolbox talk | Supervisor delivering it | domain sign-in | 9001 7.3 · 14001 7.3 · 45001 5.4, 7.3, 7.4.2 |
 | FRM-07 Site inspection | Health and Safety Officer, supervisors | domain sign-in | 9001 / 14001 / 45001 9.1.1 |
 | FRM-08 Worker consultation | Health and Safety Officer; the Managing Director at the quarterly meeting | domain sign-in | 45001 5.4 — one record per consultation event or answer; added 7 Oct 2026 (SESC-IMS-05 ¶44) |
+| FRM-09 to FRM-14 Fire door record pack | Fire door operatives, Site Supervisors, the Contracts Manager | domain sign-in | 9001 8.5.1, 8.5.2, 8.6, 8.5.5, 7.1.5.1 · 14001 8.1 — added 4 Nov 2026 (SESC-PRO-08, register §2t). **Primarily printed forms**, rendered from the same schemas by `build/render_form.py`, because they carry nine photographs per door that a Workspace form cannot take (D18). The exporter builds them too, with the photo fields marked NOT CREATED; whether to run them in Workspace at all is Gary's call. |
 
 14001 clause numbers come from the `verified: false` map. **Do not quote them to anyone.**
 

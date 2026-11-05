@@ -1,0 +1,276 @@
+id: SESC-REG-13
+title: Fire Door Asset and Install Register — one row for every fire door the Employer has installed, from the job and the opening to the evidence behind it, who installed it, whether its gaps passed, its completion certificate and when it is next due for inspection
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-11-04
+revised: 2026-11-04
+next_review: 2027-11-04
+review_frequency_months: 12
+classification: internal
+clauses:
+  iso9001:  ["8.5.2"]
+parent_document: SESC-PRO-08
+registers_cited: [SESC-REG-09, SESC-REG-11, SESC-REG-12]
+review_trigger:
+  - The first door released on SESC-FRM-12 — the first row is entered and the empty-register statements below are removed
+  - A nonconformity under SESC-PRO-08 Part 5 on any door already entered (row annotated; SESC-FRM-05 reference)
+  - The inspection and remedial repair records being drafted (SESC-PRO-08 Part 7(n)) — columns for inspection history are added then, not before
+  - The record capture section of the SESC Platform taking this register as the fire_door_assets table (D20) — the keys below are the column names and are not renamed
+  - The Managing Director's signature of SESC-IMS-04 v0.4 (D28)
+personal_data: false
+
+# SESC-REG-13 Fire Door Asset and Install Register.
+#
+# Reference taken from CLAUDE.md 5 on 4 November 2026 for the fire door record pack
+# (HANDOFF-FD-001; Master Register 2t; decision D28). Operated by SESC-PRO-08 Fire Door
+# Installation, paragraph 34, which is where the procedure is; this file is the register.
+#
+# Why it exists. ISO 9001 clause 8.5.2 requires outputs to be identified where traceability
+# is a requirement, and the identification retained. Every fire door the Employer installs
+# is a traceable output: the client's responsible person, a fire risk assessor, a building
+# control body or an auditor will one day ask, of one door, which doorset it is, what
+# evidence it was installed under, who installed it, whether the gaps were within the
+# manufacturer's tolerance, and when it was last looked at. One row answers that. The register
+# is also the asset list from which planned inspection and maintenance is offered, and it is
+# the table the SESC Platform will hold as fire_door_assets — which is why its columns are
+# fixed here, as data, and not in a spreadsheet somebody can re-head.
+#
+# THIS REGISTER IS ISSUED EMPTY. No fire door has been installed under SESC-PRO-08 on any
+# date, no SESC-FRM-12 certificate exists, and no row can be entered until one does. The
+# QinetiQ instruction for three doors at MOD Boscombe Down was reported by the Chief Operating
+# Officer on 4 November 2026 and is not held in the three sources; nothing about those doors
+# is entered here.
+#
+# Where the rows live. The repository holds the COLUMNS, issued empty. The WORKING register
+# with rows is held in the records store on the job side, because a row names the installer
+# and the client's site; build/export_fire_door_register.py writes the working workbook from
+# these columns so that it can never carry a column this file does not. Rows move to the SESC
+# Platform without re-keying (D20). A completed row is never placed in this file.
+#
+# What it claims. ISO 9001 8.5.2, as the retained identification of each installed door, and
+# only once a row exists: an empty register evidences nothing, and the gap report is right to
+# show 8.5.2 red for fire doors until the first SESC-FRM-12 is indexed. It does not claim 8.5.1,
+# 8.6 or 8.5.5 (SESC-PRO-08 and the forms), 7.2 (SESC-PRO-06; SESC-REG-12) or 9.1.1.
+#
+# What is NOT here. No gap measurement (SESC-FRM-11 holds them), no photograph, no evidence
+# document, no certificate (SESC-FRM-12), no inspection finding (the inspection record, when
+# drafted). No personal data beyond the installer's name in the working register, which is why
+# the working register is in the records store and this file carries no row.
+
+design_rules:
+  - >
+    ONE ROW PER DOOR LEAF SET. A pair of doors in one frame is one row with the configuration
+    stated; two doors in two openings are two rows.
+  - >
+    EVERY ROW CITES ITS CERTIFICATE. A row exists only from a SESC-FRM-12 with a SESC-FRM-11
+    result of Pass. A door that was not released has no row; it has an SESC-FRM-05.
+  - >
+    THE KEYS ARE THE COLUMN NAMES, NOW AND IN THE PLATFORM. A key is never renamed; a column
+    that is no longer needed is marked retired, not deleted. A new column is added by a new
+    version of this file, never in the workbook.
+  - >
+    NO FIGURE IN THE REGISTER IS A JUDGEMENT. gaps_result copies SESC-FRM-11; it is not
+    re-decided here.
+  - >
+    THE WORKBOOK IS GENERATED, NEVER THE MASTER. build/export_fire_door_register.py writes it
+    from this file. Rows are entered in the working copy in the records store; the repository
+    copy stays empty.
+
+columns:
+  - key: door_uid
+    label: Register reference
+    type: text
+    required: true
+    maps_to: fire_door_assets.door_uid
+    help: JOBNO-DOORID, for example JN1234-D01. Unique for the life of the door.
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    maps_to: fire_door_assets.job_ref
+  - key: client
+    label: Client
+    type: text
+    required: true
+    maps_to: fire_door_assets.client
+  - key: client_order_ref
+    label: Client's order or instruction reference
+    type: text
+    required: false
+    maps_to: fire_door_assets.client_order_ref
+  - key: site
+    label: Site
+    type: text
+    required: true
+    maps_to: fire_door_assets.site
+  - key: building
+    label: Building or block
+    type: text
+    required: false
+    maps_to: fire_door_assets.building
+  - key: door_id
+    label: Door identifier
+    type: text
+    required: true
+    maps_to: fire_door_assets.door_id
+    help: The client's reference where it has one; otherwise D01, D02 and so on (SESC-PRO-08 paragraph 12).
+  - key: location
+    label: Location
+    type: text
+    required: true
+    maps_to: fire_door_assets.location
+  - key: rating
+    label: Rating
+    type: select
+    required: true
+    options: [FD30, FD30S, FD60, FD60S, Other]
+    maps_to: fire_door_assets.rating
+  - key: rating_source
+    label: Source of the rating
+    type: text
+    required: true
+    maps_to: fire_door_assets.rating_source
+    help: The client's document that states it, as on SESC-FRM-09.
+  - key: configuration
+    label: Configuration
+    type: select
+    required: true
+    options: [Single leaf, Double leaf, Leaf and a half, Other]
+    maps_to: fire_door_assets.configuration
+  - key: doorset_manufacturer
+    label: Doorset manufacturer
+    type: text
+    required: true
+    maps_to: fire_door_assets.doorset_manufacturer
+  - key: doorset_reference
+    label: Doorset product reference
+    type: text
+    required: true
+    maps_to: fire_door_assets.doorset_reference
+  - key: evidence_reference
+    label: Test evidence or certificate reference
+    type: text
+    required: true
+    maps_to: fire_door_assets.evidence_reference
+    help: The manufacturer's evidence, as on SESC-FRM-10. Not an SESC certification; none is held.
+  - key: survey_ref
+    label: SESC-FRM-09 reference
+    type: text
+    required: true
+    maps_to: fire_door_assets.survey_ref
+  - key: product_evidence_ref
+    label: SESC-FRM-10 reference
+    type: text
+    required: true
+    maps_to: fire_door_assets.product_evidence_ref
+  - key: checklist_ref
+    label: SESC-FRM-11 reference
+    type: text
+    required: true
+    maps_to: fire_door_assets.checklist_ref
+  - key: install_date
+    label: Installation date
+    type: date
+    required: true
+    maps_to: fire_door_assets.install_date
+  - key: installer
+    label: Installer
+    type: text
+    required: true
+    maps_to: fire_door_assets.installer
+    help: Names a person — one reason the working register lives in the records store.
+  - key: supervisor
+    label: Supervisor who signed hold point 5
+    type: text
+    required: true
+    maps_to: fire_door_assets.supervisor
+  - key: gaps_result
+    label: Gaps within the manufacturer's tolerance
+    type: select
+    required: true
+    options: [Pass, Fail — not released]
+    maps_to: fire_door_assets.gaps_result
+    help: Copied from SESC-FRM-11. A Fail row should not exist (design rule 2); it is here so the Platform can refuse it.
+  - key: photos_complete
+    label: Nine photographs held in Fire Doors/<Door ID>/
+    type: select
+    required: true
+    options: ["Yes", "No — not released"]
+    maps_to: fire_door_assets.photos_complete
+  - key: completion_cert_ref
+    label: SESC-FRM-12 certificate reference
+    type: text
+    required: true
+    maps_to: fire_door_assets.completion_cert_ref
+  - key: handover_ref
+    label: SESC-FRM-13 handover reference
+    type: text
+    required: false
+    maps_to: fire_door_assets.handover_ref
+  - key: inspection_interval
+    label: Recommended inspection interval, with its source
+    type: text
+    required: true
+    maps_to: fire_door_assets.inspection_interval
+  - key: next_inspection_due
+    label: Next inspection due
+    type: date
+    required: true
+    maps_to: fire_door_assets.next_inspection_due
+  - key: ppm_status
+    label: Planned inspection and maintenance
+    type: select
+    required: true
+    options: [Offered, Instructed, Declined, Not offered]
+    maps_to: fire_door_assets.ppm_status
+  - key: ncr_refs
+    label: SESC-FRM-05 references, if any, since installation
+    type: text
+    required: false
+    maps_to: fire_door_assets.ncr_refs
+  - key: status
+    label: Status
+    type: select
+    required: true
+    options: [Installed, Remedial work open, Replaced, Removed]
+    maps_to: fire_door_assets.status
+  - key: notes
+    label: Notes
+    type: text
+    required: false
+    maps_to: fire_door_assets.notes
+
+doors: []
+# No row. See the header: this register is issued empty and the working copy with rows lives
+# in the records store.
+
+clause_notes:
+  iso9001_8_5_2: >
+    Claimed as the retained identification and traceability of each installed fire door, and
+    only once a row exists. Until the first SESC-FRM-12, the clause is red for fire doors and
+    this file says so.
+  not_claimed: >
+    8.5.1, 8.5.5, 8.6, 8.7 and 7.1.5.1 (SESC-PRO-08 and SESC-FRM-09 to 13); 7.2 (SESC-PRO-06,
+    SESC-REG-12, SESC-FRM-14); 8.1 of ISO 14001 (SESC-PRO-08 paragraph 21); 9.1.1 (an
+    inspection record, when drafted).
+
+records:
+  held:
+    - None. No fire door has been installed under SESC-PRO-08 and no row exists.
+  not_yet_held:
+    - The first row, from the first SESC-FRM-12 — due at completion of the first instruction
+    - The working register in the records store, created from build/export_fire_door_register.py — due before the first door is released
+    - The Managing Director's approval of this register and of SESC-PRO-08 — due 2026-11-30 (proposed)
+    - The inspection history columns — added when the inspection record is drafted (SESC-PRO-08 Part 7(n))
+
+revision_history:
+  - version: "0.1"
+    date: 2026-11-04
+    author: G A Hill (drafted by Claude)
+    change: >
+      First draft, alongside SESC-PRO-08 and SESC-FRM-09 to SESC-FRM-14, from HANDOFF-FD-001.
+      Thirty columns, each keyed to the fire_door_assets column it becomes in the SESC Platform
+      (D20). Issued empty. Claims 8.5.2 only, and only once a row exists. Nothing taken from any
+      template or other organisation's register. Not approved.

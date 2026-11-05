@@ -1,0 +1,208 @@
+id: SESC-FRM-12
+title: Fire Door Installation Completion Certificate
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-11-04
+next_review: 2027-11-04
+classification: internal
+clauses:
+  iso9001:  ["8.6"]
+personal_data: false
+records_generated: [fire_door_completion_certificate]
+parent_document: SESC-PRO-08
+one_per: door, or one per job listing every door
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    The job file, in the door's subfolder, and the records store; a copy to the
+    client in the handover pack. Never the repository. Names the installer and
+    supervisor in their work capacity, as the client needs to know who installed
+    the door.
+  retention: As SESC-FRM-09
+  feeds_register: SESC-REG-13 — the completion certificate reference column
+
+purpose: >
+  The release record for a fire door under ISO 9001 clause 8.6 and the document
+  the client keeps. It is completed only when SESC-FRM-09, SESC-FRM-10 and
+  SESC-FRM-11 are complete for the door, every hold point is signed, every gap
+  and test passed and nine photographs are held (SESC-PRO-08 paragraph 29).
+  It carries one statement of what was done, and no other.
+
+statement: >
+  Installed in accordance with BS 8214 and the doorset manufacturer's installation
+  instructions, using components matching the doorset's test evidence, by trained
+  operatives under SESC supervision.
+
+certification_note: >
+  This certificate records competent installation on the basis stated above. It
+  does not state or imply that SESC Solutions Ltd, this installation or any
+  operative is certified, approved, registered or accredited under BM TRADA
+  Q-Mark, FIRAS or any other third-party scheme for fire door installation.
+  SESC Solutions Ltd holds no such certification.
+
+guidance:
+  - Do not complete this certificate for a door whose SESC-FRM-11 reads anything other than Pass.
+  - The statement is printed. It is not edited, shortened or added to.
+  - For one certificate covering a job, list every door in the schedule box with its SESC-FRM-09, SESC-FRM-10 and SESC-FRM-11 references, and leave the single-door fields for the first door.
+  - The installer signs as the person who installed the door. The Contracts Manager signs as supervisor. Nobody signs for a door they did not see.
+
+print:
+  per: door
+  photo_stages: []
+
+revision_history:
+  - version: "0.1"
+    date: 2026-11-04
+    change: >
+      First draft, alongside SESC-PRO-08. Drafted by Claude for G A Hill from
+      HANDOFF-FD-001; not approved. The statement is the wording at SESC-PRO-08
+      paragraph 6 and the certification note is paragraph 7.
+
+fields:
+  - key: certificate_ref
+    label: Certificate reference
+    type: text
+    required: true
+    section: Job
+    help: FRM-12 followed by the job number and the door identifier, for example FRM-12-JN1234-D01.
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    section: Job
+  - key: client
+    label: Client
+    type: text
+    required: true
+    section: Job
+  - key: client_order_ref
+    label: Client's order or instruction reference
+    type: text
+    required: true
+    section: Job
+  - key: basis_confirmation_ref
+    label: Client's written confirmation of the installation basis (SESC-TPL-05 reply) — reference and date
+    type: text
+    required: true
+    section: Job
+    help: Hold point 1. If there is none, there is no certificate.
+  - key: site
+    label: Site
+    type: text
+    required: true
+    section: Job
+  - key: building
+    label: Building or block
+    type: text
+    required: false
+    section: Job
+
+  - key: door_id
+    label: Door identifier
+    type: text
+    required: true
+    section: Door
+  - key: location
+    label: Location
+    type: text
+    required: true
+    section: Door
+  - key: rating
+    label: Rating
+    type: select
+    required: true
+    section: Door
+    options: [FD30, FD30S, FD60, FD60S, Other — as stated in the schedule]
+  - key: doorset_manufacturer
+    label: Doorset manufacturer
+    type: text
+    required: true
+    section: Door
+  - key: doorset_reference
+    label: Doorset product reference
+    type: text
+    required: true
+    section: Door
+  - key: evidence_reference
+    label: Test evidence reference (from SESC-FRM-10)
+    type: text
+    required: true
+    section: Door
+  - key: survey_ref
+    label: SESC-FRM-09 reference
+    type: text
+    required: true
+    section: Door
+  - key: product_evidence_ref
+    label: SESC-FRM-10 reference
+    type: text
+    required: true
+    section: Door
+  - key: checklist_ref
+    label: SESC-FRM-11 reference — result Pass
+    type: text
+    required: true
+    section: Door
+  - key: install_date
+    label: Installation date
+    type: date
+    required: true
+    section: Door
+  - key: door_schedule
+    label: Schedule of doors, where one certificate covers the job
+    type: textarea
+    required: false
+    section: Door
+    help: One line per door — identifier, location, rating, manufacturer, evidence reference, SESC-FRM-09, -10 and -11 references, installation date.
+
+  - key: statement_confirmed
+    label: The statement of installation printed above applies to this door in full
+    type: select
+    required: true
+    section: Statement
+    options: ["Yes"]
+    help: The wording is at SESC-PRO-08 paragraph 6. It is the only wording used.
+
+  - key: installer_name
+    label: Installer — name
+    type: text
+    required: true
+    section: Signatures
+  - key: installer_signature
+    label: Installer — signature
+    type: text
+    required: true
+    section: Signatures
+    help: On the printed form, sign here. On a digital form the authenticated submitter is the installer.
+  - key: installer_date
+    label: Installer — date
+    type: date
+    required: true
+    section: Signatures
+  - key: supervisor_name
+    label: Supervisor sign-off — name (Contracts Manager)
+    type: text
+    required: true
+    section: Signatures
+  - key: supervisor_signature
+    label: Supervisor sign-off — signature
+    type: text
+    required: true
+    section: Signatures
+  - key: supervisor_date
+    label: Supervisor sign-off — date
+    type: date
+    required: true
+    section: Signatures
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    section: Signatures
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-12-JN1234-D01). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

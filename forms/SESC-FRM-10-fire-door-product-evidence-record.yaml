@@ -1,0 +1,357 @@
+id: SESC-FRM-10
+title: Fire Door Product Evidence Record
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-11-04
+next_review: 2027-11-04
+classification: internal
+clauses:
+  iso9001:  ["8.5.1", "8.5.2"]
+personal_data: false
+records_generated: [fire_door_product_evidence]
+parent_document: SESC-PRO-08
+one_per: door
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    The job file, in the door's subfolder Fire Doors/<Door ID>/, with a copy of
+    every evidence document it cites, and the records store. Never the repository.
+  retention: As SESC-FRM-09
+  feeds_register: SESC-REG-13 — the manufacturer and evidence reference columns
+
+purpose: >
+  Every component on a fire door is either the one the doorset's test evidence
+  names, or it is not. This record answers that for each component before any
+  of them is fitted. Hold point 3 of SESC-PRO-08: the Contracts Manager approves
+  it with every row answered, and only then does installation start. A row that
+  reads "does not match" stops the door.
+
+guidance:
+  - Fill this in from the manufacturer's documents on the job file, not from the packaging and not from memory.
+  - The field-of-application check compares this door's survey (SESC-FRM-09) with what the evidence says the doorset may be installed in. If the opening, the wall, the leaf size or the configuration is outside it, stop.
+  - Where the doorset came complete from one manufacturer, most rows cite the same evidence reference. Where a component came from elsewhere, the evidence must show that combination is permitted, and the row says which document shows it.
+  - A "Not fitted" answer is honest only where the evidence and the specification do not call for the item.
+
+print:
+  per: door
+  photo_stages: []
+
+revision_history:
+  - version: "0.1"
+    date: 2026-11-04
+    change: >
+      First draft, alongside SESC-PRO-08. Drafted by Claude for G A Hill from
+      HANDOFF-FD-001; not approved.
+
+fields:
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    section: Job and door
+  - key: door_id
+    label: Door identifier
+    type: text
+    required: true
+    section: Job and door
+  - key: survey_ref
+    label: SESC-FRM-09 survey reference
+    type: text
+    required: true
+    section: Job and door
+  - key: rating_required
+    label: Rating required (from the survey)
+    type: select
+    required: true
+    section: Job and door
+    options: [FD30, FD30S, FD60, FD60S, Other — in the notes]
+  - key: completed_by
+    label: Completed by
+    type: text
+    required: true
+    section: Job and door
+  - key: completed_date
+    label: Date
+    type: date
+    required: true
+    section: Job and door
+
+  - key: doorset_manufacturer
+    label: Doorset manufacturer
+    type: text
+    required: true
+    section: The doorset and its evidence
+  - key: doorset_reference
+    label: Doorset product reference or model
+    type: text
+    required: true
+    section: The doorset and its evidence
+  - key: doorset_type
+    label: Supplied as
+    type: select
+    required: true
+    section: The doorset and its evidence
+    options: [Complete doorset from one manufacturer, Door assembly — components from more than one source (the evidence must show the combination is permitted)]
+  - key: evidence_type
+    label: Type of test evidence held
+    type: multiselect
+    required: true
+    section: The doorset and its evidence
+    options: [Fire test report, Assessment or field-of-application report, Manufacturer's third-party certificate or certification listing, Declaration of Performance, Manufacturer's installation instructions, Other — in the notes]
+    help: Tick every document held on the job file for this doorset. The Employer's own certification is not an option here because none is held.
+  - key: evidence_reference
+    label: Evidence reference(s) — document number, issuer and date
+    type: textarea
+    required: true
+    section: The doorset and its evidence
+  - key: evidence_held_on_file
+    label: Copy of the evidence held on the job file
+    type: select
+    required: true
+    section: The doorset and its evidence
+    options: [Yes — every document cited, Partly — in the notes, "No"]
+  - key: declaration_of_performance
+    label: Declaration of Performance and marking checked (SESC-REG-09 CO-37)
+    type: select
+    required: true
+    section: The doorset and its evidence
+    options: [Checked and copy held, Not covered by a designated standard — manufacturer's statement held, Not checked]
+  - key: source_approved
+    label: Bought from an approved source (SESC-PRO-05; SESC-POL-17)
+    type: select
+    required: true
+    section: The doorset and its evidence
+    options: [Manufacturer, Distributor authorised by the manufacturer, Merchant holding a trade account in the Employer's name, Other — stop and refer to the Contracts Manager]
+  - key: counterfeit_check
+    label: Marking, packaging and documentation checked for signs of counterfeit or non-conforming product (SESC-POL-17; SESC-POL-19)
+    type: select
+    required: true
+    section: The doorset and its evidence
+    options: [Checked — no concern, Concern raised — manufacturer asked in writing — installation stopped]
+  - key: field_of_application_check
+    label: Field-of-application check against SESC-FRM-09
+    type: select
+    required: true
+    section: The doorset and its evidence
+    options: [Opening size and wall construction, leaf size and configuration, glazing and ironmongery are all within the evidence, One or more is outside the evidence — stop]
+  - key: field_of_application_notes
+    label: What was checked, against which page of the evidence
+    type: textarea
+    required: true
+    section: The doorset and its evidence
+
+  - key: leaf_product
+    label: Door leaf — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: leaf_evidence
+    label: Door leaf — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: leaf_matches
+    label: Door leaf — matches the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted]
+
+  - key: frame_product
+    label: Frame — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: frame_evidence
+    label: Frame — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: frame_matches
+    label: Frame — matches the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted]
+
+  - key: intumescent_product
+    label: Intumescent seals — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: intumescent_evidence
+    label: Intumescent seals — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: intumescent_matches
+    label: Intumescent seals — match the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted]
+
+  - key: smoke_seal_product
+    label: Smoke seals — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: smoke_seal_evidence
+    label: Smoke seals — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: smoke_seal_matches
+    label: Smoke seals — match the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted — no S rating required]
+
+  - key: hinges_product
+    label: Hinges — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: hinges_quantity
+    label: Hinges — number fitted per leaf
+    type: number
+    required: true
+    section: Components
+  - key: hinges_evidence
+    label: Hinges — evidence reference, including the number the evidence requires
+    type: text
+    required: true
+    section: Components
+  - key: hinges_matches
+    label: Hinges — match the tested or assessed configuration in type and number
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No"]
+
+  - key: closer_product
+    label: Closer — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: closer_evidence
+    label: Closer — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: closer_matches
+    label: Closer — matches the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted]
+
+  - key: latch_product
+    label: Latch or lock — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: latch_evidence
+    label: Latch or lock — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: latch_matches
+    label: Latch or lock — matches the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted]
+
+  - key: glazing_product
+    label: Glazing and glazing system — product fitted (glass, beads, glazing seal or compound)
+    type: text
+    required: true
+    section: Components
+  - key: glazing_evidence
+    label: Glazing and glazing system — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: glazing_matches
+    label: Glazing and glazing system — match the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted — no glazing]
+
+  - key: signage_product
+    label: Signage — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: signage_evidence
+    label: Signage — requirement reference (the specification or the evidence)
+    type: text
+    required: true
+    section: Components
+  - key: signage_matches
+    label: Signage — matches the requirement
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted]
+
+  - key: threshold_product
+    label: Threshold or drop seal — product fitted
+    type: text
+    required: true
+    section: Components
+  - key: threshold_evidence
+    label: Threshold or drop seal — evidence reference
+    type: text
+    required: true
+    section: Components
+  - key: threshold_matches
+    label: Threshold or drop seal — matches the tested or assessed configuration
+    type: select
+    required: true
+    section: Components
+    options: ["Yes","No", Not fitted]
+
+  - key: other_components
+    label: Any other component fitted — product, evidence reference and whether it matches
+    type: textarea
+    required: false
+    section: Components
+    help: Intumescent hinge pads, lock and closer protection, kick plates, door viewers, flush bolts, hold-open devices. Each must be covered by the evidence or it is not fitted.
+
+  - key: approval
+    label: Contracts Manager's approval (hold point 3)
+    type: select
+    required: true
+    section: Approval
+    options: [Approved — every row answered and every component matches — installation may start, Not approved — a row reads "No" or is blank — door stopped, Not yet reviewed]
+  - key: approved_by
+    label: Approved by
+    type: text
+    required: false
+    section: Approval
+  - key: approval_date
+    label: Date
+    type: date
+    required: false
+    section: Approval
+  - key: notes
+    label: Notes
+    type: textarea
+    required: false
+    section: Approval
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    section: Approval
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-10-0003). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

@@ -128,9 +128,14 @@ written this way and consistency is auditable.
   (Approved Supplier and Contractor Register) and `SESC-REG-12` (Competence Requirements Register) were
   taken on 26 October 2026 for Batch B, first session (register §2r). `SESC-POL-20` (Anti-Bribery and
   Corruption Policy) was taken on 27 October 2026 — a signed v1.0 produced in a separate chat and filed in
-  `Signed/` (register §2s, F77 on its dates).** All are DRAFTS:
-  `SESC-POL-21` · `SESC-PRO-08` · `SESC-WI-02` · `SESC-REG-13` · `SESC-FRM-09` · `SESC-REC-06` ·
-  `SESC-TPL-05` · `SESC-CAP-015` · `SESC-IMS-07`.
+  `Signed/` (register §2s, F77 on its dates). `SESC-PRO-08` (Fire Door Installation), `SESC-FRM-09` to
+  `SESC-FRM-14` (the fire door forms: survey, product evidence, installation checklist and gap record,
+  completion certificate, handover and maintenance schedule, operative authorisation), `SESC-REG-13`
+  (Fire Door Asset and Install Register), `SESC-WI-02` (Fire Door Record Pack) and `SESC-TPL-05` (client
+  confirmation of the fire door installation basis) were taken on 4 November 2026 for the fire door record
+  pack (register §2t, decision D28).** All are DRAFTS:
+  `SESC-POL-21` · `SESC-PRO-09` · `SESC-WI-03` · `SESC-REG-14` · `SESC-FRM-15` · `SESC-REC-06` ·
+  `SESC-TPL-06` · `SESC-CAP-015` · `SESC-IMS-07`.
   **Update this line the moment one is used.**
 - **Never renumber an issued document. Never reuse a reference.**
 - Everything downstream is generated from front matter — the page-1 control table, headers,

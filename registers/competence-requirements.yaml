@@ -1,11 +1,11 @@
 id: SESC-REG-12
 title: Competence Requirements Register — the qualification, card, registration, assessment, briefing or demonstrated ability each role must hold before a person in that role is given the work, with the source that requires it, the evidence that shows it and the interval at which it is renewed
-version: "0.1"
+version: "0.2"
 status: draft
 owner: Contracts Manager
 approver: Managing Director
 issued: 2026-10-26
-revised: 2026-10-26
+revised: 2026-11-04
 next_review: 2027-10-26
 review_frequency_months: 12
 classification: internal
@@ -21,6 +21,7 @@ review_trigger:
   - An investigation under SESC-PRO-04 paragraph 14 that finds competence, training or supervision contributed
   - Each renewal interval marked "to be read from the awarding body" being read and entered
   - The requirements for mould and damp remediation being stated (CR-35)
+  - The third-party fire door certification scheme document being read, and the first SESC-FRM-14 authorisation (CR-45 to CR-48; SESC-PRO-08 Part 7(j))
   - ISO 14001:2026 being bought and read
 personal_data: false
 
@@ -94,6 +95,7 @@ roles:
     - operative_gas_mechanical
     - operative_renewables         # solar PV; heat pumps; battery storage
     - operative_mould_damp         # mould and damp remediation (D11)
+    - operative_fire_door          # fire door installation, remedial repair and maintenance (D28, 4 Nov 2026)
     - driver                       # anyone driving a company vehicle or a private vehicle for work
     - apprentice
     - subcontractor_person         # any subcontractor's person attending the Employer's sites
@@ -542,6 +544,51 @@ requirements:
     verified_by: Contracts Manager
     status: requirement documented; no check is recorded in the system because no subcontractor has been evaluated (SESC-REG-11)
 
+  # ===================================================================================
+  # G — FIRE DOOR WORK (added v0.2, 4 November 2026, alongside SESC-PRO-08; decision D28)
+  # ===================================================================================
+  # SESC-PRO-08 is a DRAFT. These rows state what that draft requires and what no document
+  # yet states. No course, awarding body, scheme card or interval is named, because none has
+  # been read; the third-party scheme's requirements are entered when the scheme document is
+  # held (SESC-PRO-08 Part 7(j)). Until the first SESC-FRM-14 exists, no person is authorised
+  # for any fire door task.
+
+  - ref: CR-45
+    requirement: Briefing on SESC-PRO-08 Fire Door Installation, SESC-WI-02 and the photograph standard, and reading of the manufacturer's installation instructions for the doorset in use, before any fire door task
+    roles: [operative_fire_door, site_supervisor, contracts_manager]
+    source: SESC-PRO-08 paragraphs 8, 19 and 33 (draft); SESC-POL-19 paragraph 26(a) (follow the manufacturer's instructions); SESC-POL-05 paragraph 32 (training when work methods change)
+    evidence: SESC-FRM-03 entry of type Internal briefing; SESC-FRM-14 field instructions_briefed
+    interval: once before the first fire door task, and on each revision of SESC-PRO-08 or change of doorset manufacturer
+    verified_by: The responsible person for fire door work (the Contracts Manager, SESC-PRO-08 paragraph 8)
+    status: requirement documented in a draft procedure; no briefing delivered; no SESC-FRM-14 exists for any person
+
+  - ref: CR-46
+    requirement: Manufacturer product training for the doorset system, where the manufacturer requires it as a condition of its evidence, its warranty or the use of its system (CR-37 applied to fire doors)
+    roles: [operative_fire_door]
+    source: SESC-POL-19 paragraph 26(d); SESC-POL-17 paragraph 22(b), (c); SESC-PRO-08 paragraphs 9(f) and 17
+    evidence: Manufacturer's certificate or installer registration; SESC-FRM-03; Training Matrix entry
+    interval: to be read from the manufacturer
+    verified_by: Contracts Manager at hold point 3 (SESC-FRM-10)
+    status: requirement documented per product; no doorset manufacturer has been selected, so whether any manufacturer requires training is not yet known
+
+  - ref: CR-47
+    requirement: Fire door installation competence demonstrated for each task authorised — observed installing a fire door under supervision through hold points 4 and 5 and recorded, or a fire door installation qualification verified with its awarding body
+    roles: [operative_fire_door]
+    source: SESC-PRO-08 paragraph 19 (draft); SESC-POL-16 paragraph 22 (no allocation outside current competence); SESC-REG-09 CO-36 (individual competence for building work, Building Regulations Part 2A)
+    evidence: SESC-FRM-14 with the assessment method in the SESC-FRM-03 vocabulary; the observing supervisor's record; any certificate verified with the issuing body
+    interval: before authorisation; the authorisation reviewed at least annually and on any nonconformity under SESC-PRO-08 Part 5
+    verified_by: The responsible person for fire door work; the Managing Director for the responsible person's own
+    status: GAP — no awarding body, course or qualification is named, because none has been read. The Contracts Manager is to state from the issuing body what external qualification, if any, is required before the first authorisation, and the third-party scheme's requirement is read from the scheme document when it is held (SESC-PRO-08 Part 7(e), (j)). No person is authorised for any fire door task
+
+  - ref: CR-48
+    requirement: Responsible person for fire door work — the person who authorises operatives on SESC-FRM-14, approves SESC-FRM-10 and signs SESC-FRM-12 as supervisor; competence appropriate to those duties, reviewed by the Managing Director
+    roles: [contracts_manager]
+    source: SESC-PRO-08 paragraph 8 (draft); the competence a certification scheme requires of this person is to be read from the scheme document (SESC-PRO-08 Part 7(j)) and is NOT stated here
+    evidence: Training Matrix; the Managing Director's annual review, as for CR-38
+    interval: at least annually
+    verified_by: Managing Director
+    status: requirement documented only as a role; no qualification is specified from any scheme and none is claimed; the scheme's own title for the role is adopted at the revision that reads the scheme document
+
 not_stated:
   note: >
     Activities in the Employer's generic risk assessment library (SESC-POL-05 paragraph 17) and
@@ -592,8 +639,20 @@ records:
     - The Training Matrix rows for counterfeit materiel, product safety, sanctions and data protection (CR-03, CR-05, CR-06, CR-10) — committed 31 August to 30 September 2026, overdue
     - The Managing Director's approval of this register and of SESC-PRO-06 — due 2026-11-30 (proposed)
     - The D3 decision on the internal auditor (CR-41)
+    - The external qualification, if any, for fire door installation stated from its awarding body, and the scheme's requirements for operatives and the responsible person read from the scheme document (CR-47, CR-48) — due before the first SESC-FRM-14 authorisation, and no later than 2026-11-30 (proposed)
+    - The first SESC-FRM-14 authorisation for any person (CR-45 to CR-47) — due before the first fire door survey
 
 revision_history:
+  - version: "0.2"
+    date: 2026-11-04
+    author: G A Hill (drafted by Claude)
+    change: >
+      Fire door work added as section G, rows CR-45 to CR-48, alongside SESC-PRO-08 v0.1 and
+      SESC-FRM-14 (decision D28, which reverses the fire door half of D11). Role
+      operative_fire_door added. No course, awarding body, scheme card or interval is named,
+      because none has been read; CR-47 is recorded as a gap on that point and CR-48 states the
+      responsible person's competence only as a role. Two review triggers and two
+      not-yet-held records added. No existing row changed. Not approved.
   - version: "0.1"
     date: 2026-10-26
     author: G A Hill (drafted by Claude)

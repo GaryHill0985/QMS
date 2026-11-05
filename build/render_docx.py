@@ -1019,12 +1019,16 @@ _FONT_CACHE = {}
 
 def _font_for(weight, size):
     from PIL import ImageFont
+    # The same search list as make_cover(). Windows was missing here (found 4 Nov 2026
+    # when the renderer first ran on a Windows machine, register F81).
     paths = {"bold": ["/usr/share/fonts/truetype/liberation/LiberationSans-Bold.ttf",
                       "/Library/Fonts/Arial Bold.ttf",
-                      "/System/Library/Fonts/Supplemental/Arial Bold.ttf"],
+                      "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
+                      "C:/Windows/Fonts/arialbd.ttf"],
              "regular": ["/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
                          "/Library/Fonts/Arial.ttf",
-                         "/System/Library/Fonts/Supplemental/Arial.ttf"]}
+                         "/System/Library/Fonts/Supplemental/Arial.ttf",
+                         "C:/Windows/Fonts/arial.ttf"]}
     for p in paths[weight]:
         if Path(p).exists():
             return ImageFont.truetype(p, size)
@@ -1032,7 +1036,8 @@ def _font_for(weight, size):
 
 
 def soffice():
-    for c in ("soffice", "libreoffice", "/Applications/LibreOffice.app/Contents/MacOS/soffice"):
+    for c in ("soffice", "libreoffice", "/Applications/LibreOffice.app/Contents/MacOS/soffice",
+              "C:/Program Files/LibreOffice/program/soffice.exe"):
         p = shutil.which(c) or (c if os.path.exists(c) else None)
         if p:
             return p
@@ -1044,7 +1049,8 @@ def to_pdf(docx_path, out_dir):
     if not exe:
         raise RenderError("LibreOffice (soffice) not found: cannot render PDF")
     with tempfile.TemporaryDirectory() as prof:
-        subprocess.run([exe, f"-env:UserInstallation=file://{prof}", "--headless",
+        # Path.as_uri() gives file:///C:/... on Windows and file:///tmp/... elsewhere (F81).
+        subprocess.run([exe, f"-env:UserInstallation={Path(prof).as_uri()}", "--headless",
                         "--convert-to", "pdf", "--outdir", str(out_dir), str(docx_path)],
                        check=True, capture_output=True, timeout=240)
     pdf = Path(out_dir) / (Path(docx_path).stem + ".pdf")

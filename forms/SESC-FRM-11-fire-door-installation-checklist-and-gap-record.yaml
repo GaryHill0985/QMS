@@ -1,0 +1,500 @@
+id: SESC-FRM-11
+title: Fire Door Installation Checklist and Gap Record
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-11-04
+next_review: 2027-11-04
+classification: internal
+clauses:
+  iso9001:  ["7.1.5.1", "8.5.1", "8.5.2", "8.6"]
+  iso14001: ["8.1"]
+personal_data: false
+records_generated: [fire_door_installation_checklist, fire_door_photographs]
+parent_document: SESC-PRO-08
+one_per: door
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    The job file, in the door's subfolder Fire Doors/<Door ID>/, with photographs
+    S02 to S09, and the records store. Never the repository. Names the installer
+    and supervisor in their work capacity only.
+  retention: As SESC-FRM-09
+  feeds_register: SESC-REG-13 — the installation date, installer and gap result columns
+
+purpose: >
+  The record of one door being installed: each step against the manufacturer's
+  instructions, the two site hold points (the frame before fire-stopping; the
+  gaps and tests before release), the ten gap measurements against the
+  manufacturer's own tolerance, the functional tests, and the eight photographs
+  taken on this form. A door with any step unsigned, any gap failed, any test
+  failed or any photograph missing is not released (SESC-PRO-08 paragraph 29).
+
+guidance:
+  - Work in the order the form runs. Each hold point is a stop. The Site Supervisor signs it before the next step starts, and a frame that was fire-stopped before hold point 4 was signed is a nonconformity, not a tidy-up.
+  - The tolerance boxes are blank on purpose. Copy the figure for this doorset from the manufacturer's installation instructions, with the page, before you measure. No figure is printed here because it belongs to the doorset, not to this form.
+  - Measure with the door closed and latched, with a gauge that carries a number, checked against a steel rule before first use on this job.
+  - Nine photographs per door, named JOBNO_DOORID_Sxx_YYYYMMDD.jpg, filed in Fire Doors/<Door ID>/ the same day. S01 is on the survey; S02 to S09 are here.
+  - A fail is corrected and re-recorded as a new entry that points at this one. Nothing on this form is overwritten.
+
+print:
+  per: door
+  photo_stages: [S02, S03, S04, S05, S06, S07, S08, S09]
+  gap_table:
+    tolerance_fields: [tol_edge_min_mm, tol_edge_max_mm, tol_head_min_mm, tol_head_max_mm, tol_threshold_max_mm]
+    before_key: gaps_hinge_result
+    rows:
+      - [Hinge side — top, gap_hinge_top_mm]
+      - [Hinge side — middle, gap_hinge_mid_mm]
+      - [Hinge side — bottom, gap_hinge_bottom_mm]
+      - [Lock side — top, gap_lock_top_mm]
+      - [Lock side — middle, gap_lock_mid_mm]
+      - [Lock side — bottom, gap_lock_bottom_mm]
+      - [Head — hinge end, gap_head_hinge_end_mm]
+      - [Head — middle, gap_head_mid_mm]
+      - [Head — lock end, gap_head_lock_end_mm]
+      - [Threshold or undercut, gap_threshold_mm]
+
+revision_history:
+  - version: "0.1"
+    date: 2026-11-04
+    change: >
+      First draft, alongside SESC-PRO-08. Drafted by Claude for G A Hill from
+      HANDOFF-FD-001; not approved.
+
+fields:
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    section: Job and door
+  - key: door_id
+    label: Door identifier
+    type: text
+    required: true
+    section: Job and door
+  - key: survey_ref
+    label: SESC-FRM-09 reference
+    type: text
+    required: true
+    section: Job and door
+  - key: evidence_ref
+    label: SESC-FRM-10 reference (approved at hold point 3)
+    type: text
+    required: true
+    section: Job and door
+  - key: install_date
+    label: Installation date
+    type: date
+    required: true
+    section: Job and door
+  - key: installer
+    label: Installer (authorised on SESC-FRM-14)
+    type: text
+    required: true
+    section: Job and door
+  - key: others_present
+    label: Other operatives present, including any not yet authorised
+    type: text
+    required: false
+    section: Job and door
+  - key: supervisor
+    label: Site Supervisor
+    type: text
+    required: true
+    section: Job and door
+  - key: rams_briefed
+    label: RAMS briefed and accepted before work started
+    type: select
+    required: true
+    section: Job and door
+    options: [Yes — acceptance register signed, "No — work not started"]
+  - key: instructions_on_site
+    label: Manufacturer's installation instructions on site and read for this doorset
+    type: select
+    required: true
+    section: Job and door
+    options: [Yes — reference in the notes, "No — work not started"]
+
+  - key: removal_complete
+    label: Existing door, frame and ironmongery removed; opening cleared and checked against the survey
+    type: select
+    required: true
+    section: Removal and opening
+    options: [Yes — opening as surveyed, Yes — opening differs from the survey — described below — Contracts Manager informed, Not applicable — new opening]
+  - key: opening_differences
+    label: Differences from the survey
+    type: textarea
+    required: false
+    section: Removal and opening
+    help: Where a difference takes the opening outside the field of application, stop (SESC-PRO-08 paragraph 20).
+  - key: waste_disposal
+    label: Removed door, frame and packaging
+    type: select
+    required: true
+    section: Removal and opening
+    options: [Segregated and removed as construction waste under the Employer's duty of care — transfer note reference below, Retained by the client, Removed by others]
+  - key: waste_transfer_ref
+    label: Waste transfer note reference
+    type: text
+    required: false
+    section: Removal and opening
+  - key: photo_s02
+    label: Photograph S02 — empty structural opening
+    type: file
+    required: true
+    section: Removal and opening
+    photo_stage: S02
+
+  - key: frame_fixing_type
+    label: Frame fixing type used
+    type: text
+    required: true
+    section: Frame fixing and packing — hold point 4
+    help: As the manufacturer's instructions state for this substrate, for example the fixing name, size and length.
+  - key: frame_fixing_spacing_mm
+    label: Fixing spacing used (mm)
+    type: number
+    required: true
+    section: Frame fixing and packing — hold point 4
+  - key: frame_fixing_spacing_required
+    label: Fixing spacing and number the manufacturer's instructions require, with the page
+    type: text
+    required: true
+    section: Frame fixing and packing — hold point 4
+  - key: frame_packing
+    label: Packing at each fixing
+    type: text
+    required: true
+    section: Frame fixing and packing — hold point 4
+    help: The packing material the instructions permit, and that every fixing is packed.
+  - key: frame_plumb_square
+    label: Frame plumb, square, true and at the correct depth in the opening
+    type: select
+    required: true
+    section: Frame fixing and packing — hold point 4
+    options: [Yes — checked with a level and a tape, "No — corrected before fire-stopping"]
+  - key: photo_s03
+    label: Photograph S03 — frame fixed and packed, before any fire-stopping
+    type: file
+    required: true
+    section: Frame fixing and packing — hold point 4
+    photo_stage: S03
+  - key: hold_point_4
+    label: Hold point 4 — Site Supervisor has checked the frame fixing and packing against the instructions and seen photograph S03
+    type: select
+    required: true
+    section: Frame fixing and packing — hold point 4
+    options: [Signed — fire-stopping may start, Not signed — fire-stopping must not start]
+  - key: hold_point_4_by
+    label: Hold point 4 signed by, and date
+    type: text
+    required: true
+    section: Frame fixing and packing — hold point 4
+
+  - key: firestop_product
+    label: Fire-stopping product used around the frame
+    type: text
+    required: true
+    section: Fire-stopping
+  - key: firestop_evidence
+    label: Evidence reference that covers this product for this gap width and substrate
+    type: text
+    required: true
+    section: Fire-stopping
+  - key: firestop_gap_mm
+    label: Largest gap between frame and opening filled (mm)
+    type: number
+    required: true
+    section: Fire-stopping
+  - key: firestop_applied
+    label: Applied as the product's own instructions state, continuous around the frame
+    type: select
+    required: true
+    section: Fire-stopping
+    options: ["Yes","No — described in the notes — SESC-FRM-05 raised"]
+  - key: photo_s04
+    label: Photograph S04 — fire-stopping complete, before architraves or finishes
+    type: file
+    required: true
+    section: Fire-stopping
+    photo_stage: S04
+
+  - key: intumescent_fitted
+    label: Intumescent seals fitted in the positions and lengths the evidence shows, continuous and uncut except where the instructions say
+    type: select
+    required: true
+    section: Seals and hinges
+    options: ["Yes","No"]
+  - key: smoke_seal_fitted
+    label: Smoke seals fitted as the evidence shows
+    type: select
+    required: true
+    section: Seals and hinges
+    options: ["Yes",Not required — no S rating, "No"]
+  - key: hinges_fitted
+    label: Hinges fitted in the number and positions, with the screws, the evidence states
+    type: select
+    required: true
+    section: Seals and hinges
+    options: ["Yes","No"]
+  - key: hinges_number
+    label: Number of hinges fitted per leaf
+    type: number
+    required: true
+    section: Seals and hinges
+  - key: hinge_protection
+    label: Intumescent protection to hinges, lock and closer fitted where the evidence calls for it
+    type: select
+    required: true
+    section: Seals and hinges
+    options: [Fitted, Not called for by the evidence, "Called for and not fitted — fail"]
+  - key: photo_s05
+    label: Photograph S05 — seals and hinges fitted
+    type: file
+    required: true
+    section: Seals and hinges
+    photo_stage: S05
+
+  - key: closer_fitted
+    label: Closer fitted and adjusted as the manufacturer's instructions state
+    type: select
+    required: true
+    section: Ironmongery, glazing and signage
+    options: ["Yes",Not fitted — not required by the evidence or specification, "No"]
+  - key: latch_fitted
+    label: Latch or lock fitted as the evidence covers it
+    type: select
+    required: true
+    section: Ironmongery, glazing and signage
+    options: ["Yes",Not fitted, "No"]
+  - key: glazing_fitted
+    label: Glazing and glazing system fitted as the evidence covers it
+    type: select
+    required: true
+    section: Ironmongery, glazing and signage
+    options: ["Yes",Not applicable — no glazing, "No"]
+  - key: signage_fitted
+    label: Signage fitted to both faces as the rating or specification requires
+    type: select
+    required: true
+    section: Ironmongery, glazing and signage
+    options: ["Yes",Not required, "No"]
+  - key: photo_s06
+    label: Photograph S06 — ironmongery and closer fitted
+    type: file
+    required: true
+    section: Ironmongery, glazing and signage
+    photo_stage: S06
+
+  - key: gauge_id
+    label: Gap gauge identifier
+    type: text
+    required: true
+    section: Gaps — hold point 5
+  - key: gauge_checked
+    label: Gauge checked against a steel rule before first use on this job
+    type: select
+    required: true
+    section: Gaps — hold point 5
+    options: [Yes — date in the notes, "No — do not measure"]
+  - key: tol_edge_min_mm
+    label: Manufacturer's tolerance — hinge and lock side gaps — minimum (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+    help: Copied from the installation instructions for this doorset, with the page reference below. Not printed on the form.
+  - key: tol_edge_max_mm
+    label: Manufacturer's tolerance — hinge and lock side gaps — maximum (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: tol_head_min_mm
+    label: Manufacturer's tolerance — head gap — minimum (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: tol_head_max_mm
+    label: Manufacturer's tolerance — head gap — maximum (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: tol_threshold_max_mm
+    label: Manufacturer's tolerance — threshold gap or undercut — maximum (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: tolerance_source
+    label: Where the tolerances were read from — document and page
+    type: text
+    required: true
+    section: Gaps — hold point 5
+    help: If the instructions give no figure for a position, write "not stated" and the Contracts Manager obtains it from the manufacturer before release (SESC-PRO-08 paragraph 26).
+  - key: gap_hinge_top_mm
+    label: Hinge side — top (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_hinge_mid_mm
+    label: Hinge side — middle (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_hinge_bottom_mm
+    label: Hinge side — bottom (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_lock_top_mm
+    label: Lock side — top (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_lock_mid_mm
+    label: Lock side — middle (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_lock_bottom_mm
+    label: Lock side — bottom (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_head_hinge_end_mm
+    label: Head — hinge end (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_head_mid_mm
+    label: Head — middle (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_head_lock_end_mm
+    label: Head — lock end (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gap_threshold_mm
+    label: Threshold or undercut (mm)
+    type: number
+    required: true
+    section: Gaps — hold point 5
+  - key: gaps_hinge_result
+    label: Hinge side — all three within the manufacturer's tolerance
+    type: select
+    required: true
+    section: Gaps — hold point 5
+    options: [Pass, Fail]
+  - key: gaps_lock_result
+    label: Lock side — all three within the manufacturer's tolerance
+    type: select
+    required: true
+    section: Gaps — hold point 5
+    options: [Pass, Fail]
+  - key: gaps_head_result
+    label: Head — all three within the manufacturer's tolerance
+    type: select
+    required: true
+    section: Gaps — hold point 5
+    options: [Pass, Fail]
+  - key: gaps_threshold_result
+    label: Threshold or undercut — within the manufacturer's tolerance
+    type: select
+    required: true
+    section: Gaps — hold point 5
+    options: [Pass, Fail]
+  - key: photo_s07
+    label: Photograph S07 — gauge in the gap, one position each side and at the threshold
+    type: file
+    required: true
+    section: Gaps — hold point 5
+    photo_stage: S07
+
+  - key: test_self_closes
+    label: Self-closes fully and latches from the fully open position and from about 5° from closed, without assistance
+    type: select
+    required: true
+    section: Functional tests — hold point 5
+    options: [Pass, Fail]
+  - key: test_latches
+    label: Latches positively on every closure
+    type: select
+    required: true
+    section: Functional tests — hold point 5
+    options: [Pass, Fail, Not applicable — no latch]
+  - key: test_no_binding
+    label: No binding on the frame, floor or seals through the full swing
+    type: select
+    required: true
+    section: Functional tests — hold point 5
+    options: [Pass, Fail]
+  - key: test_closer_adjusted
+    label: Closer adjusted to the manufacturer's instructions and holds the leaf against the stop
+    type: select
+    required: true
+    section: Functional tests — hold point 5
+    options: [Pass, Fail, Not applicable — no closer]
+  - key: test_signage
+    label: Signage fitted and correct for the rating
+    type: select
+    required: true
+    section: Functional tests — hold point 5
+    options: [Pass, Fail, Not required]
+  - key: photo_s08
+    label: Photograph S08 — finished door, both faces
+    type: file
+    required: true
+    section: Functional tests — hold point 5
+    photo_stage: S08
+  - key: photo_s09
+    label: Photograph S09 — doorset label, certification marks and component markings, legible
+    type: file
+    required: true
+    section: Functional tests — hold point 5
+    photo_stage: S09
+
+  - key: hold_point_5
+    label: Hold point 5 — Site Supervisor has witnessed the gaps and tests and checked that photographs S01 to S09 are in the door's subfolder
+    type: select
+    required: true
+    section: Result
+    options: [Signed — door may be released on SESC-FRM-12, Not signed — door not released]
+  - key: hold_point_5_by
+    label: Hold point 5 signed by, and date
+    type: text
+    required: true
+    section: Result
+  - key: overall_result
+    label: Overall result
+    type: select
+    required: true
+    section: Result
+    options: [Pass — every gap and test passed, every hold point signed, nine photographs held — release on SESC-FRM-12, Fail — corrected and re-recorded as a new entry, Fail — cannot be corrected within the instructions — SESC-FRM-05 raised — door not released]
+  - key: ncr_ref
+    label: SESC-FRM-05 reference, if raised
+    type: text
+    required: false
+    section: Result
+  - key: departures
+    label: Any departure from the manufacturer's instructions or from BS 8214, and why
+    type: textarea
+    required: false
+    section: Result
+    help: Where the instructions and BS 8214 differ, the instructions apply and the difference is written here (SESC-PRO-08 paragraph 9(f)).
+  - key: notes
+    label: Notes
+    type: textarea
+    required: false
+    section: Result
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    section: Result
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-11-0003). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).
