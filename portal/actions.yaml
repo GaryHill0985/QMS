@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.26, 5 November 2026 (fire door record pack committed and put up for review — F84 updated; otherwise as at v1.25)
+source_register: SESC-IMS-Master-Register.md v1.27, 5 November 2026 (PR #20 merged as fc225da; otherwise as at v1.26)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
