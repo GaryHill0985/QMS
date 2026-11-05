@@ -321,6 +321,34 @@ class TestFixture(unittest.TestCase):
         self.assertIn("Signed induction sheets", body)
         self.assertIsNotNone(R.find_signature_table(Document(res["docx"])))
 
+    # F85 — a table whose header row sits on the numbered-paragraph line.
+
+    def test_table_header_on_numbered_line(self):
+        """F85: the seven procedures open tables as "1. | Column | Other |" with the
+        |---| line and the body rows indented beneath. The header row is the table's,
+        not the paragraph's text, and the paragraph number still prints (F27/F34)."""
+        src = write_fixture(self.tmp)
+        src.write_text(src.read_text()
+                       .replace("1. First paragraph. Nothing in this body names the version.\n\n"
+                                "   | Column | Other |", "1. | Column | Other |"),
+                       newline="\n")
+        self.assertIn("1. | Column | Other |\n   |---|---|", src.read_text())
+        res = R.render(src, self.tmp)
+        doc = Document(res["docx"])
+        # the number survives, as the source's number
+        self.assertEqual(docx_numbers(res["docx"]), ["1.", "2.", "(a)", "(b)"])
+        self.assertEqual(docx_numbers(res["docx"]), source_numbers(src))
+        # no literal pipe text anywhere in a body paragraph
+        for p in doc.paragraphs:
+            self.assertNotIn("|", p.text)
+        # the table's first row is the header row, carrying the header text, and
+        # the first data row is not a header
+        tb = doc.tables[1]                       # table 0 is the control table
+        self.assertEqual([c.text.strip() for c in tb.rows[0].cells], ["Column", "Other"])
+        self.assertEqual([c.text.strip() for c in tb.rows[1].cells], ["a", "b"])
+        self.assertIsNotNone(tb.rows[0]._tr.find(f"{R.qn('w:trPr')}/{R.qn('w:tblHeader')}"))
+        self.assertIsNone(tb.rows[1]._tr.find(f"{R.qn('w:trPr')}/{R.qn('w:tblHeader')}"))
+
     def test_typed_footer_must_match(self):
         src = write_fixture(self.tmp, footer="*SESC Solutions Ltd · SESC-PRO-99 v7.3 · Uncontrolled when printed*")
         with self.assertRaises(R.RenderError):

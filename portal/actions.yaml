@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.28, 5 November 2026 (signature guard fixed — F58 and F82 closed, F85 added; otherwise as at v1.27, PR #20 merged)
+source_register: SESC-IMS-Master-Register.md v1.29, 5 November 2026 (F85 closed — numbered-line table headers render; otherwise as at v1.28, PR #22 merged)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -700,17 +700,18 @@ actions:
     kind: finding
     title: Fourteen tables in PRO-01 to PRO-07 print without their header row
     owner: Chief Operating Officer
-    due: 2026-11-30
-    status: open
+    status: closed
     severity: medium
     detail: >
-      The seven procedures of register §2q and §2r open their tables on the
-      numbered-paragraph line ("25. | Record | What it is | ... |"), and
-      parse_blocks() in render_docx.py reads that line as paragraph text, so
-      the header prints as literal text and the first data row is styled as
-      the header. Seen on PRO-06 p. 9 on 5 Nov 2026. A renderer fix with a
-      test, not a document edit; before the queued §2q/§2r render pass.
-      Register §2u.
+      CLOSED 5 Nov 2026. The seven procedures of register §2q and §2r open
+      their tables on the numbered-paragraph line ("25. | Record | What it
+      is | ... |"), and parse_blocks() in render_docx.py read that line as
+      paragraph text, so the header printed as literal text and the first
+      data row was styled as the header (seen on PRO-06 p. 9). The parser now
+      reads such a line as the table's header row and still prints the
+      number; one fixture test added; all fourteen tables parse with their
+      header; PRO-06 and PRO-01 rendered and read as images. No document
+      edited. Register §2v.
     internal: true
 
   - ref: F83
