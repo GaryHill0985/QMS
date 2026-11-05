@@ -1,0 +1,189 @@
+id: SESC-FRM-13
+title: Fire Door Handover and Maintenance Schedule
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-11-04
+next_review: 2027-11-04
+classification: internal
+clauses:
+  iso9001:  ["8.5.5"]
+personal_data: false
+records_generated: [fire_door_handover]
+parent_document: SESC-PRO-08
+one_per: job
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    The job file and the records store; a copy to the client as the cover of the
+    handover pack. Never the repository.
+  retention: As SESC-FRM-09
+  feeds_register: SESC-REG-13 — the next inspection due column
+
+purpose: >
+  The client's operation and maintenance information for the fire doors the
+  Employer installed, and the Employer's record that it was handed over and
+  received. It is the post-delivery activity under ISO 9001 clause 8.5.5 and the
+  Employer's contribution to the client's golden thread. It is also the natural
+  point at which planned inspection and maintenance is offered.
+
+guidance:
+  - The inspection interval is not a figure the Employer sets. Read it from the manufacturer's maintenance instructions and from the guidance the client's fire risk assessment relies on, and write the source beside it.
+  - The duty to keep fire doors in efficient working order sits with the responsible person for the premises under the Regulatory Reform (Fire Safety) Order 2005. This schedule helps them do that; it does not take the duty from them, and the form says so.
+  - The pack is not handed over until every item ticked in the contents box is actually in it.
+  - The client's responsible person signs for receipt. If nobody will sign, record who the pack was given to, how and when.
+
+inspection_checks:
+  note: >
+    What a routine inspection of an installed fire door checks. Printed on the
+    form for the client. It describes the checks, and does not state an
+    interval.
+  items:
+    - The door closes fully and latches from the fully open position and from a few degrees open, without assistance
+    - No damage, warping or distortion to the leaf, frame or stops
+    - Intumescent seals and smoke seals continuous, undamaged, not painted over and firmly in their grooves
+    - Gaps between leaf and frame, and at the threshold, within the manufacturer's tolerance as recorded on SESC-FRM-11
+    - Hinges secure, all screws present and of the right type, no missing or loose hinge
+    - Closer secure, undamaged, adjusted, with no leaking fluid; door not held or wedged open
+    - Latch or lock engages; no unauthorised ironmongery, holes or notches added since installation
+    - Glazing and glazing beads intact and secure; no cracked glass
+    - Signage present, correct and legible on both faces
+    - No alteration, re-painting of seals, additional holes or fittings since the last inspection
+
+print:
+  per: job
+  photo_stages: []
+
+revision_history:
+  - version: "0.1"
+    date: 2026-11-04
+    change: >
+      First draft, alongside SESC-PRO-08. Drafted by Claude for G A Hill from
+      HANDOFF-FD-001; not approved.
+
+fields:
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    section: Job
+  - key: client
+    label: Client
+    type: text
+    required: true
+    section: Job
+  - key: site
+    label: Site
+    type: text
+    required: true
+    section: Job
+  - key: building
+    label: Building or block
+    type: text
+    required: false
+    section: Job
+  - key: handover_date
+    label: Handover date
+    type: date
+    required: true
+    section: Job
+  - key: compiled_by
+    label: Pack compiled by (Contracts Manager)
+    type: text
+    required: true
+    section: Job
+
+  - key: door_schedule
+    label: Schedule of doors handed over
+    type: textarea
+    required: true
+    section: Door schedule
+    help: One line per door — door identifier, location, rating, doorset manufacturer and product reference, test evidence reference, SESC-FRM-12 certificate reference, installation date.
+  - key: door_count
+    label: Number of doors
+    type: number
+    required: true
+    section: Door schedule
+
+  - key: pack_contents
+    label: The handover pack contains
+    type: multiselect
+    required: true
+    section: Pack contents
+    options: [This schedule, A SESC-FRM-12 completion certificate for every door, The doorset manufacturer's installation instructions, The doorset manufacturer's maintenance and care instructions, The Declaration of Performance or the manufacturer's evidence statement for each doorset, The photograph set S01 to S09 for every door, The SESC-FRM-09 survey and SESC-FRM-11 checklist for every door where the client asks for them, The gap measurements and the manufacturer's tolerance for every door, The waste transfer note references for removed doors]
+    help: Tick only what is in the pack. Where the client's golden thread requirements ask for more, add it and record it in the notes.
+  - key: golden_thread_requirements
+    label: Client's golden thread or information requirements received in writing
+    type: select
+    required: true
+    section: Pack contents
+    options: [Received — reference in the notes — met in this pack, Received — partly met — gap stated in the notes, None stated by the client]
+
+  - key: inspection_interval
+    label: Recommended routine inspection interval
+    type: text
+    required: true
+    section: Maintenance
+    help: As read from the manufacturer's maintenance instructions and the guidance the client's fire risk assessment relies on. Not a figure the Employer chooses.
+  - key: inspection_interval_source
+    label: Source of the interval — document, issuer and page
+    type: text
+    required: true
+    section: Maintenance
+  - key: next_inspection_due
+    label: Next inspection due
+    type: date
+    required: true
+    section: Maintenance
+    help: Calculated from the installation date and the interval above. Entered on SESC-REG-13.
+  - key: responsible_person_note
+    label: The responsible person for the premises keeps these doors in efficient working order under the Regulatory Reform (Fire Safety) Order 2005; this schedule assists that duty and does not transfer it
+    type: select
+    required: true
+    section: Maintenance
+    options: [Noted]
+  - key: ppm_offer
+    label: Planned inspection and maintenance by the Employer
+    type: select
+    required: true
+    section: Maintenance
+    options: [Offered — client to confirm, Instructed — reference in the notes, Declined by the client, Not offered]
+  - key: contact_role
+    label: Who to contact at the Employer for maintenance, remedial work or questions
+    type: text
+    required: true
+    section: Maintenance
+    help: Role and office number, for example "Contracts Manager, SESC Solutions Ltd, 01747 445 509". Not a personal mobile number.
+
+  - key: received_by_name
+    label: Received for the client by — name and role
+    type: text
+    required: true
+    section: Receipt
+  - key: received_by_signature
+    label: Received for the client by — signature
+    type: text
+    required: false
+    section: Receipt
+    help: Where nobody will sign, record in the notes who the pack was given to, how and when.
+  - key: received_date
+    label: Date received
+    type: date
+    required: true
+    section: Receipt
+  - key: notes
+    label: Notes
+    type: textarea
+    required: false
+    section: Receipt
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    section: Receipt
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-13-0002). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

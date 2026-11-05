@@ -1,0 +1,224 @@
+id: SESC-FRM-09
+title: Fire Door Pre-Installation Survey
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-11-04
+next_review: 2027-11-04
+classification: internal
+clauses:
+  iso9001:  ["8.5.1", "8.5.2"]
+personal_data: false
+records_generated: [fire_door_survey]
+parent_document: SESC-PRO-08
+one_per: door
+
+completed_record:
+  contains_personal_data: false
+  store: >
+    The job file, in the door's subfolder Fire Doors/<Door ID>/, and the records
+    store. Never the repository. Names the surveyor in their work capacity only.
+  retention: As SESC-POL-16 Annex B for job records, and for the life of the installation where the client's golden thread requires it (SESC-PRO-08 paragraph 39)
+  feeds_register: SESC-REG-13 Fire Door Asset and Install Register, on release of the door
+
+purpose: >
+  One opening, measured and described before any doorset is ordered, so that the
+  doorset chosen has test evidence that covers this opening and not an opening
+  someone remembered. Hold point 2 of SESC-PRO-08: the Contracts Manager reviews
+  this record before an order is raised.
+
+guidance:
+  - Measure the structural opening, not the old frame. Where the opening is out of true, record three measurements for each dimension and the smallest.
+  - The rating is the client's to state, from its fire risk assessment, fire strategy or specification. Write where it came from. If the client has not stated one, say so and do not guess.
+  - Take photograph S01 of the existing door in place before anything is touched, named JOBNO_DOORID_S01_YYYYMMDD.jpg, and file it in the door's subfolder the same day.
+  - Anything in the reveal that the doorset will meet — a duct, a cable, a floor finish, a threshold step — goes in the constraints box.
+
+print:
+  per: door
+  photo_stages: [S01]
+
+revision_history:
+  - version: "0.1"
+    date: 2026-11-04
+    change: >
+      First draft, alongside SESC-PRO-08. Drafted by Claude for G A Hill from
+      HANDOFF-FD-001; not approved.
+
+fields:
+  - key: job_ref
+    label: Job number
+    type: text
+    required: true
+    section: Job and door
+    help: Ties the survey to the job and, later, to the SESC Platform without re-keying (D15).
+  - key: client
+    label: Client
+    type: text
+    required: true
+    section: Job and door
+  - key: site
+    label: Site
+    type: text
+    required: true
+    section: Job and door
+  - key: building
+    label: Building or block
+    type: text
+    required: false
+    section: Job and door
+  - key: door_id
+    label: Door identifier
+    type: text
+    required: true
+    section: Job and door
+    help: The client's door reference where it has one; otherwise D01, D02 and so on in the order of the client's schedule (SESC-PRO-08 paragraph 12).
+  - key: location
+    label: Location of the door
+    type: text
+    required: true
+    section: Job and door
+    help: Floor, room or corridor, and what the door separates, for example "Ground floor, store 3 to corridor".
+  - key: survey_date
+    label: Date of survey
+    type: date
+    required: true
+    section: Job and door
+  - key: surveyed_by
+    label: Surveyed by
+    type: text
+    required: true
+    section: Job and door
+
+  - key: rating_required
+    label: Rating required
+    type: select
+    required: true
+    section: Rating
+    options: [FD30, FD30S, FD60, FD60S, Other — as stated in the notes, Not stated by the client — ask before ordering]
+  - key: rating_source
+    label: Where the rating comes from
+    type: text
+    required: true
+    section: Rating
+    help: The client's fire risk assessment, fire strategy, specification or door schedule, with its reference and date. The Employer does not choose the rating (SESC-PRO-08 paragraph 11).
+  - key: smoke_control_required
+    label: Smoke seals required
+    type: select
+    required: true
+    section: Rating
+    options: [Yes — an S rating, "No", Not stated — ask]
+  - key: glazing_required
+    label: Vision panel or glazing required
+    type: select
+    required: true
+    section: Rating
+    options: ["No", Yes — size and position in the notes, Not stated — ask]
+
+  - key: opening_height_mm
+    label: Structural opening height (mm)
+    type: number
+    required: true
+    section: Structural opening
+    help: Smallest of three measurements, left, centre and right.
+  - key: opening_width_mm
+    label: Structural opening width (mm)
+    type: number
+    required: true
+    section: Structural opening
+    help: Smallest of three measurements, top, middle and bottom.
+  - key: wall_thickness_mm
+    label: Wall or partition thickness (mm)
+    type: number
+    required: true
+    section: Structural opening
+  - key: opening_out_of_true
+    label: Is the opening out of plumb, level or square
+    type: select
+    required: true
+    section: Structural opening
+    options: ["No", Yes — by how much, in the notes]
+  - key: wall_construction
+    label: Wall or partition construction
+    type: select
+    required: true
+    section: Structural opening
+    options: [Masonry — brick, Masonry — block, Concrete, Timber stud and plasterboard, Metal stud and plasterboard, Other — in the notes, Not determinable without opening up]
+    help: The doorset's evidence covers named substrates. The construction here must be one of them (SESC-PRO-08 paragraph 16).
+  - key: substrate_condition
+    label: Condition of the substrate at the fixing positions
+    type: select
+    required: true
+    section: Structural opening
+    options: [Sound, Loose or damaged — builder's work needed, Not visible]
+  - key: floor_at_threshold
+    label: Floor at the threshold
+    type: text
+    required: true
+    section: Structural opening
+    help: Finish, level difference across the opening, and whether a threshold plate or drop seal is expected.
+
+  - key: existing_door
+    label: Existing door, frame and ironmongery
+    type: textarea
+    required: true
+    section: Existing door
+    help: What is there now, its condition, any label or marking on it, and whether it is or was a fire door.
+  - key: existing_door_removal
+    label: Removal and disposal of the existing door
+    type: select
+    required: true
+    section: Existing door
+    options: [Removed and disposed of by the Employer as construction waste, Removed by the Employer and retained by the client, Removed by others, To be confirmed]
+  - key: handing
+    label: Handing and direction of swing required
+    type: select
+    required: true
+    section: Existing door
+    options: [Left hand — opening in, Left hand — opening out, Right hand — opening in, Right hand — opening out, Double doors — in the notes, To be confirmed with the client]
+
+  - key: constraints
+    label: Services, finishes and access constraints
+    type: textarea
+    required: false
+    section: Constraints
+    help: Anything in or near the reveal the doorset will meet, and anything that affects access for the work — occupied area, out-of-hours working, escorted access, permits.
+  - key: photo_s01
+    label: Photograph S01 — existing door in place, before removal
+    type: file
+    required: true
+    section: Photographs
+    photo_stage: S01
+    help: File name JOBNO_DOORID_S01_YYYYMMDD.jpg, in Fire Doors/<Door ID>/ on the job file.
+
+  - key: survey_outcome
+    label: Outcome of the Contracts Manager's review (hold point 2)
+    type: select
+    required: true
+    section: Review
+    options: [Opening suitable — select the doorset, Builder's work needed first — specified and priced before ordering, Opening cannot take a doorset whose evidence covers it — client to be told by the Managing Director, Not yet reviewed]
+    help: No doorset is ordered until this reads one of the first two (SESC-PRO-08 paragraph 15).
+  - key: reviewed_by
+    label: Reviewed by
+    type: text
+    required: false
+    section: Review
+  - key: review_date
+    label: Date of review
+    type: date
+    required: false
+    section: Review
+  - key: notes
+    label: Notes
+    type: textarea
+    required: false
+    section: Review
+  - key: correction_of
+    label: Does this correct an earlier entry
+    type: text
+    required: false
+    section: Review
+    help: >
+      Leave blank for a new record. To correct one, give its record reference
+      (for example FRM-09-0003). Records are never edited or deleted; a
+      correction is a new entry that points at the original (D15).

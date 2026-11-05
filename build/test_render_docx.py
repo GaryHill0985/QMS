@@ -198,7 +198,7 @@ class TestIMS04(unittest.TestCase):
 
     def test_header_and_footer_from_front_matter(self):
         hdr = xml_text(part_text(self.res["docx"], r"word/header\d*\.xml$"))
-        self.assertIn("SESC-IMS-04 · V0.3 — Context of the Organisation", hdr)
+        self.assertIn("SESC-IMS-04 · V0.4 — Context of the Organisation", hdr)
         self.assertIn("Draft — not issued", hdr)
         ftr_xml = part_text(self.res["docx"], r"word/footer\d*\.xml$")
         self.assertIn("Uncontrolled when printed", xml_text(ftr_xml))
@@ -211,7 +211,7 @@ class TestIMS04(unittest.TestCase):
         self.assertEqual(f["issue_date"], "Not issued")
         self.assertTrue(f["approved_by"].startswith("Not yet approved"))
         self.assertIn("DRAFT", f["revision"])
-        self.assertEqual(f["revision_date"], "24 September 2026")
+        self.assertEqual(f["revision_date"], "4 November 2026")
 
     def test_signature_block_empty(self):
         doc = Document(self.res["docx"])

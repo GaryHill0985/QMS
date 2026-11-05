@@ -14,7 +14,7 @@
 # Closed items are kept, marked closed, so the list shows what moved; the
 # portal does not print them.
 
-source_register: SESC-IMS-Master-Register.md v1.24, 27 October 2026 (POL-20 filed — F77–F79 added; otherwise as at v1.23)
+source_register: SESC-IMS-Master-Register.md v1.26, 5 November 2026 (fire door record pack committed and put up for review — F84 updated; otherwise as at v1.25)
 
 # internal: true keeps an item out of the auditor and contributor builds.
 # Commercial decisions and the project's own management are not an auditor's
@@ -98,6 +98,24 @@ actions:
       structure held, written 2026-ready, each with "ISO 14001:2026 being bought
       and read" as a review trigger. CLAUDE.md 6, the no-quoting rule, D6 and
       PJR's answer on the edition (F48) are unchanged.
+    internal: false
+
+  - ref: D28
+    kind: decision
+    title: Fire door installation, remedial repair and maintenance are inside the scope
+    owner: Managing Director
+    due: 2026-11-30
+    status: open
+    severity: critical
+    detail: >
+      NEW 4 Nov 2026 (register 2t). Reverses the fire door half of D11. The
+      Chief Operating Officer reports a fire door service line and a QinetiQ
+      instruction for three doors at MOD Boscombe Down. Drafted at SESC-IMS-04
+      v0.4 paragraphs 7, 14 and 16(c)-(d) and in SESC-PRO-08 v0.1 with
+      SESC-FRM-09 to 14, SESC-REG-13, SESC-WI-02 and SESC-TPL-05. Formal on
+      Steve's signature of IMS-04 v0.4; nothing is installed under SESC-PRO-08
+      before then. The Employer holds no third-party fire door certification
+      and none is claimed anywhere in the pack.
     internal: false
 
   - ref: B5
@@ -632,6 +650,71 @@ actions:
       SESC-POL-03; the file of that name in Signed/ contains POL-01 (F60).
       Closes with F60. Register §2s.
     internal: false
+
+  - ref: F81
+    kind: finding
+    title: The renderer could not run on Windows — font and LibreOffice paths
+    owner: Chief Operating Officer
+    due: 2026-11-04
+    status: closed
+    severity: medium
+    detail: >
+      CLOSED 4 Nov 2026 in the fire door PR. render_docx.py _font_for() listed
+      Linux and macOS font paths only, so every render failed on the Windows
+      machine that became the working machine on 4 Nov 2026; soffice() did not
+      look in Program Files; to_pdf() built a malformed file:// profile path on
+      Windows. All three fixed; 25/25 renderer tests pass. Register §2t.
+    internal: true
+
+  - ref: F82
+    kind: finding
+    title: SESC-PRO-06 will not render — a Part 6 table cell trips the signature guard
+    owner: Chief Operating Officer
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      The Part 6 records table at SESC-PRO-06 paragraph 25 has a first-column
+      cell beginning "Signed induction sheets", which SIG_LABELS matches, so
+      render_docx.py refuses the draft (SignatureError). Same root cause as F58.
+      Fix F58 in the renderer (skip header rows and cells that are not a
+      signature row) or reword the cell at PRO-06 v0.2. Found 4 Nov 2026 when
+      PRO-06 was used to prove the renderer on Windows. Register §2t.
+    internal: true
+
+  - ref: F83
+    kind: finding
+    title: The liability business description does not name fire door work
+    owner: Managing Director
+    due: 2026-11-30
+    status: open
+    severity: high
+    detail: >
+      The broker's letter of 6 Aug 2026 lists alarm installation, electrical,
+      plumbing and heating, solar, and roofing by bona fide subcontractors only
+      (SESC-IMS-04 paragraph 16(a)). Neither it nor the PI Statement of Fact
+      names fire door installation. Written confirmation that EL, PL and PI
+      respond to the trade is required before the first door is installed under
+      SESC-PRO-08 (IMS-04 v0.4 Part 8(w)). Same pattern as F30 for mould and
+      damp. A statement to an insurer, so Steve's. Register §2t.
+    internal: false
+
+  - ref: F84
+    kind: finding
+    title: Two clones of the repository exist and CLAUDE.md names only one
+    owner: Chief Operating Officer
+    due: 2026-11-30
+    status: open
+    severity: medium
+    detail: >
+      From 4 Nov 2026 the working machine is a Windows PC with the repository
+      cloned to C:\Users\Admin\Desktop\QMS from main at 36573a2. CLAUDE.md 11
+      still names the MacBook clone as the master and gives zsh commands; 7.7
+      now has two clones to police. 5 Nov 2026: a signing key now exists on
+      the PC and is registered on GitHub (D4); the workstream commit 549931c
+      is signed, pushed and Verified. The key has no passphrase (F14). Which
+      clone is the master is Gary's decision. Register §2t.3 and §2t.5.
+    internal: true
 
   - ref: F9
     kind: finding

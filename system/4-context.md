@@ -1,7 +1,7 @@
 ---
 id: SESC-IMS-04
 title: Context of the Organisation
-version: "0.3"
+version: "0.4"
 status: draft
 owner: Chief Operating Officer
 approver: Managing Director
@@ -27,7 +27,7 @@ supersedes: null
 
 **Clause 4 of ISO 9001:2015, ISO 14001:2026 and ISO 45001:2018 — written once, for all three.**
 
-> **Status: DRAFT, version 0.3, 24 September 2026. Not approved and not issued.**
+> **Status: DRAFT, version 0.4, 4 November 2026. Not approved and not issued.**
 > This document is the first artefact of the Integrated Management System. It is issued for
 > review by the Chief Operating Officer and approval by the Managing Director. Until the
 > Approval block at Part 9 is completed it evidences nothing.
@@ -57,6 +57,16 @@ supersedes: null
 > Master Register have been corrected; see Annex B. **The Managing Director agreed D8 and D11 by
 > telephone on 24 September 2026, as reported by the Chief Operating Officer. His signature on
 > this version is what makes D8, D11 and D17 formal.**
+>
+> **v0.4, 4 November 2026.** Fire door installation, remedial repair and maintenance are named
+> in the scope statement at ¶14 and at ¶7 and ¶16(c) (decision D28). This reverses the fire door
+> half of D11: on 4 November 2026 the Chief Operating Officer reported that the Employer is
+> starting a fire door service line and has been instructed by QinetiQ to install three fire
+> doors at MOD Boscombe Down, and SESC-PRO-08 is drafted for it. ¶16(d) records that no
+> third-party fire door certification is held and that the liability business description does
+> not name the trade. **The Managing Director has not yet confirmed D28; his signature on this
+> version is what makes it formal, and nothing is installed under SESC-PRO-08 before then.**
+> Part 8 gains rows (w) and (x). No other paragraph is changed.
 
 ---
 
@@ -97,10 +107,11 @@ supersedes: null
    it does not cover any other company in which the director holds an interest.
 
 7. **What the Employer does.** The Employer carries out roofing, building fabric, mechanical,
-   electrical and renewable energy works, and mould and damp remediation, largely in existing
-   and occupied buildings and on customer and Government establishments. The signed policies
-   do not yet name mould and damp remediation. It is added to each at its next revision
-   (decision D11).
+   electrical and renewable energy works, mould and damp remediation, and the installation,
+   remedial repair and maintenance of fire doors, largely in existing and occupied buildings
+   and on customer and Government establishments. The signed policies do not yet name mould
+   and damp remediation or fire door work. Each is added to them at their next revision
+   (decisions D11 and D28).
 
 8. **Where.** From a single leased unit at West Melbury comprising office and stores, and on
    customer sites. Much of the work is in Dorset, Wiltshire and Hampshire, on and near chalk
@@ -150,8 +161,9 @@ supersedes: null
 14. **The scope statement, in the form in which it will appear on any certificate:**
 
     > **The provision of roofing, building fabric, mechanical, electrical and renewable energy
-    > installation, refurbishment, maintenance and repair services, and mould and damp
-    > remediation services, to commercial, public sector, social housing, defence and domestic
+    > installation, refurbishment, maintenance and repair services, mould and damp
+    > remediation services, and fire door installation, remedial repair and maintenance
+    > services, to commercial, public sector, social housing, defence and domestic
     > customers, including heat loss calculation, emitter and heat pump sizing, MCS solar PV
     > design, and the specification of ventilation for mould and damp remediation; carried out
     > from Unit 19 Melbury Business Park, West Melbury, Shaftesbury, Dorset SP7 0AF and at
@@ -175,8 +187,10 @@ supersedes: null
         it means the management system, rather than a scheme assessment, is the only assurance
         over roofing work, which raises rather than lowers what clause 8 must do.
 
-16. **Mould and damp remediation is inside the scope, as remediation only (decision D11).** It
-    is named at paragraph 14. The Employer does not survey for or diagnose mould and damp, and
+16. **Mould and damp remediation is inside the scope, as remediation only (decision D11), and
+    fire door installation, remedial repair and maintenance are inside the scope (decision D28,
+    sub-paragraphs (c) and (d)).** Mould and damp remediation is named at paragraph 14. The
+    Employer does not survey for or diagnose mould and damp, and
     the scope statement does not claim that it does. Survey and diagnosis are added to the scope
     only once the survey qualification the Employer intends to obtain is actually held. The
     signed policies describe the business as *"roofing, building fabric, mechanical, electrical
@@ -192,6 +206,28 @@ supersedes: null
         Managing Director's to resolve.**
 
     (b) **The professional indemnity declaration does not name it either.** See paragraph 58(d).
+
+    (c) **Fire door work (decision D28, 4 November 2026).** The installation of fire doors and
+        doorsets, their remedial repair and their planned inspection and maintenance are
+        named at paragraph 14, and the procedure is SESC-PRO-08 with the records SESC-FRM-09 to
+        SESC-FRM-14 and the register SESC-REG-13. Decision D11 of 24 September 2026 had put
+        fire doors outside the scope because they were not then a trade the Employer sold; on
+        4 November 2026 the Chief Operating Officer reported that the Employer is starting a
+        fire door service line and has been instructed by QinetiQ to install three fire doors
+        at MOD Boscombe Down. The reversal is formal on the Managing Director's signature of
+        this version, and no fire door is installed under SESC-PRO-08 before then.
+
+    (d) **Three consequences follow and are recorded rather than avoided.** The Employer holds
+        no third-party certification for fire door installation under BM TRADA Q-Mark, FIRAS or
+        any other scheme, and every installation is evidenced as competent installation to
+        BS 8214 and the manufacturer's instructions, in the one wording at SESC-PRO-08 ¶6,
+        with the client's written acceptance of that basis obtained before work starts
+        (SESC-PRO-08 ¶10). The liability business description at sub-paragraph (a) does not
+        name fire door work, and whether the policies respond to it has not been confirmed in
+        writing; **this is an open item at Part 8(w), and it is the Managing Director's.** And
+        the Compliance Obligations Register SESC-REG-09 carries the Regulatory Reform (Fire
+        Safety) Order 2005 for the Employer's own premises only; the rows for the trade are
+        **an open item at Part 8(x).**
 
 17. **Sites and boundaries.** One site, Unit 19, comprising office and stores, plus customer
     premises and Government establishments including Boscombe Down. Work carried out by the
@@ -682,7 +718,7 @@ supersedes: null
     | # | What does not exist | Position and date |
     |---|---|---|
     | (a) | **The directly-employed headcount, established from the payroll with the date it changed** | Not established. Declared five different ways historically. **Required before any figure is written into any document or questionnaire.** Owner: Chief Operating Officer. Due 30 September 2026. |
-    | (b) | **The Managing Director's written decision on the design carve-out at paragraph 58 (D8, D17) and on the scope at paragraphs 14 and 16 (D11)** | Agreed by telephone on 24 September 2026, as reported by the Chief Operating Officer. No written record exists. His signature on this version is the record. The ventilation element cannot be signed until (u) is resolved. Owner: Managing Director. Due 30 September 2026. |
+    | (b) | **The Managing Director's written decision on the design carve-out at paragraph 58 (D8, D17) and on the scope at paragraphs 14 and 16 (D11, and from v0.4 D28 on fire doors)** | D8, D11 and D17 agreed by telephone on 24 September 2026, as reported by the Chief Operating Officer. D28 reported by the Chief Operating Officer on 4 November 2026 and not yet confirmed by the Managing Director. No written record exists of any of them. His signature on this version is the record. The ventilation element cannot be signed until (u) is resolved. Owner: Managing Director. Due 30 September 2026 — **overdue; revised to 30 November 2026, proposed in v0.4 for the owner to confirm.** |
     | (c) | **Environmental aspects and impacts register that is the Employer's own** | Does not exist. The register held belongs to a landscaping firm and must not be used. **This is the defining ISO 14001 document and the highest-priority gap in the whole system.** Owner: Environmental Manager. Due 30 November 2026. |
     | (d) | **Compliance obligations register, current, and an evaluation of compliance against it** | The register held is dated 2020 with dead drive links. Owner: Environmental Manager. Due 30 November 2026. |
     | (e) | **The ISO 45001 clause 5.4 worker consultation and participation mechanism, and records of it operating with non-managerial workers** | Does not exist as a mechanism with records. Owner: Health and Safety Officer. Due 31 October 2026. |
@@ -703,6 +739,8 @@ supersedes: null
     | (t) | **The first live record in the record capture forms: the start of the operating history** | Not yet created. The forms are built in the repository and not yet run in Google Workspace. Owner: Chief Operating Officer. Target 9 October 2026. |
     | (u) | **Written confirmation from the insurer or broker that professional indemnity policy AHG015566 covers ventilation specification in mould and damp remediation, and the policy wording that defines "professional services"** | Not held. The schedule and the Statement of Fact do not show it (paragraph 58(d)). **Required before the ventilation element of paragraph 58 is approved.** Owner: Managing Director. Due before this version is signed, and no later than 30 September 2026. |
     | (v) | **The certification body's answer on certifying to ISO 9001:2026 (D16)** | Not received. To be asked at the first certification body meeting on 6 October 2026 and in the written quotation requests (D2). Owner: Chief Operating Officer. Due 31 October 2026. |
+    | (w) | **Written confirmation that the employers' liability, public liability and professional indemnity policies respond to fire door installation, remedial repair and maintenance** | Not held. The business description at paragraph 16(a) does not name the trade (paragraph 16(d)). **Required before the first fire door is installed under SESC-PRO-08.** Owner: Managing Director. Due before the first installation, and no later than 30 November 2026 (*proposed*). |
+    | (x) | **Rows at SESC-REG-09 for the fire door trade — the Regulatory Reform (Fire Safety) Order 2005 as it bears on handover, Approved Document B, and any Building Safety Act 2022 secondary legislation on fire door competence — each instrument read on the issuing body's site** | Not entered; CO-24 covers the Employer's premises only (SESC-PRO-08 Part 7(g)). Owner: Contracts Manager. Due 30 November 2026 (*proposed*). |
 
 65. **Certification claims.** The Employer holds no ISO 9001, ISO 14001, ISO 45001 or ISO/IEC
     27001 certification, no BS 99001 certification, no Cyber Essentials certification and no NFRC
@@ -749,8 +787,9 @@ supersedes: null
 | 0.1 | 18 August 2026 | G A Hill | First draft. Created as the first document of the Integrated Management System. Derived from SESC-REG-01 v1.0, SESC-REG-02 v1.0, SESC-POL-05 v1.1, SESC-POL-08 v1.1, SESC-POL-16 v1.2 and SESC-CRP-01 v1.0. No content taken from any other organisation's document. |
 | 0.2 | 18 August 2026 | G A Hill | Added ¶16, raising decision D11. Paragraphs from 16 onwards renumbered. *(This row was missing from the table in v0.2 and was added in v0.3. The change is as recorded in the v0.2 note under the status banner.)* |
 | 0.3 | 24 September 2026 | G A Hill (drafted by Claude) | **D11:** ¶7 and ¶14 name mould and damp remediation, as remediation only. ¶16 rewritten, and fire doors removed from the scope wording. ¶16(a) records that the liability business description does not name the trade. **D8 and D17:** the carve-out at ¶58 now covers heat loss, emitter and heat pump sizing, MCS solar PV design, and ventilation specification for mould and damp remediation. ¶14 and ¶18 aligned with it. ¶58(b)–(d) cite the PI schedule and Statement of Fact page by page, and record that cover for ventilation specification is **not shown**. ¶59 rewritten. **Corrections of statements that no longer matched the Master Register v1.10:** ¶1 gains the D16 edition position. ¶33 no longer asserts the content of ISO 14001:2026, which has not been read. ¶39 no longer quotes 30 September 2026 as the start of operation (B3). ¶50 and ¶51 record the Google Workspace stopgap (D15) and the SESC Platform decision, instead of stating that an encrypted database exists. ¶50 gives the repository name. The v0.2 note cited F17 for F16. Missing revision row 0.2 added. Footer version corrected. **Part 8:** new records held (g) and (h). (b), (h), (m), (n) and (q) updated, with overdue dates flagged. New items (r) to (v). **The approval block at Part 9 is untouched and unsigned.** |
+| 0.4 | 4 November 2026 | G A Hill (drafted by Claude) | **D28:** fire door installation, remedial repair and maintenance named at ¶7 and in the scope statement at ¶14; ¶16 lead amended and new ¶16(c) and (d), recording the reversal of the fire door half of D11, the no-certification position, and the two consequences. Part 8(b) updated for D28 and its overdue date re-proposed; new rows (w) (insurance response to fire door work) and (x) (SESC-REG-09 rows for the trade). Drafted alongside SESC-PRO-08 v0.1 and the fire door record pack (Master Register §2t). **The Managing Director has not confirmed D28. The approval block at Part 9 is untouched and unsigned.** No other paragraph changed; no renumbering. |
 
 ---
 
-*SESC Solutions Ltd · SESC-IMS-04 Context of the Organisation v0.3 · 24 September 2026 ·
+*SESC Solutions Ltd · SESC-IMS-04 Context of the Organisation v0.4 · 4 November 2026 ·
 **DRAFT — not approved, not issued** · Uncontrolled when printed*

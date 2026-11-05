@@ -91,7 +91,8 @@ def d(v):
 def uk(v):
     dt = d(v)
     if dt:
-        return dt.strftime("%-d %B %Y") if len(str(v)) > 7 else dt.strftime("%B %Y")
+        # str(dt.day), not "%-d": that flag is glibc/macOS only and fails on Windows (F81)
+        return f"{dt.day} {dt.strftime('%B %Y')}" if len(str(v)) > 7 else dt.strftime("%B %Y")
     return str(v) if v else "—"
 
 
@@ -244,7 +245,7 @@ def page(sysm, audience, slug, heading, strap, body):
 <div class="sub">{E(strap)}</div>
 <div class="sub">{E(org['legal_name'])} &middot; company {E(org['company_number'])}
 &middot; Integrated Management System &mdash; ISO 9001, ISO 14001, ISO 45001
-&middot; generated {sysm.asof.strftime('%-d %B %Y')}</div>
+&middot; generated {sysm.asof.day} {sysm.asof.strftime('%B %Y')}</div>
 </div></header>
 <nav class="tabs"><div class="wrap">{nav}
 <div class="aud">{audline}</div>

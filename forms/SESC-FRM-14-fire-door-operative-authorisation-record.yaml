@@ -1,0 +1,178 @@
+id: SESC-FRM-14
+title: Fire Door Operative Authorisation Record
+version: "0.1"
+status: draft
+owner: Contracts Manager
+approver: Managing Director
+issued: 2026-11-04
+next_review: 2027-11-04
+classification: internal
+clauses:
+  iso9001:  ["8.5.1"]
+personal_data: false
+records_generated: [fire_door_operative_authorisation]
+parent_document: SESC-PRO-08
+one_per: person
+
+completed_record:
+  contains_personal_data: true
+  store: >
+    The records store, under SESC-POL-14, with the Training Matrix. NEVER the
+    repository and never the job file (CLAUDE.md 8). This record names a person
+    and their qualifications.
+  retention: Duration of engagement plus the period SESC-POL-05 Annex B and SESC-POL-14 Annex C give for training records, the longer applying (SESC-PRO-06 paragraph 26)
+  feeds_register: The Training Matrix; the authorised list the Contracts Manager holds for allocating fire door work
+
+purpose: >
+  The record that the responsible person for fire door work has looked at the
+  evidence of one person's training and competence and authorised that person
+  for named fire door tasks. SESC-REG-12 CR-45 to CR-48 say what competence
+  each task needs; SESC-FRM-03 and the Training Matrix record that this person
+  holds it; this form is the authorisation that follows. No person does a fire
+  door task they are not authorised for here (SESC-PRO-08 paragraph 19).
+
+design_note: >
+  Built to the shape a third-party certification scheme is expected to ask for —
+  one named responsible person authorising a list of operatives, each for named
+  tasks, with the evidence behind each authorisation. What the scheme actually
+  requires of that person, and how many operatives one may be responsible for,
+  is read from the scheme document when it is held and is NOT stated here
+  (SESC-PRO-08 Part 7(j)). The field "responsible person" is renamed to the
+  scheme's own title at that revision.
+
+guidance:
+  - One record per person. A change of tasks, a new training record or a restriction is a new entry that points at the earlier one, not an edit.
+  - The training lines cite SESC-FRM-03 entries. Attendance only is not competence; the assessment method says how competence was shown, in the SESC-FRM-03 vocabulary.
+  - Authorise only the tasks the evidence supports. An operative can be authorised to fix frames and not to sign off gaps.
+  - The responsible person does not authorise themself. Their own competence is recorded on the Training Matrix and reviewed by the Managing Director.
+
+print:
+  per: person
+  photo_stages: []
+
+revision_history:
+  - version: "0.1"
+    date: 2026-11-04
+    change: >
+      First draft, alongside SESC-PRO-08 and the fire door rows at SESC-REG-12
+      v0.2. Drafted by Claude for G A Hill from HANDOFF-FD-001; not approved.
+
+fields:
+  - key: date
+    label: Date of this record
+    type: date
+    required: true
+    section: Person
+  - key: person
+    label: Operative — name
+    type: text
+    required: true
+    section: Person
+  - key: person_role
+    label: Role
+    type: select
+    required: true
+    section: Person
+    options: [Operative, Site Supervisor, Contracts Manager, Apprentice, Subcontractor's person]
+  - key: employer_of_person
+    label: Employed by
+    type: select
+    required: true
+    section: Person
+    options: [The Employer, A subcontractor on SESC-REG-11 — named in the notes]
+  - key: cscs_card
+    label: CSCS or equivalent card — type and number
+    type: text
+    required: true
+    section: Person
+    help: Card seen and checked with the scheme (SESC-REG-12 CR-14). Expiry on the Training Matrix.
+  - key: cscs_expiry
+    label: Card expiry
+    type: date
+    required: true
+    section: Person
+
+  - key: training_lines
+    label: Fire door training and briefing received — one line each
+    type: textarea
+    required: true
+    section: Training and evidence
+    help: Topic — date — trainer or provider — SESC-FRM-03 reference. Manufacturer product training where the evidence or the warranty depends on it (SESC-REG-12 CR-37, CR-46); the Employer's briefing on SESC-PRO-08, SESC-WI-02 and the photograph standard (CR-45); any external fire door installation course (CR-47) with the awarding body.
+  - key: instructions_briefed
+    label: Briefed on SESC-PRO-08, SESC-WI-02 and the photograph standard, and holds a copy of SESC-WI-02
+    type: select
+    required: true
+    section: Training and evidence
+    options: [Yes — SESC-FRM-03 reference in the training lines, "No"]
+  - key: assessment_method
+    label: How competence was assessed
+    type: select
+    required: true
+    section: Training and evidence
+    options: [Observed on site installing a fire door under supervision, Observed on site on a practice doorset, Knowledge check passed, Certificate held and verified with the issuing body, Certificate held — not verified, Attendance only — NOT sufficient for authorisation]
+  - key: assessed_by
+    label: Competence assessed by
+    type: text
+    required: true
+    section: Training and evidence
+  - key: assessment_date
+    label: Date of assessment
+    type: date
+    required: true
+    section: Training and evidence
+  - key: assessment_notes
+    label: What was observed or checked
+    type: textarea
+    required: false
+    section: Training and evidence
+
+  - key: tasks_authorised
+    label: Tasks this person is authorised to carry out
+    type: multiselect
+    required: true
+    section: Authorisation
+    options: [Pre-installation survey (SESC-FRM-09), Removal of existing doors and disposal, Frame fixing and packing, Fire-stopping around the frame, Fitting intumescent and smoke seals, Fitting hinges and ironmongery and adjusting closers, Fitting glazing and glazing systems, Gap measurement and functional testing, Signing SESC-FRM-11 as installer, Signing SESC-FRM-12 as installer, Supervising and signing hold points 4 and 5, Compiling the handover pack (SESC-FRM-13)]
+  - key: restrictions
+    label: Restrictions or conditions
+    type: textarea
+    required: false
+    section: Authorisation
+    help: For example "under direct supervision of a named person for the first three doors", or "not timber-to-metal-stud frames until product training is held".
+  - key: authorised_by
+    label: Authorised by — the responsible person for fire door work
+    type: text
+    required: true
+    section: Authorisation
+    help: The Contracts Manager until another person is named here (SESC-PRO-08 paragraph 8). Does not authorise themself.
+  - key: authorisation_date
+    label: Date of authorisation
+    type: date
+    required: true
+    section: Authorisation
+  - key: review_due
+    label: Authorisation review due
+    type: date
+    required: true
+    section: Authorisation
+    help: No later than the earliest expiry among the card and the training it rests on, and at least annually.
+  - key: status
+    label: Status
+    type: select
+    required: true
+    section: Authorisation
+    options: [Authorised for the tasks ticked, Authorised with the restrictions stated, Suspended — reason in the notes, Withdrawn — reason in the notes]
+  - key: notes
+    label: Notes
+    type: textarea
+    required: false
+    section: Authorisation
+  - key: correction_of
+    label: Does this correct or supersede an earlier entry
+    type: text
+    required: false
+    section: Authorisation
+    help: >
+      Leave blank for a new record. To change a person's authorisation, give the
+      reference of the entry this one supersedes (for example FRM-14-0002).
+      Records are never edited or deleted; a change is a new entry that points
+      at the original (D15).
